@@ -6,7 +6,7 @@
 header {
     width: 100%;
     min-height: 75vh;
-    background: linear-gradient(135deg, hsla(235, 84%, 55%, 0.85), hsla(189, 70%, 41%, 0.85)), url(../images/portada.png);
+    background: linear-gradient(135deg, hsla(235, 84%, 55%, 0.85), hsla(189, 70%, 41%, 0.85)), url(/images/portada.png);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

@@ -4,7 +4,7 @@
 /* Header */
 
 .facturacion-header {
-    background: linear-gradient(135deg, #0068b2 0%, #003796 100%) !important;
+    background: linear-gradient(135deg, hsla(235, 84%, 55%, 0.85), hsla(189, 70%, 41%, 0.85)), url(/images/portada.png);
 }
 
 

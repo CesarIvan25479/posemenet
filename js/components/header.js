@@ -40,7 +40,6 @@ const productLinks = [
     { href: 'recargas.html', text: 'Recargas de Tiempo Aire' },
     { href: 'facturacion.html', text: 'Facturación Electrónica' },
     { href: 'servicios.html', text: 'Servicios en la Nube' },
-    { href: 'modificaciones.html', text: 'Modificaciones a la Medida' },
     { href: 'modificaciones.html', text: 'Modificaciones a la Medida' }
 ];
 

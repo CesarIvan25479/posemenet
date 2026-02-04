@@ -32,49 +32,49 @@ posemenet/
 └── contacto.html                # Contact page
 ```
 
-## Features
+# Características
 
-- **Modular CSS Architecture**: Organized into base, components, and pages
-- **Reusable Components**: Navigation, buttons, cards, footer are reusable
-- **Dynamic Product Loading**: Products load dynamically via JavaScript modules
-- **Responsive Design**: Fully responsive for mobile, tablet, and desktop
-- **CSS Variables**: Easy customization via CSS custom properties
+- **Arquitectura CSS modular**: Organizada en base, componentes y páginas
+- **Componentes reutilizables**: Navegación, botones, tarjetas y pie de página reutilizables
+- **Carga dinámica de productos**: Los productos se cargan dinámicamente mediante módulos JavaScript
+- **Diseño responsivo**: Totalmente responsivo para dispositivos móviles, tabletas y computadoras de escritorio
+- **Variables CSS**: Fácil personalización mediante propiedades personalizadas CSS
 
-## Development
+## Desarrollo
 
-### Adding New Products
+### Añadir nuevos productos
 
-1. Add product data to `js/components/router.js`
-2. Create a layout loader function in `js/components/layout-loader.js` (if needed)
-3. Import and register the product in the products object
+1. Añadir los datos del producto a `js/components/router.js`
+2. Crear una función de carga de diseño en `js/components/layout-loader.js` (si es necesario)
+3. Importar y registrar el producto en el objeto de productos
 
-### Customizing Styles
+### Personalizar estilos
 
-Edit `css/base/variables.css` to change:
-- Colors (primary, text, backgrounds)
-- Spacing units
-- Border radius
-- Shadows
+Editar `css/base/variables.css` para cambiar:
+- Colores (primario, texto, fondos)
+- Unidades de espaciado
+- Radio del borde
+- Sombras
 
-### Running Locally
+### Ejecución local
 
-Simply open `view.html` in a browser, or use a local server:
+Simplemente abrir `view.html` en un navegador o usar un servidor local:
 
 ```bash
-# Using Python
+# Usando Python
 python -m http.server 8000
 
-# Using Node.js (with http-server)
+# Usando Node.js (con http-server)
 npx http-server
 ```
 
-## Browser Support
+## Compatibilidad con navegadores
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
+- Chrome (última versión)
+- Firefox (última versión)
+- Safari (última versión)
+- Edge (última versión)
 
-## License
+## Licencia
 
 © 2026 emenetPOS

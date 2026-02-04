@@ -4,7 +4,7 @@
 /* Header */
 
 .servicios-header {
-    background: linear-gradient(135deg, #7c4dff 0%, #651fff 100%) !important;
+    background: linear-gradient(135deg, hsla(235, 84%, 55%, 0.85), hsla(189, 70%, 41%, 0.85)), url(/images/portada.png);
 }
 
 

@@ -4,7 +4,7 @@
 /* Recargas Header */
 
 .recargas-header {
-    background: linear-gradient(135deg, #00c853 0%, #009624 100%) !important;
+    background: linear-gradient(135deg, hsla(235, 84%, 55%, 0.85), hsla(189, 70%, 41%, 0.85)), url(/images/portada.png);
 }
 
 
