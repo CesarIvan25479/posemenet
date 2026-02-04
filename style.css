@@ -77,7 +77,7 @@ body {
 
 header {
     width: 100%;
-    min-height: 100vh;
+    min-height: 75vh;
     background: linear-gradient(135deg, hsla(235, 84%, 55%, 0.85), hsla(189, 70%, 41%, 0.85)), url(images/portada.png);
     background-size: cover;
     background-position: center;
@@ -963,5 +963,363 @@ footer {
     }
     body {
         color: #000;
+    }
+}
+
+
+/* ===== ESTILOS ESPECIALIZADOS PARA FACTURACIÓN ELECTRÓNICA ===== */
+
+
+/* Ocultar las secciones por defecto cuando es facturación */
+
+.facturacion-section-hero {
+    background: var(--color-white) !important;
+    padding: 4rem 2rem !important;
+}
+
+.facturacion-beneficios {
+    padding: 4rem 0 !important;
+    background: var(--color-gray-light) !important;
+}
+
+
+/* ===== SECCIÓN HERO FACTURACIÓN ===== */
+
+.facturacion-hero {
+    padding: 0;
+}
+
+.facturacion-hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.facturacion-hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.facturacion-hero-title {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    color: var(--color-primary-dark);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.facturacion-hero-description {
+    font-size: 1.3rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.facturacion-hero-subtitle {
+    font-size: 1rem;
+    color: var(--color-text-light);
+    line-height: 1.8;
+    margin: 0;
+}
+
+
+/* Botón Comprar Timbres */
+
+.facturacion-btn-comprar {
+    padding: 14px 32px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    width: fit-content;
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: var(--color-white);
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+}
+
+.facturacion-btn-comprar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+}
+
+.facturacion-btn-comprar:active {
+    transform: translateY(0);
+}
+
+
+/* Imagen Hero */
+
+.facturacion-hero-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.facturacion-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    animation: slideInRight 0.8s ease-out;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.facturacion-image-badge {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    background: #28a745;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+    animation: bounceDown 0.8s ease-out;
+}
+
+.facturacion-image-badge i {
+    font-size: 1.2rem;
+}
+
+@keyframes bounceDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ===== SECCIÓN DE BENEFICIOS (2 BURBUJAS REDONDAS) ===== */
+
+.facturacion-beneficios-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.facturacion-beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.facturacion-burbuja {
+    background: var(--color-white);
+    padding: 3rem;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border: 2px solid var(--color-border);
+}
+
+.facturacion-burbuja:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    border-color: var(--color-primary);
+}
+
+.facturacion-burbuja-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    font-size: 2.5rem;
+    box-shadow: 0 4px 15px rgba(0, 104, 178, 0.2);
+    flex-shrink: 0;
+}
+
+.facturacion-burbuja h3 {
+    color: var(--color-primary-dark);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.facturacion-burbuja p {
+    color: var(--color-text-light);
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+
+/* ===== SECCIÓN DE CARACTERÍSTICAS ===== */
+
+.facturacion-caracteristicas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.facturacion-caracteristica-item {
+    background: var(--color-gray-light);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--color-primary);
+}
+
+.facturacion-caracteristica-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.caracteristica-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1rem;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    font-size: 2rem;
+}
+
+.facturacion-caracteristica-item h3 {
+    color: var(--color-primary-dark);
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+}
+
+.facturacion-caracteristica-item p {
+    color: var(--color-text-light);
+    line-height: 1.6;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+@media screen and (max-width: 1024px) {
+    .facturacion-hero-container {
+        gap: 2rem;
+    }
+    .facturacion-beneficios-grid {
+        grid-template-columns: 1fr;
+    }
+    .facturacion-burbuja {
+        width: 250px;
+        height: 250px;
+        padding: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .facturacion-hero-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .facturacion-section-hero {
+        padding: 2rem 1rem !important;
+    }
+    .facturacion-hero-title {
+        font-size: 1.5rem;
+    }
+    .facturacion-hero-description {
+        font-size: 1.1rem;
+    }
+    .facturacion-beneficios-grid {
+        grid-template-columns: 1fr;
+    }
+    .facturacion-burbuja {
+        width: 100%;
+        height: auto;
+        min-height: 250px;
+        padding: 2rem;
+        border-radius: 20px;
+    }
+    .facturacion-image-badge {
+        top: auto;
+        bottom: 20px;
+        right: 20px;
+    }
+    .facturacion-caracteristicas-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .facturacion-section-hero {
+        padding: 1.5rem 1rem !important;
+    }
+    .facturacion-hero-title {
+        font-size: 1.25rem;
+    }
+    .facturacion-hero-description {
+        font-size: 1.1rem;
+    }
+    .facturacion-btn-comprar {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+        width: 100%;
+        justify-content: center;
+    }
+    .facturacion-burbuja {
+        width: 100%;
+        height: auto;
+        min-height: 220px;
+        padding: 1.5rem;
+        border-radius: 20px;
+    }
+    .facturacion-burbuja h3 {
+        font-size: 1.1rem;
+    }
+    .facturacion-burbuja p {
+        font-size: 0.85rem;
+    }
+    .facturacion-beneficios-container {
+        width: 95%;
+    }
+    .facturacion-beneficios-grid {
+        gap: 1rem;
     }
 }

@@ -1,0 +1,34 @@
+/* ===== EMENETPOS MAIN STYLESHEET ===== */
+
+
+/* Organized by: Base → Components → Pages → Vendors → Responsive */
+
+
+/* ===== VENDORS ===== */
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
+
+/* ===== BASE ===== */
+
+@import 'base/variables.css';
+@import 'base/reset.css';
+@import 'base/utilities.css';
+
+/* ===== COMPONENTS ===== */
+
+@import 'components/navigation.css';
+@import 'components/buttons.css';
+@import 'components/footer.css';
+@import 'components/cards.css';
+@import 'components/sections.css';
+
+/* ===== PAGES ===== */
+
+@import 'pages/facturacion.css';
+@import 'pages/recargas.css';
+@import 'pages/servicios.css';
+@import 'pages/modificaciones.css';
+
+/* ===== RESPONSIVE ===== */
+
+@import 'responsive.css';

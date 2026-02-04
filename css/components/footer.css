@@ -1,0 +1,46 @@
+/* ===== FOOTER ===== */
+
+footer {
+    background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary));
+    padding: var(--spacing-xl) 0 var(--spacing-md);
+    color: var(--color-white);
+}
+
+.contenedor-footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-lg);
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: var(--spacing-lg);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.content-foo {
+    text-align: center;
+}
+
+.content-foo h4 {
+    color: var(--color-white);
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-sm);
+    padding-bottom: var(--spacing-xs);
+    border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+    display: inline-block;
+    font-weight: 600;
+}
+
+.content-foo p {
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.8;
+    margin-top: var(--spacing-xs);
+}
+
+.titulo-final {
+    text-align: center;
+    font-size: 0.95rem;
+    margin: var(--spacing-md) 0 0;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 300;
+}

@@ -1,0 +1,213 @@
+/* ===== MODIFICACIONES A LA MEDIDA PAGE STYLES ===== */
+
+
+/* Header */
+
+.modificaciones-header {
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%) !important;
+}
+
+
+/* Hero Section */
+
+.modificaciones-hero-section {
+    padding: var(--spacing-xl) 0;
+    background: var(--color-white);
+}
+
+.modificaciones-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #ff6b35, #f7931e);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+}
+
+.modificaciones-badge i {
+    font-size: 1.1rem;
+}
+
+.modificaciones-hero-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: var(--color-primary-dark);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: var(--spacing-md);
+}
+
+.modificaciones-hero-description {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    line-height: 1.8;
+    margin-bottom: var(--spacing-lg);
+    max-width: 800px;
+}
+
+.modificaciones-stats {
+    display: flex;
+    gap: var(--spacing-xl);
+}
+
+.mod-stat {
+    text-align: center;
+}
+
+.mod-stat .stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #ff6b35;
+    line-height: 1;
+}
+
+.mod-stat .stat-label {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+/* Services Section */
+
+.modificaciones-services-section {
+    padding: var(--spacing-xl) 0;
+    background: var(--color-gray-light);
+}
+
+.modificaciones-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+}
+
+.mod-card {
+    background: var(--color-white);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    border-top: 4px solid #ff6b35;
+}
+
+.mod-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.mod-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto var(--spacing-md);
+    background: linear-gradient(135deg, #ff6b35, #f7931e);
+    border-radius: var(--border-radius-circle);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+.mod-card h3 {
+    color: var(--color-primary-dark);
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.mod-card p {
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+
+/* Proceso Section */
+
+.modificaciones-proceso-section {
+    padding: var(--spacing-xl) 0;
+    background: var(--color-white);
+}
+
+.proceso-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+}
+
+.proceso-card {
+    background: var(--color-gray-light);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    text-align: center;
+    transition: var(--transition);
+    position: relative;
+}
+
+.proceso-card:hover {
+    background: #fff3e0;
+    transform: translateY(-5px);
+}
+
+.proceso-number {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #ff6b35, #f7931e);
+    border-radius: var(--border-radius-circle);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: white;
+    margin: 0 auto var(--spacing-md);
+}
+
+.proceso-card h3 {
+    color: var(--color-primary-dark);
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.proceso-card p {
+    color: var(--color-text-light);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+
+/* Responsive */
+
+@media screen and (max-width: 768px) {
+    .modificaciones-stats {
+        flex-wrap: wrap;
+        gap: var(--spacing-md);
+    }
+    .modificaciones-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .proceso-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .modificaciones-grid {
+        grid-template-columns: 1fr;
+    }
+    .proceso-grid {
+        grid-template-columns: 1fr;
+    }
+    .modificaciones-stats {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+}
