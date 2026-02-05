@@ -1,7 +1,7 @@
-/* ===== EMENETPOS MAIN STYLESHEET ===== */
+/* EMENETPOS MAIN ESTILOS  */
 
 
-/* Organized by: Base → Components → Pages → Vendors → Responsive */
+/*Esta pagina es responsive*/
 
 
 /* ===== VENDORS ===== */
@@ -12,18 +12,19 @@
 
 @import 'base/variables.css';
 @import 'base/reset.css';
-@import 'base/utilities.css';
+@import 'base/utilidades.css';
 
 /* ===== COMPONENTS ===== */
 
-@import 'components/navigation.css';
-@import 'components/buttons.css';
-@import 'components/footer.css';
-@import 'components/cards.css';
-@import 'components/sections.css';
+@import 'componentes/nav.css';
+@import 'componentes/botones.css';
+@import 'componentes/footer.css';
+@import 'componentes/cards.css';
+@import 'componentes/sections.css';
 
 /* ===== PAGES ===== */
 
+@import 'pages/software.css';
 @import 'pages/facturacion.css';
 @import 'pages/recargas.css';
 @import 'pages/servicios.css';

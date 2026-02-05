@@ -4,14 +4,57 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contacto - emenetPOS</title>
+    <title>emenetPOS</title>
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
 <body>
-    <!-- Header Container (loaded dynamically) -->
-    <div id="header-container"></div>
+    <header>
+
+        <nav>
+            <!-- Logo a la izquierda -->
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="images/emenetLogoN.png" alt="Logo Emenet">
+                </a>
+            </div>
+
+            <!-- Menú a la derecha -->
+            <div class="nav-menu">
+                <!-- Menú desplegable de Productos -->
+                <div class="dropdown">
+                    <input type="checkbox" id="productos-menu" class="dropdown-toggle">
+                    <label for="productos-menu" class="dropdown-label">Productos</label>
+                    <div class="dropdown-content">
+                        <a href="software.html">Software emenetPOS</a>
+                        <a href="facturacion.html">Facturación Electrónica</a>
+                        <a href="recargas.html" data-product="recargas">Recargas de Tiempo Aire</a>
+                        <a href="servicios.html" data-product="servicios">Servicios en la Nube</a>
+                        <a href="modificaciones.html" data-product="modificaciones">Modificaciones a la Medida</a>
+                    </div>
+                </div>
+
+                <!-- Link Contacto -->
+                <a href="contacto.html" class="nav-link">Contacto</a>
+            </div>
+        </nav>
+
+        <section class="textos-header">
+            <div class="topnav">
+                <h1>emenetPOS tu mejor opción</h1>
+                <h2>Gestiona tus ventas, inventarios y mas.</h2>
+            </div>
+        </section>
+
+        <div class="wave" style="height: 150px; overflow: hidden;">
+            <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height:100%; width: 100%;">
+                <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                    style="stroke: none; fill: #fff;"></path>
+            </svg>
+        </div>
+    </header>
+
 
     <!-- ===== CONTACTO SECTION ===== -->
     <section class="servicios">
@@ -39,6 +82,24 @@
 
     <!-- Footer Container (loaded dynamically) -->
     <div id="footer-container"></div>
+    <!-- FOOTER -->
+    <footer>
+        <div class="contenedor-footer">
+            <div class="content-foo">
+                <h4>Telefono</h4>
+                <p>+34 123 456 789</p>
+            </div>
+            <div class="content-foo">
+                <h4>Correo</h4>
+                <p>soporte@emenetpos.com</p>
+            </div>
+            <div class="content-foo">
+                <h4>Ubicacion</h4>
+                <p>Madrid, España</p>
+            </div>
+        </div>
+        <h2 class="titulo-final">&copy; emenetPOS | 2026</h2>
+    </footer>
 
     <script type="module" src="js/menu.js"></script>
 </body>

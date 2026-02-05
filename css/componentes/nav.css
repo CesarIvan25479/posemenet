@@ -6,7 +6,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgb(255, 255, 255);
     backdrop-filter: blur(10px);
     position: sticky;
     top: 0;
@@ -55,7 +55,7 @@ nav {
 }
 
 .nav-link {
-    color: var(--color-white);
+    color: var(--color-black);
     font-weight: 500;
     text-decoration: none;
     padding: 0.5rem 1rem;
@@ -72,12 +72,12 @@ nav {
     transform: translateX(-50%) scaleX(0);
     width: 80%;
     height: 2px;
-    background: var(--color-white);
+    background: linear-gradient(135deg, #000000, #000000);
     transition: var(--transition);
 }
 
 .nav-link:hover {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgb(0, 0, 0);
     transform: translateY(-2px);
 }
 
@@ -101,7 +101,7 @@ nav {
     display: flex;
     align-items: center;
     gap: 8px;
-    color: var(--color-white);
+    color: var(--color-black);
     font-weight: 500;
     text-decoration: none;
     padding: 0.5rem 1rem;
@@ -127,14 +127,14 @@ nav {
     transform: translateX(-50%) scaleX(0);
     width: 80%;
     height: 2px;
-    background: var(--color-white);
+    background: linear-gradient(135deg, #b4acac, #000000);
     transition: var(--transition);
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background: var(--color-white);
+    background: linear-gradient(135deg, #fcfcfc, #fcfcfc);
     min-width: 240px;
     box-shadow: var(--shadow-md);
     padding: 10px 0;
@@ -172,7 +172,7 @@ nav {
 }
 
 .dropdown-toggle:checked~.dropdown-label {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 253, 253, 0.984);
     transform: translateY(-2px);
 }
 

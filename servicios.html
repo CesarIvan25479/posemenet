@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Servicios en la Nube - emenetPOS</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+    <!-- Header Container (loaded dynamically) -->
+    <div id="header-container"></div>
+    <header>
+
+        <nav>
+            <!-- Logo a la izquierda -->
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="images/emenetLogoN.png" alt="Logo Emenet">
+                </a>
+            </div>
+
+            <!-- Menú a la derecha -->
+            <div class="nav-menu">
+                <!-- Menú desplegable de Productos -->
+                <div class="dropdown">
+                    <input type="checkbox" id="productos-menu" class="dropdown-toggle">
+                    <label for="productos-menu" class="dropdown-label">Productos</label>
+                    <div class="dropdown-content">
+                        <a href="software.html">Software emenetPOS</a>
+                        <a href="facturacion.html">Facturación Electrónica</a>
+                        <a href="recargas.html" data-product="recargas">Recargas de Tiempo Aire</a>
+                        <a href="servicios.html" data-product="servicios">Servicios en la Nube</a>
+                        <a href="modificaciones.html" data-product="modificaciones">Modificaciones a la Medida</a>
+                    </div>
+                </div>
+
+                <!-- Link Contacto -->
+                <a href="contacto.html" class="nav-link">Contacto</a>
+            </div>
+        </nav>
+
+        <section class="textos-header">
+            <div class="topnav">
+                <h1>Servicios en la Nube</h1>
+                <h2>Accede a tu información desde cualquier lugar.</h2>
+            </div>
+        </section>
+
+        <div class="wave" style="height: 150px; overflow: hidden;">
+            <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height:100%; width: 100%;">
+                <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                    style="stroke: none; fill: #fff;"></path>
+            </svg>
+        </div>
+    </header>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="servicios-hero-section">
+        <div class="contenedor">
+            <div class="servicios-hero-content">
+                <div class="servicios-badge">
+                    <i class="fas fa-cloud"></i>
+                    <span>Sin Instalación</span>
+                </div>
+                <h2 class="servicios-hero-title">Tu negocio en cualquier dispositivo</h2>
+                <p class="servicios-hero-description">
+                    Accede a tu sistema emenetPOS desde cualquier computadora, tablet o celular. No necesitas instalar nada, solo abre tu navegador y listo. Tu información está siempre sincronizada y segura en la nube.
+                </p>
+                <div class="servicios-features">
+                    <div class="servicio-feature">
+                        <i class="fas fa-sync"></i>
+                        <span>Sincronización en tiempo real</span>
+                    </div>
+                    <div class="servicio-feature">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Respaldo automático</span>
+                    </div>
+                    <div class="servicio-feature">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>Acceso multiplataforma</span>
+                    </div>
+                </div>
+            </div>
+            <div class="servicios-hero-image">
+                <div class="cloud-mockup">
+                    <div class="cloud-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <div class="device-icons">
+                        <i class="fas fa-desktop"></i>
+                        <i class="fas fa-tablet-alt"></i>
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="sync-animation">
+                        <i class="fas fa-sync fa-spin"></i>
+                        <span>Sincronizando...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVICIOS SECTION ===== -->
+    <section class="servicios-main-section">
+        <div class="contenedor">
+            <h2 class="titulo">Lo que incluye Servicios en la Nube</h2>
+            <div class="servicios-grid">
+                <div class="servicio-card">
+                    <div class="servicio-icon">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                    </div>
+                    <h3>Backup Automático</h3>
+                    <p>Tu información se respalda automáticamente cada día. Nunca perderás tus datos.</p>
+                </div>
+                <div class="servicio-card">
+                    <div class="servicio-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Acceso Web</h3>
+                    <p>Accede desde cualquier navegador web. Sin instalación, sin actualizaciones manuales.</p>
+                </div>
+                <div class="servicio-card">
+                    <div class="servicio-icon">
+                        <i class="fas fa-sync"></i>
+                    </div>
+                    <h3>Sincronización</h3>
+                    <p>Múltiples dispositivos sincronizados en tiempo real. Trabaja desde donde quieras.</p>
+                </div>
+                <div class="servicio-card">
+                    <div class="servicio-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Seguridad</h3>
+                    <p>Encriptación de nivel empresarial. Tu información está protegida 24/7.</p>
+                </div>
+                <div class="servicio-card">
+                    <div class="servicio-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Multi usuario</h3>
+                    <p>Acceso simultáneo para múltiples usuarios con diferentes permisos.</p>
+                </div>
+                <div class="servicio-card">
+                    <div class="servicio-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Soporte 24/7</h3>
+                    <p>Nuestro equipo está disponible para ayudarte en cualquier momento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== BENEFICIOS SECTION ===== -->
+    <section class="servicios-benefits-section">
+        <div class="contenedor">
+            <h2 class="titulo">¿Por qué elegir servicios en la nube?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h3>Ahorro</h3>
+                    <p>Sin costos de servidores ni mantenimiento de hardware. Solo paga por lo que usas.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Escalabilidad</h3>
+                    <p>Escala tu negocio sin preocuparte por la infraestructura. La nube crece contigo.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Mantenimiento</h3>
+                    <p>Las actualizaciones se aplican automáticamente. Siempre tienes la última versión.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Disponibilidad</h3>
+                    <p>99.9% de disponibilidad garantizada. Tu negocio nunca se detiene.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA SECTION ===== -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>¿Listo para llevar tu negocio a la nube?</h2>
+            <p>Comienza a disfrutar de todos los beneficios hoy mismo</p>
+            <div class="cta-buttons">
+                <button class="btn btn-primary btn-large">
+                    <i class="fas fa-cloud"></i> Contratar Ahora
+                </button>
+                <button class="btn btn-outline btn-large">
+                    <i class="fas fa-info-circle"></i> Más Información
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Container (loaded dynamically) -->
+    <div id="footer-container"></div>
+    <!-- FOOTER -->
+    <footer>
+        <div class="contenedor-footer">
+            <div class="content-foo">
+                <h4>Telefono</h4>
+                <p>+34 123 456 789</p>
+            </div>
+            <div class="content-foo">
+                <h4>Correo</h4>
+                <p>soporte@emenetpos.com</p>
+            </div>
+            <div class="content-foo">
+                <h4>Ubicacion</h4>
+                <p>México</p>
+            </div>
+        </div>
+        <h2 class="titulo-final">&copy; emenetPOS | 2026</h2>
+    </footer>
+
+    <script type="module" src="js/menu.js"></script>
+</body>
+
+</html>

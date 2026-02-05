@@ -1,7 +1,7 @@
 /* ===== FOOTER ===== */
 
 footer {
-    background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary));
+    background: linear-gradient(135deg, #878787, #000000);
     padding: var(--spacing-xl) 0 var(--spacing-md);
     color: var(--color-white);
 }
@@ -14,7 +14,7 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
     padding-bottom: var(--spacing-lg);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgb(255, 255, 255);
 }
 
 .content-foo {
@@ -26,7 +26,7 @@ footer {
     font-size: 1.1rem;
     margin-bottom: var(--spacing-sm);
     padding-bottom: var(--spacing-xs);
-    border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 3px solid rgb(255, 255, 255);
     display: inline-block;
     font-weight: 600;
 }

@@ -1,0 +1,44 @@
+/* ===== SECTIONS & HERO ===== */
+
+
+/* Header Section */
+
+header {
+    width: 100%;
+    min-height: 75vh;
+    background: linear-gradient(135deg, hsla(240, 100%, 99%, 0.85), hsla(0, 0%, 0%, 0.29)), url(/images/portada.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+header .textos-header {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: var(--spacing-xl) var(--spacing-md);
+    animation: fadeInUp 1s ease-out;
+}
+
+.textos-header h1 {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    color: var(--color-black);
+    font-weight: 800;
+    margin-bottom: var(--spacing-md);
+    text-shadow: 2px 4px 12px rgba(0, 0, 0, 0.505);
+    letter-spacing: -0.5px;
+}
+
+.textos-header h2 {
+    font-size: clamp(1.25rem, 3vw, 2rem);
+    font-weight: 300;
+    color: var(--color-black);
+    max-width: 700px;
+    text-shadow: 1px 2px 8px rgb(0, 0, 0);
+}
