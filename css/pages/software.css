@@ -171,3 +171,71 @@
     justify-content: center;
     flex-wrap: wrap;
 }
+
+
+/* ============================= */
+
+
+/* RESPONSIVE HERO - MÓVIL */
+
+
+/* ============================= */
+
+@media screen and (max-width: 768px) {
+    /* Hero layout: 2 columnas -> 1 columna */
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+        text-align: center;
+    }
+    /* Texto arriba */
+    .hero-content {
+        order: 1;
+        align-items: center;
+    }
+    /* Imagen abajo */
+    .hero-image {
+        order: 2;
+        margin-top: var(--spacing-lg);
+    }
+    /* Descripción más legible en móvil */
+    .hero-description {
+        max-width: 100%;
+        font-size: 1rem;
+    }
+    /* Centrar botones */
+    .buttons-container {
+        justify-content: center;
+        width: 100%;
+    }
+    .buttons-container .btn {
+        width: 100%;
+        max-width: 320px;
+        justify-content: center;
+    }
+}
+
+
+/* ============================= */
+
+
+/* EXTRA: MÓVILES PEQUEÑOS */
+
+
+/* ============================= */
+
+@media screen and (max-width: 480px) {
+    .hero-section {
+        padding: var(--spacing-lg) 0;
+    }
+    .hero-title {
+        font-size: 1.5rem;
+    }
+    .hero-description {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+    .image-hero {
+        max-width: 90%;
+    }
+}
