@@ -17,12 +17,12 @@
 .btn-primary {
     background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
     color: var(--color-white);
-    box-shadow: 0 4px 15px rgba(0, 104, 178, 0.3);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 104, 178, 0.4);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.989);
 }
 
 .btn-secondary {
@@ -39,7 +39,7 @@
 
 .btn-outline {
     background: transparent;
-    color: var(--color-white);
+    color: var(--color-black);
     border: 2px solid var(--color-white);
 }
 

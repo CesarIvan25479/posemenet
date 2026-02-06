@@ -39,11 +39,16 @@
                 <a href="contacto.html" class="nav-link">Contacto</a>
             </div>
         </nav>
-
+        <!-- Carrusel de fondo -->
+        <div class="header-carousel">
+            <div class="slide active" style="background-image:url('images/portada.png')"></div>
+            <div class="slide" style="background-image:url('images/portada2.png')"></div>
+            <div class="slide" style="background-image:url('images/img3.png')"></div>
+        </div>
         <section class="textos-header">
             <div class="topnav">
                 <h1>emenetPOS tu mejor opción</h1>
-                <h2>Gestiona tus ventas, inventarios y mas.</h2>
+                <h2>Nuestro equipo está listo para ayudarte</h2>
             </div>
         </section>
 
@@ -87,12 +92,47 @@
             </div>
         </div>
     </section>
+    <!--FORMULARIO SECTION-->
+    <section class="contacto-section">
+        <div class="formulario-ind">
+            <h1>Contáctanos directamente</h1>
+
+            <form class="formulario">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <input type="text" placeholder="Nombre completo" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="tel" placeholder="Teléfono" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" placeholder="Correo electrónico" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <textarea placeholder="Escribe tu mensaje" rows="4" required></textarea>
+                </div>
+
+                <button type="submit" class="btn-enviar">
+                Enviar mensaje
+            </button>
+            </form>
+        </div>
+    </section>
+
 
     <!-- Footer Container (loaded dynamically) -->
     <div id="footer-container"></div>
     <!-- FOOTER -->
     <footer>
         <div class="contenedor-footer">
+            <div class="footer-logo">
+                <img src="images/emenetLogoB.png" alt="Logo emenet">
+            </div>
+
             <div class="content-foo">
                 <i class="fa-regular fa-calendar-days"></i>
                 <h4>Horarios de atención</h4>

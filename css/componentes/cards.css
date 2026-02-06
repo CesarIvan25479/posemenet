@@ -13,6 +13,20 @@
     border: 1px solid var(--color-border);
 }
 
+.formulario-ind {
+    background-color: #e8eef7;
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    border: 1px solid var(--color-border);
+}
+
+.formulario-ind::after {
+    transition: none;
+}
+
 .servicio-ind:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-md);

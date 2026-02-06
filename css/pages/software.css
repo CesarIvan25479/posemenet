@@ -142,9 +142,9 @@
 
 .cta-section {
     padding: var(--spacing-xl) var(--spacing-md);
-    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    background-color: rgb(255, 255, 255);
     text-align: center;
-    color: var(--color-white);
+    color: var(--color-black);
 }
 
 .cta-content {
@@ -156,7 +156,7 @@
     font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 800;
     margin-bottom: var(--spacing-md);
-    text-shadow: 2px 4px 12px rgba(0, 0, 0, 0.2);
+    text-shadow: 2px 4px 12px rgb(0, 0, 0);
 }
 
 .cta-content p {
