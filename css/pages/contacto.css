@@ -39,9 +39,9 @@
 }
 
 
-/*GIRD PARA LOS 3 INPUTS*/
+/* Grid para los 3 inputs */
 
-.form-gird {
+.form-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-md);
@@ -52,7 +52,7 @@
 }
 
 
-/*INPUTS Y TEXTAREA*/
+/* Inputs y textarea */
 
 .form-group input,
 .form-group textarea {
@@ -63,4 +63,72 @@
     font-size: 0.95rem;
     transition: var(--transition);
     background: #fff;
+}
+
+
+/* Animación al enfocar */
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+
+/* Placeholder */
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--color-text-light);
+}
+
+
+/* ===== BOTÓN ===== */
+
+.btn-enviar {
+    margin-top: var(--spacing-sm);
+    padding: 14px;
+    width: 220px;
+    border-radius: var(--border-radius-sm);
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-enviar:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+
+/* ===== ANIMACIÓN ===== */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    .formulario-ind {
+        padding: var(--spacing-lg);
+    }
 }

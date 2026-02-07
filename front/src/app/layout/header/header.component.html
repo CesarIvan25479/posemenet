@@ -1,11 +1,29 @@
-<nav>
-  <ol>
-    <li [routerLink]="''" style="cursor: pointer;">Home</li>
-    <li [routerLink]="'/software'" style="cursor: pointer;">Software</li>
-    <li [routerLink]="'/facturacion'" style="cursor: pointer;">Facturación</li>
-    <li [routerLink]="'/tiempo-aire'" style="cursor: pointer;">Tiempo aire</li>
-    <li [routerLink]="'/servicios-nube'" style="cursor: pointer;">Servicios en la Nube</li>
-    <li [routerLink]="'/modificaciones'" style="cursor: pointer;">Modificaciones a la medida</li>
-    <li [routerLink]="'/contacto'" style="cursor: pointer;">contacto</li>
-  </ol>
-</nav>
+<header>
+    <nav>
+        <!-- Logo a la izquierda -->
+        <div class="nav-logo">
+            <a href="index.html">
+                <img src="images/emenetLogoN.png" alt="Logo Emenet">
+            </a>
+        </div>
+
+        <!-- Menú a la derecha -->
+        <div class="nav-menu">
+            <!-- Menú desplegable de Productos -->
+            <div class="dropdown">
+                <input type="checkbox" id="productos-menu" class="dropdown-toggle">
+                <label for="productos-menu" class="dropdown-label">Productos</label>
+                <div class="dropdown-content">
+                    <a [routerLink]="'/software'">Software emenetPOS</a>
+                    <a [routerLink]="'/facturacion'">Facturación Electrónica</a>
+                    <a [routerLink]="'/tiempo-aire'">Recargas de Tiempo Aire</a>
+                    <a [routerLink]="'/servicios-nube'">Servicios en la Nube</a>
+                    <a [routerLink]="'/modificaciones'">Modificaciones a la Medida</a>
+                </div>
+            </div>
+
+            <!-- Link Contacto -->
+            <a [routerLink]="'/contacto'" class="nav-link">Contacto</a>
+        </div>
+    </nav>
+</header>

@@ -1,0 +1,518 @@
+/* ===== RECARGAS PAGE STYLES ===== */
+
+
+/* Recargas Header */
+
+.recargas-header {
+    background: linear-gradient(135deg, hsla(235, 84%, 55%, 0.85), hsla(189, 70%, 41%, 0.85)), url(/images/portada.png);
+}
+
+
+/* Hero Section */
+
+.recargas-hero-section {
+    padding: var(--spacing-xl) 0;
+    background: var(--color-gray-light);
+}
+
+.recargas-hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.recargas-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #ff9800, #f57c00);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%,
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 152, 0, 0.4);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(255, 152, 0, 0);
+    }
+}
+
+.recargas-badge i {
+    font-size: 1.1rem;
+}
+
+.recargas-hero-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: var(--color-primary-dark);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: var(--spacing-md);
+}
+
+.recargas-hero-description {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    line-height: 1.8;
+    margin-bottom: var(--spacing-lg);
+}
+
+.recargas-stats {
+    display: flex;
+    gap: var(--spacing-xl);
+}
+
+.recargas-stat {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #00c853;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+/* Phone Mockup */
+
+.recargas-hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.phone-mockup {
+    width: 280px;
+    height: 500px;
+    background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
+    border-radius: 40px;
+    padding: 12px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.phone-mockup::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 25px;
+    background: #0d0d0d;
+    border-radius: 20px;
+}
+
+.phone-screen {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #e8f5e9, #c8e6c9);
+    border-radius: 30px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 20px 15px;
+    background: #00c853;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.app-content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.carrier-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.carrier-item {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.carrier-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.carrier-item i {
+    font-size: 1.8rem;
+    color: #00c853;
+}
+
+.carrier-item span {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.recarga-animation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+    background: linear-gradient(135deg, #00c853, #009624);
+    border-radius: 12px;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.recarga-animation i {
+    animation: lightning 0.5s infinite alternate;
+}
+
+@keyframes lightning {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0.7;
+        transform: scale(1.1);
+    }
+}
+
+
+/* Section Subtitle */
+
+.section-subtitle {
+    text-align: center;
+    color: var(--color-text-light);
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-xl);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Operadoras Section */
+
+.operadoras-section {
+    padding: var(--spacing-xl) 0;
+    background: var(--color-white);
+}
+
+.operadoras-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.operadora-card {
+    background: var(--color-white);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.operadora-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.operadora-card.telcel {
+    border-color: #ff3d00;
+}
+
+.operadora-card.movistar {
+    border-color: #00a1df;
+}
+
+.operadora-card.att {
+    border-color: #ff6d00;
+}
+
+.operadora-card.unefon {
+    border-color: #00bcd4;
+}
+
+.operadora-logo {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto var(--spacing-md);
+    border-radius: var(--border-radius-circle);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.operadora-card.telcel .operadora-logo {
+    background: linear-gradient(135deg, #ff3d00, #d32f2f);
+}
+
+.operadora-card.movistar .operadora-logo {
+    background: linear-gradient(135deg, #00a1df, #0277bd);
+}
+
+.operadora-card.att .operadora-logo {
+    background: linear-gradient(135deg, #ff6d00, #e65100);
+}
+
+.operadora-card.unefon .operadora-logo {
+    background: linear-gradient(135deg, #00bcd4, #0097a7);
+}
+
+.operadora-card h3 {
+    color: var(--color-primary-dark);
+    font-size: 1.4rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.operadora-card p {
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.operadora-amounts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+
+.amount-tag {
+    background: var(--color-gray-light);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-text);
+    transition: var(--transition);
+}
+
+.amount-tag:hover {
+    background: var(--color-primary);
+    color: white;
+}
+
+
+/* Benefits Section */
+
+.recargas-benefits-section {
+    padding: var(--spacing-xl) 0;
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+}
+
+.benefit-card {
+    background: var(--color-white);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+}
+
+.benefit-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.benefit-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto var(--spacing-md);
+    background: linear-gradient(135deg, #00c853, #009624);
+    border-radius: var(--border-radius-circle);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 200, 83, 0.3);
+}
+
+.benefit-card h3 {
+    color: var(--color-primary-dark);
+    font-size: 1.3rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.benefit-card p {
+    color: var(--color-text-light);
+    line-height: 1.7;
+}
+
+
+/* Servicios Section */
+
+.servicios-section {
+    padding: var(--spacing-xl) 0;
+    background: var(--color-white);
+}
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-xl);
+}
+
+.servicio-card {
+    background: var(--color-gray-light);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    text-align: center;
+    transition: var(--transition);
+    border-left: 4px solid #00c853;
+}
+
+.servicio-card:hover {
+    background: #e8f5e9;
+    transform: translateX(5px);
+}
+
+.servicio-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto var(--spacing-sm);
+    background: linear-gradient(135deg, #00c853, #009624);
+    border-radius: var(--border-radius-circle);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.servicio-card h3 {
+    color: var(--color-primary-dark);
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.servicio-card p {
+    color: var(--color-text-light);
+    font-size: 0.9rem;
+}
+
+
+/* Responsive */
+
+@media screen and (max-width: 1024px) {
+    .recargas-hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .recargas-hero-content {
+        order: 1;
+    }
+    .recargas-hero-image {
+        order: 0;
+        margin-bottom: var(--spacing-lg);
+    }
+    .recargas-stats {
+        justify-content: center;
+    }
+    .recargas-badge {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .recargas-stats {
+        flex-wrap: wrap;
+        gap: var(--spacing-md);
+    }
+    .stat-number {
+        font-size: 2rem;
+    }
+    .operadoras-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .servicios-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .operadoras-grid {
+        grid-template-columns: 1fr;
+    }
+    .servicios-grid {
+        grid-template-columns: 1fr;
+    }
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+    .recargas-stats {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+    .phone-mockup {
+        width: 240px;
+        height: 420px;
+    }
+    .carrier-grid {
+        gap: 8px;
+    }
+    .carrier-item {
+        padding: 10px;
+    }
+    .carrier-item i {
+        font-size: 1.4rem;
+    }
+    .carrier-item span {
+        font-size: 0.75rem;
+    }
+}
