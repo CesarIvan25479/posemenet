@@ -26,6 +26,11 @@ footer {
     margin-bottom: .5rem;
     border-bottom: 3px solid #fff;
     display: inline-block;
+    text-indent: 10px;
+}
+
+a {
+    text-indent: 10px;
 }
 
 .content-foo p {
