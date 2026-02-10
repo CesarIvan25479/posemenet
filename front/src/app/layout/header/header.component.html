@@ -2,28 +2,37 @@
     <nav>
         <!-- Logo a la izquierda -->
         <div class="nav-logo">
-            <a href="index.html">
+            <a [routerLink]="'/'">
                 <img src="images/emenetLogoN.png" alt="Logo Emenet">
             </a>
         </div>
 
+        <!-- Menú hamburguesa para móviles -->
+        <button class="hamburger" (click)="toggleMobileMenu()" [class.active]="isMobileMenuOpen">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
         <!-- Menú a la derecha -->
-        <div class="nav-menu">
+        <div class="nav-menu" [class.mobile-open]="isMobileMenuOpen" (click)="$event.stopPropagation()">
             <!-- Menú desplegable de Productos -->
+            <a [routerLink]="'/'" class="nav-link" (click)="closeMobileMenu()">Inicio</a>
             <div class="dropdown">
-                <input type="checkbox" id="productos-menu" class="dropdown-toggle">
-                <label for="productos-menu" class="dropdown-label">Productos</label>
-                <div class="dropdown-content">
-                    <a [routerLink]="'/software'">Software emenetPOS</a>
-                    <a [routerLink]="'/facturacion'">Facturación Electrónica</a>
-                    <a [routerLink]="'/tiempo-aire'">Recargas de Tiempo Aire</a>
-                    <a [routerLink]="'/servicios-nube'">Servicios en la Nube</a>
-                    <a [routerLink]="'/modificaciones'">Modificaciones a la Medida</a>
+                <label class="dropdown-label" (click)="toggleDropdown(); $event.stopPropagation()">
+                    Productos
+                </label>
+                <div class="dropdown-content" [class.show]="isDropdownOpen">
+                    <a [routerLink]="'/software'" (click)="closeMobileMenu()">Software emenetPOS</a>
+                    <a [routerLink]="'/facturacion'" (click)="closeMobileMenu()">Facturación Electrónica</a>
+                    <a [routerLink]="'/tiempo-aire'" (click)="closeMobileMenu()">Recargas de Tiempo Aire</a>
+                    <a [routerLink]="'/servicios-nube'" (click)="closeMobileMenu()">Servicios en la Nube</a>
+                    <a [routerLink]="'/modificaciones'" (click)="closeMobileMenu()">Modificaciones a la Medida</a>
                 </div>
             </div>
 
             <!-- Link Contacto -->
-            <a [routerLink]="'/contacto'" class="nav-link">Contacto</a>
+            <a [routerLink]="'/contacto'" class="nav-link" (click)="closeMobileMenu()">Contacto</a>
         </div>
     </nav>
 </header>

@@ -412,6 +412,16 @@ header .textos-header {
     margin: 0 auto;
 }
 
+.wave {
+    position: relative;
+    z-index: 2;
+    margin-top: auto;
+}
+
+.wave svg {
+    display: block;
+}
+
 
 /* Animations */
 
@@ -489,19 +499,19 @@ header .textos-header {
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
 }
 
 .btn-outline {
-    background: #000;
+    background: transparent;
     color: var(--color-white);
-    border: 2px solid var(--color-black);
+    border: 2px solid var(--color-white);
 }
 
 .btn-outline:hover {
-    background: var(--color-black);
-    color: #000000;
-    transform: translateY(-5px);
+    background: var(--color-white);
+    color: var(--color-primary);
+    transform: translateY(-2px);
 }
 
 .btn-large {
@@ -510,13 +520,13 @@ header .textos-header {
 }
 
 
-/* CTA Section */
+/* ===== SECCIÓN CTA (LLAMADA A ACCIÓN) ===== */
 
 .cta-section {
     padding: var(--spacing-xl) var(--spacing-md);
-    background-color: rgb(255, 255, 255);
+    background: linear-gradient(135deg, rgba(0, 175, 202, 0.975), rgb(1, 27, 123));
     text-align: center;
-    color: var(--color-black);
+    color: var(--color-white);
 }
 
 .cta-content {
@@ -528,11 +538,18 @@ header .textos-header {
     font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 800;
     margin-bottom: var(--spacing-md);
-    text-shadow: 2px 4px 12px rgb(0, 0, 0);
+    text-shadow: 2px 4px 12px rgba(255, 255, 255, 0.669);
 }
 
 .cta-content p {
     font-size: 1.2rem;
     margin-bottom: var(--spacing-lg);
     opacity: 0.95;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
 }
