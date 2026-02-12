@@ -484,6 +484,7 @@ header .textos-header {
     color: var(--color-text-light);
     line-height: 1.8;
     font-size: 0.95rem;
+    margin-bottom: 1px;
 }
 
 
@@ -775,6 +776,10 @@ header .textos-header {
     cursor: pointer;
     position: relative;
     overflow: hidden;
+    margin-top: 10px;    /* Espacio con el texto de arriba */
+    margin-bottom: 10px; /* Espacio con el texto de abajo */
+  
+     
 }
 
 
