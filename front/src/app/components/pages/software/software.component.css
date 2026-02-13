@@ -263,6 +263,10 @@ header .textos-header {
     display: flex;
     gap: var(--spacing-md);
     flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 
@@ -294,14 +298,14 @@ header .textos-header {
 }
 
 .btn-secondary {
-    background: var(--color-gray-light);
-    color: var(--color-primary);
+    background: #0b006b;
+    color: #e0e0e0;
     border: 2px solid var(--color-primary);
 }
 
 .btn-secondary:hover {
     background: var(--color-primary);
-    color: var(--color-white);
+    color: #08e6ff;
     transform: translateY(-2px);
 }
 

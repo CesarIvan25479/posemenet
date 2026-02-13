@@ -29,20 +29,22 @@
         <div class="hero-content">
             <h2 class="hero-title">Innovación en tu Punto de Venta</h2>
             <p class="hero-description">
-                emenetPOS es la solución integral que tu negocio necesita. Gestiona ventas, inventario, clientes y reportes en una sola plataforma. Con nuestra tecnología moderna y fácil de usar, aumentarás la eficiencia de tu negocio y maximizarás tus ganancias. Confía
+                emenetPOS es la solución integral que tu negocio necesita. Gestiona ventas, inventario, clientes y reportes en una sola plataforma. 
+                Con nuestra tecnología moderna y fácil de usar, aumentarás la eficiencia de tu negocio y maximizarás tus ganancias. Confía
                 en miles de empresas que ya utilizan emenetPOS.
             </p>
             <div class="buttons-container">
-                <button class="btn btn-primary">
-                    <i class="fas fa-download"></i> Descargar Gratis
-                </button>
-                <button class="btn btn-secondary">
-                    <i class="fas fa-shopping-cart"></i> Comprar Ahora
-                </button>
+               
+                <div class="buttons-container">
+    <a [routerLink]="'/contacto'" class="btn btn-secondary">
+        <i class="fas fa-shopping-cart"></i>
+        <span>Comprar Ahora</span>
+    </a>
+</div>
             </div>
         </div>
         <div class="hero-image">
-            <img src="images/soft.jpg" alt="Software emenetPOS" class="image-hero">
+            <img src="images/mybusiness.png" alt="Software emenetPOS" class="image-hero">
         </div>
     </div>
 </section>
@@ -57,29 +59,29 @@
                     <i class="fas fa-chart-line"></i>
                 </div>
                 <h3>Gestión de Ventas</h3>
-                <p>Registra todas tus ventas en tiempo real. Accede a reportes detallados de tu desempeño diario, semanal y mensual. Aumenta tu productividad con herramientas diseñadas para vendedores profesionales.</p>
+                <p>Gestiona tu negocio sin complicaciones. Ventas, compras e inventario con reportes en tiempo real.</p>
             </div>
             <div class="feature-bubble">
                 <div class="bubble-icon">
                     <i class="fas fa-boxes"></i>
                 </div>
                 <h3>Control de Inventario</h3>
-                <p>Mantén tu inventario siempre actualizado. Recibe alertas cuando los productos estén bajos. Evita pérdidas de ventas por falta de stock y gestiona automáticamente tus proveedores.</p>
+                <p>Más control, menos preocupaciones. Evita faltantes, automatiza proveedores y administra fácilmente tus clientes y tus cuentas.</p>
 
             </div>
             <div class="feature-bubble">
                 <div class="bubble-icon">
                     <i class="fas fa-mouse"></i>
                 </div>
-                <h3>Interfaz Intuitiva</h3>
-                <p>Diseño moderno y fácil de entender. No necesitas capacitación compleja. Tus empleados aprenderán a usar el sistema en minutos. Interfaz responsiva para cualquier dispositivo.</p>
+                <h3>Todo en Uno</h3>
+                <p>Todo en un solo sistema. Factura, cobra, gestiona proveedores y vende recargas fácilmente. Hecho a la medida de tu negocio.</p>
             </div>
             <div class="feature-bubble">
                 <div class="bubble-icon">
                     <i class="fas fa-headset"></i>
                 </div>
                 <h3>Soporte Técnico 24/7</h3>
-                <p>Nuestro equipo de expertos está disponible todo el día. Chat en vivo, email y teléfono. Actualizaciones gratuitas y mejoras continuas. Tu satisfacción es nuestra prioridad.</p>
+                <p>Soporte total, siempre contigo. Atención 24/7 y actualizaciones incluidas.</p>
             </div>
 
         </div>
@@ -158,15 +160,24 @@
         <div class="counter-container">
             <div class="counter-inline">
                 <h3>Clientes Satisfechos</h3>
-                <!-- Nota: Empezamos en 0 para que se vea la animación -->
+                <h1 class="counter-text">+ de</h1>
                 <h1 class="counter-number gradient" data-target="2000">2000</h1>
-                <h1 class="counter-text">+</h1>
+                
             </div>
             <div class="counter-inline">
                 <h3>Empresas que confían en nosotros</h3>
+                 <h1 class="counter-text">+ de</h1>
                 <h1 class="counter-number gradient" data-target="1000">1000</h1>
-                <h1 class="counter-text">+</h1>
+                
             </div>
-        </div>
+            
+                    
+        </div><br>
+        <div class="buttons-container">
+    <a [routerLink]="'/contacto'" class="btn btn-outline btn-large">
+        <i class="fas fa-calendar"></i>
+        <span>Me interesa</span>
+    </a>
+</div>
     </div>
 </section>

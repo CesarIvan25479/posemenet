@@ -7,6 +7,7 @@ import { NubeComponent } from './components/pages/nube/nube.component';
 import { ModificacionesComponent } from './components/pages/modificaciones/modificaciones.component';
 import { ContactoComponent } from './components/pages/contacto/contacto.component';
 import { TiempoAireComponent } from './components/pages/tiempo-aire/tiempo-aire.component';
+import { AccesoriosComponent } from './components/pages/accesorios/accesorios.component';
 
 export const routes: Routes = [{
   path: "", component: LayoutComponent,
@@ -18,5 +19,6 @@ export const routes: Routes = [{
     {path: "servicios-nube", component: NubeComponent,},
     {path: "modificaciones", component: ModificacionesComponent,},
     {path: "contacto", component: ContactoComponent},
+    {path: "accesorios", component: AccesoriosComponent}
   ]
 }];

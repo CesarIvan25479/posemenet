@@ -1,9 +1,10 @@
 import { Component, AfterViewInit, ElementRef, ViewChildren, QueryList, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-software',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './software.component.html',
   styleUrl: './software.component.css'
 })
