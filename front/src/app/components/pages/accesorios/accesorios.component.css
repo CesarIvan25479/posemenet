@@ -182,3 +182,123 @@ header .textos-header {
         padding: var(--spacing-lg) var(--spacing-sm);
     }
 }
+
+
+/* ===== CIRCULAR GALLERY SECTION ===== */
+
+.gallery-section {
+    width: 100%;
+    padding: var(--spacing-xl) 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
+    overflow: hidden;
+}
+
+.gallery-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+.gallery-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: #003796;
+    text-align: center;
+    margin-bottom: var(--spacing-sm);
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.gallery-description {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: #003796;
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+    animation: fadeInUp 1s ease-out;
+}
+
+.gallery-container {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+    cursor: grab;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+    background: transparent;
+}
+
+.gallery-container:active {
+    cursor: grabbing;
+}
+
+.gallery-container canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsive adjustments for gallery */
+@media (max-width: 1024px) {
+    .gallery-container {
+        height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-section {
+        padding: var(--spacing-lg) 0;
+    }
+    
+    .gallery-container {
+        height: 400px;
+    }
+    
+    .gallery-title {
+        font-size: 1.75rem;
+    }
+    
+    .gallery-description {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-container {
+        height: 350px;
+    }
+    
+    .gallery-content {
+        padding: 0 var(--spacing-sm);
+    }
+}
+
+.ventas-section {
+    width: 100%;
+    padding: var(--spacing-xl) 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
+    overflow: hidden;
+}
+
+.product-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+.product-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: #003796;
+    text-align: center;
+    margin-bottom: var(--spacing-sm);
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.product-description{
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: #003796;
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+    animation: fadeInUp 1s ease-out;
+}
+
