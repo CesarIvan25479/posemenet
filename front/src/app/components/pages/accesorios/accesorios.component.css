@@ -1,24 +1,6 @@
 /* ===== VARIABLES CSS ===== */
 
-:root {
-    --color-primary: #000000;
-    --color-primary-dark: #003796;
-    --color-primary-light: #114d9c;
-    --color-text: #333;
-    --color-text-light: #666;
-    --color-white: #ffffff;
-    --color-gray-light: #f8f9fa;
-    --color-border: #e0e0e0;
-    --spacing-xs: 0.5rem;
-    --spacing-sm: 1rem;
-    --spacing-md: 1.5rem;
-    --spacing-lg: 2rem;
-    --spacing-xl: 3rem;
-    --border-radius: 12px;
-    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
-    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
-    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
+
 
 * {
     margin: 0;
@@ -272,6 +254,10 @@ header .textos-header {
     }
 }
 
+
+/* ===================================
+   SECTION PRINCIPAL - VENTAS
+   =================================== */
 .ventas-section {
     width: 100%;
     padding: var(--spacing-xl) 0;
@@ -285,20 +271,352 @@ header .textos-header {
     padding: 0 var(--spacing-md);
 }
 
+/* ===================================
+   HEADER - TÍTULO Y DESCRIPCIÓN
+   =================================== */
+.products-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xxl);
+}
+
 .product-title {
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 700;
     color: #003796;
-    text-align: center;
     margin-bottom: var(--spacing-sm);
     animation: fadeInUp 0.8s ease-out;
+    letter-spacing: -0.5px;
 }
 
-.product-description{
+.product-description {
     font-size: clamp(1rem, 2vw, 1.25rem);
     color: #003796;
-    text-align: center;
+    margin-bottom: 0;
+    animation: fadeInUp 1s ease-out 0.1s both;
+    font-weight: 500;
+}
+
+/* ===================================
+   GRID DE PRODUCTOS - 3 COLUMNAS x 2 FILAS
+   =================================== */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--spacing-lg);
     margin-bottom: var(--spacing-xl);
-    animation: fadeInUp 1s ease-out;
+}
+
+/* Asegurar exactamente 3 columnas */
+@media (min-width: 1200px) {
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ===================================
+   TARJETAS DE PRODUCTO
+   =================================== */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-normal);
+    cursor: pointer;
+    animation: fadeInUp 0.6s ease-out backwards;
+}
+
+/* Animación escalonada para las tarjetas */
+.product-card:nth-child(1) { animation-delay: 0.1s; }
+.product-card:nth-child(2) { animation-delay: 0.2s; }
+.product-card:nth-child(3) { animation-delay: 0.3s; }
+.product-card:nth-child(4) { animation-delay: 0.4s; }
+.product-card:nth-child(5) { animation-delay: 0.5s; }
+.product-card:nth-child(6) { animation-delay: 0.6s; }
+
+/* HOVER - Efecto profesional al pasar el cursor */
+.product-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-8px);
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.08);
+}
+
+.product-card:hover .product-overlay {
+    opacity: 1;
+}
+
+.product-card:hover .btn-more-info {
+    background-color: var(--color-primary-dark);
+    transform: scale(1.05);
+}
+
+/* ===================================
+   IMAGEN Y OVERLAY
+   =================================== */
+.product-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background-color: var(--color-background);
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-normal);
+    display: block;
+}
+
+.product-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 55, 150, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+}
+
+.overlay-text {
+    color: var(--color-white);
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* ===================================
+   INFORMACIÓN DEL PRODUCTO
+   =================================== */
+.product-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: var(--spacing-md);
+}
+
+.product-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #003796;
+    margin-bottom: var(--spacing-xs);
+    line-height: 1.3;
+    min-height: 2.6rem;
+    animation: fadeInUp 0.6s ease-out 0.1s both;
+}
+
+.product-description-card {
+    font-size: 0.9rem;
+    color: #003796;
+    margin-bottom: var(--spacing-md);
+    flex-grow: 1;
+    line-height: 1.5;
+    animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+/* ===================================
+   PIE DE TARJETA - PRECIO Y BOTÓN
+   =================================== */
+.product-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-sm);
+    padding-top: var(--spacing-sm);
+    border-top: 1px solid var(--color-border);
+}
+
+.product-price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ff0101;
+    animation: fadeInUp 0.6s ease-out 0.3s both;
+}
+
+/* ===================================
+   BOTÓN "MÁS INFORMACIÓN"
+   =================================== */
+.btn-more-info {
+    flex: 1;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    animation: fadeInUp 0.6s ease-out 0.3s both;
+    box-shadow: 0 2px 8px rgba(0, 55, 150, 0.2);
+}
+
+.btn-more-info:hover {
+    background-color: var(--color-primary-dark);
+    box-shadow: 0 4px 16px rgba(0, 55, 150, 0.3);
+    transform: scale(1.05);
+}
+
+.btn-more-info:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 55, 150, 0.2);
+}
+
+.btn-more-info:focus {
+    outline: 2px solid var(--color-primary-light);
+    outline-offset: 2px;
+}
+
+/* ===================================
+   ANIMACIONES
+   =================================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===================================
+   RESPONSIVO - TABLET
+   =================================== */
+@media (max-width: 1024px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+    }
+    
+    .product-card {
+        animation-delay: none !important;
+    }
+}
+
+/* ===================================
+   RESPONSIVO - MOBILE
+   =================================== */
+@media (max-width: 640px) {
+    .ventas-section {
+        padding: var(--spacing-lg) 0;
+    }
+    
+    .product-content {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .products-header {
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .product-image-wrapper {
+        height: 200px;
+    }
+    
+    .product-title {
+        font-size: 1.5rem;
+    }
+    
+    .product-description {
+        font-size: 0.95rem;
+    }
+}
+
+/* ===================================
+   ESTILOS ADICIONALES PARA MODAL
+   =================================== */
+
+/* Cursor pointer para la imagen del producto */
+.product-image-wrapper {
+    cursor: pointer;
+}
+
+/* Efecto hover mejorado para el overlay */
+.product-image-wrapper:hover .product-overlay {
+    opacity: 1;
+}
+
+.product-image-wrapper:hover .product-image {
+    transform: scale(1.05);
+}
+
+.product-image {
+    transition: transform 0.3s ease;
+}
+
+/* Overlay del producto - estilos mejorados */
+.product-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 55, 150, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.overlay-text {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 12px 24px;
+    border: 2px solid white;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Botón de más información - estilos mejorados */
+.btn-more-info {
+    background: #003796;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-more-info:hover {
+    background: #002a75;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 55, 150, 0.3);
+}
+
+/* Responsive para modal y tarjetas */
+@media (max-width: 768px) {
+    .product-overlay {
+        opacity: 1;
+        background: rgba(0, 55, 150, 0.5);
+    }
+    
+    .overlay-text {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
 }
 

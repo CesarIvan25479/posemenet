@@ -35,8 +35,153 @@
 <!--==== VENTA ACCESORIOS SECTION ====-->
 <section class="ventas-section">
     <div class="product-content">
-        <h2 class="product-title">Tenemos todo para tu punto de venta</h2>
-        <p class="product-description">Explora nuestro catalogo de accesorios</p>
+        <!-- Header Section -->
+        <div class="products-header">
+            <h2 class="product-title">Tenemos todo para tu punto de venta</h2>
+            <p class="product-description">Explora nuestro catálogo de accesorios</p>
+        </div>
 
+        <!-- Products Grid (3 columnas x 2 filas) -->
+        <div class="products-grid">
+            <!-- Product Card 1 -->
+            <article class="product-card">
+                <div class="product-image-wrapper" (click)="openModal(products[0])">
+                    <img 
+                        src="images/barras2.png" 
+                        alt="Lector QR Profesional" 
+                        class="product-image"
+                    >
+                    <div class="product-overlay">
+                        <span class="overlay-text">Ver más</span>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Lector de código profesional</h3>
+                    <p class="product-description-card">Scanner de códigos de alta velocidad y precisión</p>
+                    <div class="product-footer">
+                        <span class="product-price">$229.99 MX</span>
+                        
+                    </div>
+                </div>
+            </article>
+
+            <!-- Product Card 2 -->
+            <article class="product-card">
+                <div class="product-image-wrapper" (click)="openModal(products[1])">
+                    <img 
+                        src="images/impresora2.png" 
+                        alt="Impresora Térmica Compacta" 
+                        class="product-image"
+                    >
+                    <div class="product-overlay">
+                        <span class="overlay-text">Ver más</span>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Impresora Térmica Compacta</h3>
+                    <p class="product-description-card">Impresora térmica para recibos y etiquetas</p>
+                    <div class="product-footer">
+                        <span class="product-price">$1999.99 MX</span>
+                        
+                    </div>
+                </div>
+            </article>
+
+            <!-- Product Card 3 -->
+            <article class="product-card">
+                <div class="product-image-wrapper" (click)="openModal(products[2])">
+                    <img 
+                        src="images/cajon2.png" 
+                        alt="Cajón de Efectivo Electrónico" 
+                        class="product-image"
+                    >
+                    <div class="product-overlay">
+                        <span class="overlay-text">Ver más</span>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Cajón de Efectivo Electrónico</h3>
+                    <p class="product-description-card">Cajón automático con seguridad integrada y control USB</p>
+                    <div class="product-footer">
+                        <span class="product-price">$1499.99 MX</span>
+                        
+                    </div>
+                </div>
+            </article>
+
+            <!-- Product Card 4 -->
+            <article class="product-card">
+                <div class="product-image-wrapper" (click)="openModal(products[3])">
+                    <img 
+                        src="images/consumible2.png" 
+                        alt="Consumibles" 
+                        class="product-image"
+                    >
+                    <div class="product-overlay">
+                        <span class="overlay-text">Ver más</span>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Consumibles</h3>
+                    <p class="product-description-card">Papel Térmico, Etiquetas Térmicas y Cartuchos y Toners</p>
+                    <div class="product-footer">
+                        <span class="product-price">$74.99</span>
+                        
+                    </div>
+                </div>
+            </article>
+
+            <!-- Product Card 5 -->
+            <article class="product-card">
+                <div class="product-image-wrapper" (click)="openModal(products[4])">
+                    <img 
+                        src="images/compu.png" 
+                        alt="Pantalla Táctil 15 pulgadas" 
+                        class="product-image"
+                    >
+                    <div class="product-overlay">
+                        <span class="overlay-text">Ver más</span>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Computadora All In One Paquete Completo</h3>
+                    <p class="product-description-card">Monitor táctil capacitivo, mouse y teclado</p>
+                    <div class="product-footer">
+                        <span class="product-price">$4999.99 MX</span>
+                        
+                    </div>
+                </div>
+            </article>
+
+            <!-- Product Card 6 -->
+            <article class="product-card">
+                <div class="product-image-wrapper" (click)="openModal(products[5])">
+                    <img 
+                        src="images/terminal1.png" 
+                        alt="Caja Registradora Electrónica" 
+                        class="product-image"
+                    >
+                    <div class="product-overlay">
+                        <span class="overlay-text">Ver más</span>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Caja Registradora Electrónica</h3>
+                    <p class="product-description-card">Sistema completo con software integrado</p>
+                    <div class="product-footer">
+                        <span class="product-price">$449.99</span>
+                        
+                    </div>
+                </div>
+            </article>
+        </div>
     </div>
 </section>
+
+<!-- Modal de Producto -->
+<app-product-modal 
+    [isOpen]="isModalOpen" 
+    [product]="selectedProduct"
+    (close)="closeModal()"
+    (contact)="onContact($event)">
+</app-product-modal>
