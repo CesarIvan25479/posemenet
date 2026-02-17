@@ -72,12 +72,12 @@ nav {
     transform: translateX(-50%) scaleX(0);
     width: 80%;
     height: 2px;
-    background: linear-gradient(135deg, #000000, #000000);
+    background: linear-gradient(135deg, #000d24, #000000);
     transition: var(--transition);
 }
 
 .nav-link:hover {
-    background: rgb(0, 0, 0);
+    background: rgb(0, 55, 150);
     color: #fff;
     transform: translateY(-2px);
 }

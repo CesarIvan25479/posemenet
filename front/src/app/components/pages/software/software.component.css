@@ -256,6 +256,14 @@ header .textos-header {
     max-width: 500px;
 }
 
+.precio-pos {
+    font-size: 1.1rem;
+    color: #0f0095;
+    font-weight: 700;
+    text-align: center;
+    margin-top: var(--spacing-lg);
+}
+
 
 /* Contenedor de botones */
 
@@ -286,17 +294,6 @@ header .textos-header {
     text-decoration: none;
 }
 
-.btn-primary {
-    background: #ff0000;
-    color: var(--color-white);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.947);
-}
-
-.btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
-}
-
 .btn-secondary {
     background: #0b006b;
     color: #e0e0e0;
@@ -304,8 +301,8 @@ header .textos-header {
 }
 
 .btn-secondary:hover {
-    background: var(--color-primary);
-    color: #08e6ff;
+    background: #ffffff;;
+    color: #1e01b1;
     transform: translateY(-2px);
 }
 
@@ -317,7 +314,7 @@ header .textos-header {
 
 .btn-outline:hover {
     background: var(--color-white);
-    color: var(--color-primary);
+    color: #0b006b;
     transform: translateY(-2px);
 }
 
@@ -489,7 +486,7 @@ header .textos-header {
 
 .cta-section {
     padding: var(--spacing-xl) var(--spacing-md);
-    background: linear-gradient(135deg, rgba(0, 175, 202, 0.975), rgb(1, 27, 123));
+    background: linear-gradient(135deg, rgba(0, 18, 137, 0.975), rgb(54, 97, 255));
     text-align: center;
     color: var(--color-white);
 }
@@ -571,7 +568,7 @@ header .textos-header {
 
 /* Gradiente azul a morado para los números */
 .counter-number.gradient {
-    background: linear-gradient(135deg, #000000 0%, #001b36 50%, #25eefc 100%);
+    background: linear-gradient(135deg, #ffffffad 0%, #ffffff 50%, #ffffff 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

@@ -192,9 +192,9 @@
 }
 
 .facturacion-burbuja p {
-    color: var(--color-text-light);
+    color: #000267;
     line-height: 1.6;
-    font-size: 0.95rem;
+    font-size: 1.2rem;
     margin: 0;
 }
 
