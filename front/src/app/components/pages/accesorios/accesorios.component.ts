@@ -58,7 +58,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       description: 'Scanner de códigos de alta velocidad y precisión. Ideal para comercios, almacenes y cualquier negocio que requiera lectura rápida y confiable de códigos.',
       price: 229.99,
       image: 'images/barras2.png',
-      images: ['images/barras3.png'],
+      images: ['images/barras3.png', 'images/barras.png'],
       features: [
         'Lectura de códigos 1D y 2D',
         'Velocidad de escaneo de 300 escaneos/segundo',
@@ -71,7 +71,6 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
         'Interfaz': 'USB 2.0',
         'Alcance': 'Hasta 30 cm',
         'Temperatura': '0°C a 50°C'
-        
       }
     },
     {
@@ -79,8 +78,8 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       name: 'Impresora Térmica Compacta',
       description: 'Impresora térmica para recibos y etiquetas. Perfecta para puntos de venta que requieren impresión rápida y silenciosa.',
       price: 1999.99,
-      image: 'images/impresora3.webp',
-      images: ['images/impresora4.webp'],
+      image: 'images/impresora2.png',
+      images: ['images/impresora3.webp', 'images/impresora4.webp', 'images/impresora.png'],
       features: [
         'Velocidad de impresión de 250mm/segundo',
         'Corte automático de papel',
@@ -101,8 +100,8 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       name: 'Cajón de Efectivo Electrónico',
       description: 'Cajón automático con seguridad integrada y control USB. Diseñado para un manejo seguro y eficiente del efectivo en tu negocio.',
       price: 1499.99,
-      image: 'images/cajon3.webp',
-      images: ['images/cajon4.webp'],
+      image: 'images/cajon2.png',
+      images: ['images/cajon3.webp', 'images/cajon4.webp', 'images/cajon.png'],
       features: [
         'Apertura automática mediante impulsor',
         '4 compartimentos para billetes',
@@ -115,28 +114,28 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
         'Capacidad': 'Hasta 500 billetes',
         'Material': 'Acero galvanizado',
         'Apertura': 'Eléctrica/Manual'
-        
       }
     },
     {
       id: 4,
       name: 'Consumibles',
-      description: 'Papel Térmico, Etiquetas Térmicas, Cartuchos y Toners.',
+      description: 'Papel Térmico, Etiquetas Térmicas, Cartuchos y Toners. Todo lo necesario para tu punto de venta.',
       price: 74.99,
-      image: 'images/consumible3.png',
+      image: 'images/consumible2.png',
+      images: ['images/consumible3.png', 'images/consumible.png'],
       features: [
-        'Conexión Bluetooth 5.0',
-        'Alcance de hasta 50 metros',
-        'Batería de larga duración (12 horas)',
-        'Compatible con dispositivos móviles',
-        'Base de carga incluida'
+        'Papel térmico de alta calidad',
+        'Etiquetas térmicas adhesivas',
+        'Cartuchos compatibles múltiples marcas',
+        'Toners de alto rendimiento',
+        'Precios competitivos por mayoreo'
       ],
       specifications: {
-        'Tecnología': 'Bluetooth 5.0',
-        'Alcance': '50 metros',
-        'Batería': '2000 mAh',
-        'Autonomía': '12 horas',
-        'Garantía': '1 año'
+        'Papel térmico': '80mm x 70mm',
+        'Etiquetas': 'Variados tamaños',
+        'Cartuchos': 'HP, Canon, Epson',
+        'Toners': 'Universal',
+        'Garantía': 'Calidad garantizada'
       }
     },
     {
@@ -144,11 +143,14 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       name: 'Computadora All In One',
       description: 'Monitor táctil capacitivo con soporte VESA. Interfaz intuitiva y responsive para tu sistema de punto de venta.',
       price: 4999.99,
-      image: 'images/compu2.png',
-      images: ['images/compu3.png'],
+      image: 'images/compu.png',
+      images: ['images/compu2.png', 'images/compu3.png', 'images/compu4.png'],
       features: [
         'Tecnología táctil capacitiva proyectada',
-        'Resolución HD de 1024x768'
+        'Resolución HD de 1024x768',
+        'Mouse y teclado incluidos',
+        'Software POS preinstalado',
+        'Soporte VESA ajustable'
       ],
       specifications: {
         'Tamaño': '15 pulgadas',
@@ -164,6 +166,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       description: 'Sistema completo con software integrado. La solución todo-en-uno para gestionar tu punto de venta de manera profesional.',
       price: 449.99,
       image: 'images/terminal1.png',
+      images: ['images/terminal1.png'],
       features: [
         'Software de gestión incluido',
         'Pantalla táctil de 10 pulgadas',
