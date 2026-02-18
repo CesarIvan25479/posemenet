@@ -11,6 +11,7 @@ export interface Product {
   features?: string[];
   feature?: string[];
   specifications?: { [key: string]: string };
+  functions?: string[]; // Funciones del producto/sistema
 }
 
 @Component({
@@ -77,15 +78,26 @@ export interface Product {
             </div>
           </div>
 
-          <!-- Parte inferior: Especificaciones y Botones -->
+          <!-- Parte inferior: Especificaciones, Funciones y Botones -->
           <div class="modal-footer">
-            <div class="modal-specifications" *ngIf="product.specifications">
-              <h3>Especificaciones técnicas:</h3>
-              <div class="specs-grid">
-                <div class="spec-item" *ngFor="let spec of product.specifications | keyvalue">
-                  <span class="spec-key">{{ spec.key }}:</span>
-                  <span class="spec-value">{{ spec.value }}</span>
+            <div class="footer-grid">
+              <!-- Especificaciones técnicas -->
+              <div class="modal-specifications" *ngIf="product.specifications">
+                <h3>Especificaciones técnicas:</h3>
+                <div class="specs-list">
+                  <div class="spec-item" *ngFor="let spec of product.specifications | keyvalue">
+                    <span class="spec-key">{{ spec.key }}:</span>
+                    <span class="spec-value">{{ spec.value }}</span>
+                  </div>
                 </div>
+              </div>
+              
+              <!-- Funciones del sistema -->
+              <div class="modal-functions" *ngIf="product.functions?.length">
+                <h3>Funciones del sistema:</h3>
+                <ul class="functions-list">
+                  <li *ngFor="let func of product.functions">{{ func }}</li>
+                </ul>
               </div>
             </div>
             
@@ -383,25 +395,31 @@ export interface Product {
       font-weight: bold;
     }
 
-    /* ===== FOOTER - ESPECIFICACIONES Y BOTONES ===== */
+    /* ===== FOOTER - ESPECIFICACIONES, FUNCIONES Y BOTONES ===== */
     .modal-footer {
       padding: 20px 25px;
       border-top: 1px solid #eee;
       background: #fafafa;
     }
 
-    .modal-specifications h3 {
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .modal-specifications h3, .modal-functions h3 {
       color: #333;
       font-size: 1rem;
       margin-bottom: 12px;
       font-weight: 600;
     }
 
-    .specs-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 8px 20px;
-      margin-bottom: 20px;
+    .specs-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
     }
 
     .spec-item {
@@ -417,6 +435,37 @@ export interface Product {
 
     .spec-value {
       color: #555;
+    }
+
+    .modal-functions {
+      border-left: 1px solid #e0e0e0;
+      padding-left: 20px;
+    }
+
+    .functions-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .functions-list li {
+      padding: 4px 0;
+      padding-left: 18px;
+      position: relative;
+      color: #555;
+      font-size: 0.85rem;
+    }
+
+    .functions-list li::before {
+      content: '\\2713';
+      position: absolute;
+      left: 0;
+      color: #28a745;
+      font-weight: bold;
+      font-size: 0.75rem;
     }
 
     .modal-actions {
@@ -601,8 +650,16 @@ export interface Product {
         font-size: 1.4rem;
       }
 
-      .specs-grid {
+      .footer-grid {
         grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      .modal-functions {
+        border-left: none;
+        padding-left: 0;
+        border-top: 1px solid #e0e0e0;
+        padding-top: 15px;
       }
 
       .modal-footer {

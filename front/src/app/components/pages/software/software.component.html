@@ -36,10 +36,10 @@
             
                
             <div class="buttons-container">
-                <a [routerLink]="'/contacto'" class="btn btn-secondary">
+                <button class="btn btn-secondary" (click)="openModal()">
                     <i class="fas fa-shopping-cart"></i>
                     <span>Más información</span>
-                </a>
+                </button>
             </div>
             
         </div>
@@ -184,3 +184,11 @@
 </div>
     </div>
 </section>
+
+<!-- Modal de Producto -->
+<app-product-modal 
+    [isOpen]="isModalOpen" 
+    [product]="selectedProduct"
+    (close)="closeModal()"
+    (contact)="onContact($event)">
+</app-product-modal>
