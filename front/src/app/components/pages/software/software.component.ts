@@ -22,7 +22,7 @@ export class SoftwareComponent implements OnInit, AfterViewInit, OnDestroy {
   posPackage: Product = {
     id: 1,
     name: 'emenetPOS Punto de Venta',
-    description: 'Solución integral para la administración eficiente de tu negocio. Paquete completo con todo lo necesario para iniciar operaciones de manera profesional.',
+    description: 'Punto de venta completo y listo para operar, impulsado por MyBusiness POS. Incluye equipo esencial y soporte especializado para que empieces a vender desde el primer día, todo en un solo paquete.',
     price: 30500,
     image: 'images/mybusiness2.png',
     images: ['images/monitor2.png', 'images/pc.png', 'images/cajon5.png', 'images/impresora5.png','images/lector.png','images/teclado.png'],
@@ -34,10 +34,8 @@ export class SoftwareComponent implements OnInit, AfterViewInit, OnDestroy {
       'Soporte técnico especializado'
     ],
     specifications: {
-      'Computadora': 'PC GHIA Frontier Slim 2.0',
+      'Computadora': 'PC GHIA Frontier Slim 2.0 1 TB Disco RAM 8 GB',
       'Procesador': 'Intel Pentium GOLD Core 3.7 GHz',
-      'Memoria RAM': '8 GB',
-      'Almacenamiento': '1 TB Disco duro',
       'Monitor': '23.8 pulgadas',
       'Periféricos': 'Teclado y ratón incluidos',
       'Sistema Operativo': 'Windows 11',

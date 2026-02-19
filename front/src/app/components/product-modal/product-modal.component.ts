@@ -358,7 +358,7 @@ export interface Product {
 
     .modal-price {
       font-size: 1.6rem;
-      color: #ff0101;
+      color: #001b73;
       font-weight: 700;
     }
 
