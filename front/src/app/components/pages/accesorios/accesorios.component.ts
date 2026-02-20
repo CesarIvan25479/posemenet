@@ -206,6 +206,78 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
         'Sistema': 'Android 11',
         'Garantía': '2 años'
       }
+    },
+    {
+      id: 7,
+      name: 'PC GHIA Frontier Slim 2.0',
+      description: 'Computadora de escritorio con excelente rendimiento para punto de venta y oficina. Disco 1 TB y RAM 8 GB para un desempeño óptimo.',
+      price: 5999.99,
+      image: 'images/pc.png',
+      images: ['images/pc.png'],
+      features: [
+        'Procesador de alto rendimiento',
+        'Disco duro de 1 TB de capacidad',
+        'Memoria RAM de 8 GB',
+        'Diseño slim compacto',
+        'Ideal para punto de venta y oficina'
+      ],
+      specifications: {
+        'Disco Duro': '1 TB',
+        'RAM': '8 GB',
+        'Modelo': 'Frontier Slim 2.0'
+      },
+      moreSpecifications: {
+        'Marca': 'GHIA',
+        'Garantía': '1 año'
+      }
+    },
+    {
+      id: 8,
+      name: 'Monitor GHIA 23.8 pulgadas',
+      description: 'Monitor de alta definición con pantalla de 23.8 pulgadas. Perfecto para punto de venta y uso empresarial con excelente calidad de imagen.',
+      price: 2499.99,
+      image: 'images/monitor.png',
+      images: ['images/monitor2.png'],
+      features: [
+        'Pantalla de 23.8 pulgadas',
+        'Resolución Full HD',
+        'Conexión HDMI y VGA',
+        'Diseño elegante y moderno',
+        'Bajo consumo energético'
+      ],
+      specifications: {
+        'Tamaño': '23.8 pulgadas',
+        'Resolución': 'Full HD 1920x1080',
+        'Conexiones': 'HDMI, VGA'
+      },
+      moreSpecifications: {
+        'Marca': 'GHIA',
+        'Garantía': '1 año'
+      }
+    },
+    {
+      id: 9,
+      name: 'Rollos Térmicos 76mm',
+      description: 'Caja de consumibles con rollos térmicos de 76mm, compatibles con nuestras impresoras térmicas. Alta calidad de impresión.',
+      price: 149.99,
+      image: 'images/consumible.png',
+      images: ['images/consumible2.png', 'images/consumible3.png'],
+      features: [
+        'Rollos térmicos de 76mm',
+        'Compatible con impresoras térmicas',
+        'Alta calidad de impresión',
+        'Larga duración del papel',
+        'Empaque por caja económica'
+      ],
+      specifications: {
+        'Ancho': '76mm',
+        'Tipo': 'Papel térmico',
+        'Compatibilidad': 'Impresoras térmicas 76mm'
+      },
+      moreSpecifications: {
+        'Presentación': 'Caja con múltiples rollos',
+        'Calidad': 'Premium'
+      }
     }
   ];
 
