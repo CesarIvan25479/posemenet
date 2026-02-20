@@ -55,8 +55,8 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     {
       id: 1,
       name: 'Lector de código profesional',
-      description: 'Fácil de operar por su función Plug and Play, identifica códigos de barra ID en celulares y monitores. Soporta escaneo manual y automático. Auto sensor con base.',
-      price: 229.99,
+      description: 'Fácil de operar por su función Plug and Play, identifica códigos de barra ID en celulares y monitores.',
+      price: 1500.00,
       image: 'images/barras3.png',
       images: ['images/barras4.png', 'images/barras5.png'],
       features: [
@@ -67,36 +67,46 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
         'Diseño ergonómico para uso prolongado'
       ],
       specifications: {
-        'Modelo': 'GSLWB1', 
-        'Fuente de luz': '650nm Laser diodo visible'
+        'Tipo de escaneo': 'Bidireccional',
+        'IP Class': 'IP52', 
+        'Fuente de luz': '650nm Laser diodo visible',
+        'Material': 'ABS + PC',
       },
       moreSpecifications: {
-        'Tipo de escaneo': 'Bidireccional',
-        'Velocidad': '300 escaneos/segundo'
+        
+        'Voltaje': '5V CC',
+        'Peso' : '246gr',
+        'Cable' : '2 metros',
+        'Medidas' : '175mm x 73mm x 102mm'
       }
     },
     {
       id: 2,
       name: 'Impresora Térmica Compacta',
       description: 'Impresora térmica para recibos y etiquetas. Perfecta para puntos de venta que requieren impresión rápida y silenciosa.',
-      price: 1999.99,
-      image: 'images/impresora2.png',
-      images: ['images/impresora3.webp', 'images/impresora4.webp', 'images/impresora.png'],
+      price: 1200.00,
+      image: 'images/impresora3.png',
+      images: ['images/impresora4.png', 'images/impresora5.png'],
       features: [
-        'Velocidad de impresión de 250mm/segundo',
-        'Corte automático de papel',
+        'Impresión térmica directa sin tinta.',
+        'Resolución 203 DPI nítida y profesional.',
         'Conexión USB y Ethernet',
-        'Compatible con ESC/POS',
+        'Cortador automático integrado',
         'Bandeja de papel de fácil carga'
       ],
       specifications: {
-        'Ancho de papel': '80mm',
+        'Tamaño impresión': '76mm',
         'Velocidad': '250mm/s',
-        'Resolución': '203 DPI'
+        'Operación': 'Continua estable',
+        'Tecnología': 'Termica',
+        
+        
       },
       moreSpecifications: {
         'Conexión': 'USB + Ethernet',
-        'Garantía': '1 año'
+        'Interfaces' : 'Puerto USB 2.0 y Ethernet LAN (RJ-45)',
+        'Código de barras' : '1D/2D, Code 39, EAN13, PDF417, QR, UPC',
+        'Movilidad' : 'Alámbrico'
       }
   
     },
@@ -104,22 +114,24 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       id: 3,
       name: 'Cajón de Efectivo Electrónico',
       description: 'Cajón automático con seguridad integrada y control USB. Diseñado para un manejo seguro y eficiente del efectivo en tu negocio.',
-      price: 1499.99,
-      image: 'images/cajon2.png',
-      images: ['images/cajon3.webp', 'images/cajon4.webp', 'images/cajon.png'],
+      price: 750.00,
+      image: 'images/cajon5.png',
+      images: ['images/cajon3.png', 'images/cajon4.png'],
       features: [
         'Apertura automática mediante impulsor',
         '4 compartimentos para billetes',
         '8 compartimentos para monedas',
-        'Cerradura con 2 llaves incluidas',
-        'Construcción en acero resistente'
+        'Cerradura de 3 posiciones',
+        'Construcción en metal resistente'
       ],
       specifications: {
-        'Dimensiones': '410 x 420 x 100 mm',
-        'Capacidad': 'Hasta 500 billetes'
+        'Interfaces': 'RJ11 para impresora de recibos',
+        'Capacidad': 'Hasta 500 billetes',
+        'Ranuras': 'Ranura para documentos'
       },
       moreSpecifications: {
-        'Material': 'Acero galvanizado',
+        'Material': 'Metal resistente',
+        'Dimensiones': '355 x 370 x 80 mm (L x W x H)',
         'Apertura': 'Eléctrica/Manual'
       }
     },

@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, OnInit, OnDestroy } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit, OnDestroy, OnChanges, SimpleChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
@@ -737,7 +737,7 @@ export interface Product {
     }
   `]
 })
-export class ProductModalComponent implements OnInit, OnDestroy {
+export class ProductModalComponent implements OnInit, OnDestroy, OnChanges {
   @Input() isOpen = false;
   @Input() product: Product | null = null;
   @Input() showAccesoriosButton = false;
@@ -755,10 +755,22 @@ export class ProductModalComponent implements OnInit, OnDestroy {
   private touchEndY = 0;
   private minSwipeDistance = 50; // Mínima distancia para considerar un swipe
   private autoPlayInterval: any;
-  private autoPlayDelay = 4000; // 4 segundos
+  private autoPlayDelay = 2500; // 2.5 segundos
 
   ngOnInit(): void {
-    this.startAutoPlay();
+    // El autoplay se iniciará cuando el modal se abra con un producto
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    // Iniciar autoplay cuando el modal se abre con un producto
+    if (changes['isOpen'] || changes['product']) {
+      if (this.isOpen && this.product) {
+        this.currentIndex = 0;
+        this.startAutoPlay();
+      } else {
+        this.stopAutoPlay();
+      }
+    }
   }
 
   ngOnDestroy(): void {
