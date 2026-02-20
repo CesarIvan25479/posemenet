@@ -1,5 +1,6 @@
 import { Component, Input, Output, EventEmitter, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 export interface Product {
   id: number;
@@ -11,13 +12,14 @@ export interface Product {
   features?: string[];
   feature?: string[];
   specifications?: { [key: string]: string };
+  moreSpecifications?: { [key: string]: string }; // Especificaciones adicionales
   functions?: string[]; // Funciones del producto/sistema
 }
 
 @Component({
   selector: 'app-product-modal',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   template: `
     <div class="modal-overlay" *ngIf="isOpen" (click)="onOverlayClick($event)">
       <div class="modal-container">
@@ -92,6 +94,17 @@ export interface Product {
                 </div>
               </div>
               
+              <!-- Más especificaciones -->
+              <div class="modal-more-specifications" *ngIf="product.moreSpecifications">
+                <h3>Más especificaciones:</h3>
+                <div class="specs-list">
+                  <div class="spec-item" *ngFor="let spec of product.moreSpecifications | keyvalue">
+                    <span class="spec-key">{{ spec.key }}:</span>
+                    <span class="spec-value">{{ spec.value }}</span>
+                  </div>
+                </div>
+              </div>
+              
               <!-- Funciones del sistema -->
               <div class="modal-functions" *ngIf="product.functions?.length">
                 <h3>Funciones del sistema:</h3>
@@ -103,6 +116,7 @@ export interface Product {
             
             <div class="modal-actions">
               <button class="btn-primary" (click)="onContact()">Contactar para comprar</button>
+             <a class="btn-secondary" [routerLink]="'/accesorios'" (click)="closeModal()" *ngIf="showAccesoriosButton">Ver más accesorios</a>
               <button class="btn-secondary" (click)="closeModal()">Seguir explorando</button>
             </div>
           </div>
@@ -437,6 +451,18 @@ export interface Product {
       color: #555;
     }
 
+    .modal-more-specifications {
+      border-left: 1px solid #e0e0e0;
+      padding-left: 20px;
+    }
+
+    .modal-more-specifications h3 {
+      color: #333;
+      font-size: 1rem;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
     .modal-functions {
       border-left: 1px solid #e0e0e0;
       padding-left: 20px;
@@ -498,15 +524,29 @@ export interface Product {
     }
 
     .btn-secondary {
-      background: transparent;
-      color: #003796;
-      border: 2px solid #003796;
-    }
+  background: transparent;
+  color: #003796;
+  border: 2px solid #003796;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 6px;
+}
 
-    .btn-secondary:hover {
-      background: #003796;
-      color: white;
-    }
+.btn-secondary:hover {
+  background: #003796;
+  color: white;
+}
+
+.btn-secondary:focus {
+  outline: 2px solid #003796;
+  outline-offset: 2px;
+}
 
     /* ===== ZOOM MODAL ===== */
     .zoom-overlay {
@@ -662,6 +702,13 @@ export interface Product {
         padding-top: 15px;
       }
 
+      .modal-more-specifications {
+        border-left: none;
+        padding-left: 0;
+        border-top: 1px solid #e0e0e0;
+        padding-top: 15px;
+      }
+
       .modal-footer {
         padding: 15px;
       }
@@ -693,6 +740,7 @@ export interface Product {
 export class ProductModalComponent implements OnInit, OnDestroy {
   @Input() isOpen = false;
   @Input() product: Product | null = null;
+  @Input() showAccesoriosButton = false;
   @Output() close = new EventEmitter<void>();
   @Output() contact = new EventEmitter<Product>();
 

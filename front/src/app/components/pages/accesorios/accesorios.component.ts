@@ -55,10 +55,10 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     {
       id: 1,
       name: 'Lector de código profesional',
-      description: 'Scanner de códigos de alta velocidad y precisión. Ideal para comercios, almacenes y cualquier negocio que requiera lectura rápida y confiable de códigos.',
+      description: 'Fácil de operar por su función Plug and Play, identifica códigos de barra ID en celulares y monitores. Soporta escaneo manual y automático. Auto sensor con base.',
       price: 229.99,
-      image: 'images/barras2.png',
-      images: ['images/barras3.png', 'images/barras.png'],
+      image: 'images/barras3.png',
+      images: ['images/barras4.png', 'images/barras5.png'],
       features: [
         'Lectura de códigos 1D y 2D',
         'Velocidad de escaneo de 300 escaneos/segundo',
@@ -67,10 +67,12 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
         'Diseño ergonómico para uso prolongado'
       ],
       specifications: {
-        'Tipo de escaneo': 'Imager 2D',
-        'Interfaz': 'USB 2.0',
-        'Alcance': 'Hasta 30 cm',
-        'Temperatura': '0°C a 50°C'
+        'Modelo': 'GSLWB1', 
+        'Fuente de luz': '650nm Laser diodo visible'
+      },
+      moreSpecifications: {
+        'Tipo de escaneo': 'Bidireccional',
+        'Velocidad': '300 escaneos/segundo'
       }
     },
     {
@@ -90,10 +92,13 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       specifications: {
         'Ancho de papel': '80mm',
         'Velocidad': '250mm/s',
-        'Resolución': '203 DPI',
+        'Resolución': '203 DPI'
+      },
+      moreSpecifications: {
         'Conexión': 'USB + Ethernet',
         'Garantía': '1 año'
       }
+  
     },
     {
       id: 3,
@@ -111,7 +116,9 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       ],
       specifications: {
         'Dimensiones': '410 x 420 x 100 mm',
-        'Capacidad': 'Hasta 500 billetes',
+        'Capacidad': 'Hasta 500 billetes'
+      },
+      moreSpecifications: {
         'Material': 'Acero galvanizado',
         'Apertura': 'Eléctrica/Manual'
       }
@@ -133,7 +140,9 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       specifications: {
         'Papel térmico': '80mm x 70mm',
         'Etiquetas': 'Variados tamaños',
-        'Cartuchos': 'HP, Canon, Epson',
+        'Cartuchos': 'HP, Canon, Epson'
+      },
+      moreSpecifications: {
         'Toners': 'Universal',
         'Garantía': 'Calidad garantizada'
       }
@@ -155,7 +164,9 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       specifications: {
         'Tamaño': '15 pulgadas',
         'Resolución': '1024 x 768',
-        'Brillo': '250 cd/m²',
+        'Brillo': '250 cd/m²'
+      },
+      moreSpecifications: {
         'Contraste': '700:1',
         'Garantía': '3 años'
       }
@@ -177,7 +188,9 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       specifications: {
         'Procesador': 'Quad Core 1.8GHz',
         'RAM': '2 GB',
-        'Almacenamiento': '16 GB',
+        'Almacenamiento': '16 GB'
+      },
+      moreSpecifications: {
         'Sistema': 'Android 11',
         'Garantía': '2 años'
       }
