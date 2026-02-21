@@ -525,12 +525,12 @@ header .textos-header {
     }
     
     .products-grid {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-md);
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-sm);
     }
     
     .product-image-wrapper {
-        height: 200px;
+        height: 150px;
     }
     
     .product-title {
@@ -539,6 +539,32 @@ header .textos-header {
     
     .product-description {
         font-size: 0.95rem;
+    }
+    
+    .product-info {
+        padding: var(--spacing-sm);
+    }
+    
+    .product-name {
+        font-size: 0.9rem;
+        min-height: auto;
+    }
+    
+    .product-description-card {
+        font-size: 0.75rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    
+    .product-price {
+        font-size: 1rem;
+    }
+    
+    .product-footer {
+        flex-direction: column;
+        gap: var(--spacing-xs);
     }
 }
 

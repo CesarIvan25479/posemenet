@@ -486,7 +486,7 @@ header .textos-header {
 
 .cta-section {
     padding: var(--spacing-xl) var(--spacing-md);
-    background: linear-gradient(135deg, rgba(0, 18, 137, 0.975), rgb(54, 97, 255));
+    background: linear-gradient(135deg, rgba(0, 18, 137, 0.975), rgb(20, 25, 67));
     text-align: center;
     color: var(--color-white);
 }
@@ -619,18 +619,25 @@ header .textos-header {
     .cta-buttons .btn {
         width: 100%;
     }
-    /* Contadores responsivos - stack vertical en móvil */
+    /* Contadores responsivos - 2 columnas en móvil */
     .counter-container {
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         gap: var(--spacing-md);
     }
     .counter-inline {
         width: 100%;
-        max-width: 280px;
+        max-width: none;
         padding: var(--spacing-md);
     }
+    .counter-inline h3 {
+        font-size: 0.85rem;
+    }
     .counter-number.gradient {
-        font-size: 2.5rem;
+        font-size: 2rem;
+    }
+    .counter-text {
+        font-size: 1rem;
     }
 }
 

@@ -8,6 +8,13 @@
     background: var(--color-white);
 }
 
+.servicios-hero-section .contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
 .servicios-hero-content {
     max-width: 600px;
 }
@@ -252,7 +259,7 @@
 /* Responsive */
 
 @media screen and (max-width: 1024px) {
-    .contenedor {
+    .servicios-hero-section .contenedor {
         display: flex;
         flex-direction: column;
         gap: var(--spacing-lg);
