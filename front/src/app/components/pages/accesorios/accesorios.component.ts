@@ -138,21 +138,21 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     {
       id: 4,
       name: 'Consumibles',
-      description: 'Papel Térmico, Etiquetas Térmicas, Cartuchos y Toners. Todo lo necesario para tu punto de venta.',
-      price: 74.99,
-      image: 'images/consumible2.png',
-      images: ['images/consumible3.png', 'images/consumible.png'],
+      description: 'Papel Térmico, Etiquetas. Todo lo necesario para tu punto de venta.',
+      price: 80.00,
+      image: 'images/rollo2.png',
+      images: ['images/rollo3.png', 'images/rollo4.png'],
       features: [
         'Papel térmico de alta calidad',
         'Etiquetas térmicas adhesivas',
-        'Cartuchos compatibles múltiples marcas',
-        'Toners de alto rendimiento',
+        'Papel termico de calidad',
+        '',
         'Precios competitivos por mayoreo'
       ],
       specifications: {
         'Papel térmico': '80mm x 70mm',
         'Etiquetas': 'Variados tamaños',
-        'Cartuchos': 'HP, Canon, Epson'
+        'Calidad': 'Alta'
       },
       moreSpecifications: {
         'Toners': 'Universal',
@@ -164,8 +164,8 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       name: 'Computadora All In One',
       description: 'Monitor táctil capacitivo con soporte VESA. Interfaz intuitiva y responsive para tu sistema de punto de venta.',
       price: 4999.99,
-      image: 'images/compu.png',
-      images: ['images/compu2.png', 'images/compu3.png', 'images/compu4.png'],
+      image: 'images/compu2.png',
+      images: ['images/compu3.png', 'images/compu4.png'],
       features: [
         'Tecnología táctil capacitiva proyectada',
         'Resolución HD de 1024x768',
@@ -185,11 +185,11 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     },
     {
       id: 6,
-      name: 'Caja Registradora Electrónica',
+      name: 'Terminal Billpocket nano',
       description: 'Sistema completo con software integrado. La solución todo-en-uno para gestionar tu punto de venta de manera profesional.',
-      price: 449.99,
-      image: 'images/terminal1.png',
-      images: ['images/terminal1.png'],
+      price: 450.00,
+      image: 'images/terminal3.png',
+      images: ['images/terminal2.png'],
       features: [
         'Software de gestión incluido',
         'Pantalla táctil de 10 pulgadas',

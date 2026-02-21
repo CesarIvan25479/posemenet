@@ -401,7 +401,7 @@ header .textos-header {
 .imagen-about-us {
     flex: 1;
     min-width: 300px;
-    max-width: 500px;
+    max-width: 300px;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-md);
     object-fit: cover;
