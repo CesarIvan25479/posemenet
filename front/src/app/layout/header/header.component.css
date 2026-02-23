@@ -8,13 +8,17 @@ nav, nav * {
 nav i,
 nav .fa-solid,
 nav .fa-regular,
-nav .fa-brands,
 nav [class*="fa-"] {
     font-family: 'Font Awesome 6 Free' !important;
     font-weight: 900;
 }
 
 nav .fa-regular {
+    font-weight: 400;
+}
+
+nav .fa-brands {
+    font-family: 'Font Awesome 6 Brands' !important;
     font-weight: 400;
 }
 
@@ -43,17 +47,17 @@ nav {
     gap: var(--spacing-lg);
     box-sizing: border-box;
 }
-
+/*linea del nav*/
 nav::after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, #002a75, #1a6bff, #002a75);
+    height: 1px;
+    background: linear-gradient(90deg, #ffffff, #ffffff, #fde4e4);
     background-size: 200% auto;
-    animation: shimmer 4s linear infinite;
+    
 }
 
 @keyframes shimmer {
@@ -128,6 +132,10 @@ nav::after {
     gap: 4px;
     flex-shrink: 0;
     position: relative;
+}
+
+.mobile-footer {
+    display: none;
 }
 
 .nav-link {
@@ -538,6 +546,57 @@ nav::after {
 
     .dropdown-content a:last-child {
         border-radius: 0 0 10px 10px;
+    }
+
+    /* Mobile Footer - Redes Sociales */
+    .mobile-footer {
+        margin-top: auto;
+        padding: 20px 0 10px;
+        border-top: 1px solid rgba(255, 255, 255, 0.542);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .mobile-social-links {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .mobile-social-links a {
+        width: 42px;
+        height: 42px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 94, 255, 0.08);
+        border-radius: 50%;
+        color: #ffffff;
+        font-size: 1.1rem;
+        transition: all 0.25s ease;
+        text-decoration: none;
+    }
+
+    .mobile-social-links a:hover {
+        background: #001845;
+        color: #ffffff;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 12px rgba(0, 42, 117, 0.25);
+    }
+
+    .mobile-social-links a i {
+        font-family: 'Font Awesome 6 Brands' !important;
+        font-weight: 400;
+    }
+
+    .titulo-final {
+        font-size: 0.75rem;
+        color: #ffffff;
+        text-align: center;
+        margin: 0;
+        letter-spacing: 0.02em;
     }
 }
 

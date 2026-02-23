@@ -24,8 +24,8 @@ export class SoftwareComponent implements OnInit, AfterViewInit, OnDestroy {
     name: 'emenetPOS Punto de Venta',
     description: 'Punto de venta completo y listo para operar, impulsado por MyBusiness POS. Incluye equipo esencial y soporte especializado para que empieces a vender desde el primer día, todo en un solo paquete.',
     price: 30500,
-    image: 'images/mybusiness2.png',
-    images: ['images/monitor2.png', 'images/pc.png', 'images/cajon5.png', 'images/impresora3.png','images/barras3.png','images/teclado.png'],
+    image: 'images/software/mybusiness2.png',
+    images: ['images/software/monitor2.png', 'images/software/pc.png', 'images/cajon5.png', 'images/impresora3.png','images/barras3.png','images/teclado.png'],
     features: [
       'Configuración, instalación y puesta en marcha del sistema completo',
       'Implementación del sistema de recargas de tiempo aire',
