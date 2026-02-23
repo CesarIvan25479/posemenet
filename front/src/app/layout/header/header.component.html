@@ -18,23 +18,23 @@
         <!-- Menú a la derecha -->
         <div class="nav-menu" [class.mobile-open]="isMobileMenuOpen" (click)="$event.stopPropagation()">
             <!-- Menú desplegable de Productos -->
-            <a [routerLink]="'/'" class="nav-link" (click)="closeMobileMenu()">Inicio</a>
+            <a [routerLink]="'/'" class="nav-link" (click)="closeMobileMenu()"><i class="fa-solid fa-house"></i> Inicio</a>
             <div class="dropdown">
                 <label class="dropdown-label" (click)="toggleDropdown(); $event.stopPropagation()">
                     Productos
                 </label>
                 <div class="dropdown-content" [class.show]="isDropdownOpen">
-                    <a [routerLink]="'/software'" (click)="closeMobileMenu()">Software emenetPOS</a>
-                    <a [routerLink]="'/accesorios'" (click)="closeMobileMenu()">Accesorios</a>
-                    <a [routerLink]="'/facturacion'" (click)="closeMobileMenu()">Facturación Electrónica</a>
-                    <a [routerLink]="'/tiempo-aire'" (click)="closeMobileMenu()">Recargas de Tiempo Aire</a>
-                    <a [routerLink]="'/servicios-nube'" (click)="closeMobileMenu()">Servicios en la Nube</a>
-                    <a [routerLink]="'/modificaciones'" (click)="closeMobileMenu()">Modificaciones a la Medida</a>
+                    <a [routerLink]="'/software'" (click)="closeMobileMenu()"><i class="fa-regular fa-chess-knight"></i> Software emenetPOS</a>
+                    <a [routerLink]="'/accesorios'" (click)="closeMobileMenu()"><i class="fa-solid fa-cart-shopping"></i> Accesorios</a>
+                    <a [routerLink]="'/facturacion'" (click)="closeMobileMenu()"><i class="fa-solid fa-file-invoice-dollar"></i> Facturación Electrónica</a>
+                    <a [routerLink]="'/tiempo-aire'" (click)="closeMobileMenu()"><i class="fa-solid fa-mobile-screen-button"></i> Recargas de Tiempo Aire</a>
+                    <a [routerLink]="'/servicios-nube'" (click)="closeMobileMenu()"><i class="fa-solid fa-cloud"></i> Servicios en la Nube</a>
+                    <a [routerLink]="'/modificaciones'" (click)="closeMobileMenu()"><i class="fa-solid fa-wrench"></i> Modificaciones a la Medida</a>
                 </div>
             </div>
 
             <!-- Link Contacto -->
-            <a [routerLink]="'/contacto'" class="nav-link" (click)="closeMobileMenu()">Contacto</a>
+            <a [routerLink]="'/contacto'" class="nav-link" (click)="closeMobileMenu()"><i class="fa-regular fa-address-card"></i> Contacto</a>
         </div>
     </nav>
 </header>

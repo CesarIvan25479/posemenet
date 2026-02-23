@@ -802,7 +802,7 @@ header .textos-header {
 
 .cta-section {
     padding: var(--spacing-xl) var(--spacing-md);
-    background: linear-gradient(135deg, rgba(0, 175, 202, 0.975), rgb(1, 27, 123));
+    background: linear-gradient(135deg, rgba(0, 18, 137, 0.975), rgb(20, 25, 67));
     text-align: center;
     color: var(--color-white);
 }
