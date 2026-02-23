@@ -296,15 +296,15 @@ header .textos-header {
 .textos-header h1 {
     font-size: clamp(2rem, 6vw, 3.5rem);
     font-weight: 800;
-    color: #000000;
+    color: #001845;
     margin-bottom: var(--spacing-md);
-    text-shadow: 2px 4px 12px rgba(2, 0, 126, 0.4);
+    text-shadow: 2px 4px 12px rgba(255, 255, 255, 0.625);
 }
  
 .textos-header h2 {
     font-size: clamp(1.25rem, 3vw, 2rem);
     font-weight: 300;
-    color: #011f49;
+    color: #001845;
     
     max-width: 700px;
     margin: 0 auto;

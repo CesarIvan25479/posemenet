@@ -1,5 +1,5 @@
-import { Component, HostListener, ElementRef } from '@angular/core';
-import { RouterLink } from "@angular/router";
+import { Component, HostListener, ElementRef, OnInit } from '@angular/core';
+import { RouterLink, Router, NavigationStart } from "@angular/router";
 
 @Component({
   selector: 'app-header',
@@ -7,11 +7,20 @@ import { RouterLink } from "@angular/router";
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   isMobileMenuOpen = false;
   isDropdownOpen = false;
 
-  constructor(private elementRef: ElementRef) {}
+  constructor(private elementRef: ElementRef, private router: Router) {}
+
+  ngOnInit(): void {
+    // Cerrar menú móvil en cada navegación
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationStart) {
+        this.closeMobileMenu();
+      }
+    });
+  }
 
   toggleMobileMenu(): void {
     this.isMobileMenuOpen = !this.isMobileMenuOpen;

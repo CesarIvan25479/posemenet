@@ -195,18 +195,75 @@ header .textos-header {
     animation: fadeInUp 1s ease-out;
 }
 
+header {
+    position: relative;
+    width: 100%;
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.header-carousel {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.header-carousel .slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: carouselFade 15s infinite;
+}
+
+.header-carousel .slide:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.header-carousel .slide:nth-child(2) {
+    animation-delay: 5s;
+}
+
+.header-carousel .slide:nth-child(3) {
+    animation-delay: 10s;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0.35));
+    z-index: 1;
+}
+
+header .textos-header {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: var(--spacing-xl) var(--spacing-md);
+    animation: fadeInUp 1s ease-out;
+}
+
 .textos-header h1 {
     font-size: clamp(2rem, 6vw, 3.5rem);
     font-weight: 800;
-    color: #000;
+    color: #001845;
     margin-bottom: var(--spacing-md);
-    text-shadow: 2px 4px 12px rgba(0, 0, 0, 0.4);
+    text-shadow: 2px 4px 12px rgba(255, 255, 255, 0.625);
 }
-
+ 
 .textos-header h2 {
     font-size: clamp(1.25rem, 3vw, 2rem);
     font-weight: 300;
-    color: #000;
+    color: #001845;
+    
     max-width: 700px;
     margin: 0 auto;
 }
