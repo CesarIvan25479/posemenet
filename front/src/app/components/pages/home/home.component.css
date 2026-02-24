@@ -622,6 +622,7 @@ header::before {
     box-shadow: var(--shadow-md);
     object-fit: cover;
     transition: var(--transition);
+    order: -1; /* Image appears first on desktop */
 }
 
 .imagen-about-us:hover {
@@ -747,6 +748,10 @@ header::before {
     }
     .imagen-about-us {
         max-width: 100%;
+        order: 1; /* Image appears after text on mobile */
+    }
+    .contenido-textos {
+        order: 0; /* Text appears first on mobile */
     }
     .contenido-textos h1 {
         font-size: 1.75rem;
