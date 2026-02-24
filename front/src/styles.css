@@ -189,3 +189,74 @@ select {
     --radius-xl: 24px;
     --radius-lg: 16px;
 }
+
+
+/* ===== LOADER ===== */
+
+.loader {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: #e1dedf;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2em;
+    font-size: 12px;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader img {
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+.loader p {
+    color: var(--color-text);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.progress {
+    position: absolute;
+    top: 60%;
+    width: 50%;
+    height: 1px;
+    background: #000000;
+    transform: scaleX(0);
+    transition: transform 1s;
+    transform-origin: left;
+    z-index: 10;
+    margin: 0 5%;
+}
+
+.progress.animate {
+    animation: progressBar 1.5s ease-out forwards;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+}
+
+@keyframes progressBar {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
