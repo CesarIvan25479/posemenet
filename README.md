@@ -12,7 +12,7 @@
 
 ## 📋 Descripción
 
-emenetPOS es el sitio web corporativo de **emenet comunicaciones**, una empresa especializada en soluciones de punto de venta, accesorios tecnológicos, facturación electrónica y servicios en la nube. Este proyecto está desarrollado con Angular 19 y ofrece una experiencia moderna, responsiva y profesional.
+emenetPOS es el sitio web corporativo de **emenet comunicaciones**, una empresa especializada en comunicaciones distribuidora de internet, developer, soluciones de punto de venta, accesorios tecnológicos. Este proyecto está desarrollado con Angular 19 y ofrece una experiencia moderna, responsiva y profesional.
 
 ## ✨ Características
 
