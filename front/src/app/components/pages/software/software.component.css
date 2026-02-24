@@ -1,41 +1,4 @@
-/* ===== VARIABLES CSS ===== */
 
-:root {
-    --color-primary: #000000;
-    --color-primary-dark: #003796;
-    --color-primary-light: #114d9c;
-    --color-text: #333;
-    --color-text-light: #666;
-    --color-white: #ffffff;
-    --color-gray-light: #f8f9fa;
-    --color-border: #e0e0e0;
-    --spacing-xs: 0.5rem;
-    --spacing-sm: 1rem;
-    --spacing-md: 1.5rem;
-    --spacing-lg: 2rem;
-    --spacing-xl: 3rem;
-    --border-radius: 12px;
-    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
-    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
-    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-    line-height: 1.6;
-    color: var(--color-text);
-    overflow-x: hidden;
-}
 
 
 /* ===== HEADER & CAROUSEL ===== */
