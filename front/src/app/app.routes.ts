@@ -8,6 +8,7 @@ import { ModificacionesComponent } from './components/pages/modificaciones/modif
 import { ContactoComponent } from './components/pages/contacto/contacto.component';
 import { TiempoAireComponent } from './components/pages/tiempo-aire/tiempo-aire.component';
 import { AccesoriosComponent } from './components/pages/accesorios/accesorios.component';
+import { GirosComponent } from './components/pages/giros/giros.component';
 
 export const routes: Routes = [{
   path: "", component: LayoutComponent,
@@ -19,6 +20,7 @@ export const routes: Routes = [{
     {path: "servicios-nube", component: NubeComponent,},
     {path: "modificaciones", component: ModificacionesComponent,},
     {path: "contacto", component: ContactoComponent},
-    {path: "accesorios", component: AccesoriosComponent}
+    {path: "accesorios", component: AccesoriosComponent},
+    {path: "giros", component: GirosComponent}
   ]
 }];
