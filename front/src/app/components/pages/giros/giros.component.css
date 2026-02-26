@@ -71,7 +71,7 @@ header {
 .hero-h1 {
   font-family: var(--font-head);
   font-size: clamp(2.4rem, 5vw, 3.8rem);
-  font-weight: 900;
+  font-weight: 600;
   line-height: 1.1;
   color: var(--navy);
   letter-spacing: -.03em;
