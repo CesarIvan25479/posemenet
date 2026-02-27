@@ -25,7 +25,6 @@
                 </label>
                 <div class="dropdown-content" [class.show]="isDropdownOpen">
                     <a [routerLink]="'/software'" (click)="closeMobileMenu()"><i class="fa-regular fa-chess-knight"></i> Software emenetPOS</a>
-                    <a [routerLink]="'/accesorios'" (click)="closeMobileMenu()"><i class="fa-solid fa-cart-shopping"></i> Accesorios</a>
                     <a [routerLink]="'/facturacion'" (click)="closeMobileMenu()"><i class="fa-solid fa-file-invoice-dollar"></i> Facturación Electrónica</a>
                     <a [routerLink]="'/tiempo-aire'" (click)="closeMobileMenu()"><i class="fa-solid fa-mobile-screen-button"></i> Recargas de Tiempo Aire</a>
                     <a [routerLink]="'/servicios-nube'" (click)="closeMobileMenu()"><i class="fa-solid fa-cloud"></i> Servicios en la Nube</a>
@@ -33,6 +32,8 @@
                     
                 </div>
             </div>
+            <!--Link accesorios-->
+            <a [routerLink]="'/accesorios'" class="nav-link" (click)="closeMobileMenu()"><i class="fa-solid fa-cart-shopping"></i> Accesorios</a>
             <!--Link giros-->
             <a [routerLink]="'/giros'" class="nav-link" (click)="closeMobileMenu()"><i class="fa-solid fa-money-bill-transfer"></i> Giros</a>
 
