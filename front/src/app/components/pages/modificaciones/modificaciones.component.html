@@ -1,28 +1,112 @@
-<!-- ===== HEADER ===== -->
 <header>
-    <!-- Carrusel de fondo -->
-    <div class="header-carousel">
-        <div class="slide active" style="background-image:url('images/portada.png')"></div>
-        <div class="slide" style="background-image:url('images/portada2.png')"></div>
-        <div class="slide" style="background-image:url('images/img3.png')"></div>
+  <div class="hero-blob"></div>
+  <div class="hero-dots"></div>
+
+  <!-- IZQUIERDA -->
+  <div class="hero-left">
+    <div class="hero-badge"> MyBusinessPos — modificaciones a la medida</div>
+
+    <h1 class="hero-h1">
+      Todo <span class="accent">a la medida</span><br>
+      nos adaptamos a tu<br>
+      Negocio
+    </h1>
+
+    <p class="hero-sub">
+      Si necesitas personalizar el sistema para adaptarlo a las necesidades específicas de tu negocio, emenetPos te ofrece soluciones a la medida.
+    </p>
+
+    <div class="hero-features">
+      <div class="feature-item">
+        <span class="check">
+          <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+        </span>
+        Sistema 100% adaptable.
+      </div>
+      <div class="feature-item">
+        <span class="check">
+          <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+        </span>
+        Personalizable a tu gusto.
+      </div>
+      <div class="feature-item">
+        <span class="check">
+          <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+        </span>
+        Se ajusta a la forma de trabajar de tu negocio.
+      </div>
+      
     </div>
 
-    <section class="textos-header">
-        <div class="topnav">
-            <h1>Modificaciones a la Medida</h1>
-            <h2>El sistema que se adapta a tu negocio.</h2>
+    <div class="hero-actions">
+   <a class="btn-hero-primary" [routerLink]="'/contacto'">🚀 Probar Ahora</a>
+      
+  <a href="https://api.whatsapp.com/send?phone=5217131334557&text=Hola%20buen%20d%C3%ADa%2C%20necesito%20informaci%C3%B3n%20sobre%20emenetPOS"
+  class="btn-hero-ghost"
+  target="_blank"
+  rel="noopener noreferrer">Contáctanos</a>
+    </div>
+
+    <div class="hero-social-proof">
+      <div class="avatars">
+        <span>MV</span>
+        <span>CI</span>
+        <span>RC</span>
+      </div>
+      <div class="social-text">
+        <strong>+2,000 negocios</strong> ya usan emenetPOS<br>en todo México
+      </div>
+    </div>
+  </div>
+
+  <!-- DERECHA -->
+  <div class="hero-right">
+    <!-- Floating card timbres -->
+    <div class="float-card fc-ventas">
+      <div class="float-card-icon">🎫</div>
+      <div class="float-card-text">
+        <strong>Desde $465</strong>
+        <span>paquete de 100 timbres</span>
+      </div>
+    </div>
+
+    <!-- Floating card CFDI -->
+    <div class="float-card fc-ticket">
+      <div class="float-card-icon">🧾</div>
+      <div class="float-card-text">
+        <strong>Factura CFDI</strong>
+        <span>emitida en segundos</span>
+      </div>
+    </div>
+
+    <div class="mockup-wrapper">
+      <div class="screen-mockup">
+
+        <!-- MARCO + PANTALLA -->
+        <div class="screen-frame">
+          <div class="screen-cam"></div>
+          <div class="screen-display">
+            <img src="images/nube/puntoventa.png" alt="Facturación Electrónica emenetPos">
+          </div>
         </div>
-    </section>
 
-    <!-- Wave al final del header -->
-    <div class="wave" style="height: 150px; overflow: hidden;">
-        <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height:100%; width: 100%;">
-            <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
-                style="stroke: none; fill: #fff;"></path>
-        </svg>
+        <!-- BASE DEL MONITOR -->
+        <div class="screen-foot">
+          <div class="screen-neck"></div>
+          <div class="screen-stand"></div>
+        </div>
+
+      </div>
     </div>
-</header>
+  </div>
 
+  <!-- Wave -->
+  <div class="hero-wave">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
+    </svg>
+  </div>
+</header>
 <!-- ===== HERO SECTION ===== -->
 <section class="modificaciones-hero-section">
     <div class="contenedor">
