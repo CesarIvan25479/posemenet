@@ -1,78 +1,127 @@
 <!-- ===== HEADER ===== -->
-<header>
-
-
-    <!-- Carrusel de fondo -->
-    <div class="header-carousel">
+<header class="hero">
+    <div class="hero-carousel">
         <div class="slide active" style="background-image:url('images/portada.png')"></div>
         <div class="slide" style="background-image:url('images/portada2.png')"></div>
         <div class="slide" style="background-image:url('images/img3.png')"></div>
     </div>
-
-    <section class="textos-header">
-        <div class="topnav">
-            <h1>Comunicate con nosotros</h1>
-            <h2>Nuestro equipo está listo para ayudarte</h2>
-        </div>
-    </section>
-
-    <!-- Wave al final del header -->
-    <div class="wave" style="height: 150px; overflow: hidden;">
-        <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height:100%; width: 100%;">
-            <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
-                style="stroke: none; fill: #fff;"></path>
+    <div class="hero-overlay"></div>
+    <div class="hero-content hero-reveal">
+        <span class="hero-eyebrow">Soporte & Atención</span>
+        <h1 class="hero-title">Comunícate<br>con nosotros</h1>
+        <p class="hero-subtitle">Nuestro equipo está listo para ayudarte</p>
+    </div>
+    <div class="hero-wave">
+        <svg viewBox="0 0 1440 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,60 C360,120 1080,0 1440,60 L1440,100 L0,100 Z" fill="#f5f5f7" />
         </svg>
     </div>
 </header>
 
-<!-- ===== CONTACTO SECTION ===== -->
-<section class="servicios">
-    <div class="contenedor">
-        <h2 class="titulo">Contáctanos</h2>
-        <div class="servicio-cont">
-            <div class="servicio-ind">
-                <i class="fas fa-phone" style="font-size: 3rem; color: var(--color-primary); margin-bottom: 1rem;"></i>
-                <h3>Llamanos</h3>
-                <p>713 133 4557 Ext. 33</p>
-                <p>Comunícate con nuestro equipo directamente para recibir atención personalizada.</p>
-                
+<!-- ===== CONTACT CARDS ===== -->
+<section class="contact-info">
+    <div class="container">
+        <div class="section-label">Canales de atención</div>
+        <h2 class="section-title">¿Cómo podemos ayudarte?</h2>
+
+        <div class="cards-grid">
+
+            <div class="contact-card reveal fade-up delay-100">
+                <div class="card-icon-wrap">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <h3>Llámanos</h3>
+                <p class="card-main">713 133 4557 Ext. 33</p>
+                <p class="card-desc">Atención personalizada con nuestro equipo de soporte.</p>
+                <a href="tel:7131334557" class="card-link">Llamar ahora <i class="fas fa-arrow-right"></i></a>
             </div>
-            <div class="servicio-ind">
-                <i class="fas fa-envelope" style="font-size: 3rem; color: var(--color-primary); margin-bottom: 1rem;"></i>
-                <h3>Correo Electrónico</h3>
-                <p>clientes&#64;emenet.mx</p>
-                <p>Escríbenos para solicitudes formales, reportes o aclaraciones.</p>
+
+            <div class="contact-card featured reveal fade-up delay-200">
+                <div class="card-icon-wrap">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <h3>Correo electrónico</h3>
+                <p class="card-main">clientes&#64;emenet.mx</p>
+                <p class="card-desc">Solicitudes formales, reportes o aclaraciones.</p>
+                <a href="mailto:clientes@emenet.mx" class="card-link">Enviar correo <i
+                        class="fas fa-arrow-right"></i></a>
             </div>
-            <div class="servicio-ind">
-                <i class="fa-brands fa-whatsapp" style="font-size: 3rem; color: var(--color-primary); margin-bottom: 1rem;"></i>
+
+            <div class="contact-card reveal fade-up delay-300">
+                <div class="card-icon-wrap">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
                 <h3>Cobranza</h3>
-                <p>729 179 2524</p>
-                <p>Consulta tu saldo, pagos o estados de cuenta de forma sencilla.</p>
+                <p class="card-main">729 179 2524</p>
+                <p class="card-desc">Consulta tu saldo, pagos o estados de cuenta.</p>
+                <a href="https://wa.me/527291792524" target="_blank" class="card-link">Escribir por WhatsApp <i
+                        class="fas fa-arrow-right"></i></a>
             </div>
+
         </div>
     </div>
 </section>
 
-<!-- ===== FORMULARIO SECTION ===== -->
-<section class="contacto-section">
-    <div class="formulario-ind">
-        <h1>Contáctanos directamente</h1>
-        <form class="formulario">
-            <div class="form-grid">
-                <div class="form-group">
-                    <input type="text" placeholder="Nombre completo" required>
-                </div>
-                <div class="form-group">
-                    <input type="tel" placeholder="Teléfono" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" placeholder="Correo electrónico" required>
-                </div>
+<!-- ===== FORMULARIO ===== -->
+<section class="form-section reveal fade-up">
+    <div class="container">
+        <div class="form-wrapper">
+
+            <div class="form-left">
+                <div class="section-label">Formulario de contacto</div>
+                <h2 class="form-title">Cuéntanos en qué<br>podemos ayudarte</h2>
+                <p class="form-desc">Completa el formulario y uno de nuestros asesores se pondrá en contacto contigo a
+                    la brevedad posible.</p>
+                <ul class="form-perks">
+                    <li><i class="fas fa-check-circle"></i> Respuesta en menos de 24 horas</li>
+                    <li><i class="fas fa-check-circle"></i> Atención personalizada</li>
+                    <li><i class="fas fa-check-circle"></i> Datos 100% seguros</li>
+                </ul>
             </div>
-            <div class="form-group">
-                <textarea placeholder="Escribe tu mensaje" rows="4" required></textarea>
-            </div>
-            <button type="submit" class="btn-enviar">Enviar mensaje</button>
-        </form>
+
+            <form class="form-card" (ngSubmit)="onSubmit()" #contactForm="ngForm">
+
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="nombre">Nombre completo</label>
+                        <input id="nombre" type="text" name="nombre" placeholder="Tu nombre" required
+                            autocomplete="name" />
+                    </div>
+
+                    <div class="input-group">
+                        <label for="telefono">Teléfono</label>
+                        <div class="phone-input-wrap">
+                            <span class="phone-prefix">+52</span>
+                            <input id="telefono" type="tel" name="telefono" placeholder="10 dígitos" required
+                                maxlength="10" inputmode="numeric" pattern="[0-9]{10}" (keypress)="soloNumeros($event)"
+                                (paste)="pegadoNumeros($event)" autocomplete="tel" />
+                        </div>
+                        <span class="input-hint">Solo números, sin espacios ni guiones</span>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Correo electrónico</label>
+                    <input id="email" type="email" name="email" placeholder="correo&#64;ejemplo.com" required
+                        autocomplete="email" />
+                </div>
+
+                <div class="input-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" placeholder="Escribe tu consulta o comentario..." rows="5"
+                        required></textarea>
+                </div>
+
+                <div class="form-footer">
+                    <p class="privacy-note"><i class="fas fa-lock"></i> Tu información está protegida y no será
+                        compartida.</p>
+                    <button type="submit" class="btn-submit">
+                        <span>Enviar mensaje</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+
+            </form>
+        </div>
     </div>
 </section>

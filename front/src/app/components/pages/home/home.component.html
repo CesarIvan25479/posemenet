@@ -1,6 +1,6 @@
 <!-- ===== HEADER ===== -->
 <header>
-    <!-- Imagen de fondo -->
+  <!-- Imagen de fondo -->
   <div class="hero-bg">
     <img src="images/giros/img3.png" alt="Tienda de ropa">
   </div>
@@ -22,41 +22,47 @@
       Emite facturas CFDI, controla tu caja y haz crecer tu negocio.
     </p>
 
-    
-     <div class="hero-features">
+
+    <div class="hero-features">
       <div class="feature-item">
         <span class="check">
-          <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+          <svg viewBox="0 0 12 12">
+            <polyline points="2,6 5,9 10,3" />
+          </svg>
         </span>
         Vende desde cualquier dispositivo
       </div>
       <div class="feature-item">
         <span class="check">
-          <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+          <svg viewBox="0 0 12 12">
+            <polyline points="2,6 5,9 10,3" />
+          </svg>
         </span>
         Controla el efectivo de tu caja
       </div>
       <div class="feature-item">
         <span class="check">
-          <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+          <svg viewBox="0 0 12 12">
+            <polyline points="2,6 5,9 10,3" />
+          </svg>
         </span>
         Emite facturas CFDI de tus ventas
       </div>
       <div class="feature-item">
         <span class="check">
-          <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+          <svg viewBox="0 0 12 12">
+            <polyline points="2,6 5,9 10,3" />
+          </svg>
         </span>
         Reportes e inventario en tiempo real
       </div>
     </div>
 
     <div class="hero-actions">
-   <a class="btn-hero-primary" [routerLink]="'/contacto'">🚀 Probar Ahora</a>
-      
-  <a href="https://api.whatsapp.com/send?phone=5217131334557&text=Hola%20buen%20d%C3%ADa%2C%20necesito%20informaci%C3%B3n%20sobre%20emenetPOS"
-  class="btn-hero-ghost"
-  target="_blank"
-  rel="noopener noreferrer">Contáctanos</a>
+      <a class="btn-hero-primary" [routerLink]="'/contacto'">🚀 Probar Ahora</a>
+
+      <a href="https://api.whatsapp.com/send?phone=5217131334557&text=Hola%20buen%20d%C3%ADa%2C%20necesito%20informaci%C3%B3n%20sobre%20emenetPOS"
+        class="btn-hero-ghost" target="_blank" rel="noopener noreferrer">Contáctanos</a>
     </div>
 
     <div class="hero-social-proof">
@@ -115,119 +121,121 @@
   <!-- Wave -->
   <div class="hero-wave">
     <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
+      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#ffffff" />
     </svg>
   </div>
 </header>
 
 <!-- ===== SOBRE NOSOTROS SECTION ===== -->
-<section class="contenedor sobre-nosotros">
-    <div class="contenedor-sobre-nosotros">
-        <div class="contenido-textos">
-            <h1>emenetPOS gestiona tus ventas, inventarios y más desde un solo lugar.</h1>
-            <p>Somos distribuidores autorizados de MyBusiness POS.
-Te ayudamos a administrar tu negocio de forma eficiente, desde tu primer día hasta el crecimiento de tu empresa, brindándote capacitación, seguimiento y soporte continuo.
-Con emenetPOS, no solo adquieres un sistema, obtienes respaldo y acompañamiento para hacer crecer tu negocio.
-            </p>
-        </div>
-        <img src="images/home/home.webp" alt="" class="imagen-about-us">
+<section class="contenedor sobre-nosotros reveal fade-up">
+  <div class="contenedor-sobre-nosotros">
+    <div class="contenido-textos">
+      <h1>emenetPOS gestiona tus ventas, inventarios y más desde un solo lugar.</h1>
+      <p>Somos distribuidores autorizados de MyBusiness POS.
+        Te ayudamos a administrar tu negocio de forma eficiente, desde tu primer día hasta el crecimiento de tu empresa,
+        brindándote capacitación, seguimiento y soporte continuo.
+        Con emenetPOS, no solo adquieres un sistema, obtienes respaldo y acompañamiento para hacer crecer tu negocio.
+      </p>
     </div>
+    <img src="images/home/home.webp" alt="" class="imagen-about-us">
+  </div>
 </section>
 <!-- ===== SERVICIOS SECTION ===== -->
-<section class="servicios">
-    <div class="contenedor">
-        <h2 class="titulo">Nuestros servicios</h2>
-        <div class="servicio-cont">
-            <div class="servicio-ind">
-                <img src="images/home/giro.png" alt="">
-                <h3>Giro de negocios</h3>
-                <p>MyBusiness POS funciona en múltiples negocios, te mostramos cómo funciona en cada uno.</p>
-                <div class="buttons-container">
-                    <a [routerLink]="'/software'" class="btn-moderno">
-                        <i class="fa-solid fa-circle-info"></i>
-                        <span>Más información</span>
-                    </a>
-                </div>
-
-            </div>
-
-            <div class="servicio-ind">
-                <img src="images/home/recargas.png" alt="">
-                <h3>Recargas de tiempo aire</h3>
-                <p>Aumentamos tus ganancias y flujo de clientes ofreciendo recargas y pago de servicios.</p>
-                <div class="buttons-container">
-                    <a [routerLink]="'/tiempo-aire'" class="btn-moderno">
-                        <i class="fa-solid fa-circle-info"></i>
-                        <span>Más información</span>
-                    </a>
-                </div>
-            </div>
-            <div class="servicio-ind">
-                <img src="images/home/factura.png" alt="">
-                <h3>Facturación CFDI 4.0</h3>
-                <p>Emite tus CFDI directamente desde el sistema, sin procesos adicionales.</p>
-                <div class="buttons-container">
-                    <a [routerLink]="'/facturacion'" class="btn-moderno">
-                        <i class="fa-solid fa-circle-info"></i>
-                        <span>Más información</span>
-                    </a>
-                </div>
-            </div>
-            <div class="servicio-ind">
-                <img src="images/home/corporativo.png" alt="">
-                <h3>Todo a la medida</h3>
-                <p>El único sistema de punto de venta que se adecúa a tu requerimiento particular o giro comercial.</p>
-                <div class="buttons-container">
-                    <a [routerLink]="'/modificaciones'" class="btn-moderno">
-                        <i class="fa-solid fa-circle-info"></i>
-                        <span>Más información</span>
-                    </a>
-                </div>
-            </div>
+<section class="servicios reveal fade-up">
+  <div class="contenedor">
+    <h2 class="titulo">Nuestros servicios</h2>
+    <div class="servicio-cont">
+      <div class="servicio-ind reveal fade-up delay-100">
+        <img src="images/home/giro.png" alt="">
+        <h3>Giro de negocios</h3>
+        <p>MyBusiness POS funciona en múltiples negocios, te mostramos cómo funciona en cada uno.</p>
+        <div class="buttons-container">
+          <a [routerLink]="'/software'" class="btn-moderno">
+            <i class="fa-solid fa-circle-info"></i>
+            <span>Más información</span>
+          </a>
         </div>
+
+      </div>
+
+      <div class="servicio-ind reveal fade-up delay-200">
+        <img src="images/home/recargas.png" alt="">
+        <h3>Recargas de tiempo aire</h3>
+        <p>Aumentamos tus ganancias y flujo de clientes ofreciendo recargas y pago de servicios.</p>
+        <div class="buttons-container">
+          <a [routerLink]="'/tiempo-aire'" class="btn-moderno">
+            <i class="fa-solid fa-circle-info"></i>
+            <span>Más información</span>
+          </a>
+        </div>
+      </div>
+      <div class="servicio-ind reveal fade-up delay-300">
+        <img src="images/home/factura.png" alt="">
+        <h3>Facturación CFDI 4.0</h3>
+        <p>Emite tus CFDI directamente desde el sistema, sin procesos adicionales.</p>
+        <div class="buttons-container">
+          <a [routerLink]="'/facturacion'" class="btn-moderno">
+            <i class="fa-solid fa-circle-info"></i>
+            <span>Más información</span>
+          </a>
+        </div>
+      </div>
+      <div class="servicio-ind reveal fade-up delay-400">
+        <img src="images/home/corporativo.png" alt="">
+        <h3>Todo a la medida</h3>
+        <p>El único sistema de punto de venta que se adecúa a tu requerimiento particular o giro comercial.</p>
+        <div class="buttons-container">
+          <a [routerLink]="'/modificaciones'" class="btn-moderno">
+            <i class="fa-solid fa-circle-info"></i>
+            <span>Más información</span>
+          </a>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 <!-- =====  SOLUCIONES SECTION ===== -->
-<section class="servicios">
-    <div class="contenedor">
-        <h2 class="titulo">Más soluciones para tu negocio</h2>
-        <div class="servicio-cont">
-            <div class="servicio-ind">
-                <img src="images/home/tools.png" alt="">
-                <h3>Control de Usuarios y Permisos</h3>
-                <p>Asigna roles y permisos personalizados para mayor seguridad y control interno.</p>
-                <div class="buttons-container">
-                    <a [routerLink]="'/contacto'" class="btn-moderno">
-                        <i class="fa-solid fa-thumbs-up"></i>
-                        <span>Me interesa</span>
-                    </a>
-                </div>
-            </div>
-            <div class="servicio-ind">
-                <img src="images/home/accesorios.png" alt="">
-                <h3>Accesorios</h3>
-                <p>También contamos con accesorios, consumibles y soporte técnico 
-                    para que tu negocio siempre esté listo para vender.
-
-                </p>
-            <div class="buttons-container">
-                    <a [routerLink]="'/accesorios'" class="btn-moderno">
-                        <i class="fa-solid fa-thumbs-up"></i>
-                        <span>Me interesa</span>
-                    </a>
-                </div>
-            </div>
-            <div class="servicio-ind">
-                <img src="images/home/nube.png" alt="">
-                <h3>Sincronización en la nube</h3>
-                <p>Puedes instalar tu punto de venta en una o en todas tus sucursales y la información estará siempre sincronizada.</p>
-                <div class="buttons-container">
-                    <a [routerLink]="'/servicios-nube'" class="btn-moderno">
-                        <i class="fa-solid fa-thumbs-up"></i>
-                        <span>Me interesa</span>
-                    </a>
-                </div>
-            </div>
+<section class="servicios reveal fade-up">
+  <div class="contenedor">
+    <h2 class="titulo">Más soluciones para tu negocio</h2>
+    <div class="servicio-cont">
+      <div class="servicio-ind reveal fade-up delay-100">
+        <img src="images/home/tools.png" alt="">
+        <h3>Control de Usuarios y Permisos</h3>
+        <p>Asigna roles y permisos personalizados para mayor seguridad y control interno.</p>
+        <div class="buttons-container">
+          <a [routerLink]="'/contacto'" class="btn-moderno">
+            <i class="fa-solid fa-thumbs-up"></i>
+            <span>Me interesa</span>
+          </a>
         </div>
+      </div>
+      <div class="servicio-ind reveal fade-up delay-200">
+        <img src="images/home/accesorios.png" alt="">
+        <h3>Accesorios</h3>
+        <p>También contamos con accesorios, consumibles y soporte técnico
+          para que tu negocio siempre esté listo para vender.
+
+        </p>
+        <div class="buttons-container">
+          <a [routerLink]="'/accesorios'" class="btn-moderno">
+            <i class="fa-solid fa-thumbs-up"></i>
+            <span>Me interesa</span>
+          </a>
+        </div>
+      </div>
+      <div class="servicio-ind reveal fade-up delay-300">
+        <img src="images/home/nube.png" alt="">
+        <h3>Sincronización en la nube</h3>
+        <p>Puedes instalar tu punto de venta en una o en todas tus sucursales y la información estará siempre
+          sincronizada.</p>
+        <div class="buttons-container">
+          <a [routerLink]="'/servicios-nube'" class="btn-moderno">
+            <i class="fa-solid fa-thumbs-up"></i>
+            <span>Me interesa</span>
+          </a>
+        </div>
+      </div>
     </div>
+  </div>
 </section>

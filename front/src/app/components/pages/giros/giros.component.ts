@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, AfterViewInit, OnDestroy, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 interface Giro {
@@ -14,7 +14,7 @@ interface Giro {
   templateUrl: './giros.component.html',
   styleUrl: './giros.component.css'
 })
-export class GirosComponent implements AfterViewInit {
+export class GirosComponent implements AfterViewInit, OnDestroy {
   @ViewChild('girosGrid') girosGrid!: ElementRef;
 
   // Touch handling variables
@@ -87,9 +87,91 @@ export class GirosComponent implements AfterViewInit {
     return Array(this.totalGiroSets).fill(0).map((_, i) => i);
   }
 
+  private rotatorInterval: any;
+
   ngAfterViewInit(): void {
     this.setupTouchSwipe();
+    this.startRotator();
+    this.setupTabs();
   }
+
+  ngOnDestroy(): void {
+    if (this.rotatorInterval) {
+      clearInterval(this.rotatorInterval);
+    }
+  }
+
+  private startRotator(): void {
+    const el = document.getElementById('rotating-text');
+    if (!el) return;
+
+    const words = [
+      'punto de venta',
+      'POS para Ropa',
+      'POS para Farmacias',
+      'POS para Abarrotes',
+      'POS para Cafeterías',
+      'POS para Joyerías',
+    ];
+    let currentIndex = 0;
+    const intervalMs = 2800;
+    const fadeMs = 300;
+
+    // Asegurar estado inicial
+    el.textContent = words[0];
+    el.classList.add('fade-in');
+
+    this.rotatorInterval = setInterval(async () => {
+      // Salida
+      el.classList.remove('fade-in');
+      el.classList.add('fade-out');
+
+      await new Promise<void>(resolve => setTimeout(resolve, fadeMs));
+
+      // Cambiar texto
+      currentIndex = (currentIndex + 1) % words.length;
+      el.textContent = words[currentIndex];
+
+      // Entrada
+      el.classList.remove('fade-out');
+      el.classList.add('fade-in');
+    }, intervalMs);
+  }
+
+  private setupTabs(): void {
+    // Exponer showComp globalmente para los onclick del HTML si es necesario
+    (window as any).showComp = this.showComp.bind(this);
+
+    // Inicializar controlador de tabs
+    const controller = new CompTabsController();
+    controller.bindAll();
+  }
+
+  public showComp(id: string, btn: HTMLElement): void {
+    // Desactivar todos los paneles
+    const panels = document.querySelectorAll<HTMLElement>('.comp-panel');
+    panels.forEach((panel: HTMLElement) => {
+      panel.classList.remove('active');
+    });
+
+    // Desactivar todos los tabs
+    const tabs = document.querySelectorAll<HTMLElement>('.comp-tab');
+    tabs.forEach((tab: HTMLElement) => {
+      tab.classList.remove('active');
+    });
+
+    // Mostrar el panel seleccionado
+    const targetPanel = document.getElementById(`comp-${id}`);
+    if (targetPanel) {
+      targetPanel.classList.add('active');
+    }
+
+    // Activar el tab clickeado
+    if (btn) {
+      btn.classList.add('active');
+    }
+  }
+
 
   setupTouchSwipe(): void {
     const gridElement = this.girosGrid?.nativeElement;
@@ -107,7 +189,7 @@ export class GirosComponent implements AfterViewInit {
 
   private handleSwipe(): void {
     const swipeDistance = this.touchEndX - this.touchStartX;
-    
+
     if (Math.abs(swipeDistance) > this.minSwipeDistance) {
       if (swipeDistance > 0) {
         // Swipe right - go to previous
@@ -128,76 +210,9 @@ export class GirosComponent implements AfterViewInit {
   }
 }
 
-// rotating-hero.ts
-interface RotatorConfig {
-  elementId: string;
-  words: string[];
-  intervalMs: number;
-  fadeMs: number;
-}
-
-class HeroTextRotator {
-  private el: HTMLElement;
-  private words: string[];
-  private intervalMs: number;
-  private fadeMs: number;
-  private currentIndex: number = 0;
-  private timer: ReturnType<typeof setInterval> | null = null;
-
-  constructor(config: RotatorConfig) {
-    const el = document.getElementById(config.elementId);
-    if (!el) throw new Error(`Element #${config.elementId} not found`);
-    this.el = el;
-    this.words = config.words;
-    this.intervalMs = config.intervalMs;
-    this.fadeMs = config.fadeMs;
-    this.el.textContent = this.words[0];
-    this.el.classList.add('fade-in');
-  }
-
-  private async rotate(): Promise<void> {
-    // Salida
-    this.el.classList.remove('fade-in');
-    this.el.classList.add('fade-out');
-
-    await new Promise<void>(resolve => setTimeout(resolve, this.fadeMs));
-
-    // Cambiar texto
-    this.currentIndex = (this.currentIndex + 1) % this.words.length;
-    this.el.textContent = this.words[this.currentIndex];
-
-    // Entrada
-    this.el.classList.remove('fade-out');
-    this.el.classList.add('fade-in');
-  }
-
-  public start(): void {
-    this.timer = setInterval(() => this.rotate(), this.intervalMs);
-  }
-
-  public stop(): void {
-    if (this.timer) clearInterval(this.timer);
-  }
-}
-
-// Inicialización
-document.addEventListener('DOMContentLoaded', () => {
-  const rotator = new HeroTextRotator({
-    elementId: 'rotating-text',
-    words: [
-      'punto de venta',
-      'POS para Ropa',
-      'POS para Farmacias',
-      'POS para Abarrotes',
-      'POS para Cafeterías',
-      'POS para Joyerías',
-    ],
-    intervalMs: 2800,
-    fadeMs: 300,
-  });
-  rotator.start();
-});
-
+// ─────────────────────────────────────────────
+//  Controlador de Tabs (Auxiliar)
+// ─────────────────────────────────────────────
 type CompId =
   | 'sicar'
   | 'aspel'
@@ -206,108 +221,37 @@ type CompId =
   | 'pharmacylite'
   | 'pharmacysoft';
 
-/**
- * Muestra el panel de comparativa correspondiente al
- * competidor seleccionado y activa su tab.
- *
- * @param id  - ID del competidor (debe coincidir con el sufijo del elemento #comp-{id})
- * @param btn - El botón HTMLElement que fue clickeado
- */
-function showComp(id: CompId, btn: HTMLElement): void {
-  // Desactivar todos los paneles
-  const panels = document.querySelectorAll<HTMLElement>('.comp-panel');
-  panels.forEach((panel: HTMLElement) => {
-    panel.classList.remove('active');
-  });
-
-  // Desactivar todos los tabs
-  const tabs = document.querySelectorAll<HTMLElement>('.comp-tab');
-  tabs.forEach((tab: HTMLElement) => {
-    tab.classList.remove('active');
-  });
-
-  // Mostrar el panel seleccionado
-  const targetPanel = document.getElementById(`comp-${id}`);
-  if (!targetPanel) {
-    console.warn(`[comp-tabs] Panel #comp-${id} no encontrado en el DOM.`);
-    return;
-  }
-  targetPanel.classList.add('active');
-
-  // Activar el tab clickeado
-  btn.classList.add('active');
-}
-
-/**
- * Clase que encapsula toda la lógica de los tabs
- * de comparativa para un uso más estructurado.
- */
 class CompTabsController {
   private panels: NodeListOf<HTMLElement>;
   private tabs: NodeListOf<HTMLElement>;
 
   constructor() {
     this.panels = document.querySelectorAll<HTMLElement>('.comp-panel');
-    this.tabs   = document.querySelectorAll<HTMLElement>('.comp-tab');
+    this.tabs = document.querySelectorAll<HTMLElement>('.comp-tab');
   }
 
-  /**
-   * Desactiva todos los paneles y tabs.
-   */
   private resetAll(): void {
     this.panels.forEach((panel: HTMLElement) => panel.classList.remove('active'));
-    this.tabs.forEach((tab: HTMLElement)     => tab.classList.remove('active'));
+    this.tabs.forEach((tab: HTMLElement) => tab.classList.remove('active'));
   }
 
-  /**
-   * Activa el panel y tab correspondiente al ID recibido.
-   *
-   * @param id  - ID del competidor
-   * @param btn - Botón clickeado
-   */
   public show(id: CompId, btn: HTMLElement): void {
     this.resetAll();
-
     const targetPanel = document.getElementById(`comp-${id}`);
-    if (!targetPanel) {
-      console.warn(`[CompTabsController] Panel #comp-${id} no encontrado.`);
-      return;
+    if (targetPanel) {
+      targetPanel.classList.add('active');
+      btn.classList.add('active');
     }
-
-    targetPanel.classList.add('active');
-    btn.classList.add('active');
   }
 
-  /**
-   * Registra los event listeners automáticamente
-   * leyendo el atributo data-comp de cada tab.
-   *
-   * Uso en HTML:
-   *   <button class="comp-tab" data-comp="sicar">vs. Sicar</button>
-   */
   public bindAll(): void {
     this.tabs.forEach((tab: HTMLElement) => {
       const compId = tab.dataset['comp'] as CompId | undefined;
       if (!compId) return;
-
       tab.addEventListener('click', () => {
         this.show(compId, tab);
       });
     });
   }
 }
-
-// ─────────────────────────────────────────────
-//  Inicialización al cargar el DOM
-// ─────────────────────────────────────────────
-document.addEventListener('DOMContentLoaded', (): void => {
-  const controller = new CompTabsController();
-
-  // Opción A — bindAll() si usas data-comp en los botones
-  controller.bindAll();
-
-  // Opción B — exposición global para onclick inline en HTML
-  // Permite seguir usando: onclick="showComp('sicar', this)"
-  (window as Window & typeof globalThis & { showComp: typeof showComp }).showComp = showComp;
-});
 

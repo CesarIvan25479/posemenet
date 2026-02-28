@@ -10,16 +10,52 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
-<body> 
+<body>
     <!-- Loader inicial -->
     <div id="app-loader" class="loader">
         <img src="images/emenet-logo.png" width="100px" alt="emenetPOS">
         <div class="progress"></div>
         <div class="loader-logo">emenetPOS</div>
-  <div class="loader-bar"></div>
+        <div class="loader-bar"></div>
     </div>
-    
+
     <app-root></app-root>
+
+    <!-- Global Scroll Animations Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.15,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('reveal-active');
+                        // Optional: stop observing after reveal if you want it to happen only once
+                        // observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            // Function to register elements
+            const registerElements = () => {
+                const revealElements = document.querySelectorAll('.reveal');
+                revealElements.forEach(el => observer.observe(el));
+            };
+
+            // Initial registration
+            registerElements();
+
+            // Observe DOM changes (useful for Angular's dynamic routing)
+            const mutationObserver = new MutationObserver(() => {
+                registerElements();
+            });
+
+            mutationObserver.observe(document.body, { childList: true, subtree: true });
+        });
+    </script>
 </body>
 
 </html>

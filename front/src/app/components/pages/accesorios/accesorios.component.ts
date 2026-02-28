@@ -13,12 +13,13 @@ import { ProductModalComponent, Product } from '../../product-modal/product-moda
 })
 export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('galleryContainer', { static: false }) galleryContainer!: ElementRef<HTMLDivElement>;
-  
+
   private galleryApp?: CircularGalleryApp;
+  private resizeObserver?: ResizeObserver;
 
   // Color del texto de la galería (formato hexadecimal)
   galleryTextColor: string = '#003796'; // Azul - Cambia este valor para modificar el color del texto
-  
+
   // Modal state
   isModalOpen = false;
   selectedProduct: Product | null = null;
@@ -68,16 +69,16 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       ],
       specifications: {
         'Tipo de escaneo': 'Bidireccional',
-        'IP Class': 'IP52', 
+        'IP Class': 'IP52',
         'Fuente de luz': '650nm Laser diodo visible',
         'Material': 'ABS + PC',
       },
       moreSpecifications: {
-        
+
         'Voltaje': '5V CC',
-        'Peso' : '246gr',
-        'Cable' : '2 metros',
-        'Medidas' : '175mm x 73mm x 102mm'
+        'Peso': '246gr',
+        'Cable': '2 metros',
+        'Medidas': '175mm x 73mm x 102mm'
       }
     },
     {
@@ -99,16 +100,16 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
         'Velocidad': '250mm/s',
         'Operación': 'Continua estable',
         'Tecnología': 'Termica',
-        
-        
+
+
       },
       moreSpecifications: {
         'Conexión': 'USB + Ethernet',
-        'Interfaces' : 'Puerto USB 2.0 y Ethernet LAN (RJ-45)',
-        'Código de barras' : '1D/2D, Code 39, EAN13, PDF417, QR, UPC',
-        'Movilidad' : 'Alámbrico'
+        'Interfaces': 'Puerto USB 2.0 y Ethernet LAN (RJ-45)',
+        'Código de barras': '1D/2D, Code 39, EAN13, PDF417, QR, UPC',
+        'Movilidad': 'Alámbrico'
       }
-  
+
     },
     {
       id: 3,
@@ -188,7 +189,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       name: 'Terminal Billpocket nano',
       description: 'Sistema completo con software integrado. La solución todo-en-uno para gestionar tu punto de venta de manera profesional.',
       price: 450.00,
-      image: 'images/terminal3.png',
+      image: 'images/terminal.png',
       images: ['images/terminal2.png'],
       features: [
         'Software de gestión incluido',
@@ -212,8 +213,8 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       name: 'PC GHIA Frontier Slim 2.0',
       description: 'Computadora de escritorio con excelente rendimiento para punto de venta y oficina. Disco 1 TB y RAM 8 GB para un desempeño óptimo.',
       price: 5999.99,
-      image: 'images/pc.png',
-      images: ['images/pc.png'],
+      image: 'images/compu1.png',
+      images: ['images/compu2.png'],
       features: [
         'Procesador de alto rendimiento',
         'Disco duro de 1 TB de capacidad',
@@ -294,10 +295,21 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
           textColor: this.galleryTextColor
         }
       );
+
+      // Observar cambios en el tamaño del contenedor para redibujar el canvas
+      this.resizeObserver = new ResizeObserver(() => {
+        if (this.galleryApp) {
+          this.galleryApp.onResize();
+        }
+      });
+      this.resizeObserver.observe(this.galleryContainer.nativeElement);
     }
   }
 
   ngOnDestroy(): void {
+    if (this.resizeObserver) {
+      this.resizeObserver.disconnect();
+    }
     if (this.galleryApp) {
       this.galleryApp.destroy();
     }

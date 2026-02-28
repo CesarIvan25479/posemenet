@@ -1,154 +1,158 @@
 <!-- ===== HEADER ===== -->
 <header>
-  <div class="hero-blob"></div>
-  <div class="hero-dots"></div>
+    <div class="hero-blob"></div>
+    <div class="hero-dots"></div>
 
-  <!-- IZQUIERDA -->
-  <div class="hero-left">
-    <div class="hero-badge"> MyBusinessPos — Software de Punto de Venta</div>
+    <!-- IZQUIERDA -->
+    <div class="hero-left hero-reveal">
+        <div class="hero-badge"> MyBusinessPos — Software de Punto de Venta</div>
 
-    <h1 class="hero-h1">
-      El<span class="accent">&nbsp; Software más potente</span><br>
-      y cómodo para gestionar tu negocio
-    </h1>
+        <h1 class="hero-h1">
+            <span class="accent">Software potente</span><br>
+            y fácil para gestionar<br class="hero-br"> tu negocio
+        </h1>
 
-    <p class="hero-sub">
-      Punto de venta completo y listo para operar, impulsado por MyBusiness POS.
-    </p>
+        <p class="hero-sub">
+            Punto de venta completo y listo para operar, impulsado por MyBusiness POS.
+        </p>
 
-   
 
-    <div class="hero-actions">
-   <a class="btn-hero-primary" [routerLink]="'/contacto'">🚀 Probar Ahora</a>
-      
-  <a href="https://api.whatsapp.com/send?phone=5217131334557&text=Hola%20buen%20d%C3%ADa%2C%20necesito%20informaci%C3%B3n%20sobre%20emenetPOS"
-  class="btn-hero-ghost"
-  target="_blank"
-  rel="noopener noreferrer">Contáctanos</a>
-    </div>
 
-    <div class="hero-social-proof">
-      <div class="avatars">
-        <span>MV</span>
-        <span>CI</span>
-        <span>RC</span>
-      </div>
-      <div class="social-text">
-        <strong>+2,000 negocios</strong> ya usan emenetPOS<br>en todo México
-      </div>
-    </div>
-  </div>
+        <div class="hero-actions">
+            <a class="btn-hero-primary" [routerLink]="'/contacto'">🚀 Probar Ahora</a>
 
-  <!-- DERECHA -->
-  <div class="hero-right">
-    <!-- Floating card ventas -->
-    <div class="float-card fc-ventas">
-      <div class="float-card-icon">📈</div>
-      <div class="float-card-text">
-        <strong>+34% ventas</strong>
-        <span>este mes vs anterior</span>
-      </div>
-    </div>
-
-    <!-- Floating card ticket -->
-    <div class="float-card fc-ticket">
-      <div class="float-card-icon">🧾</div>
-      <div class="float-card-text">
-        <strong>Factura CFDI</strong>
-        <span>emitida correctamente</span>
-      </div>
-    </div>
-
-    <div class="mockup-wrapper">
-      <div class="screen-mockup">
-
-        <!-- MARCO + PANTALLA -->
-        <div class="screen-frame">
-          <div class="screen-cam"></div>
-          <div class="screen-display">
-            <img src="images/software/puntoventa.png" alt="MyBusiness POS V24">
-          </div>
+            <a href="https://api.whatsapp.com/send?phone=5217131334557&text=Hola%20buen%20d%C3%ADa%2C%20necesito%20informaci%C3%B3n%20sobre%20emenetPOS"
+                class="btn-hero-ghost" target="_blank" rel="noopener noreferrer">Contáctanos</a>
         </div>
 
-        <!-- BASE DEL MONITOR -->
-        <div class="screen-foot">
-          <div class="screen-neck"></div>
-          <div class="screen-stand"></div>
+        <div class="hero-social-proof">
+            <div class="avatars">
+                <span>MV</span>
+                <span>CI</span>
+                <span>RC</span>
+            </div>
+            <div class="social-text">
+                <strong>+2,000 negocios</strong> ya usan emenetPOS<br>en todo México
+            </div>
+        </div>
+    </div>
+
+    <!-- DERECHA -->
+    <div class="hero-right hero-reveal" style="animation-delay: 0.3s">
+        <!-- Floating card ventas -->
+        <div class="float-card fc-ventas">
+            <div class="float-card-icon">📈</div>
+            <div class="float-card-text">
+                <strong>+34% ventas</strong>
+                <span>este mes vs anterior</span>
+            </div>
         </div>
 
-      </div>
-    </div>
-  </div>
+        <!-- Floating card ticket -->
+        <div class="float-card fc-ticket">
+            <div class="float-card-icon">🧾</div>
+            <div class="float-card-text">
+                <strong>Factura CFDI</strong>
+                <span>emitida correctamente</span>
+            </div>
+        </div>
 
-  <!-- Wave -->
-  <div class="hero-wave">
-    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
-    </svg>
-  </div>
+        <div class="mockup-wrapper">
+            <div class="screen-mockup">
+
+                <!-- MARCO + PANTALLA -->
+                <div class="screen-frame">
+                    <div class="screen-cam"></div>
+                    <div class="screen-display">
+                        <img src="images/software/puntoventa.png" alt="MyBusiness POS V24">
+                    </div>
+                </div>
+
+                <!-- BASE DEL MONITOR -->
+                <div class="screen-foot">
+                    <div class="screen-neck"></div>
+                    <div class="screen-stand"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Wave -->
+    <div class="hero-wave">
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#ffffff" />
+        </svg>
+    </div>
 </header>
 
 <!-- ===== HERO SECTION ===== -->
-<section class="hero-section">
+<section class="hero-section reveal fade-up">
     <div class="hero-container">
         <div class="hero-content">
             <h2 class="hero-title">Innovación que impulsa tu Punto de Venta</h2>
             <p class="hero-description">
-                En emenetPOS, como distribuidores autorizados de MyBusiness POS, ofrecemos una solución integral para la administración eficiente de tu negocio.
-                Centraliza la gestión de ventas, inventarios, clientes y reportes en una plataforma robusta, segura y confiable.
-                Brindamos implementación, capacitación y soporte especializado para garantizar el máximo rendimiento de tu sistema.
+                En emenetPOS, como distribuidores autorizados de MyBusiness POS, ofrecemos una solución integral para la
+                administración eficiente de tu negocio.
+                Centraliza la gestión de ventas, inventarios, clientes y reportes en una plataforma robusta, segura y
+                confiable.
+                Brindamos implementación, capacitación y soporte especializado para garantizar el máximo rendimiento de
+                tu sistema.
             </p>
-            
-               
+
+
             <div class="buttons-container">
                 <button class="btn btn-secondary" (click)="openModal()">
                     <i class="fas fa-shopping-cart"></i>
                     <span>Más información</span>
                 </button>
             </div>
-            
+
         </div>
         <div class="hero-image">
             <img src="images/software/mybusiness.png" alt="Software emenetPOS" class="image-hero">
-            
+
         </div>
-       
+
     </div>
 </section>
 
 <!-- ===== FEATURES SECTION ===== -->
-<section class="features-section">
+<section class="features-section reveal fade-up">
     <div class="contenedor">
         <h2 class="titulo">¿Por qué elegir emenetPOS?</h2>
         <div class="features-grid">
-            <div class="feature-bubble">
+            <div class="feature-bubble reveal zoom-in delay-100">
                 <div class="bubble-icon">
                     <i class="fas fa-chart-line"></i>
                 </div>
                 <h3>Gestión de Ventas</h3>
                 <p>Gestiona tu negocio sin complicaciones. Ventas, compras e inventario con reportes en tiempo real.</p>
             </div>
-            <div class="feature-bubble">
+            <div class="feature-bubble reveal zoom-in delay-200">
                 <div class="bubble-icon">
                     <i class="fas fa-boxes"></i>
                 </div>
                 <h3>Control de Inventario</h3>
-                <p>Más control, menos preocupaciones. Evita faltantes, automatiza proveedores y administra fácilmente tus clientes y tus cuentas.</p>
+                <p>Más control, menos preocupaciones. Evita faltantes, automatiza proveedores y administra fácilmente
+                    tus clientes y tus cuentas.</p>
 
             </div>
-            <div class="feature-bubble">
+            <div class="feature-bubble reveal zoom-in delay-300">
                 <div class="bubble-icon">
                     <i class="fas fa-mouse"></i>
                 </div>
                 <h3>Todo en Uno</h3>
-                <p>Todo en un solo sistema. Factura, cobra, gestiona proveedores y vende recargas fácilmente. Hecho a la medida de tu negocio.</p>
+                <p>Todo en un solo sistema. Factura, cobra, gestiona proveedores y vende recargas fácilmente. Hecho a la
+                    medida de tu negocio.</p>
             </div>
-            <div class="feature-bubble">
+            <div class="feature-bubble reveal zoom-in delay-400">
                 <div class="bubble-icon">
                     <i class="fa-solid fa-arrow-up-right-dots"></i>
                 </div>
                 <h3>Impulsa tu Crecimiento</h3>
-                <p>Te ayudamos a implementar, capacitar y respaldar tu sistema MyBusiness POS para que tu negocio crezca con seguridad.</p>
+                <p>Te ayudamos a implementar, capacitar y respaldar tu sistema MyBusiness POS para que tu negocio crezca
+                    con seguridad.</p>
             </div>
 
         </div>
@@ -156,57 +160,62 @@
 </section>
 
 <!-- ===== ADDITIONAL FEATURES SECTION ===== -->
-<section class="additional-features">
+<section class="additional-features reveal fade-up">
     <div class="contenedor">
         <h2 class="titulo">Más características que te encantarán</h2>
         <div class="features-list">
-            <div class="feature-item">
+            <div class="feature-item reveal fade-left delay-100">
                 <div class="feature-check">
                     <i class="fas fa-check"></i>
                 </div>
                 <div class="feature-info">
                     <h4>Control Avanzado de Inventario</h4>
-                    <p>Administra existencias, mínimos, máximos, lotes, caducidades y múltiples almacenes sin complicaciones.</p>
+                    <p>Administra existencias, mínimos, máximos, lotes, caducidades y múltiples almacenes sin
+                        complicaciones.</p>
                 </div>
             </div>
-            <div class="feature-item">
+            <div class="feature-item reveal fade-left delay-200">
                 <div class="feature-check">
                     <i class="fas fa-check"></i>
                 </div>
                 <div class="feature-info">
                     <h4>CFDI 4.0</h4>
-                    <p>Emite facturas, notas de crédito y complementos de pago cumpliendo con la normativa fiscal vigente en México.</p>
+                    <p>Emite facturas, notas de crédito y complementos de pago cumpliendo con la normativa fiscal
+                        vigente en México.</p>
                 </div>
             </div>
-            <div class="feature-item">
+            <div class="feature-item reveal fade-left delay-300">
                 <div class="feature-check">
                     <i class="fas fa-check"></i>
                 </div>
                 <div class="feature-info">
                     <h4>Administración de Clientes y Proveedores</h4>
-                    <p>Controla cuentas por cobrar, cuentas por pagar, historial de compras y estados de cuenta detallados.</p>
+                    <p>Controla cuentas por cobrar, cuentas por pagar, historial de compras y estados de cuenta
+                        detallados.</p>
                 </div>
             </div>
-            <div class="feature-item">
+            <div class="feature-item reveal fade-left delay-400">
                 <div class="feature-check">
                     <i class="fas fa-check"></i>
                 </div>
                 <div class="feature-info">
                     <h4>Control Total en la Nube</h4>
-                    <p>Instala tu sistema en cualquier sucursal y mantén toda tu información sincronizada automáticamente.
+                    <p>Instala tu sistema en cualquier sucursal y mantén toda tu información sincronizada
+                        automáticamente.
                         Inventarios, ventas y datos centralizados sin volver a capturar información.</p>
                 </div>
             </div>
-            <div class="feature-item">
+            <div class="feature-item reveal fade-left delay-500">
                 <div class="feature-check">
                     <i class="fas fa-check"></i>
                 </div>
                 <div class="feature-info">
                     <h4>Control de Caja, Cortes y seguridad</h4>
-                    <p>Realiza aperturas, cierres y cortes de caja con seguimiento detallado de ingresos y movimientos.</p>
+                    <p>Realiza aperturas, cierres y cortes de caja con seguimiento detallado de ingresos y movimientos.
+                    </p>
                 </div>
             </div>
-            <div class="feature-item">
+            <div class="feature-item reveal fade-left delay-500">
                 <div class="feature-check">
                     <i class="fas fa-check"></i>
                 </div>
@@ -224,37 +233,33 @@
     <div class="cta-content">
         <h2>¿Listo para transformar tu negocio?</h2>
         <p>Únete a miles de empresas que confían en <b>emenetPOS</b></p>
-        
+
         <div class="counter-container">
             <div class="counter-inline">
                 <h3>Clientes Satisfechos</h3>
                 <h1 class="counter-text">+ de</h1>
                 <h1 class="counter-number gradient" data-target="10000">10,000</h1>
-                
+
             </div>
             <div class="counter-inline">
                 <h3>Empresas que confían en nosotros</h3>
-                 <h1 class="counter-text">+ de</h1>
+                <h1 class="counter-text">+ de</h1>
                 <h1 class="counter-number gradient" data-target="1000">1000</h1>
-                
+
             </div>
-            
-                    
+
+
         </div><br>
         <div class="buttons-container">
-    <a [routerLink]="'/contacto'" class="btn btn-outline btn-large">
-        <i class="fas fa-calendar"></i>
-        <span>Me interesa</span>
-    </a>
-</div>
+            <a [routerLink]="'/contacto'" class="btn btn-outline btn-large">
+                <i class="fas fa-calendar"></i>
+                <span>Me interesa</span>
+            </a>
+        </div>
     </div>
 </section>
 
 <!-- Modal de Producto -->
-<app-product-modal 
-    [isOpen]="isModalOpen" 
-    [product]="selectedProduct"
-    [showAccesoriosButton]="true"
-    (close)="closeModal()"
-    (contact)="onContact($event)">
+<app-product-modal [isOpen]="isModalOpen" [product]="selectedProduct" [showAccesoriosButton]="true"
+    (close)="closeModal()" (contact)="onContact($event)">
 </app-product-modal>

@@ -3,7 +3,7 @@
   <div class="hero-dots"></div>
 
   <!-- IZQUIERDA -->
-  <div class="hero-left">
+  <div class="hero-left hero-reveal">
     <div class="hero-badge"> emenetPos — Facturación Electrónica</div>
 
     <h1 class="hero-h1">
@@ -13,44 +13,50 @@
     </h1>
 
     <p class="hero-sub">
-      Genera facturas CFDI 100% válidas ante el SAT. 
+      Genera facturas CFDI 100% válidas ante el SAT.
       Envía por email, controla tu repertorio y cumple con todas las obligaciones fiscales.
     </p>
 
     <div class="hero-features">
       <div class="feature-item">
         <span class="check">
-          <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+          <svg viewBox="0 0 12 12">
+            <polyline points="2,6 5,9 10,3" />
+          </svg>
         </span>
         Facturas CFDI válidas ante el SAT
       </div>
       <div class="feature-item">
         <span class="check">
-          <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+          <svg viewBox="0 0 12 12">
+            <polyline points="2,6 5,9 10,3" />
+          </svg>
         </span>
         Envío automático por email
       </div>
       <div class="feature-item">
         <span class="check">
-          <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+          <svg viewBox="0 0 12 12">
+            <polyline points="2,6 5,9 10,3" />
+          </svg>
         </span>
         Repertorio de clientes y productos
       </div>
       <div class="feature-item">
         <span class="check">
-          <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+          <svg viewBox="0 0 12 12">
+            <polyline points="2,6 5,9 10,3" />
+          </svg>
         </span>
         Reportes y contabilidad simplificada
       </div>
     </div>
 
     <div class="hero-actions">
-   <a class="btn-hero-primary" [routerLink]="'/contacto'">🚀 Probar Ahora</a>
-      
-  <a href="https://api.whatsapp.com/send?phone=5217131334557&text=Hola%20buen%20d%C3%ADa%2C%20necesito%20informaci%C3%B3n%20sobre%20emenetPOS"
-  class="btn-hero-ghost"
-  target="_blank"
-  rel="noopener noreferrer">Contáctanos</a>
+      <a class="btn-hero-primary" [routerLink]="'/contacto'">🚀 Probar Ahora</a>
+
+      <a href="https://api.whatsapp.com/send?phone=5217131334557&text=Hola%20buen%20d%C3%ADa%2C%20necesito%20informaci%C3%B3n%20sobre%20emenetPOS"
+        class="btn-hero-ghost" target="_blank" rel="noopener noreferrer">Contáctanos</a>
     </div>
 
     <div class="hero-social-proof">
@@ -66,7 +72,7 @@
   </div>
 
   <!-- DERECHA -->
-  <div class="hero-right">
+  <div class="hero-right hero-reveal" style="animation-delay: 0.3s">
     <!-- Floating card timbres -->
     <div class="float-card fc-ventas">
       <div class="float-card-icon">🎫</div>
@@ -109,122 +115,125 @@
   <!-- Wave -->
   <div class="hero-wave">
     <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
+      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#ffffff" />
     </svg>
   </div>
 </header>
 <br>
 <!-- ===== HERO SECTION ===== -->
-<section class="facturacion-hero-section">
-    <div class="facturacion-hero-container">
-        <div class="facturacion-hero-content">
-            <div class="facturacion-badge">
-                <i class="fas fa-check-circle"></i>
-                <span>100% Legal</span>
-            </div>
-            <h2 class="facturacion-hero-title">Facturación Digital Profesional</h2>
-            <p class="facturacion-hero-description">Genera facturas electrónicas para tus clientes de forma fácil y rápida.</p>
-            <p class="facturacion-hero-subtitle">MyBusiness POS te permite emitir facturas electrónicas 100% válidas en tiempo real, cumpliendo automáticamente con todas las normativas fiscales vigentes.
-            Y con el respaldo de emenetPOS, recibirás capacitación, seguimiento y soporte continuo para que tu facturación funcione siempre de manera correcta y sin complicaciones.
-            </p>
-            <button class="facturacion-btn-comprar">
-                    <i class="fas fa-shopping-cart"></i> Comprar Timbres Fiscales
-                </button>
-        </div>
-        <div class="facturacion-hero-image">
-            <img src="images/facturacion.webp" alt="Facturación Electrónica" class="facturacion-image">
-        </div>
+<section class="facturacion-hero-section reveal fade-up">
+  <div class="facturacion-hero-container">
+    <div class="facturacion-hero-content">
+      <div class="facturacion-badge">
+        <i class="fas fa-check-circle"></i>
+        <span>100% Legal</span>
+      </div>
+      <h2 class="facturacion-hero-title">Facturación Digital Profesional</h2>
+      <p class="facturacion-hero-description">Genera facturas electrónicas para tus clientes de forma fácil y rápida.
+      </p>
+      <p class="facturacion-hero-subtitle">MyBusiness POS te permite emitir facturas electrónicas 100% válidas en tiempo
+        real, cumpliendo automáticamente con todas las normativas fiscales vigentes.
+        Y con el respaldo de emenetPOS, recibirás capacitación, seguimiento y soporte continuo para que tu facturación
+        funcione siempre de manera correcta y sin complicaciones.
+      </p>
+      <button class="facturacion-btn-comprar">
+        <i class="fas fa-shopping-cart"></i> Comprar Timbres Fiscales
+      </button>
     </div>
+    <div class="facturacion-hero-image">
+      <img src="images/facturacion.webp" alt="Facturación Electrónica" class="facturacion-image">
+    </div>
+  </div>
 </section>
 <!-- ===== BENEFICIOS SECTION ===== -->
-<section class="facturacion-benefits-section">
-    <div class="contenedor">
-        <h2 class="titulo">Paquetes de Timbres Fiscales</h2>
-        <div class="facturacion-beneficios-grid">
-            <div class="facturacion-burbuja">
-                <div class="facturacion-burbuja-icon">
-                    <i class="fas fa-clock"></i>
-                </div>
-                <h3>Paquete de 100</h3>
-                <p>$ 465.16 MXN</p>
-            </div>
-            <div class="facturacion-burbuja">
-                <div class="facturacion-burbuja-icon">
-                    <i class="fas fa-shield-alt"></i>
-                </div>
-                <h3>Paquete de 200</h3>
-                <p>$ 814.32 MXN</p>
-            </div>
-            <div class="facturacion-burbuja">
-                <div class="facturacion-burbuja-icon">
-                    <i class="fas fa-shield-alt"></i>
-                </div>
-                <h3>Paquete de 500</h3>
-                <p>$ 1,745.80 MXN</p>
-            </div>
-            <div class="facturacion-burbuja">
-                <div class="facturacion-burbuja-icon">
-                    <i class="fas fa-shield-alt"></i>
-                </div>
-                <h3>Paquete de 1000</h3>
-                <p>$ 2,911.60 MXN</p>
-            </div>
+<section class="facturacion-benefits-section reveal fade-up">
+  <div class="contenedor">
+    <h2 class="titulo">Paquetes de Timbres Fiscales</h2>
+    <div class="facturacion-beneficios-grid">
+      <div class="facturacion-burbuja reveal zoom-in delay-100">
+        <div class="facturacion-burbuja-icon">
+          <i class="fas fa-clock"></i>
         </div>
+        <h3>Paquete de 100</h3>
+        <p>$ 465.16 MXN</p>
+      </div>
+      <div class="facturacion-burbuja reveal zoom-in delay-200">
+        <div class="facturacion-burbuja-icon">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <h3>Paquete de 200</h3>
+        <p>$ 814.32 MXN</p>
+      </div>
+      <div class="facturacion-burbuja reveal zoom-in delay-300">
+        <div class="facturacion-burbuja-icon">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <h3>Paquete de 500</h3>
+        <p>$ 1,745.80 MXN</p>
+      </div>
+      <div class="facturacion-burbuja reveal zoom-in delay-400">
+        <div class="facturacion-burbuja-icon">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <h3>Paquete de 1000</h3>
+        <p>$ 2,911.60 MXN</p>
+      </div>
     </div>
+  </div>
 </section>
 
 <!-- ===== CARACTERISTICAS SECTION ===== -->
 <section class="facturacion-caracteristicas-section">
-    <div class="contenedor">
-        <h2 class="titulo">Características Principales</h2>
-        <div class="facturacion-caracteristicas-grid">
-            <div class="facturacion-caracteristica-item">
-                <div class="caracteristica-icon">
-                    <i class="fas fa-file-invoice-dollar"></i>
-                </div>
-                <h3>Emisión Legal</h3>
-                <p>Genera facturas 100% válidas con firma digital y respaldo del SAT</p>
-            </div>
-            <div class="facturacion-caracteristica-item">
-                <div class="caracteristica-icon">
-                    <i class="fas fa-cloud-upload-alt"></i>
-                </div>
-                <h3>Almacenamiento Seguro</h3>
-                <p>Todas tus facturas se guardan en servidores certificados en la nube</p>
-            </div>
-            <div class="facturacion-caracteristica-item">
-                <div class="caracteristica-icon">
-                    <i class="fas fa-envelope"></i>
-                </div>
-                <h3>Envío Automático</h3>
-                <p>Envía facturas por email directamente a tus clientes</p>
-            </div>
-            <div class="facturacion-caracteristica-item">
-                <div class="caracteristica-icon">
-                    <i class="fas fa-chart-bar"></i>
-                </div>
-                <h3>Reportes Detallados</h3>
-                <p>Análisis completos de tus facturas emitidas y cumplimiento fiscal</p>
-            </div>
+  <div class="contenedor">
+    <h2 class="titulo">Características Principales</h2>
+    <div class="facturacion-caracteristicas-grid">
+      <div class="facturacion-caracteristica-item">
+        <div class="caracteristica-icon">
+          <i class="fas fa-file-invoice-dollar"></i>
         </div>
+        <h3>Emisión Legal</h3>
+        <p>Genera facturas 100% válidas con firma digital y respaldo del SAT</p>
+      </div>
+      <div class="facturacion-caracteristica-item">
+        <div class="caracteristica-icon">
+          <i class="fas fa-cloud-upload-alt"></i>
+        </div>
+        <h3>Almacenamiento Seguro</h3>
+        <p>Todas tus facturas se guardan en servidores certificados en la nube</p>
+      </div>
+      <div class="facturacion-caracteristica-item">
+        <div class="caracteristica-icon">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <h3>Envío Automático</h3>
+        <p>Envía facturas por email directamente a tus clientes</p>
+      </div>
+      <div class="facturacion-caracteristica-item">
+        <div class="caracteristica-icon">
+          <i class="fas fa-chart-bar"></i>
+        </div>
+        <h3>Reportes Detallados</h3>
+        <p>Análisis completos de tus facturas emitidas y cumplimiento fiscal</p>
+      </div>
     </div>
+  </div>
 </section>
 
 <!-- ===== CTA SECTION ===== -->
 <section class="cta-section">
-    <div class="cta-content">
-        <h2>¿Listo para digitalizar tu negocio?</h2>
-        <p>Únete a miles de empresas que ya utilizan nuestra facturación electrónica</p>
-        <div class="buttons-container">
-            <a class="btn btn-outline btn-large"></a>
-        </div>
-        <div class="cta-buttons">
-            <button class="btn btn-primary btn-large">
-                <i class="fas fa-shopping-cart"></i> Comprar Timbres
-            </button>
-            <button class="btn btn-outline btn-large">
-                <i class="fas fa-calendar"></i> Agendar Demo
-            </button>
-        </div>
+  <div class="cta-content">
+    <h2>¿Listo para digitalizar tu negocio?</h2>
+    <p>Únete a miles de empresas que ya utilizan nuestra facturación electrónica</p>
+    <div class="buttons-container">
+      <a class="btn btn-outline btn-large"></a>
     </div>
+    <div class="cta-buttons">
+      <button class="btn btn-primary btn-large">
+        <i class="fas fa-shopping-cart"></i> Comprar Timbres
+      </button>
+      <button class="btn btn-outline btn-large">
+        <i class="fas fa-calendar"></i> Agendar Demo
+      </button>
+    </div>
+  </div>
 </section>

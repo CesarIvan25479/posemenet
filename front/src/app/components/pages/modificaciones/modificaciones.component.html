@@ -3,7 +3,7 @@
   <div class="hero-dots"></div>
 
   <!-- IZQUIERDA -->
-  <div class="hero-left">
+  <div class="hero-left hero-reveal">
     <div class="hero-badge"> MyBusinessPos — modificaciones a la medida</div>
 
     <h1 class="hero-h1">
@@ -13,38 +13,43 @@
     </h1>
 
     <p class="hero-sub">
-      Si necesitas personalizar el sistema para adaptarlo a las necesidades específicas de tu negocio, emenetPos te ofrece soluciones a la medida.
+      Si necesitas personalizar el sistema para adaptarlo a las necesidades específicas de tu negocio, emenetPos te
+      ofrece soluciones a la medida.
     </p>
 
     <div class="hero-features">
       <div class="feature-item">
         <span class="check">
-          <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+          <svg viewBox="0 0 12 12">
+            <polyline points="2,6 5,9 10,3" />
+          </svg>
         </span>
         Sistema 100% adaptable.
       </div>
       <div class="feature-item">
         <span class="check">
-          <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+          <svg viewBox="0 0 12 12">
+            <polyline points="2,6 5,9 10,3" />
+          </svg>
         </span>
         Personalizable a tu gusto.
       </div>
       <div class="feature-item">
         <span class="check">
-          <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+          <svg viewBox="0 0 12 12">
+            <polyline points="2,6 5,9 10,3" />
+          </svg>
         </span>
         Se ajusta a la forma de trabajar de tu negocio.
       </div>
-      
+
     </div>
 
     <div class="hero-actions">
-   <a class="btn-hero-primary" [routerLink]="'/contacto'">🚀 Probar Ahora</a>
-      
-  <a href="https://api.whatsapp.com/send?phone=5217131334557&text=Hola%20buen%20d%C3%ADa%2C%20necesito%20informaci%C3%B3n%20sobre%20emenetPOS"
-  class="btn-hero-ghost"
-  target="_blank"
-  rel="noopener noreferrer">Contáctanos</a>
+      <a class="btn-hero-primary" [routerLink]="'/contacto'">🚀 Probar Ahora</a>
+
+      <a href="https://api.whatsapp.com/send?phone=5217131334557&text=Hola%20buen%20d%C3%ADa%2C%20necesito%20informaci%C3%B3n%20sobre%20emenetPOS"
+        class="btn-hero-ghost" target="_blank" rel="noopener noreferrer">Contáctanos</a>
     </div>
 
     <div class="hero-social-proof">
@@ -60,7 +65,7 @@
   </div>
 
   <!-- DERECHA -->
-  <div class="hero-right">
+  <div class="hero-right hero-reveal" style="animation-delay: 0.3s">
     <!-- Floating card timbres -->
     <div class="float-card fc-ventas">
       <div class="float-card-icon">🎫</div>
@@ -103,131 +108,132 @@
   <!-- Wave -->
   <div class="hero-wave">
     <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
+      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#ffffff" />
     </svg>
   </div>
 </header>
 <!-- ===== HERO SECTION ===== -->
-<section class="modificaciones-hero-section">
-    <div class="contenedor">
-        <div class="modificaciones-hero-content">
-            <div class="modificaciones-badge">
-                <i class="fas fa-cogs"></i>
-                <span>Personalizado</span>
-            </div>
-            <h2 class="modificaciones-hero-title">Tu negocio es único,<br>tu sistema también</h2>
-            <p class="modificaciones-hero-description">
-                En emenetPOS entendemos que cada negocio tiene necesidades diferentes. Por eso te ofrecemos modificaciones a la medida para que el sistema se ajuste perfectamente a tus procesos y requerimientos específicos.
-            </p>
-            <div class="modificaciones-stats">
-                <div class="mod-stat">
-                    <span class="stat-number">100%</span>
-                    <span class="stat-label">Personalizable</span>
-                </div>
-                <div class="mod-stat">
-                    <span class="stat-number">500+</span>
-                    <span class="stat-label">Clientes satisfechos</span>
-                </div>
-                <div class="mod-stat">
-                    <span class="stat-number">10+</span>
-                    <span class="stat-label">Años de experiencia</span>
-                </div>
-            </div>
+<section class="modificaciones-hero-section reveal fade-up">
+  <div class="contenedor">
+    <div class="modificaciones-hero-content">
+      <div class="modificaciones-badge">
+        <i class="fas fa-cogs"></i>
+        <span>Personalizado</span>
+      </div>
+      <h2 class="modificaciones-hero-title">Tu negocio es único,<br>tu sistema también</h2>
+      <p class="modificaciones-hero-description">
+        En emenetPOS entendemos que cada negocio tiene necesidades diferentes. Por eso te ofrecemos modificaciones a la
+        medida para que el sistema se ajuste perfectamente a tus procesos y requerimientos específicos.
+      </p>
+      <div class="modificaciones-stats">
+        <div class="mod-stat">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Personalizable</span>
         </div>
+        <div class="mod-stat">
+          <span class="stat-number">500+</span>
+          <span class="stat-label">Clientes satisfechos</span>
+        </div>
+        <div class="mod-stat">
+          <span class="stat-number">10+</span>
+          <span class="stat-label">Años de experiencia</span>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 <!-- ===== SERVICIOS SECTION ===== -->
-<section class="modificaciones-services-section">
-    <div class="contenedor">
-        <h2 class="titulo">Servicios de Personalización</h2>
-        <div class="modificaciones-grid">
-            <div class="mod-card">
-                <div class="mod-icon">
-                    <i class="fas fa-code"></i>
-                </div>
-                <h3>Desarrollo Personalizado</h3>
-                <p>Creamos módulos y funcionalidades específicas para tu negocio. Sin compromisos, solo lo que necesitas.</p>
-            </div>
-            <div class="mod-card">
-                <div class="mod-icon">
-                    <i class="fas fa-plug"></i>
-                </div>
-                <h3>Integraciones</h3>
-                <p>Conectamos tu sistema con otros software, plataformas de venta o herramientas que ya uses.</p>
-            </div>
-            <div class="mod-card">
-                <div class="mod-icon">
-                    <i class="fas fa-chart-bar"></i>
-                </div>
-                <h3>Reportes Custom</h3>
-                <p>Reportes diseñados específicamente para tu negocio. La información que necesitas, como la necesitas.</p>
-            </div>
-            <div class="mod-card">
-                <div class="mod-icon">
-                    <i class="fas fa-paint-brush"></i>
-                </div>
-                <h3>Interfaz Adaptada</h3>
-                <p>Diseño de interfaz según tus necesidades. Más fácil, más rápido, más eficiente.</p>
-            </div>
-            <div class="mod-card">
-                <div class="mod-icon">
-                    <i class="fas fa-graduation-cap"></i>
-                </div>
-                <h3>Capacitación</h3>
-                <p>Entrenamiento personalizado para tu equipo. Sacamos el máximo partido al sistema.</p>
-            </div>
-            <div class="mod-card">
-                <div class="mod-icon">
-                    <i class="fas fa-tools"></i>
-                </div>
-                <h3>Mantenimiento</h3>
-                <p>Soporte continuo y actualizaciones para tu sistema personalizado.</p>
-            </div>
+<section class="modificaciones-services-section reveal fade-up">
+  <div class="contenedor">
+    <h2 class="titulo">Servicios de Personalización</h2>
+    <div class="modificaciones-grid">
+      <div class="mod-card reveal zoom-in delay-100">
+        <div class="mod-icon">
+          <i class="fas fa-code"></i>
         </div>
+        <h3>Desarrollo Personalizado</h3>
+        <p>Creamos módulos y funcionalidades específicas para tu negocio. Sin compromisos, solo lo que necesitas.</p>
+      </div>
+      <div class="mod-card reveal zoom-in delay-200">
+        <div class="mod-icon">
+          <i class="fas fa-plug"></i>
+        </div>
+        <h3>Integraciones</h3>
+        <p>Conectamos tu sistema con otros software, plataformas de venta o herramientas que ya uses.</p>
+      </div>
+      <div class="mod-card reveal zoom-in delay-300">
+        <div class="mod-icon">
+          <i class="fas fa-chart-bar"></i>
+        </div>
+        <h3>Reportes Custom</h3>
+        <p>Reportes diseñados específicamente para tu negocio. La información que necesitas, como la necesitas.</p>
+      </div>
+      <div class="mod-card reveal zoom-in delay-400">
+        <div class="mod-icon">
+          <i class="fas fa-paint-brush"></i>
+        </div>
+        <h3>Interfaz Adaptada</h3>
+        <p>Diseño de interfaz según tus necesidades. Más fácil, más rápido, más eficiente.</p>
+      </div>
+      <div class="mod-card reveal zoom-in delay-500">
+        <div class="mod-icon">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <h3>Capacitación</h3>
+        <p>Entrenamiento personalizado para tu equipo. Sacamos el máximo partido al sistema.</p>
+      </div>
+      <div class="mod-card reveal zoom-in delay-500">
+        <div class="mod-icon">
+          <i class="fas fa-tools"></i>
+        </div>
+        <h3>Mantenimiento</h3>
+        <p>Soporte continuo y actualizaciones para tu sistema personalizado.</p>
+      </div>
     </div>
+  </div>
 </section>
 
 <!-- ===== PROCESO SECTION ===== -->
 <section class="modificaciones-proceso-section">
-    <div class="contenedor">
-        <h2 class="titulo">Nuestro Proceso</h2>
-        <div class="proceso-grid">
-            <div class="proceso-card">
-                <div class="proceso-number">1</div>
-                <h3>Consulta</h3>
-                <p>Escuchamos tus necesidades y requerimientos específicos</p>
-            </div>
-            <div class="proceso-card">
-                <div class="proceso-number">2</div>
-                <h3>Propuesta</h3>
-                <p>Te presentamos una solución personalizada y un presupuesto claro</p>
-            </div>
-            <div class="proceso-card">
-                <div class="proceso-number">3</div>
-                <h3>Desarrollo</h3>
-                <p>Creamos la solución a medida con los más altos estándares de calidad</p>
-            </div>
-            <div class="proceso-card">
-                <div class="proceso-number">4</div>
-                <h3>Implementación</h3>
-                <p>Instalamos, configuramos y probamos el sistema en tu negocio</p>
-            </div>
-        </div>
+  <div class="contenedor">
+    <h2 class="titulo">Nuestro Proceso</h2>
+    <div class="proceso-grid">
+      <div class="proceso-card">
+        <div class="proceso-number">1</div>
+        <h3>Consulta</h3>
+        <p>Escuchamos tus necesidades y requerimientos específicos</p>
+      </div>
+      <div class="proceso-card">
+        <div class="proceso-number">2</div>
+        <h3>Propuesta</h3>
+        <p>Te presentamos una solución personalizada y un presupuesto claro</p>
+      </div>
+      <div class="proceso-card">
+        <div class="proceso-number">3</div>
+        <h3>Desarrollo</h3>
+        <p>Creamos la solución a medida con los más altos estándares de calidad</p>
+      </div>
+      <div class="proceso-card">
+        <div class="proceso-number">4</div>
+        <h3>Implementación</h3>
+        <p>Instalamos, configuramos y probamos el sistema en tu negocio</p>
+      </div>
     </div>
+  </div>
 </section>
 
 <!-- ===== CTA SECTION ===== -->
 <section class="cta-section">
-    <div class="cta-content">
-        <h2>¿Necesitas algo específico?</h2>
-        <p>Cuéntanos tu idea y la hacemos realidad</p>
-        <div class="cta-buttons">
-            <button class="btn btn-primary btn-large">
-                <i class="fas fa-comment"></i> Cotizar Proyecto
-            </button>
-            <button class="btn btn-outline btn-large">
-                <i class="fas fa-calendar"></i> Agendar Demo
-            </button>
-        </div>
+  <div class="cta-content">
+    <h2>¿Necesitas algo específico?</h2>
+    <p>Cuéntanos tu idea y la hacemos realidad</p>
+    <div class="cta-buttons">
+      <button class="btn btn-primary btn-large">
+        <i class="fas fa-comment"></i> Cotizar Proyecto
+      </button>
+      <button class="btn btn-outline btn-large">
+        <i class="fas fa-calendar"></i> Agendar Demo
+      </button>
     </div>
+  </div>
 </section>

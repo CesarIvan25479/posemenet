@@ -1,26 +1,115 @@
-<!-- ===== HEADER ===== -->
-<header>
-    <!-- Carrusel de fondo -->
-    <div class="header-carousel">
-        <div class="slide active" style="background-image:url('images/portada.png')"></div>
-        <div class="slide" style="background-image:url('images/portada2.png')"></div>
-        <div class="slide" style="background-image:url('images/img3.png')"></div>
+<header class="acc-header">
+
+    <!-- ▸ Decorativo -->
+    <div class="acc-hero-blob" aria-hidden="true"></div>
+
+    <!-- ─── SECCIÓN 1: HERO ─── -->
+    <div class="acc-hero">
+
+        <!-- Texto izquierda -->
+        <div class="acc-hero-text hero-reveal">
+
+            <div class="acc-badge">
+                <span class="acc-badge-dot" aria-hidden="true"></span>
+                Equipamiento profesional
+            </div>
+
+            <h1 class="acc-h1">
+                El hardware que<br>
+                tu negocio<br>
+                <span class="acc-accent">necesita hoy</span>
+            </h1>
+
+            <p class="acc-sub">
+                Desde scanners hasta computadoras completas.
+                Todo probado, garantizado y listo para conectar
+                con MyBusinessPOS desde el primer día.
+            </p>
+
+            <!-- Checklist de valor -->
+            <div class="acc-checks">
+                <div class="acc-check-item">
+                    <span class="acc-check-icon">
+                        <svg viewBox="0 0 12 12">
+                            <polyline points="2,6 5,9 10,3" />
+                        </svg>
+                    </span>
+                    Entrega rápida
+                </div>
+                <div class="acc-check-item">
+                    <span class="acc-check-icon">
+                        <svg viewBox="0 0 12 12">
+                            <polyline points="2,6 5,9 10,3" />
+                        </svg>
+                    </span>
+                    Garantía incluida
+                </div>
+                <div class="acc-check-item">
+                    <span class="acc-check-icon">
+                        <svg viewBox="0 0 12 12">
+                            <polyline points="2,6 5,9 10,3" />
+                        </svg>
+                    </span>
+                    Compatibles con POS
+                </div>
+                <div class="acc-check-item">
+                    <span class="acc-check-icon">
+                        <svg viewBox="0 0 12 12">
+                            <polyline points="2,6 5,9 10,3" />
+                        </svg>
+                    </span>
+                    Soporte técnico
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Imagen hero con anillo y chips -->
+        <div class="acc-hero-visual hero-reveal" aria-hidden="true" style="animation-delay: 0.3s">
+
+            <div class="acc-ring-wrap">
+                <!-- Anillo SVG giratorio -->
+                <svg class="acc-ring-svg" viewBox="0 0 340 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="170" cy="170" r="162" stroke="rgba(11,191,191,.2)" stroke-width="1.5"
+                        stroke-dasharray="6 14" />
+                    <circle cx="170" cy="170" r="130" stroke="rgba(0,24,69,.08)" stroke-width="1"
+                        stroke-dasharray="3 20" />
+                </svg>
+
+                <!-- Imagen principal -->
+                <img class="acc-hero-img" src="images/accesorios/accesorios.png"
+                    alt="Computadora All In One para punto de venta">
+            </div>
+
+            <!-- Chips flotantes -->
+            <div class="acc-chip acc-chip--tl">
+                <span class="acc-chip-icon">⚡</span>
+                Plug &amp; Play
+            </div>
+            <div class="acc-chip acc-chip--tr">
+                <span class="acc-chip-icon">🛡️</span>
+                Garantía
+            </div>
+            <div class="acc-chip acc-chip--bl">
+                <span class="acc-chip-icon">📦</span>
+                Envío rápido
+            </div>
+            <div class="acc-chip acc-chip--br">
+                <span class="acc-chip-icon">✅</span>
+                Certificado
+            </div>
+
+        </div>
+
     </div>
 
-    <section class="textos-header">
-        <div class="topnav">
-            <h1>Accesorios</h1>
-            <h2>Tenemos todo lo que necesitas para tu punto de venta</h2>
-        </div>
-    </section>
-
-    <!-- Wave al final del header -->
-    <div class="wave" style="height: 150px; overflow: hidden;">
-        <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height:100%; width: 100%;">
-            <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
-                style="stroke: none; fill: #fff;"></path>
+    <!-- Wave decorativo al pie del header -->
+    <div class="acc-header-wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,30 C360,70 1080,0 1440,30 L1440,60 L0,60 Z" fill="#f0f4fb" />
         </svg>
-    </div>  
+    </div>
+
 </header>
 
 <!-- ===== CIRCULAR GALLERY SECTION ===== -->
@@ -32,11 +121,38 @@
     </div>
 </section>
 
+<!-- ─── SECCIÓN 5: SCROLL CTA ─── -->
+<div class="acc-scroll-cta" aria-label="Ver catálogo completo abajo">
+
+    <p class="acc-scroll-label">Catálogo completo</p>
+
+    <p class="acc-scroll-text">
+        Ve todos los productos<br>
+        <em>justo aquí abajo</em>
+    </p>
+
+
+
+    <!-- Flechas animadas CSS puras -->
+    <div class="acc-scroll-chevrons" aria-hidden="true">
+        <div class="acc-chevron"></div>
+        <div class="acc-chevron"></div>
+        <div class="acc-chevron"></div>
+    </div>
+
+</div>
+
+<!-- Wave separadora hacia la sección de productos -->
+<div class="acc-wave" aria-hidden="true">
+    <svg viewBox="0 0 1440 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,24 C480,48 960,0 1440,24 L1440,48 L0,48 Z" fill="#F4F7FB" />
+    </svg>
+</div>
 <!--==== VENTA ACCESORIOS SECTION ====-->
 <section class="ventas-section">
     <div class="product-content">
         <!-- Header Section -->
-        <div class="products-header">
+        <div class="products-header reveal fade-up">
             <h2 class="product-title">Tenemos todo para tu punto de venta</h2>
             <p class="product-description">Explora nuestro catálogo de accesorios</p>
         </div>
@@ -44,13 +160,9 @@
         <!-- Products Grid (3 columnas x 2 filas) -->
         <div class="products-grid">
             <!-- Product Card 1 -->
-            <article class="product-card">
+            <article class="product-card reveal fade-up delay-100">
                 <div class="product-image-wrapper" (click)="openModal(products[0])">
-                    <img 
-                        src="images/barras2.png" 
-                        alt="Lector QR Profesional" 
-                        class="product-image"
-                    >
+                    <img src="images/barras2.png" alt="Lector QR Profesional" class="product-image">
                     <div class="product-overlay">
                         <span class="overlay-text">Ver más</span>
                     </div>
@@ -60,19 +172,15 @@
                     <p class="product-description-card">Scanner de códigos de alta velocidad y precisión</p>
                     <div class="product-footer">
                         <span class="product-price">$1,500.00 MX</span>
-                        
+
                     </div>
                 </div>
             </article>
 
             <!-- Product Card 2 -->
-            <article class="product-card">
+            <article class="product-card reveal fade-up delay-200">
                 <div class="product-image-wrapper" (click)="openModal(products[1])">
-                    <img 
-                        src="images/impresora2.png" 
-                        alt="Impresora Térmica Compacta" 
-                        class="product-image"
-                    >
+                    <img src="images/impresora2.png" alt="Impresora Térmica Compacta" class="product-image">
                     <div class="product-overlay">
                         <span class="overlay-text">Ver más</span>
                     </div>
@@ -82,19 +190,15 @@
                     <p class="product-description-card">Impresora térmica para recibos y etiquetas</p>
                     <div class="product-footer">
                         <span class="product-price">$1,200.00 MX</span>
-                        
+
                     </div>
                 </div>
             </article>
 
             <!-- Product Card 3 -->
-            <article class="product-card">
+            <article class="product-card reveal fade-up delay-300">
                 <div class="product-image-wrapper" (click)="openModal(products[2])">
-                    <img 
-                        src="images/cajon2.png" 
-                        alt="Cajón de Efectivo Electrónico" 
-                        class="product-image"
-                    >
+                    <img src="images/cajon2.png" alt="Cajón de Efectivo Electrónico" class="product-image">
                     <div class="product-overlay">
                         <span class="overlay-text">Ver más</span>
                     </div>
@@ -104,7 +208,7 @@
                     <p class="product-description-card">Cajón automático con seguridad integrada y control USB</p>
                     <div class="product-footer">
                         <span class="product-price">$750.00 MX</span>
-                        
+
                     </div>
                 </div>
             </article>
@@ -112,11 +216,7 @@
             <!-- Product Card 4 -->
             <article class="product-card">
                 <div class="product-image-wrapper" (click)="openModal(products[3])">
-                    <img 
-                        src="images/rollo.png" 
-                        alt="Consumibles" 
-                        class="product-image"
-                    >
+                    <img src="images/rollo.png" alt="Consumibles" class="product-image">
                     <div class="product-overlay">
                         <span class="overlay-text">Ver más</span>
                     </div>
@@ -126,7 +226,7 @@
                     <p class="product-description-card">Rollo de papel térmico c/u</p>
                     <div class="product-footer">
                         <span class="product-price">$80.00 MX</span>
-                        
+
                     </div>
                 </div>
             </article>
@@ -134,11 +234,7 @@
             <!-- Product Card 5 -->
             <article class="product-card">
                 <div class="product-image-wrapper" (click)="openModal(products[4])">
-                    <img 
-                        src="images/compu1.png" 
-                        alt="Pantalla Táctil 15 pulgadas" 
-                        class="product-image"
-                    >
+                    <img src="images/compu1.png" alt="Pantalla Táctil 15 pulgadas" class="product-image">
                     <div class="product-overlay">
                         <span class="overlay-text">Ver más</span>
                     </div>
@@ -148,7 +244,7 @@
                     <p class="product-description-card">Monitor táctil capacitivo, mouse y teclado</p>
                     <div class="product-footer">
                         <span class="product-price">$4,999.99 MX</span>
-                        
+
                     </div>
                 </div>
             </article>
@@ -156,11 +252,7 @@
             <!-- Product Card 6 -->
             <article class="product-card">
                 <div class="product-image-wrapper" (click)="openModal(products[5])">
-                    <img 
-                        src="images/terminal.png" 
-                        alt="Caja Registradora Electrónica" 
-                        class="product-image"
-                    >
+                    <img src="images/terminal.png" alt="Caja Registradora Electrónica" class="product-image">
                     <div class="product-overlay">
                         <span class="overlay-text">Ver más</span>
                     </div>
@@ -170,19 +262,15 @@
                     <p class="product-description-card">Sistema completo con software integrado</p>
                     <div class="product-footer">
                         <span class="product-price">$450.00 MX</span>
-                        
+
                     </div>
                 </div>
             </article>
 
             <!-- Product Card 7 -->
-            <article class="product-card">
+            <article class="product-card reveal fade-up">
                 <div class="product-image-wrapper" (click)="openModal(products[6])">
-                    <img 
-                        src="images/pc.png" 
-                        alt="PC GHIA Frontier Slim 2.0" 
-                        class="product-image"
-                    >
+                    <img src="images/compu1.png" alt="PC GHIA Frontier Slim 2.0" class="product-image">
                     <div class="product-overlay">
                         <span class="overlay-text">Ver más</span>
                     </div>
@@ -192,7 +280,7 @@
                     <p class="product-description-card">1 TB Disco, RAM 8 GB - Ideal para punto de venta</p>
                     <div class="product-footer">
                         <span class="product-price">$5,999.99 MX</span>
-                        
+
                     </div>
                 </div>
             </article>
@@ -200,11 +288,7 @@
             <!-- Product Card 8 -->
             <article class="product-card">
                 <div class="product-image-wrapper" (click)="openModal(products[7])">
-                    <img 
-                        src="images/monitor.png" 
-                        alt="Monitor GHIA 23.8 pulgadas" 
-                        class="product-image"
-                    >
+                    <img src="images/monitor.png" alt="Monitor GHIA 23.8 pulgadas" class="product-image">
                     <div class="product-overlay">
                         <span class="overlay-text">Ver más</span>
                     </div>
@@ -214,7 +298,7 @@
                     <p class="product-description-card">Monitor Full HD para punto de venta y oficina</p>
                     <div class="product-footer">
                         <span class="product-price">$2,499.99 MX</span>
-                        
+
                     </div>
                 </div>
             </article>
@@ -222,11 +306,7 @@
             <!-- Product Card 9 -->
             <article class="product-card">
                 <div class="product-image-wrapper" (click)="openModal(products[8])">
-                    <img 
-                        src="images/consumible.png" 
-                        alt="Rollos Térmicos 76mm" 
-                        class="product-image"
-                    >
+                    <img src="images/consumible.png" alt="Rollos Térmicos 76mm" class="product-image">
                     <div class="product-overlay">
                         <span class="overlay-text">Ver más</span>
                     </div>
@@ -236,18 +316,102 @@
                     <p class="product-description-card">Caja de consumibles para impresoras térmicas</p>
                     <div class="product-footer">
                         <span class="product-price">$149.99</span>
-                        
+
                     </div>
                 </div>
             </article>
+        </div>
+        <!-- ─── SECCIÓN 3: BENEFICIOS ─── -->
+        <section class="acc-benefits" aria-labelledby="acc-benefits-title">
+
+            <h2 class="acc-benefits-title" id="acc-benefits-title">
+                ¿Por qué comprar <span>aquí</span>?
+            </h2>
+
+            <div class="acc-benefits-grid">
+
+                <div class="acc-benefit-card">
+                    <div class="acc-benefit-icon" aria-hidden="true">🔌</div>
+                    <div class="acc-benefit-card-body">
+                        <p class="acc-benefit-name">Integración inmediata</p>
+                        <p class="acc-benefit-desc">
+                            Todos los equipos funcionan desde el primer enchufe con
+                            MyBusinessPOS. Sin configuraciones complicadas.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="acc-benefit-card">
+                    <div class="acc-benefit-icon" aria-hidden="true">🏆</div>
+                    <div class="acc-benefit-card-body">
+                        <p class="acc-benefit-name">Calidad probada</p>
+                        <p class="acc-benefit-desc">
+                            Hardware seleccionado tras pruebas reales en comercios
+                            mexicanos. Rendimiento garantizado en uso continuo.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="acc-benefit-card">
+                    <div class="acc-benefit-icon" aria-hidden="true">💬</div>
+                    <div class="acc-benefit-card-body">
+                        <p class="acc-benefit-name">Soporte en tu idioma</p>
+                        <p class="acc-benefit-desc">
+                            Asesoría técnica en español. Resolvemos cualquier duda
+                            sobre instalación, compatibilidad o uso.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="acc-benefit-card">
+                    <div class="acc-benefit-icon" aria-hidden="true">💰</div>
+                    <div class="acc-benefit-card-body">
+                        <p class="acc-benefit-name">Precios accesibles</p>
+                        <p class="acc-benefit-desc">
+                            Desde $80 MX por rollo hasta equipos completos. Hay
+                            opción para cualquier presupuesto y tamaño de negocio.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ─── SECCIÓN 4: BANNER PROMO ─── -->
+        <div class="acc-promo-banner" role="region" aria-label="Oferta especial">
+
+            <div class="acc-promo-text">
+                <p class="acc-promo-eyebrow">&#9733; Equipos disponibles hoy</p>
+                <h2 class="acc-promo-h2">
+                    Arma tu punto de venta<br>
+                    completo desde <em>$80 MX</em>
+                </h2>
+                <p class="acc-promo-desc">
+                    Rollos, scanners, impresoras, cajones y computadoras.
+                    Todo lo que ves abajo está listo para enviarse.
+                </p>
+            </div>
+
+            <div class="acc-promo-prices" aria-label="Precios destacados">
+                <div class="acc-promo-price-item">
+                    <span>Lector de código</span>
+                    <span class="acc-promo-price-val">$1,500 MX</span>
+                </div>
+                <div class="acc-promo-price-item">
+                    <span>Impresora térmica</span>
+                    <span class="acc-promo-price-val">$1,200 MX</span>
+                </div>
+                <div class="acc-promo-price-item">
+                    <span>Cajón electrónico</span>
+                    <span class="acc-promo-price-val">$750 MX</span>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
 
 <!-- Modal de Producto -->
-<app-product-modal 
-    [isOpen]="isModalOpen" 
-    [product]="selectedProduct"
-    (close)="closeModal()"
+<app-product-modal [isOpen]="isModalOpen" [product]="selectedProduct" (close)="closeModal()"
     (contact)="onContact($event)">
 </app-product-modal>
