@@ -279,6 +279,97 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
         'Presentación': 'Caja con múltiples rollos',
         'Calidad': 'Premium'
       }
+    },
+    {
+      id: 10,
+      name: 'emenetPOS Punto de Venta',
+      description: 'Punto de venta completo y listo para operar, impulsado por MyBusiness POS. Incluye equipo esencial y soporte especializado para que empieces a vender desde el primer día, todo en un solo paquete.',
+      price: 30500.00,
+      image: 'images/software/mybusiness2.png',
+      images: ['images/software/monitor2.png', 'images/software/pc.png', 'images/cajon5.png', 'images/impresora3.png', 'images/barras3.png', 'images/teclado.png'],
+      features: [
+        'Configuración, instalación del sistema completo',
+        'Todos los accesorios de punto de venta',
+        'Implementación del sistema de recargas de tiempo aire',
+        'Implementación del sistema de cobro con tarjeta de débito y crédito',
+        '10 horas de capacitación incluidas',
+        'Soporte técnico especializado'
+      ],
+      specifications: {
+        'Computadora': 'PC GHIA Frontier Slim 2.0 1 TB Disco RAM 8 GB',
+        'Procesador': 'Intel Pentium GOLD Core 3.7 GHz',
+        'Monitor': '23.8 pulgadas',
+        'Periféricos': 'Teclado y ratón incluidos',
+        'Sistema Operativo': 'Windows 11',
+        'Software': 'MyBusiness POS v24',
+        'Impresora': 'Ticket 3 pulgadas',
+        'Lector': 'Código de barras',
+        'Cajón': '5 billetes, 8 monedas'
+      },
+      functions: [
+        'Ventas de productos y servicios',
+        'Inventario de productos',
+        'Compras y control de proveedores',
+        'Control de clientes',
+        'Cobranza a clientes',
+        'Impresión de tickets',
+        'Ventas de tiempo aire',
+        'Cobros con tarjeta de débito y crédito'
+      ]
+    },
+    {
+      id: 11,
+      name: 'Teclado Alámbrico Ghia Multimedia',
+      description: 'Teclado profesional con teclas multimedia y teclado numérico integrado para uso intenso en puntos de venta.',
+      price: 150.00,
+      image: 'images/accesorios/teclado.png',
+      images: ['images/accesorios/teclado1.png'],
+      features: [
+        'Conexión USB Plug & Play',
+        'Incluye teclado numérico',
+        'Accesos directos multimedia',
+        'Compatibilidad universal con todas las marcas',
+        'Diseño resistente al uso diario, ergonomico'
+      ],
+      specifications: {
+        'Conexión': 'Alámbrico USB',
+        'Longitud de cable': '1.6 metros',
+        'Color': 'Negro',
+        'Idioma': 'Español'
+      },
+      moreSpecifications: {
+        'Interfaz': 'USB',
+        'Teclado numérico': 'Sí',
+        'Multimedia': 'Sí',
+        'Garantía': '1 año'
+      }
+    },
+    {
+      id: 12,
+      name: 'Mouse Óptico Ghia USB',
+      description: 'Mouse óptico de alta precisión con sensor de 1200 DPI. Ideal para navegación rápida y precisa en sistemas de punto de venta.',
+      price: 99.00,
+      image: 'images/accesorios/mouse.png',
+      images: ['images/accesorios/mouse1.png'],
+      features: [
+        'Sensor óptico de 1200 DPI',
+        'Rueda de desplazamiento (Scroll)',
+        'Conexión USB Plug & Play',
+        'Compatibilidad universal con todas las marcas',
+        'Diseño ergonómico y ambidiestro'
+      ],
+      specifications: {
+        'Conexión': 'Alámbrico USB',
+        'Longitud de cable': '1.6 metros',
+        'Color': 'Negro',
+        'DPI': '1200'
+      },
+      moreSpecifications: {
+        'Interfaz': 'USB',
+        'Scroll': 'Sí',
+        'Apagado automático': 'No',
+        'Garantía': '1 año'
+      }
     }
   ];
 
