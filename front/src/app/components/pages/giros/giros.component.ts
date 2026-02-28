@@ -88,17 +88,40 @@ export class GirosComponent implements AfterViewInit, OnDestroy {
   }
 
   private rotatorInterval: any;
+  private observer: IntersectionObserver | null = null;
 
   ngAfterViewInit(): void {
     this.setupTouchSwipe();
     this.startRotator();
     this.setupTabs();
+    this.setupIntersectionObserver();
   }
 
   ngOnDestroy(): void {
     if (this.rotatorInterval) {
       clearInterval(this.rotatorInterval);
     }
+    if (this.observer) {
+      this.observer.disconnect();
+    }
+  }
+
+  private setupIntersectionObserver(): void {
+    const options = {
+      threshold: 0.15,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    this.observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal-active');
+        }
+      });
+    }, options);
+
+    const revealElements = document.querySelectorAll('.reveal');
+    revealElements.forEach(el => this.observer?.observe(el));
   }
 
   private startRotator(): void {

@@ -237,8 +237,8 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       name: 'Monitor GHIA 23.8 pulgadas',
       description: 'Monitor de alta definición con pantalla de 23.8 pulgadas. Perfecto para punto de venta y uso empresarial con excelente calidad de imagen.',
       price: 2499.99,
-      image: 'images/monitor.png',
-      images: ['images/monitor2.png'],
+      image: 'images/accesorios/monitor.png',
+      images: ['images/accesorios/monitor1.png', 'images/accesorios/monitor2.png'],
       features: [
         'Pantalla de 23.8 pulgadas',
         'Resolución Full HD',
@@ -377,6 +377,8 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     // Initialization logic
   }
 
+  private observer: IntersectionObserver | null = null;
+
   ngAfterViewInit(): void {
     if (this.galleryContainer) {
       this.galleryApp = new CircularGalleryApp(
@@ -395,6 +397,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       });
       this.resizeObserver.observe(this.galleryContainer.nativeElement);
     }
+    this.setupIntersectionObserver();
   }
 
   ngOnDestroy(): void {
@@ -404,6 +407,27 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     if (this.galleryApp) {
       this.galleryApp.destroy();
     }
+    if (this.observer) {
+      this.observer.disconnect();
+    }
+  }
+
+  private setupIntersectionObserver(): void {
+    const options = {
+      threshold: 0.15,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    this.observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal-active');
+        }
+      });
+    }, options);
+
+    const revealElements = document.querySelectorAll('.reveal');
+    revealElements.forEach(el => this.observer?.observe(el));
   }
 
   // Modal methods

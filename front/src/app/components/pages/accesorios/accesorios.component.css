@@ -39,6 +39,21 @@ body {
 /* =============================================
    HEADER / HERO
    ============================================= */
+:host {
+    display: block;
+    animation: pageFadeIn 0.8s ease-out both;
+}
+
+@keyframes pageFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 .acc-header {
     position: relative;
     background: var(--white);
@@ -111,21 +126,21 @@ body {
     align-items: center;
     gap: .5rem;
     padding: .35rem 1rem;
-    background: var(--teal-glow);
-    border: 1px solid rgba(11, 191, 191, .3);
+    background: var(--off-white);
+    border: 1px solid rgba(73, 94, 255, 0.3);
     border-radius: 100px;
     font-size: .73rem;
     font-weight: 700;
     letter-spacing: .1em;
     text-transform: uppercase;
-    color: var(--teal-dark);
+    color: var(--navy-light);
     width: fit-content;
 }
 
 .acc-badge-dot {
     width: 7px;
     height: 7px;
-    background: var(--teal);
+    background: var(--navy-light);
     border-radius: 50%;
     flex-shrink: 0;
     animation: dotPulse 2.2s ease-in-out infinite;
@@ -137,12 +152,12 @@ body {
     font-weight: 800;
     line-height: 1.08;
     letter-spacing: -.035em;
-    color: var(--navy);
+    color: var(--navy-light);
 }
 
 .acc-h1 .acc-accent {
     position: relative;
-    color: var(--navy-light);
+    color: var(--navy);
     display: inline-block;
 }
 
@@ -153,7 +168,7 @@ body {
     bottom: -4px;
     width: 100%;
     height: 3px;
-    background: linear-gradient(90deg, var(--teal), var(--teal-dark));
+    background: linear-gradient(90deg, var(--navy-light), var(--teal-dark));
     border-radius: 2px;
     transform-origin: left;
     animation: lineGrow 1s var(--ease) .7s both;
@@ -190,7 +205,7 @@ body {
 .acc-check-icon {
     width: 22px;
     height: 22px;
-    background: linear-gradient(135deg, var(--teal), var(--teal-dark));
+    background: linear-gradient(135deg, var(--navy-light), var(--navy));
     border-radius: 50%;
     display: grid;
     place-items: center;
@@ -594,14 +609,14 @@ body {
     font-family: var(--font-head);
     font-size: clamp(1.4rem, 3vw, 2rem);
     font-weight: 800;
-    color: var(--navy);
+    color: var(--navy-light);
     letter-spacing: -.03em;
     margin-bottom: 2.5rem;
     animation: fadeUp .65s var(--ease) .1s both;
 }
 
 .acc-benefits-title span {
-    color: var(--teal-dark);
+    color: var(--navy);
 }
 
 .acc-benefits-grid {
@@ -650,7 +665,7 @@ body {
     right: -30px;
     width: 100px;
     height: 100px;
-    background: var(--teal-glow);
+    background: #0155958e;
     border-radius: 50%;
     transition: transform .4s var(--ease);
 }
@@ -658,7 +673,7 @@ body {
 .acc-benefit-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 16px 40px rgba(0, 24, 69, .10);
-    border-color: rgba(11, 191, 191, .35);
+    border-color: rgba(11, 38, 191, 0.35);
 }
 
 .acc-benefit-card:hover::before {
@@ -670,7 +685,7 @@ body {
     width: 52px;
     height: 52px;
     border-radius: 16px;
-    background: var(--blue-light);
+    background: var(--navy-light);
     display: grid;
     place-items: center;
     font-size: 1.5rem;
@@ -682,7 +697,7 @@ body {
 
 .acc-benefit-card:hover .acc-benefit-icon {
     transform: scale(1.12) rotate(-4deg);
-    background: var(--teal-glow);
+    background: var(--navy);
 }
 
 .acc-benefit-card-body {
@@ -694,7 +709,7 @@ body {
     font-family: var(--font-head);
     font-size: 1rem;
     font-weight: 700;
-    color: var(--navy);
+    color: var(--navy-light);
     margin-bottom: .4rem;
 }
 
@@ -838,7 +853,7 @@ body {
 .gallery-title {
     font-size: clamp(1.8rem, 3.5vw, 2.8rem);
     font-weight: 800;
-    color: var(--navy);
+    color: var(--navy-light);
     text-align: center;
     letter-spacing: -.025em;
     margin-bottom: 12px;
@@ -901,7 +916,7 @@ body {
 .product-title {
     font-size: clamp(1.8rem, 3.5vw, 2.6rem);
     font-weight: 800;
-    color: var(--navy);
+    color: var(--navy-light);
     margin-bottom: 10px;
     letter-spacing: -.025em;
     animation: fadeUp .8s ease-out both;
