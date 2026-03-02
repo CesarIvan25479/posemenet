@@ -213,23 +213,25 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       name: 'PC GHIA Frontier Slim 2.0',
       description: 'Computadora de escritorio con excelente rendimiento para punto de venta y oficina. Disco 1 TB y RAM 8 GB para un desempeño óptimo.',
       price: 5999.99,
-      image: 'images/compu1.png',
-      images: ['images/compu2.png'],
+      image: 'images/accesorios/pc1.png',
+      images: ['images/accesorios/pc2.png', 'images/accesorios/pc3.png'],
       features: [
         'Procesador de alto rendimiento',
         'Disco duro de 1 TB de capacidad',
-        'Memoria RAM de 8 GB',
+      
         'Diseño slim compacto',
         'Ideal para punto de venta y oficina'
       ],
       specifications: {
         'Disco Duro': '1 TB',
         'RAM': '8 GB',
-        'Modelo': 'Frontier Slim 2.0'
+        'Modelo': 'Frontier Slim 2.0',
+        'Procesador': 'Intel Pentium GOLD Core 3.7 GHz'
       },
       moreSpecifications: {
-        'Marca': 'GHIA',
-        'Garantía': '1 año'
+        'Teclado': 'Conexión USB Plug & Play',
+        'Periféricos': 'Compatibilidad universal con todas las marcas',
+        'Mouse': 'Sensor óptico de 1200 DPI'
       }
     },
     {
