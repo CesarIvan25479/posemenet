@@ -1,5 +1,6 @@
 import { Component, AfterViewInit, OnDestroy, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 interface Giro {
   name: string;
@@ -7,10 +8,12 @@ interface Giro {
   iconClass: string;
 }
 
+import { RotatingTextComponent } from '../../shared/rotating-text/rotating-text.component';
+
 @Component({
   selector: 'app-giros',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RotatingTextComponent, RouterModule],
   templateUrl: './giros.component.html',
   styleUrl: './giros.component.css'
 })
@@ -87,20 +90,15 @@ export class GirosComponent implements AfterViewInit, OnDestroy {
     return Array(this.totalGiroSets).fill(0).map((_, i) => i);
   }
 
-  private rotatorInterval: any;
   private observer: IntersectionObserver | null = null;
 
   ngAfterViewInit(): void {
     this.setupTouchSwipe();
-    this.startRotator();
     this.setupTabs();
     this.setupIntersectionObserver();
   }
 
   ngOnDestroy(): void {
-    if (this.rotatorInterval) {
-      clearInterval(this.rotatorInterval);
-    }
     if (this.observer) {
       this.observer.disconnect();
     }
@@ -124,42 +122,7 @@ export class GirosComponent implements AfterViewInit, OnDestroy {
     revealElements.forEach(el => this.observer?.observe(el));
   }
 
-  private startRotator(): void {
-    const el = document.getElementById('rotating-text');
-    if (!el) return;
 
-    const words = [
-      'punto de venta',
-      'POS para Ropa',
-      'POS para Farmacias',
-      'POS para Abarrotes',
-      'POS para Cafeterías',
-      'POS para Joyerías',
-    ];
-    let currentIndex = 0;
-    const intervalMs = 2800;
-    const fadeMs = 300;
-
-    // Asegurar estado inicial
-    el.textContent = words[0];
-    el.classList.add('fade-in');
-
-    this.rotatorInterval = setInterval(async () => {
-      // Salida
-      el.classList.remove('fade-in');
-      el.classList.add('fade-out');
-
-      await new Promise<void>(resolve => setTimeout(resolve, fadeMs));
-
-      // Cambiar texto
-      currentIndex = (currentIndex + 1) % words.length;
-      el.textContent = words[currentIndex];
-
-      // Entrada
-      el.classList.remove('fade-out');
-      el.classList.add('fade-in');
-    }, intervalMs);
-  }
 
   private setupTabs(): void {
     // Exponer showComp globalmente para los onclick del HTML si es necesario

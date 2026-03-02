@@ -26,7 +26,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
 
   galleryItems = [
     {
-      image: 'images/impresora.png',
+      image: 'images/accesorios/impresora.png',
       text: 'Impresoras Térmicas'
     },
     {
@@ -42,7 +42,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       text: 'All In One Paquete'
     },
     {
-      image: 'images/terminal1.png',
+      image: 'images/accesorios/terminal.png',
       text: 'Terminal'
     },
     {
@@ -58,8 +58,8 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       name: 'Lector de código profesional',
       description: 'Fácil de operar por su función Plug and Play, identifica códigos de barra ID en celulares y monitores.',
       price: 1500.00,
-      image: 'images/barras3.png',
-      images: ['images/barras4.png', 'images/barras5.png'],
+      image: 'images/accesorios/barras2.png',
+      images: ['images/accesorios/barras4.png', 'images/accesorios/barras5.png'],
       features: [
         'Lectura de códigos 1D y 2D',
         'Velocidad de escaneo de 300 escaneos/segundo',
@@ -86,8 +86,8 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       name: 'Impresora Térmica Compacta',
       description: 'Impresora térmica para recibos y etiquetas. Perfecta para puntos de venta que requieren impresión rápida y silenciosa.',
       price: 1200.00,
-      image: 'images/impresora3.png',
-      images: ['images/impresora4.png', 'images/impresora5.png'],
+      image: 'images/accesorios/impresora.png',
+      images: ['images/accesorios/impresora4.png', 'images/accesorios/impresora5.png'],
       features: [
         'Impresión térmica directa sin tinta.',
         'Resolución 203 DPI nítida y profesional.',
@@ -116,8 +116,8 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       name: 'Cajón de Efectivo Electrónico',
       description: 'Cajón automático con seguridad integrada y control USB. Diseñado para un manejo seguro y eficiente del efectivo en tu negocio.',
       price: 750.00,
-      image: 'images/cajon5.png',
-      images: ['images/cajon3.png', 'images/cajon4.png'],
+      image: 'images/accesorios/cajon2.png',
+      images: ['images/accesorios/cajon3.png', 'images/accesorios/cajon4.png'],
       features: [
         'Apertura automática mediante impulsor',
         '4 compartimentos para billetes',
@@ -141,8 +141,8 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       name: 'Consumibles',
       description: 'Papel Térmico, Etiquetas. Todo lo necesario para tu punto de venta.',
       price: 80.00,
-      image: 'images/rollo2.png',
-      images: ['images/rollo3.png', 'images/rollo4.png'],
+      image: 'images/accesorios/rollo2.png',
+      images: ['images/accesorios/rollo3.png', 'images/accesorios/rollo4.png'],
       features: [
         'Papel térmico de alta calidad',
         'Etiquetas térmicas adhesivas',
@@ -165,8 +165,8 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       name: 'Computadora All In One',
       description: 'Monitor táctil capacitivo con soporte VESA. Interfaz intuitiva y responsive para tu sistema de punto de venta.',
       price: 4999.99,
-      image: 'images/compu2.png',
-      images: ['images/compu3.png', 'images/compu4.png'],
+      image: 'images/accesorios/compu2.png',
+      images: ['images/accesorios/compu3.png', 'images/accesorios/compu4.png'],
       features: [
         'Tecnología táctil capacitiva proyectada',
         'Resolución HD de 1024x768',
@@ -189,8 +189,8 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       name: 'Terminal Billpocket nano',
       description: 'Sistema completo con software integrado. La solución todo-en-uno para gestionar tu punto de venta de manera profesional.',
       price: 450.00,
-      image: 'images/terminal.png',
-      images: ['images/terminal2.png'],
+      image: 'images/accesorios/terminal.png',
+      images: ['images/accesorios/terminal2.png'],
       features: [
         'Software de gestión incluido',
         'Pantalla táctil de 10 pulgadas',
@@ -214,11 +214,11 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       description: 'Computadora de escritorio con excelente rendimiento para punto de venta y oficina. Disco 1 TB y RAM 8 GB para un desempeño óptimo.',
       price: 5999.99,
       image: 'images/accesorios/pc1.png',
-      images: ['images/accesorios/pc2.png', 'images/accesorios/pc3.png'],
+      images: ['images/accesorios/pc2.png', 'images/accesorios/pc3.png', 'images/accesorios/mouse1.png', 'images/accesorios/teclado1.png'],
       features: [
         'Procesador de alto rendimiento',
         'Disco duro de 1 TB de capacidad',
-      
+
         'Diseño slim compacto',
         'Ideal para punto de venta y oficina'
       ],
@@ -263,8 +263,8 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       name: 'Rollos Térmicos 76mm',
       description: 'Caja de consumibles con rollos térmicos de 76mm, compatibles con nuestras impresoras térmicas. Alta calidad de impresión.',
       price: 149.99,
-      image: 'images/consumible.png',
-      images: ['images/consumible2.png', 'images/consumible3.png'],
+      image: 'images/accesorios/consumible3.png',
+      images: ['images/consumible.png', 'images/accesorios/consumible3.png'],
       features: [
         'Rollos térmicos de 76mm',
         'Compatible con impresoras térmicas',
@@ -287,8 +287,8 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       name: 'emenetPOS Punto de Venta',
       description: 'Punto de venta completo y listo para operar, impulsado por MyBusiness POS. Incluye equipo esencial y soporte especializado para que empieces a vender desde el primer día, todo en un solo paquete.',
       price: 30500.00,
-      image: 'images/software/mybusiness2.png',
-      images: ['images/software/monitor2.png', 'images/software/pc.png', 'images/cajon5.png', 'images/impresora3.png', 'images/barras3.png', 'images/teclado.png'],
+      image: 'images/software/paquete.png',
+      images: ['images/software/mybusiness2.png', 'images/software/monitor2.png', 'images/software/pc.png', 'images/cajon5.png', 'images/impresora3.png', 'images/barras3.png', 'images/teclado.png'],
       features: [
         'Configuración, instalación del sistema completo',
         'Todos los accesorios de punto de venta',

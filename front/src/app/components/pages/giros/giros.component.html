@@ -11,9 +11,14 @@
     <div class="hero-badge">MyBusinessPos llegó a tu negocio</div>
 
     <h1 class="hero-h1">
-      El <span id="rotating-text" class="rotating-text fade-in">punto de venta</span><br>
-      más inteligente<br>
-      <span style="color:var(--navy)">para tu negocio</span>
+      <app-rotating-text [texts]="[
+          'El POS para [Ropa] más inteligente para tu negocio',
+          'Controla tu [Farmacia] con MyBusiness POS',
+          'El mejor software para [Abarrotes] de México',
+          'Gestiona tu [Ferretería] de forma profesional',
+          'La solución para [Cafeterías] líder en el mercado'
+        ]" mainClassName="rotating-title-phrase" highlightClassName="rotating-accent" staggerFrom="first"
+        [staggerDuration]="0.02" [rotationInterval]="3800" splitBy="words"></app-rotating-text>
     </h1>
 
     <p class="hero-sub reveal fade-up delay-100">
@@ -43,8 +48,9 @@
         <span class="price-period">MXN/sin mensualidades</span>
       </div>
       <div class="hero-actions">
-        <button class="btn-primary">🚀 Pruébalo Ahora</button>
-        <button class="btn-ghost">Contáctanos</button>
+        <a class="btn-primary" [routerLink]="'/contacto'">🚀 Pruébalo Ahora</a>
+        <a href="https://api.whatsapp.com/send?phone=5217131334557&text=Hola%20buen%20d%C3%ADa%2C%20necesito%20informaci%C3%B3n%20sobre%20emenetPOS"
+          class="btn-ghost" target="_blank" rel="noopener noreferrer">Contáctanos</a>
       </div>
     </div>
 
@@ -237,9 +243,8 @@
   </div>
 
   <div class="giros-cta">
-    <button class="btn-primary" style="font-size:1.05rem; padding:1rem 2.5rem;">
-      🚀 Comenzar Gratis Ahora
-    </button>
+    <a href="https://api.whatsapp.com/send?phone=5217131334557&text=Hola%20buen%20d%C3%ADa%2C%20necesito%20informaci%C3%B3n%20sobre%20emenetPOS"
+      class="btn-primary" target="_blank" rel="noopener noreferrer">🚀 Pruébalo Ahora</a>
   </div>
 
 </section>
@@ -620,12 +625,11 @@
       </table>
     </div>
   </div>
-
   <div class="comp-cta">
     <p>¿Listo para pasarte a la mejor opción del mercado?</p>
-    <button class="btn-primary" style="font-size:1.05rem; padding:1rem 2.5rem;">
-      🚀 Probar MyBusinessPos
-    </button>
+    <a href="https://api.whatsapp.com/send?phone=5217131334557&text=Hola%20buen%20d%C3%ADa%2C%20necesito%20informaci%C3%B3n%20sobre%20emenetPOS"
+      class="btn-primary" target="_blank" rel="noopener noreferrer">🚀 Probar MyBusinessPos</a>
   </div>
+
 
 </section>

@@ -16,6 +16,7 @@ import { animate, stagger } from 'motion';
 interface TextElement {
     characters: string[];
     needsSpace: boolean;
+    isHighlighted?: boolean;
 }
 
 @Component({
@@ -26,58 +27,62 @@ interface TextElement {
     <span
       #container
       [class]="'rotating-text-container ' + mainClassName"
-      [style]="containerStyle"
     >
       <span class="sr-only">{{ texts[currentIndex] }}</span>
       <span
         #textElement
         class="rotating-text-content"
-        [style]="contentStyle"
         aria-hidden="true"
       >
-        <span
-          *ngFor="let part of elements; let i = index"
-          [class]="'rotating-split-level ' + splitLevelClassName"
-          style="display: inline-flex;"
-        >
+        <ng-container *ngFor="let part of elements; let i = index">
           <span
-            *ngFor="let char of part.characters; let j = index"
-            class="rotating-char"
-            [class]="elementLevelClassName"
-            style="display: inline-block; white-space: pre;"
-          >{{ char }}</span>
-          <span *ngIf="part.needsSpace" class="rotating-space" style="white-space: pre;"> </span>
-        </span>
+            class="rotating-word-clip"
+            [class]="(part.isHighlighted ? highlightClassName : '') + ' ' + splitLevelClassName"
+          >
+            <span
+              *ngFor="let char of part.characters"
+              class="rotating-char"
+              [class]="elementLevelClassName"
+            >{{ char }}</span>
+          </span>
+          <span *ngIf="part.needsSpace" class="rotating-space">&nbsp;</span>
+        </ng-container>
       </span>
     </span>
   `,
     styles: [`
     .rotating-text-container {
-      display: inline-flex;
-      flex-wrap: wrap;
+      display: inline;
       position: relative;
-      overflow: hidden;
-      vertical-align: bottom;
     }
     .rotating-text-content {
+      display: inline;
+    }
+    .rotating-word-clip {
       display: inline-flex;
-      flex-wrap: wrap;
-      position: relative;
+      overflow: hidden;
+      padding-bottom: 0.1em;
+      vertical-align: bottom;
+    }
+    .rotating-space {
+      display: inline-block;
     }
     .rotating-char {
       display: inline-block;
       will-change: transform, opacity;
+      opacity: 0;
     }
   `]
 })
 export class RotatingTextComponent implements OnInit, AfterViewInit, OnDestroy, OnChanges {
     @Input() texts: string[] = [];
     @Input() mainClassName: string = '';
+    @Input() highlightClassName: string = 'rotating-accent';
     @Input() splitLevelClassName: string = '';
     @Input() elementLevelClassName: string = '';
     @Input() staggerDuration: number = 0.025;
     @Input() rotationInterval: number = 2000;
-    @Input() staggerFrom: 'first' | 'last' | 'center' | 'random' | number = 'last';
+    @Input() staggerFrom: 'first' | 'last' | 'center' | 'random' | number = 'first';
     @Input() splitBy: 'characters' | 'words' | 'lines' = 'characters';
     @Input() initialY: string = '100%';
     @Input() exitY: string = '-120%';
@@ -87,18 +92,6 @@ export class RotatingTextComponent implements OnInit, AfterViewInit, OnDestroy, 
     currentIndex = 0;
     elements: TextElement[] = [];
     private intervalId: any;
-
-    containerStyle = {
-        'display': 'inline-flex',
-        'flex-wrap': 'wrap',
-        'position': 'relative'
-    };
-
-    contentStyle = {
-        'display': 'inline-flex',
-        'flex-wrap': 'wrap',
-        'position': 'relative'
-    };
 
     constructor(private cdr: ChangeDetectorRef) { }
 
@@ -123,21 +116,27 @@ export class RotatingTextComponent implements OnInit, AfterViewInit, OnDestroy, 
     }
 
     updateElements() {
-        const currentText = this.texts[this.currentIndex] || '';
+        const rawText = this.texts[this.currentIndex] || '';
 
-        if (this.splitBy === 'characters') {
-            const words = currentText.split(' ');
-            this.elements = words.map((word, i) => ({
-                characters: Array.from(word),
-                needsSpace: i !== words.length - 1
-            }));
-        } else if (this.splitBy === 'words') {
-            this.elements = currentText.split(' ').map((word, i, arr) => ({
-                characters: [word],
-                needsSpace: i !== arr.length - 1
-            }));
+        if (this.splitBy === 'words' || this.splitBy === 'characters') {
+            const words = rawText.split(' ');
+            this.elements = words.map((word, i) => {
+                let isHighlighted = false;
+                let processedWord = word;
+
+                if (word.startsWith('[') && word.endsWith(']')) {
+                    isHighlighted = true;
+                    processedWord = word.substring(1, word.length - 1);
+                }
+
+                return {
+                    characters: this.splitBy === 'characters' ? Array.from(processedWord) : [processedWord],
+                    needsSpace: i !== words.length - 1,
+                    isHighlighted
+                };
+            });
         } else if (this.splitBy === 'lines') {
-            this.elements = currentText.split('\n').map((line, i, arr) => ({
+            this.elements = rawText.split('\n').map((line, i, arr) => ({
                 characters: [line],
                 needsSpace: i !== arr.length - 1
             }));
@@ -176,17 +175,16 @@ export class RotatingTextComponent implements OnInit, AfterViewInit, OnDestroy, 
         const chars = this.textElement.nativeElement.querySelectorAll('.rotating-char');
         if (!chars.length) return;
 
+        // Set initial position instantly (no flash)
+        animate(chars, { y: '100%', opacity: 0 }, { duration: 0 });
+
         animate(
             chars,
+            { y: '0%', opacity: 1 },
             {
-                y: [this.initialY, '0%'],
-                opacity: [0, 1]
-            },
-            {
-                duration: 0.6,
+                duration: 0.55,
                 delay: stagger(this.staggerDuration, { from: this.staggerFrom as any }),
-                // "spring" in motion DOM is a function or string
-                easing: 'ease-out' // We'll use a smooth easing since DOM spring is slightly different
+                ease: [0.22, 1, 0.36, 1]
             }
         );
     }
@@ -197,14 +195,11 @@ export class RotatingTextComponent implements OnInit, AfterViewInit, OnDestroy, 
 
         return animate(
             chars,
+            { y: '-110%', opacity: 0 },
             {
-                y: this.exitY,
-                opacity: 0
-            },
-            {
-                duration: 0.4,
+                duration: 0.35,
                 delay: stagger(this.staggerDuration, { from: this.staggerFrom as any }),
-                easing: 'ease-in'
+                ease: [0.64, 0, 0.78, 0]
             }
         ).finished;
     }
