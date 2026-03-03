@@ -12,18 +12,30 @@
 
 ## 📋 Descripción
 
-emenetPOS es el sitio web corporativo de **emenet comunicaciones**, una empresa especializada en comunicaciones distribuidora de internet, developer, soluciones de punto de venta, accesorios tecnológicos. Este proyecto está desarrollado con Angular 19 y ofrece una experiencia moderna, responsiva y profesional.
+emenetPOS es el sitio web corporativo de **emenet comunicaciones**, una empresa especializada en comunicaciones distribuidora de internet, developer, soluciones de punto de venta, accesorios tecnológicos. Este proyecto está desarrollado con Angular 19 y ofrece una experiencia moderna, responsiva y profesional basada en una estética **Apple-style**.
 
-## ✨ Características
+## ✨ Características y Secciones
 
-- 🏠 **Página de Inicio** - Landing page con información general y carrusel de productos
-- 💻 **Software emenetPOS** - Información sobre el sistema de punto de venta
-- 🛒 **Accesorios** - Catálogo de accesorios y equipos tecnológicos
-- 📄 **Facturación Electrónica** - Servicios de facturación electrónica
-- 📱 **Recargas de Tiempo Aire** - Sistema de recargas móviles
-- ☁️ **Servicios en la Nube** - Soluciones cloud para negocios
-- 🔧 **Modificaciones a la Medida** - Desarrollo de soluciones personalizadas
-- 📞 **Contacto** - Formulario de contacto y información de la empresa
+- 🏠 **Página de Inicio** - Landing page con información general y carrusel de productos.
+- 💻 **Software emenetPOS** - Rediseño premium con estadísticas animadas y CTA profesional.
+- 🏪 **Giros** - Sección dedicada a los diferentes giros compatibles (Farmacias, Abarrotes, Papelerías, etc.).
+- 🛒 **Accesorios** - Catálogo de accesorios y equipos tecnológicos con animaciones de entrada.
+- 📄 **Facturación Electrónica** - Servicios de facturación con nuevo modal interactivo de paquetes de timbres.
+- 📱 **Recargas de Tiempo Aire** - Sistema de recargas móviles integrado.
+- ☁️ **Servicios en la Nube** - Soluciones cloud para sincronización multisucursal.
+- 🔧 **Modificaciones a la Medida** - Desarrollo de soluciones personalizadas.
+- 📞 **Contacto** - Formulario de contacto e información de la empresa.
+
+## 🚀 Actualizaciones Recientes (Marzo 2026)
+
+Se ha implementado una gran actualización de diseño y funcionalidad:
+
+- **Rediseño Style**: Nueva estética minimalista y profesional usando la paleta corporativa `#003796` y `#001b4f`.
+- **Nuevo Modal de Timbres**: Sistema interactivo en la sección de facturación para elegir paquetes de timbres fiscales con actualización de precios en tiempo real.
+- **Scroll Reveal System**: Animaciones globales en cascada que se activan al hacer scroll, mejorando la retención visual.
+- **Contadores Animados**: Las estadísticas de clientes y empresas ahora se animan automáticamente al entrar en el viewport.
+- **Google Fonts**: Integración de **Sora** (encabezados) y **DM Sans** (cuerpo) para una legibilidad superior.
+- **Loader Inteligente**: Nuevo sistema de carga que se oculta suavemente solo cuando Angular ha terminado de renderizar la aplicación.
 
 ## 🛠️ Tecnologías Utilizadas
 
@@ -31,10 +43,10 @@ emenetPOS es el sitio web corporativo de **emenet comunicaciones**, una empresa 
 |------------|---------|-------------|
 | [Angular](https://angular.io/) | 19.2.0 | Framework principal |
 | [TypeScript](https://www.typescriptlang.org/) | 5.7.2 | Lenguaje de programación |
-| [GSAP](https://greensock.com/gsap/) | 3.14.2 | Animaciones avanzadas |
-| [OGL](https://ogl.dev/) | 1.0.11 | Gráficos 3D |
+| [Google Fonts](https://fonts.google.com/) | - | Sora & DM Sans |
 | [Font Awesome](https://fontawesome.com/) | 6.5.0 | Iconografía |
-| CSS3 | - | Estilos y animaciones |
+| CSS3 | - | Estilos Apple-Style y animaciones Custom |
+| IntersectionObserver | API | Sistema de Scroll Reveal y Contadores |
 
 ## 📁 Estructura del Proyecto
 
@@ -48,9 +60,10 @@ posemenet/
 │   │   │   ├── components/         # Componentes de páginas
 │   │   │   │   ├── pages/          # Páginas del sitio
 │   │   │   │   │   ├── home/       # Página de inicio
-│   │   │   │   │   ├── software/   # Software emenetPOS
+│   │   │   │   │   ├── software/   # Software emenetPOS (Rediseñado)
+│   │   │   │   │   ├── giros/      # Giros (Nuevo)
 │   │   │   │   │   ├── accesorios/ # Catálogo de accesorios
-│   │   │   │   │   ├── facturacion/# Facturación electrónica
+│   │   │   │   │   ├── facturacion/# Facturación (Nuevo Modal Timbres)
 │   │   │   │   │   ├── tiempo-aire/# Recargas de tiempo aire
 │   │   │   │   │   ├── nube/       # Servicios en la nube
 │   │   │   │   │   ├── modificaciones/ # Modificaciones a la medida
@@ -59,25 +72,19 @@ posemenet/
 │   │   │   ├── layout/             # Componentes de layout
 │   │   │   │   ├── header/         # Encabezado y navegación
 │   │   │   │   └── footer/         # Pie de página
-│   │   │   ├── app.component.ts    # Componente raíz
+│   │   │   ├── app.component.ts/css/html # Componente raíz
 │   │   │   ├── app.config.ts       # Configuración de la app
 │   │   │   └── app.routes.ts       # Rutas de la aplicación
-│   │   ├── index.html              # HTML principal
+│   │   ├── index.html              # HTML con Loader y Scroll Scripts
 │   │   ├── main.ts                 # Punto de entrada
-│   │   └── styles.css              # Estilos globales
+│   │   └── styles.css              # Estilos Apple-Style y animaciones
 │   ├── angular.json                # Configuración de Angular
 │   ├── package.json                # Dependencias
 │   └── tsconfig.json               # Configuración de TypeScript
-└── README.md                       # Documentación
+└── README.md                       # Documentación principal
 ```
 
 ## 🚀 Instalación y Ejecución
-
-### Prerrequisitos
-
-- [Node.js](https://nodejs.org/) (v18 o superior)
-- [npm](https://www.npmjs.com/) (v9 o superior)
-- [Angular CLI](https://angular.io/cli) (v19 o superior)
 
 ### Pasos de Instalación
 
@@ -87,52 +94,36 @@ posemenet/
    cd posemenet
    ```
 
-2. **Navegar al directorio del frontend**
+2. **Navegar e instalar dependencias**
    ```bash
    cd front
-   ```
-
-3. **Instalar dependencias**
-   ```bash
    npm install
    ```
 
-4. **Ejecutar en modo desarrollo**
+3. **Ejecutar en modo desarrollo**
    ```bash
-   npm start
-   # o
    ng serve
    ```
 
-5. **Abrir en el navegador**
+4. **Abrir en el navegador**
    ```
    http://localhost:4200
    ```
 
-### Comandos Disponibles
+## 📱 Características Responsivas e Interactivas
 
-| Comando | Descripción |
-|---------|-------------|
-| `npm start` | Inicia el servidor de desarrollo |
-| `npm run build` | Compila el proyecto para producción |
-| `npm run watch` | Compila y observa cambios |
-| `npm test` | Ejecuta los tests unitarios |
+El sitio está optimizado para dispositivos móviles con:
 
-## 📱 Características Responsivas
+- **Overflow-x Guard**: Protección global contra desbordamientos laterales.
+- **Scroll Animations**: Transiciones optimizadas para pantallas táctiles.
+- **Responsive Layout**: Columnas y tipografía que se adaptan dinámicamente (`clamp`).
+- **Navegación Táctil**: Menú móvil con animaciones fluidas.
 
-El sitio está completamente adaptado para dispositivos móviles:
+## 🎨 Diseño Visual
 
-- **Menú hamburguesa** con animaciones suaves
-- **Diseño adaptativo** para tablets y smartphones
-- **Iconos de redes sociales** en el menú móvil
-- **Navegación optimizada** para pantallas táctiles
-
-## 🎨 Diseño
-
-- **Paleta de colores corporativa**: Azul oscuro (#001845, #003796)
-- **Tipografía**: Outfit (navegación) y Open Sans (contenido)
-- **Iconografía**: Font Awesome 6
-- **Animaciones**: Transiciones suaves y efectos hover
+- **Estética**: Inspirada en Apple (Limpia, balanceada, tipografía cuidada).
+- **Colores corporativos**: Azul profundo (#003796) y Marino (#001b4f).
+- **Efectos**: Sombras suaves (`box-shadow`), degradados sutiles y transiciones `cubic-bezier`.
 
 ## 📞 Contacto
 
@@ -149,5 +140,5 @@ Este proyecto es propiedad de **emenet comunicaciones**. Todos los derechos rese
 ---
 
 <div align="center">
-  Desarrollado con ❤️ por emenet comunicaciones
+  Desarrollado con ❤️ para emenet comunicaciones
 </div>
