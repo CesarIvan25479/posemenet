@@ -3,10 +3,20 @@
 
 <head>
     <meta charset="utf-8">
-    <title>emenetPOS</title>
+    <title>emenetPOS — Software de Punto de Venta</title>
     <base href="/">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="emenetPOS — Software punto de venta completo, timbres fiscales, recargas de tiempo aire y más para tu negocio en México.">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Google Fonts: Sora + DM Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap">
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
@@ -21,40 +31,107 @@
 
     <app-root></app-root>
 
-    <!-- Global Scroll Animations Script -->
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const observerOptions = {
-                threshold: 0.15,
-                rootMargin: '0px 0px -50px 0px'
-            };
+        (function () {
 
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('reveal-active');
-                        // Optional: stop observing after reveal if you want it to happen only once
-                        // observer.unobserve(entry.target);
-                    }
+            /* ══════════════════════════════════════════
+               1. LOADER — ocultar cuando Angular listo
+            ══════════════════════════════════════════ */
+            const loader = document.getElementById('app-loader');
+
+            function hideLoader() {
+                if (!loader) return;
+                loader.style.animation = 'loaderExit 0.4s cubic-bezier(0.22,1,0.36,1) forwards';
+                setTimeout(() => loader.style.display = 'none', 420);
+            }
+
+            // Espera a que app-root tenga contenido renderizado
+            const loaderObserver = new MutationObserver(() => {
+                const root = document.querySelector('app-root');
+                if (root && root.children.length > 0) {
+                    loaderObserver.disconnect();
+                    hideLoader();
+                }
+            });
+            loaderObserver.observe(document.body, { childList: true, subtree: true });
+
+            // Fallback: ocultar a los 4s en caso de error
+            setTimeout(hideLoader, 4000);
+
+
+            /* ══════════════════════════════════════════
+               2. REVEAL — animar elementos al hacer scroll
+            ══════════════════════════════════════════ */
+            document.addEventListener('DOMContentLoaded', () => {
+
+                const revealObserver = new IntersectionObserver((entries, obs) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('reveal-active');
+                            obs.unobserve(entry.target); // anima solo una vez
+                        }
+                    });
+                }, {
+                    threshold: 0.12,
+                    rootMargin: '0px 0px -40px 0px'
                 });
-            }, observerOptions);
 
-            // Function to register elements
-            const registerElements = () => {
-                const revealElements = document.querySelectorAll('.reveal');
-                revealElements.forEach(el => observer.observe(el));
-            };
+                // Registra elementos con .reveal
+                function registerReveal() {
+                    document.querySelectorAll('.reveal:not(.reveal-active)').forEach(el => {
+                        revealObserver.observe(el);
+                    });
+                }
 
-            // Initial registration
-            registerElements();
+                registerReveal();
 
-            // Observe DOM changes (useful for Angular's dynamic routing)
-            const mutationObserver = new MutationObserver(() => {
-                registerElements();
+                // Re-registra en cambios de DOM (rutas Angular)
+                new MutationObserver(registerReveal)
+                    .observe(document.body, { childList: true, subtree: true });
+
+
+                /* ══════════════════════════════════════════
+                   3. CONTADORES — animar al entrar al viewport
+                ══════════════════════════════════════════ */
+                const counterObserver = new IntersectionObserver((entries, obs) => {
+                    entries.forEach(entry => {
+                        if (!entry.isIntersecting) return;
+                        obs.unobserve(entry.target);
+
+                        const el = entry.target;
+                        const target = +el.getAttribute('data-target');
+                        const duration = 1800;
+                        const increment = target / (duration / 16);
+                        let current = 0;
+
+                        el.classList.add('active');
+
+                        const tick = () => {
+                            current += increment;
+                            if (current < target) {
+                                el.textContent = Math.floor(current).toLocaleString('es-MX');
+                                requestAnimationFrame(tick);
+                            } else {
+                                el.textContent = target.toLocaleString('es-MX');
+                            }
+                        };
+                        tick();
+                    });
+                }, { threshold: 0.3 });
+
+                function registerCounters() {
+                    document.querySelectorAll('.counter-number:not(.active)').forEach(el => {
+                        counterObserver.observe(el);
+                    });
+                }
+
+                registerCounters();
+                new MutationObserver(registerCounters)
+                    .observe(document.body, { childList: true, subtree: true });
+
             });
 
-            mutationObserver.observe(document.body, { childList: true, subtree: true });
-        });
+        })();
     </script>
 </body>
 

@@ -210,21 +210,21 @@
   <div class="tf-promo-inner">
 
     <!-- Eyebrow -->
-    <p class="tf-promo-eyebrow">Timbres Fiscales · CFDI 4.0</p>
+    <p class="tf-promo-eyebrow reveal fade-up">Timbres Fiscales · CFDI 4.0</p>
 
     <!-- Headline -->
-    <h2 class="tf-promo-headline">
+    <h2 class="tf-promo-headline reveal fade-up delay-100">
       Factura sin límites.<br>
       <span>Elige tu paquete.</span>
     </h2>
 
     <!-- Subtítulo -->
-    <p class="tf-promo-sub">
+    <p class="tf-promo-sub reveal fade-up delay-200">
       Emisión inmediata, soporte incluido y vigencia permanente.
     </p>
 
     <!-- Tarjetas de paquetes -->
-    <div class="tf-packages">
+    <div class="tf-packages reveal zoom-in delay-300">
 
       <article class="tf-pkg">
         <div class="tf-pkg-inner">
@@ -260,7 +260,7 @@
     </div>
 
     <!-- CTA -->
-    <button class="tf-promo-cta" (click)="openModal()">
+    <button class="tf-promo-cta reveal fade-up delay-500" (click)="openModal()">
       Ver todos los paquetes
       <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
@@ -270,6 +270,7 @@
 
   </div>
 </section>
+
 
 <!-- ===== MODAL TIMBRES FISCALES ===== -->
 <div class="tm-overlay" [class.tm-overlay--open]="isModalOpen" (click)="closeModal()">
