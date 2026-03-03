@@ -1,59 +1,62 @@
-# Front
+# emenetPOS — Front-end
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.14.
+Este proyecto es el front-end oficial de **emenetPOS**, una solución integral de software punto de venta impulsada por MyBusiness POS. Construido con Angular 19.
 
-## Development server
+## 🚀 Actualizaciones Recientes (Marzo 2026)
 
-To start a local development server, run:
+Se ha implementado un rediseño completo del sistema visual y de experiencia de usuario, adoptando una estética **Apple-style: minimalista, profesional y de alto impacto**.
 
+### 🎨 Sistema de Diseño
+- **Paleta de Colores**: Basada en los azules corporativos del proyecto (`#003796` y `#001b4f`) sobre capas de blanco y gris claro (`#f5f5f7`).
+- **Tipografía**: Integración de Google Fonts (**Sora** para encabezados y **DM Sans** para cuerpo de texto).
+- **Iconografía**: Uso de FontAwesome 6 para una interfaz intuitiva.
+
+### ✨ Nuevas Funcionalidades y Mejoras
+1. **Rediseño de la Página de Software**: Nueva sección de estadísticas y CTA con contadores animados y diseño ultra-limpio.
+2. **Sistema de Timbres Fiscales**: 
+   - Modal interactivo con selección de paquetes.
+   - Actualización dinámica de precios y descripciones.
+3. **Banners de Promoción**: Implementados en las secciones de Facturación, Tiempo Aire, Nube y Modificaciones con diseño consistente y profesional.
+4. **Sistema de Animaciones Globales (Scroll Reveal)**:
+   - Los elementos aparecen en cascada al hacer scroll hacia abajo.
+   - Animación de contadores numéricos automática.
+   - Loader inteligente que desaparece cuando la aplicación está lista para interactuar.
+5. **Optimización Responsive**: Corrección de desbordamientos horizontales y mejora del layout en dispositivos móviles y tablets.
+
+---
+
+## 🛠 Instalación y Desarrollo
+
+### Requisitos
+- [Node.js](https://nodejs.org/) (Versión recomendada LTS)
+- [Angular CLI](https://github.com/angular/angular-cli) versión 19.2.14
+
+### Servidor de Desarrollo
+Para iniciar el servidor local, ejecuta:
 ```bash
 ng serve
 ```
+Navega a `http://localhost:4200/`. El sitio se recargará automáticamente al detectar cambios.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
+### Generación de Componentes
 ```bash
-ng generate component component-name
+ng generate component nombre-del-componente
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
+### Construcción para Producción
 ```bash
 ng build
 ```
+Los archivos optimizados se guardarán en el directorio `dist/`.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
+## 🏗 Estructura del Proyecto
+- `src/app/components/pages/`: Contiene las vistas principales (Software, Facturación, Nube, etc.).
+- `src/styles.css`: Sistema de animaciones globales y tokens de diseño.
+- `src/index.html`: Lógica de Loader y IntersectionObserver para animaciones de scroll.
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+---
 
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 🔐 Créditos
+Desarrollado para **3MNET / emenetPOS**.
