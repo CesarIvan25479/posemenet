@@ -1016,7 +1016,7 @@ body {
 .product-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 40, 120, 0.75);
+    background: rgba(0, 40, 120, 0.392);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1030,11 +1030,11 @@ body {
 }
 
 .overlay-text {
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 1rem;
     font-weight: 700;
     padding: 10px 22px;
-    border: 2px solid rgba(255, 255, 255, .8);
+    border: 2px solid rgba(255, 255, 255, 0.8);
     border-radius: 100px;
     letter-spacing: .04em;
     background: rgba(255, 255, 255, .1);

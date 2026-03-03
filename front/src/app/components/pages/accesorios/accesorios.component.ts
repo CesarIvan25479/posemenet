@@ -26,27 +26,27 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
 
   galleryItems = [
     {
-      image: 'images/accesorios/impresora.png',
+      image: 'images/accesorios/impresora6.png',
       text: 'Impresoras Térmicas'
     },
     {
-      image: 'images/barras.png',
+      image: 'images/accesorios/barras.png',
       text: 'Lectores de Código'
     },
     {
-      image: 'images/cajon.png',
+      image: 'images/accesorios/cajon.png',
       text: 'Cajones de Dinero'
     },
     {
-      image: 'images/compu.png',
+      image: 'images/accesorios/compu.png',
       text: 'All In One Paquete'
     },
     {
-      image: 'images/accesorios/terminal.png',
+      image: 'images/accesorios/terminal1.png',
       text: 'Terminal'
     },
     {
-      image: 'images/consumible.png',
+      image: 'images/accesorios/consumible.png',
       text: 'Consumibles'
     }
   ];
@@ -58,7 +58,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       name: 'Lector de código profesional',
       description: 'Fácil de operar por su función Plug and Play, identifica códigos de barra ID en celulares y monitores.',
       price: 1500.00,
-      image: 'images/accesorios/barras2.png',
+      image: 'images/accesorios/barras3.png',
       images: ['images/accesorios/barras4.png', 'images/accesorios/barras5.png'],
       features: [
         'Lectura de códigos 1D y 2D',
@@ -116,7 +116,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       name: 'Cajón de Efectivo Electrónico',
       description: 'Cajón automático con seguridad integrada y control USB. Diseñado para un manejo seguro y eficiente del efectivo en tu negocio.',
       price: 750.00,
-      image: 'images/accesorios/cajon2.png',
+      image: 'images/accesorios/cajon5.png',
       images: ['images/accesorios/cajon3.png', 'images/accesorios/cajon4.png'],
       features: [
         'Apertura automática mediante impulsor',
@@ -189,7 +189,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       name: 'Terminal Billpocket nano',
       description: 'Sistema completo con software integrado. La solución todo-en-uno para gestionar tu punto de venta de manera profesional.',
       price: 450.00,
-      image: 'images/accesorios/terminal.png',
+      image: 'images/accesorios/terminal3.png',
       images: ['images/accesorios/terminal2.png'],
       features: [
         'Software de gestión incluido',
@@ -260,13 +260,13 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     },
     {
       id: 9,
-      name: 'Rollos Térmicos 76mm',
-      description: 'Caja de consumibles con rollos térmicos de 76mm, compatibles con nuestras impresoras térmicas. Alta calidad de impresión.',
-      price: 149.99,
-      image: 'images/accesorios/consumible3.png',
-      images: ['images/consumible.png', 'images/accesorios/consumible3.png'],
+      name: 'Caja de Rollos Térmicos 76mm',
+      description: 'Caja de 20 rollos térmicos de 76mm, compatibles con nuestras impresoras térmicas. Alta calidad de impresión.',
+      price: 1500.00,
+      image: 'images/accesorios/caja1.png',
+      images: ['images/accesorios/caja2.png', 'images/accesorios/caja3.png'],
       features: [
-        'Rollos térmicos de 76mm',
+        '20 Rollos térmicos de 76mm',
         'Compatible con impresoras térmicas',
         'Alta calidad de impresión',
         'Larga duración del papel',
@@ -321,11 +321,11 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     },
     {
       id: 11,
-      name: 'Teclado Alámbrico Ghia Multimedia',
+      name: 'Teclado Alámbrico Multimedia',
       description: 'Teclado profesional con teclas multimedia y teclado numérico integrado para uso intenso en puntos de venta.',
       price: 150.00,
-      image: 'images/accesorios/teclado.png',
-      images: ['images/accesorios/teclado1.png'],
+      image: 'images/accesorios/teclado1.png',
+      images: ['images/accesorios/teclado4.png', 'images/accesorios/teclado3.png'],
       features: [
         'Conexión USB Plug & Play',
         'Incluye teclado numérico',
@@ -343,12 +343,12 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
         'Interfaz': 'USB',
         'Teclado numérico': 'Sí',
         'Multimedia': 'Sí',
-        'Garantía': '1 año'
+        
       }
     },
     {
       id: 12,
-      name: 'Mouse Óptico Ghia USB',
+      name: 'Mouse Óptico USB',
       description: 'Mouse óptico de alta precisión con sensor de 1200 DPI. Ideal para navegación rápida y precisa en sistemas de punto de venta.',
       price: 99.00,
       image: 'images/accesorios/mouse.png',
@@ -370,7 +370,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
         'Interfaz': 'USB',
         'Scroll': 'Sí',
         'Apagado automático': 'No',
-        'Garantía': '1 año'
+        
       }
     }
   ];

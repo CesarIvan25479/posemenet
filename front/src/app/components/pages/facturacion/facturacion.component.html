@@ -136,7 +136,7 @@
         Y con el respaldo de emenetPOS, recibirás capacitación, seguimiento y soporte continuo para que tu facturación
         funcione siempre de manera correcta y sin complicaciones.
       </p>
-      <button class="facturacion-btn-comprar">
+      <button class="facturacion-btn-comprar" (click)="openTimbresModal()">
         <i class="fas fa-shopping-cart"></i> Comprar Timbres Fiscales
       </button>
     </div>
@@ -237,3 +237,6 @@
     </div>
   </div>
 </section>
+
+<!-- Modal de Timbres Fiscales -->
+<app-timbres-modal [isOpen]="isTimbresModalOpen" (closeEvent)="closeTimbresModal()"></app-timbres-modal>
