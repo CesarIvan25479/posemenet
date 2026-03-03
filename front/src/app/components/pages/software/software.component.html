@@ -228,35 +228,44 @@
     </div>
 </section>
 
-<!-- ===== CTA SECTION ===== -->
-<section class="cta-section">
-    <div class="cta-content">
-        <h2>¿Listo para transformar tu negocio?</h2>
-        <p>Únete a miles de empresas que confían en <b>emenetPOS</b></p>
+<!-- ─── SECCIÓN: STATS / CTA ─── -->
+<section class="sw-cta-section">
 
-        <div class="counter-container">
-            <div class="counter-inline">
-                <h3>Clientes Satisfechos</h3>
-                <h1 class="counter-text">+ de</h1>
-                <h1 class="counter-number gradient" data-target="10000">10,000</h1>
+    <!-- Eyebrow -->
+    <p class="sw-cta-eyebrow">emenetPOS · Confianza comprobada</p>
 
-            </div>
-            <div class="counter-inline">
-                <h3>Empresas que confían en nosotros</h3>
-                <h1 class="counter-text">+ de</h1>
-                <h1 class="counter-number gradient" data-target="1000">1000</h1>
+    <!-- Headline -->
+    <h2 class="sw-cta-headline">
+        Miles de negocios.<br>
+        <span>Un solo sistema.</span>
+    </h2>
 
-            </div>
+    <!-- Stats grid -->
+    <div class="sw-stats">
 
-
-        </div><br>
-        <div class="buttons-container">
-            <a [routerLink]="'/contacto'" class="btn btn-outline btn-large">
-                <i class="fas fa-calendar"></i>
-                <span>Me interesa</span>
-            </a>
+        <div class="sw-stat">
+            <span class="sw-stat-num counter-number" data-target="10000">10,000</span>
+            <span class="sw-stat-label">Clientes satisfechos</span>
         </div>
+
+        <div class="sw-stat-divider"></div>
+
+        <div class="sw-stat">
+            <span class="sw-stat-num counter-number" data-target="1000">1,000</span>
+            <span class="sw-stat-label">Empresas que confían en nosotros</span>
+        </div>
+
     </div>
+
+    <!-- CTA -->
+    <a [routerLink]="'/contacto'" class="sw-cta-btn">
+        Me interesa
+        <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg>
+    </a>
+
 </section>
 
 <!-- Modal de Producto -->

@@ -25,7 +25,7 @@ export class SoftwareComponent implements OnInit, AfterViewInit, OnDestroy {
     description: 'Punto de venta completo y listo para operar, impulsado por MyBusiness POS. Incluye equipo esencial y soporte especializado para que empieces a vender desde el primer día, todo en un solo paquete.',
     price: 30500,
     image: 'images/software/paquete.png',
-    images: ['images/software/mybusiness2.png', 'images/software/monitor2.png', 'images/software/pc.png', 'images/cajon5.png', 'images/impresora3.png','images/barras3.png','images/teclado.png'],
+    images: ['images/software/mybusiness2.png', 'images/software/monitor2.png', 'images/software/pc.png', 'images/cajon5.png', 'images/impresora3.png', 'images/barras3.png', 'images/teclado.png'],
     features: [
       'Configuración, instalación y puesta en marcha del sistema completo',
       'Implementación del sistema de recargas de tiempo aire',
@@ -56,7 +56,7 @@ export class SoftwareComponent implements OnInit, AfterViewInit, OnDestroy {
     ]
   };
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   ngAfterViewInit() {
     this.setupIntersectionObserver();
@@ -84,8 +84,8 @@ export class SoftwareComponent implements OnInit, AfterViewInit, OnDestroy {
       });
     }, options);
 
-    // Observar la sección CTA
-    const ctaSection = document.querySelector('.cta-section');
+    // Observar la nueva sección CTA
+    const ctaSection = document.querySelector('.sw-cta-section');
     if (ctaSection) {
       this.observer.observe(ctaSection);
     }
@@ -93,17 +93,17 @@ export class SoftwareComponent implements OnInit, AfterViewInit, OnDestroy {
 
   animateCounters() {
     const counters = document.querySelectorAll('.counter-number');
-    
+
     counters.forEach((counter, index) => {
       const target = +counter.getAttribute('data-target')!;
       const duration = 2000; // 2 segundos
       const start = 0;
       const increment = target / (duration / 16); // 60fps
       let current = start;
-      
+
       // Agregar delay escalonado para cada contador
       const delay = index * 300;
-      
+
       const updateCounter = () => {
         current += increment;
         if (current < target) {
@@ -113,7 +113,7 @@ export class SoftwareComponent implements OnInit, AfterViewInit, OnDestroy {
           counter.textContent = target.toLocaleString();
         }
       };
-      
+
       // Iniciar animación después del delay
       setTimeout(() => {
         counter.classList.add('active');

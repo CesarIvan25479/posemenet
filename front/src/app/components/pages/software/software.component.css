@@ -1,3 +1,10 @@
+/* ── Contiene todos los desbordamientos horizontales del componente ── */
+:host {
+    display: block;
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
 /* ===== HEADER HERO ===== */
 
 header {
@@ -9,6 +16,7 @@ header {
     gap: 2rem;
     padding: 60px clamp(1.5rem, 6vw, 5rem) 60px;
     overflow: hidden;
+    /* contiene el blob y dots */
 }
 
 /* Background decorativo */
@@ -599,6 +607,11 @@ header::before {
     .float-card {
         display: none;
     }
+
+    /* Evita que el hero-right desborde en tablet */
+    .hero-right {
+        overflow: hidden;
+    }
 }
 
 @media (max-width: 768px) {
@@ -896,13 +909,16 @@ header::before {
 .additional-features {
     padding: var(--spacing-xl) 0;
     background: var(--color-white);
+    overflow-x: hidden;
+    /* evita desbordamiento de fade-left */
 }
 
 .features-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
     gap: var(--spacing-lg);
     margin-top: var(--spacing-xl);
+    overflow: hidden;
 }
 
 .feature-item {
@@ -1244,5 +1260,216 @@ header::before {
 
     body {
         color: #000;
+    }
+}
+
+/* ═══════════════════════════════════════════════
+   SW — SECCIÓN CTA / STATS (Minimalista Premium)
+═══════════════════════════════════════════════ */
+
+.sw-cta-section {
+    position: relative;
+    background: #f5f5f7;
+    padding: 100px 24px;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Sin decoración extra en fondo blanco */
+
+/* Eyebrow */
+.sw-cta-eyebrow {
+    position: relative;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #6e6e73;
+    margin: 0 0 24px;
+}
+
+/* Headline */
+.sw-cta-headline {
+    position: relative;
+    font-size: clamp(2.6rem, 6.5vw, 4.6rem);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 1.06;
+    color: #003796;
+    margin: 0 0 72px;
+}
+
+.sw-cta-headline span {
+    color: #001b4f;
+}
+
+/* Stats */
+.sw-stats {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    margin-bottom: 64px;
+}
+
+.sw-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 0 56px;
+}
+
+/* Divisor vertical */
+.sw-stat-divider {
+    width: 1px;
+    height: 72px;
+    background: rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+/* Número grande */
+.sw-stat-num {
+    font-size: clamp(3rem, 7vw, 5rem);
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    line-height: 1;
+    color: #003796;
+    display: block;
+}
+
+/* Signo + delante del número via pseudo */
+.sw-stat-num::before {
+    content: '+';
+    font-size: 0.5em;
+    vertical-align: super;
+    margin-right: 2px;
+    opacity: 0.7;
+}
+
+/* Etiqueta */
+.sw-stat-label {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: #6e6e73;
+    letter-spacing: 0.02em;
+    max-width: 160px;
+    line-height: 1.4;
+}
+
+/* Animación de conteo — estado activo */
+.sw-stat-num.active {
+    animation: statPop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+@keyframes statPop {
+    from {
+        transform: scale(0.85);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* CTA Button */
+.sw-cta-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #003796;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    padding: 14px 32px;
+    border-radius: 100px;
+    text-decoration: none;
+    transition: background 0.2s ease, gap 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 20px rgba(0, 55, 150, 0.25);
+}
+
+.sw-cta-btn svg {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.2s ease;
+}
+
+.sw-cta-btn:hover {
+    background: #001b4f;
+    gap: 12px;
+    box-shadow: 0 8px 32px rgba(0, 27, 79, 0.35);
+}
+
+.sw-cta-btn:hover svg {
+    transform: translateX(3px);
+}
+
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .sw-cta-section {
+        padding: 72px 20px;
+        overflow-x: hidden;
+    }
+
+    .sw-cta-headline {
+        font-size: clamp(2rem, 8vw, 3rem);
+        margin-bottom: 48px;
+        word-break: break-word;
+    }
+
+    .sw-stats {
+        flex-direction: column;
+        gap: 32px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .sw-stat {
+        padding: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .sw-stat-num {
+        font-size: clamp(2.4rem, 12vw, 3.5rem);
+    }
+
+    .sw-stat-divider {
+        width: 48px;
+        height: 1px;
+    }
+
+    .sw-cta-btn {
+        width: max-content;
+        max-width: calc(100vw - 48px);
+    }
+}
+
+@media (max-width: 480px) {
+    .sw-cta-section {
+        padding: 60px 16px;
+    }
+
+    .sw-cta-eyebrow {
+        font-size: 0.65rem;
+    }
+
+    .sw-cta-headline {
+        font-size: clamp(1.8rem, 9vw, 2.4rem);
+    }
+
+    .sw-stat-num {
+        font-size: 2.4rem;
+    }
+
+    .sw-stat-label {
+        font-size: 0.8rem;
+        max-width: 200px;
     }
 }
