@@ -8,12 +8,11 @@ interface Giro {
   iconClass: string;
 }
 
-import { RotatingTextComponent } from '../../shared/rotating-text/rotating-text.component';
 
 @Component({
   selector: 'app-giros',
   standalone: true,
-  imports: [CommonModule, RotatingTextComponent, RouterModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './giros.component.html',
   styleUrl: './giros.component.css'
 })

@@ -136,7 +136,7 @@
         Y con el respaldo de emenetPOS, recibirás capacitación, seguimiento y soporte continuo para que tu facturación
         funcione siempre de manera correcta y sin complicaciones.
       </p>
-      <button class="facturacion-btn-comprar" (click)="openTimbresModal()">
+      <button class="facturacion-btn-comprar" (click)="openModal()">
         <i class="fas fa-shopping-cart"></i> Comprar Timbres Fiscales
       </button>
     </div>
@@ -219,24 +219,131 @@
   </div>
 </section>
 
-<!-- ===== CTA SECTION ===== -->
-<section class="cta-section">
-  <div class="cta-content">
-    <h2>¿Listo para digitalizar tu negocio?</h2>
-    <p>Únete a miles de empresas que ya utilizan nuestra facturación electrónica</p>
-    <div class="buttons-container">
-      <a class="btn btn-outline btn-large"></a>
+<!-- ─── SECCIÓN: TIMBRES PROMO ─── -->
+<section class="tf-promo-section">
+  <div class="tf-promo-inner">
+
+    <!-- Eyebrow -->
+    <p class="tf-promo-eyebrow">Timbres Fiscales · CFDI 4.0</p>
+
+    <!-- Headline -->
+    <h2 class="tf-promo-headline">
+      Factura sin límites.<br>
+      <span>Elige tu paquete.</span>
+    </h2>
+
+    <!-- Subtítulo -->
+    <p class="tf-promo-sub">
+      Emisión inmediata, soporte incluido y vigencia permanente.
+    </p>
+
+    <!-- Tarjetas de paquetes -->
+    <div class="tf-packages">
+
+      <article class="tf-pkg">
+        <div class="tf-pkg-inner">
+          <span class="tf-pkg-qty">100</span>
+          <span class="tf-pkg-label">timbres</span>
+          <div class="tf-pkg-divider"></div>
+          <span class="tf-pkg-price">$465.16</span>
+          <span class="tf-pkg-currency">MXN</span>
+        </div>
+      </article>
+
+      <article class="tf-pkg tf-pkg--featured">
+        <div class="tf-pkg-badge">Más popular</div>
+        <div class="tf-pkg-inner">
+          <span class="tf-pkg-qty">500</span>
+          <span class="tf-pkg-label">timbres</span>
+          <div class="tf-pkg-divider"></div>
+          <span class="tf-pkg-price">$1,745.80</span>
+          <span class="tf-pkg-currency">MXN</span>
+        </div>
+      </article>
+
+      <article class="tf-pkg">
+        <div class="tf-pkg-inner">
+          <span class="tf-pkg-qty">1,000</span>
+          <span class="tf-pkg-label">timbres</span>
+          <div class="tf-pkg-divider"></div>
+          <span class="tf-pkg-price">$2,911.60</span>
+          <span class="tf-pkg-currency">MXN</span>
+        </div>
+      </article>
+
     </div>
-    <div class="cta-buttons">
-      <button class="btn btn-primary btn-large">
-        <i class="fas fa-shopping-cart"></i> Comprar Timbres
-      </button>
-      <button class="btn btn-outline btn-large">
-        <i class="fas fa-calendar"></i> Agendar Demo
-      </button>
-    </div>
+
+    <!-- CTA -->
+    <button class="tf-promo-cta" (click)="openModal()">
+      Ver todos los paquetes
+      <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+    </button>
+
   </div>
 </section>
 
-<!-- Modal de Timbres Fiscales -->
-<app-timbres-modal [isOpen]="isTimbresModalOpen" (closeEvent)="closeTimbresModal()"></app-timbres-modal>
+<!-- ===== MODAL TIMBRES FISCALES ===== -->
+<div class="tm-overlay" [class.tm-overlay--open]="isModalOpen" (click)="closeModal()">
+  <div class="tm-modal" [class.tm-modal--open]="isModalOpen" (click)="$event.stopPropagation()">
+
+    <!-- Header del modal -->
+    <div class="tm-header">
+
+      <div>
+        <h2 class="tm-title">Paquetes de Timbres Fiscales</h2>
+        <p class="tm-subtitle">Selecciona el paquete que mejor se adapte a tu negocio</p>
+      </div>
+      <button class="tm-close" (click)="closeModal()" aria-label="Cerrar modal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M18 6L6 18M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Contenido -->
+    <div class="tm-body">
+
+      <!-- Selector de paquetes -->
+      <div class="tm-packages">
+        <p class="tm-packages-label">Elige tu paquete:</p>
+        <div class="tm-packages-grid">
+          <button *ngFor="let pkg of packages" class="tm-pkg-card"
+            [class.tm-pkg-card--active]="selectedPackage.id === pkg.id" [class.tm-pkg-card--highlight]="pkg.highlight"
+            (click)="selectPackage(pkg)">
+            <span *ngIf="pkg.badge" class="tm-pkg-badge">{{ pkg.badge }}</span>
+            <span class="tm-pkg-qty">{{ pkg.quantity }}</span>
+            <span class="tm-pkg-unit">timbres</span>
+            <span class="tm-pkg-price">{{ pkg.price }}</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Detalle del paquete seleccionado -->
+      <div class="tm-detail">
+        <div class="tm-detail-left">
+          <div class="tm-detail-circle">
+            <span class="tm-detail-num">{{ selectedPackage.quantity }}</span>
+            <span class="tm-detail-word">timbres</span>
+            <span class="tm-detail-word">fiscales</span>
+          </div>
+        </div>
+        <div class="tm-detail-right">
+          <h3 class="tm-detail-title">{{ selectedPackage.title }}</h3>
+          <p class="tm-detail-desc">{{ selectedPackage.description }}</p>
+          <div class="tm-detail-price-row">
+            <span class="tm-detail-price">{{ selectedPackage.price }}</span>
+            <span class="tm-detail-price-note">MXN · pago único</span>
+          </div>
+          <a href="https://api.whatsapp.com/send?phone=5217131334557&text=Hola%2C%20quiero%20adquirir%20el%20{{ selectedPackage.title }}%20por%20{{ selectedPackage.price }}"
+            target="_blank" rel="noopener noreferrer" class="tm-btn-buy">
+            <i class="fas fa-shopping-cart"></i> Comprar ahora
+          </a>
+          <p class="tm-detail-legal">✦ Precio sin IVA · Facturas CFDI 4.0 válidas ante el SAT</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
