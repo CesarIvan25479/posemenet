@@ -1,6 +1,7 @@
-import { Component, AfterViewInit, OnDestroy, ElementRef, ViewChild } from '@angular/core';
+import { Component, AfterViewInit, OnDestroy, ElementRef, ViewChild, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { RotatingTextComponent } from '../../shared/rotating-text/rotating-text.component';
 
 interface Giro {
   name: string;
@@ -12,7 +13,7 @@ interface Giro {
 @Component({
   selector: 'app-giros',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, RotatingTextComponent],
   templateUrl: './giros.component.html',
   styleUrl: './giros.component.css'
 })
@@ -90,6 +91,8 @@ export class GirosComponent implements AfterViewInit, OnDestroy {
   }
 
   private observer: IntersectionObserver | null = null;
+
+  constructor(private cdr: ChangeDetectorRef) { }
 
   ngAfterViewInit(): void {
     this.setupTouchSwipe();

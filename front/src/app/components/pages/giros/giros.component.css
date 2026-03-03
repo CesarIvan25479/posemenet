@@ -109,24 +109,23 @@ header {
 
 
 /* Nuevo texto rotativo con el estilo solicitado (Inspiration: React Bits) */
-.rotating-accent {
-  background: #67e8f9;
-  /* Cyan 300 equivalent */
-  color: #000;
-  padding: 0.1rem 0.6rem;
-  border-radius: 10px;
+::ng-deep .rotating-accent {
+  background: #003796;
+  color: #ffffff;
+  padding: 0.15rem 0.6rem;
+  border-radius: 12px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   margin: 0 0.2rem;
   font-style: normal;
-  font-weight: 700;
-  box-shadow: 0 4px 15px rgba(103, 232, 249, 0.4);
+  font-weight: 800;
+  box-shadow: 0 4px 15px rgba(0, 162, 255, 0.45);
   transform: translateY(-0.05em);
   /* Ajuste sutil para centrar con el texto plano */
 }
 
-.rotating-split-level {
+::ng-deep .rotating-split-level {
   overflow: hidden;
   padding-bottom: 0.1rem;
 }
