@@ -240,55 +240,42 @@
   </div>
 </section>
 
-<!-- ===== NUESTROS CLIENTES SECTION ===== -->
-<section class="clientes-section reveal fade-up">
-  <div class="clientes-container">
-    <!-- Encabezado -->
-    <div class="clientes-header">
-      <span class="clientes-badge">Confianza & Experiencia</span>
-      <h2 class="clientes-title">
-        Nuestros <span class="clientes-accent">clientes</span> son nuestra carta de presentación
-      </h2>
-      <p class="clientes-subtitle">
-        Empresas líderes en su sector confían en MyBusinessPOS para la gestión integral de sus puntos de venta.
-      </p>
+<!-- ─── SECCIÓN: STATS / CTA ─── -->
+<section class="sw-cta-section">
+
+  <!-- Eyebrow -->
+  <p class="sw-cta-eyebrow reveal fade-up">emenetPOS · Confianza comprobada</p>
+
+  <!-- Headline -->
+  <h2 class="sw-cta-headline reveal fade-up delay-100">
+    Miles de negocios.<br>
+    <span>Un solo sistema.</span>
+  </h2>
+
+  <!-- Stats grid -->
+  <div class="sw-stats reveal zoom-in delay-200">
+
+    <div class="sw-stat">
+      <span class="sw-stat-num counter-number" data-target="10000">0</span>
+      <span class="sw-stat-label">Clientes satisfechos</span>
     </div>
 
-    <!-- Grid de logos -->
-    <div class="clientes-grid">
-      <div class="cliente-card reveal fade-up-scale delay-100">
-        <div class="cliente-logo-wrapper">
-          <img src="images/home/bimbo.jpg" alt="Bimbo" loading="lazy">
-        </div>
-      </div>
-      <div class="cliente-card reveal fade-up-scale delay-200">
-        <div class="cliente-logo-wrapper">
-          <img src="images/home/kikos.png" alt="Kikos" loading="lazy">
-        </div>
-      </div>
-      <div class="cliente-card reveal fade-up-scale delay-300">
-        <div class="cliente-logo-wrapper">
-          <img src="images/home/globo.png" alt="El Globo" loading="lazy">
-        </div>
-      </div>
-      <div class="cliente-card reveal fade-up-scale delay-400">
-        <div class="cliente-logo-wrapper">
-          <img src="images/home/pepe.png" alt="Pollo Pepe" loading="lazy">
-        </div>
-      </div>
-      <div class="cliente-card reveal fade-up-scale delay-500">
-        <div class="cliente-logo-wrapper">
-          <img src="images/home/lumens.png" alt="Lumen" loading="lazy">
-        </div>
-      </div>
-      <div class="cliente-card reveal fade-up-scale delay-600">
-        <div class="cliente-logo-wrapper">
-          <img src="images/home/cielo.webp" alt="Café Punta del Cielo" loading="lazy">
-        </div>
-      </div>
+    <div class="sw-stat-divider"></div>
+
+    <div class="sw-stat">
+      <span class="sw-stat-num counter-number" data-target="1000">0</span>
+      <span class="sw-stat-label">Empresas que confían en nosotros</span>
     </div>
 
-    <!-- Línea decorativa inferior -->
-    <div class="clientes-divider"></div>
   </div>
+
+  <!-- CTA -->
+  <a [routerLink]="'/contacto'" class="sw-cta-btn reveal fade-up delay-400">
+    Me interesa
+    <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+        stroke-linejoin="round" />
+    </svg>
+  </a>
+
 </section>

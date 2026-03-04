@@ -272,7 +272,7 @@
 }
 
 .contact-card:not(.featured):hover .card-icon-wrap {
-    background: var(--accent);
+    background: #003288;
     color: white;
 }
 

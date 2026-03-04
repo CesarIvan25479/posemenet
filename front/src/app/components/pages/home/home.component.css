@@ -1268,265 +1268,213 @@ header::before {
 }
 
 
-/* ═══════════════════════════════════════════
-   NUESTROS CLIENTES SECTION
-═══════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════
+   SW — SECCIÓN CTA / STATS (Minimalista Premium)
+═══════════════════════════════════════════════ */
 
-.clientes-section {
-    padding: 5rem 0 4rem;
-    background: linear-gradient(180deg, #f8faff 0%, #edf2fb 100%);
+.sw-cta-section {
     position: relative;
-    overflow: hidden;
-}
-
-/* Decoración sutil de fondo */
-.clientes-section::before {
-    content: '';
-    position: absolute;
-    top: -60px;
-    right: -80px;
-    width: 280px;
-    height: 280px;
-    background: radial-gradient(circle, rgba(0, 55, 150, 0.05) 0%, transparent 70%);
-    border-radius: 50%;
-    pointer-events: none;
-}
-
-.clientes-section::after {
-    content: '';
-    position: absolute;
-    bottom: -40px;
-    left: -60px;
-    width: 220px;
-    height: 220px;
-    background: radial-gradient(circle, rgba(0, 24, 69, 0.04) 0%, transparent 70%);
-    border-radius: 50%;
-    pointer-events: none;
-}
-
-.clientes-container {
-    width: 90%;
-    max-width: 1100px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 1;
-}
-
-/* ── Encabezado ── */
-.clientes-header {
+    background: #f5f5f7;
+    padding: 100px 24px;
     text-align: center;
-    margin-bottom: 3.5rem;
-}
-
-.clientes-badge {
-    display: inline-block;
-    padding: 0.4rem 1.2rem;
-    background: linear-gradient(135deg, rgba(0, 55, 150, 0.08) 0%, rgba(0, 24, 69, 0.06) 100%);
-    border: 1px solid rgba(0, 55, 150, 0.12);
-    border-radius: 100px;
-    font-family: var(--font-head, 'Sora', sans-serif);
-    font-size: 0.78rem;
-    font-weight: 600;
-    color: var(--color-primary-dark, #003796);
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    margin-bottom: 1.2rem;
-}
-
-.clientes-title {
-    font-family: var(--font-head, 'Sora', sans-serif);
-    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
-    font-weight: 800;
-    color: var(--navy, #001845);
-    line-height: 1.2;
-    letter-spacing: -0.02em;
-    margin-bottom: 1rem;
-}
-
-.clientes-accent {
-    color: var(--color-primary-dark, #003796);
-    position: relative;
-}
-
-.clientes-accent::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(90deg, var(--color-primary-dark, #003796), rgba(0, 55, 150, 0.3));
-    border-radius: 2px;
-}
-
-.clientes-subtitle {
-    font-family: var(--font-body, 'DM Sans', sans-serif);
-    font-size: 1.05rem;
-    color: var(--gray-text, #5A6A80);
-    max-width: 560px;
-    margin: 0 auto;
-    line-height: 1.7;
-}
-
-/* ── Grid de logos ── */
-.clientes-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.cliente-card {
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(0, 55, 150, 0.07);
-    border-radius: 16px;
-    padding: 2rem 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
     overflow: hidden;
 }
 
-/* Brillo sutil al hover */
-.cliente-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(0, 55, 150, 0.03), transparent);
-    transition: left 0.6s ease;
-    pointer-events: none;
+/* Sin decoración extra en fondo blanco */
+
+/* Eyebrow */
+.sw-cta-eyebrow {
+    position: relative;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #6e6e73;
+    margin: 0 0 24px;
 }
 
-.cliente-card:hover::before {
-    left: 100%;
+/* Headline */
+.sw-cta-headline {
+    position: relative;
+    font-size: clamp(2.6rem, 6.5vw, 4.6rem);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 1.06;
+    color: #003796;
+    margin: 0 0 72px;
 }
 
-.cliente-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 16px 40px rgba(0, 24, 69, 0.1),
-        0 4px 12px rgba(0, 55, 150, 0.06);
-    border-color: rgba(0, 55, 150, 0.15);
-    background: rgba(255, 255, 255, 0.95);
+.sw-cta-headline span {
+    color: #001b4f;
 }
 
-.cliente-logo-wrapper {
+/* Stats */
+.sw-stats {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 200%;
-    height: 80px;
+    gap: 0;
+    margin-bottom: 64px;
 }
 
-.cliente-logo-wrapper img {
-    max-width: 140px;
-    max-height: 70px;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    filter: grayscale(30%) opacity(0.85);
-    transition: all 0.35s ease;
+.sw-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 0 56px;
 }
 
-.cliente-card:hover .cliente-logo-wrapper img {
-    filter: grayscale(0%) opacity(1);
-    transform: scale(1.06);
+/* Divisor vertical */
+.sw-stat-divider {
+    width: 1px;
+    height: 72px;
+    background: rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
 }
 
-/* ── Línea decorativa inferior ── */
-.clientes-divider {
-    width: 80px;
-    height: 3px;
-    background: linear-gradient(90deg, var(--color-primary-dark, #003796), rgba(0, 55, 150, 0.2));
-    margin: 3rem auto 0;
-    border-radius: 2px;
+/* Número grande */
+.sw-stat-num {
+    font-size: clamp(3rem, 7vw, 5rem);
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    line-height: 1;
+    color: #003796;
+    display: block;
 }
 
-/* ═══════════════════════════════════════════
-   CLIENTES — RESPONSIVE
-═══════════════════════════════════════════ */
+/* Signo + delante del número via pseudo */
+.sw-stat-num::before {
+    content: '+';
+    font-size: 0.5em;
+    vertical-align: super;
+    margin-right: 2px;
+    opacity: 0.7;
+}
 
+/* Etiqueta */
+.sw-stat-label {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: #6e6e73;
+    letter-spacing: 0.02em;
+    max-width: 160px;
+    line-height: 1.4;
+}
+
+/* Animación de conteo — estado activo */
+.sw-stat-num.active {
+    animation: statPop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+@keyframes statPop {
+    from {
+        transform: scale(0.85);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* CTA Button */
+.sw-cta-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #003796;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    padding: 14px 32px;
+    border-radius: 100px;
+    text-decoration: none;
+    transition: background 0.2s ease, gap 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 20px rgba(0, 55, 150, 0.25);
+}
+
+.sw-cta-btn svg {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.2s ease;
+}
+
+.sw-cta-btn:hover {
+    background: #001b4f;
+    gap: 12px;
+    box-shadow: 0 8px 32px rgba(0, 27, 79, 0.35);
+}
+
+.sw-cta-btn:hover svg {
+    transform: translateX(3px);
+}
+
+
+/* ── Responsive ── */
 @media (max-width: 768px) {
-    .clientes-section {
-        padding: 3.5rem 0 3rem;
+    .sw-cta-section {
+        padding: 72px 20px;
+        overflow-x: hidden;
     }
 
-    .clientes-header {
-        margin-bottom: 2.5rem;
+    .sw-cta-headline {
+        font-size: clamp(2rem, 8vw, 3rem);
+        margin-bottom: 48px;
+        word-break: break-word;
     }
 
-    .clientes-title {
-        font-size: clamp(1.4rem, 5vw, 1.8rem);
+    .sw-stats {
+        flex-direction: column;
+        gap: 32px;
+        width: 100%;
+        max-width: 100%;
     }
 
-    .clientes-subtitle {
-        font-size: 0.95rem;
+    .sw-stat {
+        padding: 0;
+        width: 100%;
+        max-width: 100%;
     }
 
-    .clientes-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.2rem;
+    .sw-stat-num {
+        font-size: clamp(2.4rem, 12vw, 3.5rem);
     }
 
-    .cliente-card {
-        padding: 1.5rem 1rem;
+    .sw-stat-divider {
+        width: 48px;
+        height: 1px;
     }
 
-    .cliente-logo-wrapper {
-        height: 65px;
-    }
-
-    .cliente-logo-wrapper img {
-        max-width: 120px;
-        max-height: 58px;
+    .sw-cta-btn {
+        width: max-content;
+        max-width: calc(100vw - 48px);
     }
 }
 
 @media (max-width: 480px) {
-    .clientes-section {
-        padding: 2.5rem 0 2rem;
+    .sw-cta-section {
+        padding: 60px 16px;
     }
 
-    .clientes-header {
-        margin-bottom: 2rem;
+    .sw-cta-eyebrow {
+        font-size: 0.65rem;
     }
 
-    .clientes-badge {
-        font-size: 0.7rem;
-        padding: 0.35rem 1rem;
+    .sw-cta-headline {
+        font-size: clamp(1.8rem, 9vw, 2.4rem);
     }
 
-    .clientes-title {
-        font-size: clamp(1.2rem, 5.5vw, 1.5rem);
+    .sw-stat-num {
+        font-size: 2.4rem;
     }
 
-    .clientes-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-    }
-
-    .cliente-card {
-        padding: 1.2rem 0.8rem;
-        border-radius: 12px;
-    }
-
-    .cliente-logo-wrapper {
-        height: 55px;
-    }
-
-    .cliente-logo-wrapper img {
-        max-width: 100px;
-        max-height: 48px;
-    }
-
-    .clientes-divider {
-        margin-top: 2rem;
+    .sw-stat-label {
+        font-size: 0.8rem;
+        max-width: 200px;
     }
 }
