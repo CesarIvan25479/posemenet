@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy, ElementRef, ViewChild, AfterViewInit } fr
 import { CommonModule } from '@angular/common';
 import { CircularGalleryApp } from './circular-gallery.service';
 import { ProductModalComponent, Product } from '../../product-modal/product-modal.component';
+import { disableDebugTools } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-accesorios',
@@ -36,18 +37,18 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
 
   // Product cards for grid display
   readonly productCards = [
-    { index: 0, image: 'images/accesorios/lector.png', name: 'Lector de código profesional', description: 'Scanner de códigos de alta velocidad y precisión', price: '$1,500.00 MX', delay: 'delay-100' },
-    { index: 1, image: 'images/accesorios/impresora.png', name: 'Impresora Térmica Compacta', description: 'Impresora térmica para recibos y etiquetas', price: '$1,200.00 MX', delay: 'delay-200' },
-    { index: 2, image: 'images/accesorios/cajon2.png', name: 'Cajón de Efectivo Electrónico', description: 'Cajón automático con seguridad integrada y control USB', price: '$750.00 MX', delay: 'delay-300' },
-    { index: 3, image: 'images/accesorios/rollo.png', name: 'Rollos de papel termico', description: 'Rollo de papel térmico c/u', price: '$80.00 MX', delay: 'delay-100' },
-    { index: 4, image: 'images/accesorios/compu1.png', name: 'Computadora All In One', description: 'Monitor táctil capacitivo, mouse y teclado', price: '$4,999.99 MX', delay: 'delay-200' },
-    { index: 5, image: 'images/accesorios/terminal.png', name: 'Terminal de tarjetas', description: 'Sistema completo con software integrado', price: '$450.00 MX', delay: 'delay-300' },
-    { index: 6, image: 'images/accesorios/pc.png', name: 'PC GHIA Frontier Slim 2.0', description: '1 TB Disco, RAM 8 GB - Ideal para punto de venta', price: '$5,999.99 MX', delay: '' },
-    { index: 7, image: 'images/accesorios/monitor3.png', name: 'Monitor GHIA 23.8 pulgadas', description: 'Monitor Full HD para punto de venta y oficina', price: '$2,499.99 MX', delay: 'delay-100' },
-    { index: 8, image: 'images/accesorios/caja.png', name: 'Caja de Rollos Térmicos 76mm', description: 'Caja de 20 rollos térmicos de 76mm compatibles con nuestras impresoras térmicas', price: '$1,500.00 MX', delay: 'delay-200' },
-    { index: 9, image: 'images/accesorios/paquete.png', name: 'emenetPOS Punto de Venta', description: 'Punto de venta completo impulsado por MyBusiness POS', price: '$30,500.00 MX', delay: 'delay-300' },
-    { index: 10, image: 'images/accesorios/teclado2.png', name: 'Teclado Multimedia', description: 'Teclado con teclas de acceso rápido y pad numérico', price: '$150.00 MX', delay: 'delay-400' },
-    { index: 11, image: 'images/accesorios/hp.png', name: 'Mouse Óptico', description: 'Mouse ergonómico de 1200 DPI con sensor óptico', price: '$99.00 MX', delay: 'delay-500' },
+    { index: 0, image: 'images/accesorios/lector.png', name: 'Lector de código profesional', description: 'Scanner de códigos de alta velocidad y precisión', price: '$1,500.00 MXN', delay: 'delay-100' },
+    { index: 1, image: 'images/accesorios/impresora.png', name: 'Impresora Térmica Compacta', description: 'Impresora térmica para recibos y etiquetas', price: '$1,200.00 MXN', delay: 'delay-200' },
+    { index: 2, image: 'images/accesorios/cajon2.png', name: 'Cajón de Efectivo Electrónico', description: 'Cajón automático con seguridad integrada y control USB', price: '$750.00 MXN', delay: 'delay-300' },
+    { index: 3, image: 'images/accesorios/rollo.png', name: 'Rollos de papel termico', description: 'Rollo de papel térmico c/u', price: '$80.00 MXN', delay: 'delay-100' },
+    { index: 4, image: 'images/accesorios/compu1.png', name: 'Computadora All In One', description: 'Monitor táctil capacitivo, mouse y teclado', price: '$4,999.99 MXN', delay: 'delay-200' },
+    { index: 5, image: 'images/accesorios/terminal.png', name: 'Terminal de tarjetas', description: 'Sistema completo con software integrado', price: '$450.00 MXN', delay: 'delay-300' },
+    { index: 6, image: 'images/accesorios/pc.png', name: 'PC GHIA Frontier Slim 2.0', description: '1 TB Disco, RAM 8 GB - Ideal para punto de venta', price: '$5,999.99 MXN', delay: '' },
+    { index: 7, image: 'images/accesorios/monitor3.png', name: 'Monitor GHIA 23.8 pulgadas', description: 'Monitor Full HD para punto de venta y oficina', price: '$2,499.99 MXN', delay: 'delay-100' },
+    { index: 8, image: 'images/accesorios/caja.png', name: 'Caja de Rollos Térmicos 76mm', description: 'Caja de 20 rollos térmicos de 76mm compatibles con nuestras impresoras térmicas', price: '$1,500.00 MXN', delay: 'delay-200' },
+    { index: 9, image: 'images/accesorios/paquete.png', name: 'emenetPOS Punto de Venta', description: 'Punto de venta completo impulsado por MyBusiness POS', price: '$30,500.00 MXN', delay: 'delay-300' },
+    { index: 10, image: 'images/accesorios/teclado2.png', name: 'Teclado Multimedia', description: 'Teclado con teclas de acceso rápido y pad numérico', price: '$150.00 MXN', delay: 'delay-400' },
+    { index: 11, image: 'images/accesorios/hp.png', name: 'Mouse Óptico', description: 'Mouse ergonómico de 1200 DPI con sensor óptico', price: '$99.00 MXN', delay: 'delay-500' },
   ];
 
   // Seccion beneficios
@@ -55,14 +56,14 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     { icon: '🔌', name: 'Integración inmediata', desc: 'Todos los equipos funcionan desde el primer enchufe con MyBusinessPOS. Sin configuraciones complicadas.', delay: 'delay-100' },
     { icon: '🏆', name: 'Calidad probada', desc: 'Hardware seleccionado tras pruebas reales en comercios mexicanos. Rendimiento garantizado en uso continuo.', delay: 'delay-200' },
     { icon: '💬', name: 'Soporte y capacitación', desc: '10 horas de capacitación y asesoría. Resolvemos cualquier duda sobre instalación, compatibilidad o uso.', delay: 'delay-300' },
-    { icon: '💰', name: 'Precios accesibles', desc: 'Desde $80 MX por rollo hasta equipos completos. Hay opción para cualquier presupuesto y tamaño de negocio.', delay: 'delay-400' },
+    { icon: '💰', name: 'Precios accesibles', desc: 'Desde $80 MXN por rollo hasta equipos completos. Hay opción para cualquier presupuesto y tamaño de negocio.', delay: 'delay-400' },
   ];
 
   // Promo banner
   readonly promoItems = [
-    { name: 'Lector de código', price: '$1,500 MX' },
-    { name: 'Impresora térmica', price: '$1,200 MX' },
-    { name: 'Cajón electrónico', price: '$750 MX' },
+    { name: 'Lector de código', price: '$1,500 MXN' },
+    { name: 'Impresora térmica', price: '$1,200 MXN' },
+    { name: 'Cajón electrónico', price: '$750 MXNN' },
   ];
 
   galleryItems = [
@@ -94,7 +95,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       specifications: { 'Tamaño impresión': '76mm', 'Velocidad': '250mm/s', 'Operación': 'Continua estable', 'Tecnología': 'Termica' },
       moreSpecifications: { 'Conexión': 'USB + Ethernet', 'Interfaces': 'Puerto USB 2.0 y Ethernet LAN (RJ-45)', 'Código de barras': '1D/2D, Code 39, EAN13, PDF417, QR, UPC', 'Movilidad': 'Alámbrico' }
     },
-    {
+    {  
       id: 3, name: 'Cajón de Efectivo Electrónico',
       description: 'Cajón automático con seguridad integrada y control USB. Diseñado para un manejo seguro y eficiente del efectivo en tu negocio.',
       price: 750.00, image: 'images/accesorios/cajon5.png',
@@ -185,7 +186,6 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       moreSpecifications: { 'Interfaz': 'USB', 'Scroll': 'Sí', 'Apagado automático': 'No' }
     }
   ];
-
   ngOnInit(): void { }
 
   ngAfterViewInit(): void {

@@ -1,5 +1,5 @@
 /* =============================================
-   ACCESORIOS – Redesign completo
+   ACCESORIOS – Rediseño completo
    ============================================= */
 
 /* ─── Reset mínimo ─── */
@@ -320,7 +320,7 @@ body {
 }
 
 /* ─────────────────────────────────────────────────────
-   SECCIÓN 5 — CTA DE SCROLL (el gancho final)
+   SECCIÓN — CTA DE SCROLL (el gancho final)
    Invita visualmente a ver más abajo
 ───────────────────────────────────────────────────── */
 .acc-scroll-cta {
@@ -541,7 +541,7 @@ body {
 }
 
 /* ─────────────────────────────────────────────────────
-   SECCIÓN 2 — BARRA DE STATS / CONFIANZA
+   SECCIÓN — BARRA DE STATS / CONFIANZA
 ───────────────────────────────────────────────────── */
 .acc-trust-bar {
     position: relative;
@@ -594,7 +594,7 @@ body {
 }
 
 /* ─────────────────────────────────────────────────────
-   SECCIÓN 3 — TARJETAS DE BENEFICIOS
+   SECCIÓN — TARJETAS DE BENEFICIOS
 ───────────────────────────────────────────────────── */
 .acc-benefits {
     position: relative;
@@ -720,7 +720,7 @@ body {
 }
 
 /* ─────────────────────────────────────────────────────
-   SECCIÓN 4 — BANNER PROMO DIAGONAL
+   SECCIÓN  — BANNER PROMO DIAGONAL
    El "gancho" que hace que el usuario quiera bajar
 ───────────────────────────────────────────────────── */
 .acc-promo-banner {
