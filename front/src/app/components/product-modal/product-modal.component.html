@@ -1,0 +1,120 @@
+<div class="modal-overlay" *ngIf="isOpen" (click)="onOverlayClick($event)">
+    <div class="modal-container">
+
+        <!-- Header bar siempre visible con el botón cerrar centrado -->
+        <div class="modal-header-bar">
+            <button class="modal-close" (click)="closeModal()" aria-label="Cerrar">
+                <span>&times;</span>
+            </button>
+        </div>
+
+        <div class="modal-content" *ngIf="product">
+            <!-- Layout de dos columnas -->
+            <div class="modal-body">
+                <!-- Columna izquierda: Carrusel de Imágenes -->
+                <div class="modal-carousel">
+                    <div class="carousel-main-image" (click)="openZoom()" (touchstart)="onTouchStart($event)"
+                        (touchmove)="onTouchMove($event)" (touchend)="onTouchEnd($event)">
+                        <img [src]="currentImage" [alt]="product.name" class="carousel-image"
+                            [class.dragging]="isDragging">
+                        <div class="zoom-hint">
+                            <span>&#128269;</span>
+                        </div>
+                    </div>
+                    <!-- Indicadores de navegación del carrusel -->
+                    <div class="carousel-nav" *ngIf="allImages.length > 1">
+                        <button class="carousel-btn prev" (click)="prevImage()" aria-label="Anterior">
+                            <span>&#10094;</span>
+                        </button>
+                        <div class="carousel-dots">
+                            <span *ngFor="let img of allImages; let i = index" class="dot"
+                                [class.active]="i === currentIndex" (click)="goToImage(i)">
+                            </span>
+                        </div>
+                        <button class="carousel-btn next" (click)="nextImage()" aria-label="Siguiente">
+                            <span>&#10095;</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Columna derecha: Información del producto -->
+                <div class="modal-info">
+                    <h2 class="modal-title">{{ product.name }}</h2>
+                    <p class="modal-description">{{ product.description }}</p>
+
+                    <div class="modal-price-section">
+                        <span class="modal-price">{{ product.price | currency }}</span>
+                    </div>
+
+                    <div class="modal-features" *ngIf="product.features?.length">
+                        <h3>Características principales:</h3>
+                        <ul>
+                            <li *ngFor="let feature of product.features">{{ feature }}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Parte inferior: Especificaciones, Funciones y Botones -->
+            <div class="modal-footer">
+                <div class="footer-grid">
+                    <!-- Especificaciones técnicas -->
+                    <div class="modal-specifications" *ngIf="product.specifications">
+                        <h3>Especificaciones técnicas:</h3>
+                        <div class="specs-list">
+                            <div class="spec-item" *ngFor="let spec of product.specifications | keyvalue">
+                                <span class="spec-key">{{ spec.key }}:</span>
+                                <span class="spec-value">{{ spec.value }}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Más especificaciones -->
+                    <div class="modal-more-specifications" *ngIf="product.moreSpecifications">
+                        <h3>Más especificaciones:</h3>
+                        <div class="specs-list">
+                            <div class="spec-item" *ngFor="let spec of product.moreSpecifications | keyvalue">
+                                <span class="spec-key">{{ spec.key }}:</span>
+                                <span class="spec-value">{{ spec.value }}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Funciones del sistema -->
+                    <div class="modal-functions" *ngIf="product.functions?.length">
+                        <h3>Funciones del sistema:</h3>
+                        <ul class="functions-list">
+                            <li *ngFor="let func of product.functions">{{ func }}</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="modal-actions">
+                    <button class="btn-primary" (click)="onContact()">Contactar para comprar</button>
+                    <a class="btn-secondary" [routerLink]="'/accesorios'" (click)="closeModal()"
+                        *ngIf="showAccesoriosButton">Ver más accesorios</a>
+                    <button class="btn-secondary" (click)="closeModal()">Seguir explorando</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de Zoom -->
+<div class="zoom-overlay" *ngIf="isZoomOpen" (click)="closeZoom()">
+    <div class="zoom-container" (touchstart)="onZoomTouchStart($event)" (touchmove)="onZoomTouchMove($event)"
+        (touchend)="onZoomTouchEnd($event)">
+        <button class="zoom-close" (click)="closeZoom()" aria-label="Cerrar zoom">
+            <span>&times;</span>
+        </button>
+        <img [src]="currentImage" [alt]="product?.name" class="zoom-image" [class.dragging]="isDragging">
+        <div class="zoom-nav" *ngIf="allImages.length > 1">
+            <button class="zoom-btn prev" (click)="prevImage(); $event.stopPropagation()" aria-label="Anterior">
+                <span>&#10094;</span>
+            </button>
+            <button class="zoom-btn next" (click)="nextImage(); $event.stopPropagation()" aria-label="Siguiente">
+                <span>&#10095;</span>
+            </button>
+        </div>
+    </div>
+</div>
