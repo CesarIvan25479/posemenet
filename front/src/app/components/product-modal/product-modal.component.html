@@ -18,7 +18,14 @@
                         <img [src]="currentImage" [alt]="product.name" class="carousel-image"
                             [class.dragging]="isDragging">
                         <div class="zoom-hint">
-                            <span>&#128269;</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                                width="18" height="18" aria-hidden="true">
+                                <circle cx="11" cy="11" r="7" />
+                                <line x1="11" y1="8" x2="11" y2="14" />
+                                <line x1="8" y1="11" x2="14" y2="11" />
+                                <line x1="16.5" y1="16.5" x2="21" y2="21" />
+                            </svg>
                         </div>
                     </div>
                     <!-- Indicadores de navegación del carrusel -->
