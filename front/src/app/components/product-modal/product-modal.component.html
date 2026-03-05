@@ -43,7 +43,8 @@
                     <p class="modal-description">{{ product.description }}</p>
 
                     <div class="modal-price-section">
-                        <span class="modal-price">{{ product.price | currency }}</span>
+                        <span class="modal-price">{{ product.price | currency }}<span
+                                class="price-currency">MXN</span></span>
                     </div>
 
                     <div class="modal-features" *ngIf="product.features?.length">
@@ -93,7 +94,7 @@
                     <button class="btn-primary" (click)="onContact()">Contactar para comprar</button>
                     <a class="btn-secondary" [routerLink]="'/accesorios'" (click)="closeModal()"
                         *ngIf="showAccesoriosButton">Ver más accesorios</a>
-                    
+
                 </div>
             </div>
         </div>

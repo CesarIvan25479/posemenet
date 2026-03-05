@@ -265,6 +265,15 @@
     font-weight: 700;
 }
 
+.price-currency {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #001b73;
+    margin-left: 6px;
+    vertical-align: middle;
+    letter-spacing: 0.04em;
+}
+
 .modal-features {
     flex: 1;
 }
