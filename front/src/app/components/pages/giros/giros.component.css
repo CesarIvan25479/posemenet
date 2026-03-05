@@ -871,7 +871,7 @@ header {
 
 .comp-table thead th {
   padding: 1.1rem 1.4rem;
-  text-align: left;
+  text-align: center;
   font-family: var(--font-head);
   font-size: .82rem;
   font-weight: 700;
@@ -1003,9 +1003,9 @@ header {
   justify-content: center;
   width: 26px;
   height: 26px;
-  background: #F0F3F8;
+  background: #e6f8f8;
   border-radius: 50%;
-  color: #B0BBC8;
+  color: #ff0000;
   font-size: .9rem;
   font-weight: 700;
 }
@@ -1016,7 +1016,7 @@ header {
   justify-content: center;
   width: 26px;
   height: 26px;
-  background: #FFF8E1;
+  background: #e6f8f8;
   border-radius: 50%;
   color: #F5A623;
   font-size: .75rem;
