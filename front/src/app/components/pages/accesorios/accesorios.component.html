@@ -28,38 +28,16 @@
 
             <!-- Checklist de valor -->
             <div class="acc-checks">
+                @for (item of checkItems; track item) {
                 <div class="acc-check-item">
                     <span class="acc-check-icon">
                         <svg viewBox="0 0 12 12">
                             <polyline points="2,6 5,9 10,3" />
                         </svg>
                     </span>
-                    Entrega rápida
+                    {{ item }}
                 </div>
-                <div class="acc-check-item">
-                    <span class="acc-check-icon">
-                        <svg viewBox="0 0 12 12">
-                            <polyline points="2,6 5,9 10,3" />
-                        </svg>
-                    </span>
-                    Adquiere desde sucursal o en línea
-                </div>
-                <div class="acc-check-item">
-                    <span class="acc-check-icon">
-                        <svg viewBox="0 0 12 12">
-                            <polyline points="2,6 5,9 10,3" />
-                        </svg>
-                    </span>
-                    Compatibles con POS
-                </div>
-                <div class="acc-check-item">
-                    <span class="acc-check-icon">
-                        <svg viewBox="0 0 12 12">
-                            <polyline points="2,6 5,9 10,3" />
-                        </svg>
-                    </span>
-                    Soporte técnico
-                </div>
+                }
             </div>
 
         </div>
@@ -82,22 +60,12 @@
             </div>
 
             <!-- Chips flotantes -->
-            <div class="acc-chip acc-chip--tl">
-                <span class="acc-chip-icon">⚡</span>
-                Plug &amp; Play
+            @for (chip of heroChips; track chip.label) {
+            <div class="acc-chip" [ngClass]="chip.pos">
+                <span class="acc-chip-icon">{{ chip.icon }}</span>
+                {{ chip.label }}
             </div>
-            <div class="acc-chip acc-chip--tr">
-                <span class="acc-chip-icon">🛡️</span>
-                Seguridad
-            </div>
-            <div class="acc-chip acc-chip--bl">
-                <span class="acc-chip-icon">📦</span>
-                Envío rápido
-            </div>
-            <div class="acc-chip acc-chip--br">
-                <span class="acc-chip-icon">✅</span>
-                Certificado
-            </div>
+            }
 
         </div>
 
@@ -123,23 +91,17 @@
 
 <!-- ─── SECCIÓN 5: SCROLL CTA ─── -->
 <div class="acc-scroll-cta reveal fade-down" aria-label="Ver catálogo completo abajo">
-
     <p class="acc-scroll-label">Catálogo completo</p>
-
     <p class="acc-scroll-text">
         Ve todos los productos<br>
         <em>justo aquí abajo</em>
     </p>
-
-
-
     <!-- Flechas animadas CSS puras -->
     <div class="acc-scroll-chevrons" aria-hidden="true">
         <div class="acc-chevron"></div>
         <div class="acc-chevron"></div>
         <div class="acc-chevron"></div>
     </div>
-
 </div>
 
 <!-- Wave separadora hacia la sección de productos -->
@@ -148,6 +110,7 @@
         <path d="M0,24 C480,48 960,0 1440,24 L1440,48 L0,48 Z" fill="#F4F7FB" />
     </svg>
 </div>
+
 <!--==== VENTA ACCESORIOS SECTION ====-->
 <section class="ventas-section">
     <div class="product-content">
@@ -157,280 +120,47 @@
             <p class="product-description">Explora nuestro catálogo de accesorios</p>
         </div>
 
-        <!-- Products Grid (3 columnas x 2 filas) -->
+        <!-- Products Grid -->
         <div class="products-grid">
-            <!-- Product Card 1 -->
-            <article class="product-card reveal fade-up delay-100">
-                <div class="product-image-wrapper" (click)="openModal(products[0])">
-                    <img src="images/accesorios/lector.png" alt="Lector QR Profesional" class="product-image">
+            @for (card of productCards; track card.index; let i = $index) {
+            <article class="product-card reveal fade-up" [ngClass]="card.delay">
+                <div class="product-image-wrapper" (click)="openModal(products[card.index])">
+                    <img [src]="card.image" [alt]="card.name" class="product-image">
                     <div class="product-overlay">
                         <span class="overlay-text">Ver más</span>
                     </div>
                 </div>
                 <div class="product-info">
-                    <h3 class="product-name">Lector de código profesional</h3>
-                    <p class="product-description-card">Scanner de códigos de alta velocidad y precisión</p>
+                    <h3 class="product-name">{{ card.name }}</h3>
+                    <p class="product-description-card">{{ card.description }}</p>
                     <div class="product-footer">
-                        <span class="product-price">$1,500.00 MX</span>
-
+                        <span class="product-price">{{ card.price }}</span>
                     </div>
                 </div>
             </article>
-
-            <!-- Product Card 2 -->
-            <article class="product-card reveal fade-up delay-200">
-                <div class="product-image-wrapper" (click)="openModal(products[1])">
-                    <img src="images/accesorios/impresora.png" alt="Impresora Térmica Compacta" class="product-image">
-                    <div class="product-overlay">
-                        <span class="overlay-text">Ver más</span>
-                    </div>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name">Impresora Térmica Compacta</h3>
-                    <p class="product-description-card">Impresora térmica para recibos y etiquetas</p>
-                    <div class="product-footer">
-                        <span class="product-price">$1,200.00 MX</span>
-
-                    </div>
-                </div>
-            </article>
-
-            <!-- Product Card 3 -->
-            <article class="product-card reveal fade-up delay-300">
-                <div class="product-image-wrapper" (click)="openModal(products[2])">
-                    <img src="images/accesorios/cajon2.png" alt="Cajón de Efectivo Electrónico" class="product-image">
-                    <div class="product-overlay">
-                        <span class="overlay-text">Ver más</span>
-                    </div>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name">Cajón de Efectivo Electrónico</h3>
-                    <p class="product-description-card">Cajón automático con seguridad integrada y control USB</p>
-                    <div class="product-footer">
-                        <span class="product-price">$750.00 MX</span>
-
-                    </div>
-                </div>
-            </article>
-
-            <!-- Product Card 4 -->
-            <article class="product-card reveal fade-up delay-100">
-                <div class="product-image-wrapper" (click)="openModal(products[3])">
-                    <img src="images/accesorios/rollo.png" alt="Consumibles" class="product-image">
-                    <div class="product-overlay">
-                        <span class="overlay-text">Ver más</span>
-                    </div>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name">Rollos de papel termico</h3>
-                    <p class="product-description-card">Rollo de papel térmico c/u</p>
-                    <div class="product-footer">
-                        <span class="product-price">$80.00 MX</span>
-
-                    </div>
-                </div>
-            </article>
-
-            <!-- Product Card 5 -->
-            <article class="product-card reveal fade-up delay-200">
-                <div class="product-image-wrapper" (click)="openModal(products[4])">
-                    <img src="images/accesorios/compu1.png" alt="Pantalla Táctil 15 pulgadas" class="product-image">
-                    <div class="product-overlay">
-                        <span class="overlay-text">Ver más</span>
-                    </div>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name">Computadora All In One</h3>
-                    <p class="product-description-card">Monitor táctil capacitivo, mouse y teclado</p>
-                    <div class="product-footer">
-                        <span class="product-price">$4,999.99 MX</span>
-
-                    </div>
-                </div>
-            </article>
-
-            <!-- Product Card 6 -->
-            <article class="product-card reveal fade-up delay-300">
-                <div class="product-image-wrapper" (click)="openModal(products[5])">
-                    <img src="images/accesorios/terminal.png" alt="Caja Registradora Electrónica" class="product-image">
-                    <div class="product-overlay">
-                        <span class="overlay-text">Ver más</span>
-                    </div>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name">Terminal de tarjetas</h3>
-                    <p class="product-description-card">Sistema completo con software integrado</p>
-                    <div class="product-footer">
-                        <span class="product-price">$450.00 MX</span>
-
-                    </div>
-                </div>
-            </article>
-
-            <!-- Product Card 7 -->
-            <article class="product-card reveal fade-up">
-                <div class="product-image-wrapper" (click)="openModal(products[6])">
-                    <img src="images/accesorios/pc.png" alt="PC GHIA Frontier Slim 2.0" class="product-image">
-                    <div class="product-overlay">
-                        <span class="overlay-text">Ver más</span>
-                    </div>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name">PC GHIA Frontier Slim 2.0</h3>
-                    <p class="product-description-card">1 TB Disco, RAM 8 GB - Ideal para punto de venta</p>
-                    <div class="product-footer">
-                        <span class="product-price">$5,999.99 MX</span>
-
-                    </div>
-                </div>
-            </article>
-
-            <!-- Product Card 8 -->
-            <article class="product-card reveal fade-up delay-100">
-                <div class="product-image-wrapper" (click)="openModal(products[7])">
-                    <img src="images/accesorios/monitor3.png" alt="Monitor GHIA 23.8 pulgadas" class="product-image">
-                    <div class="product-overlay">
-                        <span class="overlay-text">Ver más</span>
-                    </div>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name">Monitor GHIA 23.8 pulgadas</h3>
-                    <p class="product-description-card">Monitor Full HD para punto de venta y oficina</p>
-                    <div class="product-footer">
-                        <span class="product-price">$2,499.99 MX</span>
-
-                    </div>
-                </div>
-            </article>
-
-            <!-- Product Card 9 -->
-            <article class="product-card reveal fade-up delay-200">
-                <div class="product-image-wrapper" (click)="openModal(products[8])">
-                    <img src="images/accesorios/caja.png" alt="Rollos Térmicos 76mm" class="product-image">
-                    <div class="product-overlay">
-                        <span class="overlay-text">Ver más</span>
-                    </div>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name">Caja de Rollos Térmicos 76mm</h3>
-                    <p class="product-description-card">Caja de 20 rollos térmicos de 76mm compatibles con nuestras impresoras térmicas</p>
-                    <div class="product-footer">
-                        <span class="product-price">$1,500.00 MX</span>
-
-                    </div>
-                </div>
-            </article>
-
-            <!-- Product Card 10 -->
-            <article class="product-card reveal fade-up delay-300">
-                <div class="product-image-wrapper" (click)="openModal(products[9])">
-                    <img src="images/accesorios/paquete.png" alt="emenetPOS Punto de Venta" class="product-image">
-                    <div class="product-overlay">
-                        <span class="overlay-text">Ver más</span>
-                    </div>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name">emenetPOS Punto de Venta</h3>
-                    <p class="product-description-card">Punto de venta completo impulsado por MyBusiness POS</p>
-                    <div class="product-footer">
-                        <span class="product-price">$30,500.00 MX</span>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Product Card 11 -->
-            <article class="product-card reveal fade-up delay-400">
-                <div class="product-image-wrapper" (click)="openModal(products[10])">
-                    <img src="images/accesorios/teclado2.png" alt="Teclado Ghia Multimedia" class="product-image">
-                    <div class="product-overlay">
-                        <span class="overlay-text">Ver más</span>
-                    </div>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name">Teclado Multimedia</h3>
-                    <p class="product-description-card">Teclado con teclas de acceso rápido y pad numérico</p>
-                    <div class="product-footer">
-                        <span class="product-price">$150.00 MX</span>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Product Card 12 -->
-            <article class="product-card reveal fade-up delay-500">
-                <div class="product-image-wrapper" (click)="openModal(products[11])">
-                    <img src="images/accesorios/hp.png" alt="Mouse Óptico Ghia" class="product-image">
-                    <div class="product-overlay">
-                        <span class="overlay-text">Ver más</span>
-                    </div>
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name">Mouse Óptico</h3>
-                    <p class="product-description-card">Mouse ergonómico de 1200 DPI con sensor óptico</p>
-                    <div class="product-footer">
-                        <span class="product-price">$99.00 MX</span>
-                    </div>
-                </div>
-            </article>
+            }
         </div>
+
         <!-- ─── SECCIÓN 3: BENEFICIOS ─── -->
         <section class="acc-benefits reveal fade-up" aria-labelledby="acc-benefits-title">
-
             <h2 class="acc-benefits-title" id="acc-benefits-title">
                 ¿Por qué comprar <span>aquí</span>?
             </h2>
-
             <div class="acc-benefits-grid">
-
-                <div class="acc-benefit-card reveal fade-up delay-100">
-                    <div class="acc-benefit-icon" aria-hidden="true">🔌</div>
+                @for (benefit of benefits; track benefit.name) {
+                <div class="acc-benefit-card reveal fade-up" [ngClass]="benefit.delay">
+                    <div class="acc-benefit-icon" aria-hidden="true">{{ benefit.icon }}</div>
                     <div class="acc-benefit-card-body">
-                        <p class="acc-benefit-name">Integración inmediata</p>
-                        <p class="acc-benefit-desc">
-                            Todos los equipos funcionan desde el primer enchufe con
-                            MyBusinessPOS. Sin configuraciones complicadas.
-                        </p>
+                        <p class="acc-benefit-name">{{ benefit.name }}</p>
+                        <p class="acc-benefit-desc">{{ benefit.desc }}</p>
                     </div>
                 </div>
-
-                <div class="acc-benefit-card reveal fade-up delay-200">
-                    <div class="acc-benefit-icon" aria-hidden="true">🏆</div>
-                    <div class="acc-benefit-card-body">
-                        <p class="acc-benefit-name">Calidad probada</p>
-                        <p class="acc-benefit-desc">
-                            Hardware seleccionado tras pruebas reales en comercios
-                            mexicanos. Rendimiento garantizado en uso continuo.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="acc-benefit-card reveal fade-up delay-300">
-                    <div class="acc-benefit-icon" aria-hidden="true">💬</div>
-                    <div class="acc-benefit-card-body">
-                        <p class="acc-benefit-name">Soporte y capacitación</p>
-                        <p class="acc-benefit-desc">
-                            10 horas de capacitación y asesoría. Resolvemos cualquier duda
-                            sobre instalación, compatibilidad o uso.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="acc-benefit-card reveal fade-up delay-400">
-                    <div class="acc-benefit-icon" aria-hidden="true">💰</div>
-                    <div class="acc-benefit-card-body">
-                        <p class="acc-benefit-name">Precios accesibles</p>
-                        <p class="acc-benefit-desc">
-                            Desde $80 MX por rollo hasta equipos completos. Hay
-                            opción para cualquier presupuesto y tamaño de negocio.
-                        </p>
-                    </div>
-                </div>
-
+                }
             </div>
         </section>
 
         <!-- ─── SECCIÓN 4: BANNER PROMO ─── -->
         <div class="acc-promo-banner reveal zoom-in" role="region" aria-label="Oferta especial">
-
             <div class="acc-promo-text">
                 <p class="acc-promo-eyebrow">&#9733; Equipos disponibles hoy</p>
                 <h2 class="acc-promo-h2">
@@ -442,22 +172,14 @@
                     Todo lo que necesita tu negocio para operar.
                 </p>
             </div>
-
             <div class="acc-promo-prices" aria-label="Precios destacados">
+                @for (promo of promoItems; track promo.name) {
                 <div class="acc-promo-price-item">
-                    <span>Lector de código</span>
-                    <span class="acc-promo-price-val">$1,500 MX</span>
+                    <span>{{ promo.name }}</span>
+                    <span class="acc-promo-price-val">{{ promo.price }}</span>
                 </div>
-                <div class="acc-promo-price-item">
-                    <span>Impresora térmica</span>
-                    <span class="acc-promo-price-val">$1,200 MX</span>
-                </div>
-                <div class="acc-promo-price-item">
-                    <span>Cajón electrónico</span>
-                    <span class="acc-promo-price-val">$750 MX</span>
-                </div>
+                }
             </div>
-
         </div>
     </div>
 </section>

@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, ElementRef, ViewChildren, QueryList, OnInit, OnDestroy } from '@angular/core';
+import { Component, AfterViewInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ProductModalComponent, Product } from '../../product-modal/product-modal.component';
@@ -9,8 +9,7 @@ import { ProductModalComponent, Product } from '../../product-modal/product-moda
   templateUrl: './software.component.html',
   styleUrl: './software.component.css'
 })
-export class SoftwareComponent implements OnInit, AfterViewInit, OnDestroy {
-  @ViewChildren('.counter') counters!: QueryList<ElementRef>;
+export class SoftwareComponent implements AfterViewInit, OnDestroy {
   private observer: IntersectionObserver | null = null;
   private hasAnimated = false;
 
@@ -45,36 +44,22 @@ export class SoftwareComponent implements OnInit, AfterViewInit, OnDestroy {
       'Cajón': '5 billetes, 8 monedas'
     },
     functions: [
-      'Ventas de productos y servicios',
-      'Inventario de productos',
-      'Compras y control de proveedores',
-      'Control de clientes',
-      'Cobranza a clientes',
-      'Impresión de tickets',
-      'Ventas de tiempo aire',
-      'Cobros con tarjeta de débito y crédito'
+      'Ventas de productos y servicios', 'Inventario de productos',
+      'Compras y control de proveedores', 'Control de clientes',
+      'Cobranza a clientes', 'Impresión de tickets',
+      'Ventas de tiempo aire', 'Cobros con tarjeta de débito y crédito'
     ]
   };
-
-  ngOnInit() { }
 
   ngAfterViewInit() {
     this.setupIntersectionObserver();
   }
 
   ngOnDestroy() {
-    if (this.observer) {
-      this.observer.disconnect();
-    }
+    this.observer?.disconnect();
   }
 
   private setupIntersectionObserver() {
-    const options = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.3 // Activar cuando el 30% de la sección sea visible
-    };
-
     this.observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting && !this.hasAnimated) {
@@ -82,43 +67,33 @@ export class SoftwareComponent implements OnInit, AfterViewInit, OnDestroy {
           this.animateCounters();
         }
       });
-    }, options);
+    }, { root: null, rootMargin: '0px', threshold: 0.3 });
 
-    // Observar la nueva sección CTA
     const ctaSection = document.querySelector('.sw-cta-section');
-    if (ctaSection) {
-      this.observer.observe(ctaSection);
-    }
+    if (ctaSection) this.observer.observe(ctaSection);
   }
 
-  animateCounters() {
+  private animateCounters() {
     const counters = document.querySelectorAll('.counter-number');
-
     counters.forEach((counter, index) => {
-      const target = +counter.getAttribute('data-target')!;
-      const duration = 2000; // 2 segundos
-      const start = 0;
-      const increment = target / (duration / 16); // 60fps
-      let current = start;
+      const target = +(counter.getAttribute('data-target') || 0);
+      const increment = target / 125; // ~2s at 60fps
+      let current = 0;
 
-      // Agregar delay escalonado para cada contador
-      const delay = index * 300;
-
-      const updateCounter = () => {
+      const update = () => {
         current += increment;
         if (current < target) {
           counter.textContent = Math.floor(current).toLocaleString();
-          requestAnimationFrame(updateCounter);
+          requestAnimationFrame(update);
         } else {
           counter.textContent = target.toLocaleString();
         }
       };
 
-      // Iniciar animación después del delay
       setTimeout(() => {
         counter.classList.add('active');
-        updateCounter();
-      }, delay);
+        update();
+      }, index * 300);
     });
   }
 
@@ -126,19 +101,16 @@ export class SoftwareComponent implements OnInit, AfterViewInit, OnDestroy {
   openModal(): void {
     this.selectedProduct = this.posPackage;
     this.isModalOpen = true;
-    // Prevenir scroll del body cuando el modal está abierto
     document.body.style.overflow = 'hidden';
   }
 
   closeModal(): void {
     this.isModalOpen = false;
     this.selectedProduct = null;
-    // Restaurar scroll del body
     document.body.style.overflow = 'auto';
   }
 
   onContact(product: Product): void {
-    // Redirigir a WhatsApp con mensaje predefinido
     const message = `Hola, estoy interesado en el paquete completo de emenetPOS Punto de Venta ($${product.price.toLocaleString()} MX)`;
     const whatsappUrl = `https://api.whatsapp.com/send?phone=5217131334557&text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');

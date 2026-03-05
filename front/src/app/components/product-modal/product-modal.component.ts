@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, OnInit, OnDestroy, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnDestroy, OnChanges, SimpleChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
@@ -8,12 +8,12 @@ export interface Product {
   description: string;
   price: number;
   image: string;
-  images?: string[];               // Array de imágenes adicionales para el carrusel
+  images?: string[];
   features?: string[];
   feature?: string[];
   specifications?: { [key: string]: string };
-  moreSpecifications?: { [key: string]: string }; // Especificaciones adicionales
-  functions?: string[];            // Funciones del producto/sistema
+  moreSpecifications?: { [key: string]: string };
+  functions?: string[];
 }
 
 @Component({
@@ -23,7 +23,7 @@ export interface Product {
   templateUrl: './product-modal.component.html',
   styleUrls: ['./product-modal.component.css']
 })
-export class ProductModalComponent implements OnInit, OnDestroy, OnChanges {
+export class ProductModalComponent implements OnDestroy, OnChanges {
   @Input() isOpen = false;
   @Input() product: Product | null = null;
   @Input() showAccesoriosButton = false;
@@ -32,23 +32,15 @@ export class ProductModalComponent implements OnInit, OnDestroy, OnChanges {
 
   currentIndex = 0;
   isZoomOpen = false;
+
+  private touchStart = { x: 0, y: 0 };
+  private touchEnd = { x: 0, y: 0 };
   isDragging = false;
-
-  // Touch handling
-  private touchStartX = 0;
-  private touchStartY = 0;
-  private touchEndX = 0;
-  private touchEndY = 0;
-  private minSwipeDistance = 50; // Mínima distancia para considerar un swipe
+  private readonly minSwipeDistance = 50;
   private autoPlayInterval: any;
-  private autoPlayDelay = 2500; // 2.5 segundos
-
-  ngOnInit(): void {
-    // El autoplay se iniciará cuando el modal se abra con un producto
-  }
+  private readonly autoPlayDelay = 2500;
 
   ngOnChanges(changes: SimpleChanges): void {
-    // Iniciar autoplay cuando el modal se abre con un producto
     if (changes['isOpen'] || changes['product']) {
       if (this.isOpen && this.product) {
         this.currentIndex = 0;
@@ -65,11 +57,7 @@ export class ProductModalComponent implements OnInit, OnDestroy, OnChanges {
 
   get allImages(): string[] {
     if (!this.product) return [];
-    const images = [this.product.image];
-    if (this.product.images && this.product.images.length > 0) {
-      images.push(...this.product.images);
-    }
-    return images;
+    return [this.product.image, ...(this.product.images || [])];
   }
 
   get currentImage(): string {
@@ -80,9 +68,7 @@ export class ProductModalComponent implements OnInit, OnDestroy, OnChanges {
   startAutoPlay(): void {
     this.stopAutoPlay();
     if (this.allImages.length > 1) {
-      this.autoPlayInterval = setInterval(() => {
-        this.nextImage();
-      }, this.autoPlayDelay);
+      this.autoPlayInterval = setInterval(() => this.nextImage(), this.autoPlayDelay);
     }
   }
 
@@ -93,23 +79,22 @@ export class ProductModalComponent implements OnInit, OnDestroy, OnChanges {
     }
   }
 
+  private resetAutoPlay(): void {
+    this.stopAutoPlay();
+    this.startAutoPlay();
+  }
+
   // ===== NAVIGATION =====
   prevImage(): void {
-    if (this.allImages.length > 1) {
-      this.currentIndex = this.currentIndex === 0
-        ? this.allImages.length - 1
-        : this.currentIndex - 1;
-      this.resetAutoPlay();
-    }
+    if (this.allImages.length <= 1) return;
+    this.currentIndex = (this.currentIndex - 1 + this.allImages.length) % this.allImages.length;
+    this.resetAutoPlay();
   }
 
   nextImage(): void {
-    if (this.allImages.length > 1) {
-      this.currentIndex = this.currentIndex === this.allImages.length - 1
-        ? 0
-        : this.currentIndex + 1;
-      this.resetAutoPlay();
-    }
+    if (this.allImages.length <= 1) return;
+    this.currentIndex = (this.currentIndex + 1) % this.allImages.length;
+    this.resetAutoPlay();
   }
 
   goToImage(index: number): void {
@@ -117,95 +102,64 @@ export class ProductModalComponent implements OnInit, OnDestroy, OnChanges {
     this.resetAutoPlay();
   }
 
-  resetAutoPlay(): void {
-    this.stopAutoPlay();
-    this.startAutoPlay();
+  // ===== UNIFIED TOUCH HANDLING =====
+  private handleTouchStart(event: TouchEvent): void {
+    this.touchStart = { x: event.touches[0].clientX, y: event.touches[0].clientY };
+    this.touchEnd = { ...this.touchStart };
+    this.isDragging = true;
   }
 
-  // ===== TOUCH HANDLING FOR CAROUSEL =====
+  private handleTouchMove(event: TouchEvent): void {
+    if (!this.isDragging) return;
+    this.touchEnd = { x: event.touches[0].clientX, y: event.touches[0].clientY };
+  }
+
+  private processSwipe(): 'left' | 'right' | 'tap' | 'none' {
+    const dx = this.touchEnd.x - this.touchStart.x;
+    const dy = this.touchEnd.y - this.touchStart.y;
+
+    if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > this.minSwipeDistance) {
+      return dx < 0 ? 'left' : 'right';
+    }
+    if (Math.abs(dx) < 10 && Math.abs(dy) < 10) return 'tap';
+    return 'none';
+  }
+
   onTouchStart(event: TouchEvent): void {
-    this.touchStartX = event.touches[0].clientX;
-    this.touchStartY = event.touches[0].clientY;
-    this.isDragging = true;
+    this.handleTouchStart(event);
     this.stopAutoPlay();
   }
 
   onTouchMove(event: TouchEvent): void {
-    if (!this.isDragging) return;
-    this.touchEndX = event.touches[0].clientX;
-    this.touchEndY = event.touches[0].clientY;
+    this.handleTouchMove(event);
   }
 
-  onTouchEnd(event: TouchEvent): void {
+  onTouchEnd(_event?: TouchEvent): void {
     if (!this.isDragging) return;
     this.isDragging = false;
-
-    const deltaX = this.touchEndX - this.touchStartX;
-    const deltaY = this.touchEndY - this.touchStartY;
-
-    // Solo procesar si el movimiento horizontal es mayor que el vertical
-    // y si la distancia es suficiente
-    if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > this.minSwipeDistance) {
-      if (deltaX < 0) {
-        // Swipe izquierda -> siguiente imagen
-        this.nextImage();
-      } else {
-        // Swipe derecha -> imagen anterior
-        this.prevImage();
-      }
-    } else {
-      // Si no fue un swipe, tratar como tap para zoom
-      if (Math.abs(deltaX) < 10 && Math.abs(deltaY) < 10) {
-        this.openZoom();
-      }
-    }
-
-    // Reset values
-    this.touchStartX = 0;
-    this.touchEndX = 0;
-    this.touchStartY = 0;
-    this.touchEndY = 0;
-
+    const gesture = this.processSwipe();
+    if (gesture === 'left') this.nextImage();
+    else if (gesture === 'right') this.prevImage();
+    else if (gesture === 'tap') this.openZoom();
     this.startAutoPlay();
   }
 
-  // ===== TOUCH HANDLING FOR ZOOM =====
   onZoomTouchStart(event: TouchEvent): void {
-    this.touchStartX = event.touches[0].clientX;
-    this.touchStartY = event.touches[0].clientY;
-    this.isDragging = true;
+    this.handleTouchStart(event);
     event.stopPropagation();
   }
 
   onZoomTouchMove(event: TouchEvent): void {
-    if (!this.isDragging) return;
-    this.touchEndX = event.touches[0].clientX;
-    this.touchEndY = event.touches[0].clientY;
+    this.handleTouchMove(event);
     event.stopPropagation();
   }
 
   onZoomTouchEnd(event: TouchEvent): void {
     if (!this.isDragging) return;
     this.isDragging = false;
-
-    const deltaX = this.touchEndX - this.touchStartX;
-    const deltaY = this.touchEndY - this.touchStartY;
-
-    // Solo procesar si el movimiento horizontal es mayor que el vertical
-    if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > this.minSwipeDistance) {
-      if (deltaX < 0) {
-        this.nextImage();
-      } else {
-        this.prevImage();
-      }
-      event.stopPropagation();
-    }
-
-    // Reset values
-    this.touchStartX = 0;
-    this.touchEndX = 0;
-    this.touchStartY = 0;
-    this.touchEndY = 0;
+    const gesture = this.processSwipe();
+    if (gesture === 'left') { this.nextImage(); event.stopPropagation(); }
+    else if (gesture === 'right') { this.prevImage(); event.stopPropagation(); }
   }
 
   // ===== ZOOM =====
@@ -228,14 +182,10 @@ export class ProductModalComponent implements OnInit, OnDestroy, OnChanges {
   }
 
   onContact(): void {
-    if (this.product) {
-      this.contact.emit(this.product);
-    }
+    if (this.product) this.contact.emit(this.product);
   }
 
   onOverlayClick(event: MouseEvent): void {
-    if (event.target === event.currentTarget) {
-      this.closeModal();
-    }
+    if (event.target === event.currentTarget) this.closeModal();
   }
 }
