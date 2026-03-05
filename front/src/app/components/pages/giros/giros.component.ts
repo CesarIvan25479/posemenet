@@ -30,7 +30,7 @@ export class GirosComponent implements AfterViewInit, OnDestroy {
     { icon: '🛒', iconClass: 'gi-5', name: 'Abarrotes' },
     { icon: '🔧', iconClass: 'gi-6', name: 'Refaccionaria' },
     { icon: '🔨', iconClass: 'gi-7', name: 'Ferreterías' },
-    { icon: '📎', iconClass: 'gi-8', name: 'Papelerías' },
+    { icon: '✏️​', iconClass: 'gi-8', name: 'Papelerías' },
     { icon: '📦', iconClass: 'gi-9', name: 'Mayoristas' },
     { icon: '🏺', iconClass: 'gi-10', name: 'Tiendas de Objetos' },
     { icon: '📱', iconClass: 'gi-11', name: 'Electrónica' },
@@ -52,6 +52,11 @@ export class GirosComponent implements AfterViewInit, OnDestroy {
     { icon: '🧸', iconClass: 'gi-27', name: 'Jugueterías' },
     { icon: '🏗️', iconClass: 'gi-28', name: 'Construcción' },
     { icon: '🔞', iconClass: 'gi-29', name: 'Sex Shops' },
+    { icon: '🎙️​', iconClass: 'gi-30', name: 'Tienda de música' },
+    { icon: '🎮​', iconClass: 'gi-31', name: 'Tienda gamer' },
+    { icon: '🖨️​', iconClass: 'gi-32', name: 'Imprentas' },
+    { icon: '🛍️', iconClass: 'gi-33', name: 'Tiendas de regalos' },
+    { icon: '🍽️', iconClass: 'gi-34', name: 'Restaurantes' },
   ];
 
   private readonly delays = ['delay-100', 'delay-200', 'delay-300', 'delay-400', 'delay-500'];
