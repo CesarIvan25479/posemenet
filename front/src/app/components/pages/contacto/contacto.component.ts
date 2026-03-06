@@ -1,38 +1,71 @@
+
+import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { ClientService } from '../../../services/user/clientService.service';
+import { NgxSonnerToaster, toast } from 'ngx-sonner';
+
 
 @Component({
   selector: 'app-contacto',
-  imports: [FormsModule],
+  standalone: true,
+  imports: [ReactiveFormsModule, NgIf, NgxSonnerToaster],
   templateUrl: './contacto.component.html',
   styleUrl: './contacto.component.css'
 })
 export class ContactoComponent {
 
-  /** Permite solo teclas numéricas en el campo de teléfono */
-  soloNumeros(event: KeyboardEvent): boolean {
-    const charCode = event.which ?? event.keyCode;
-    // Permitir teclas de control (backspace, delete, flechas, tab)
-    if (charCode === 0 || charCode === 8) return true;
-    // Bloquear cualquier carácter que no sea dígito (0-9)
-    if (charCode < 48 || charCode > 57) {
-      event.preventDefault();
-      return false;
-    }
-    return true;
+  contactForm: FormGroup;
+  loading = false;
+  enviado = false;
+
+  constructor(private fb: FormBuilder, private api: ClientService) {
+    this.contactForm = this.fb.group({
+      nombre: ['', Validators.required],
+      telefono: ['', [Validators.required, Validators.pattern(/^\d{10}$/)]],
+      correo: ['', [Validators.required, Validators.email]],
+      mensaje: ['', Validators.required]
+    });
   }
 
-  /** Limpia el contenido pegado para aceptar solo dígitos y máx. 10 */
-  pegadoNumeros(event: ClipboardEvent): void {
-    event.preventDefault();
-    const texto = event.clipboardData?.getData('text') ?? '';
-    const soloDigitos = texto.replace(/\D/g, '').slice(0, 10);
-    const input = event.target as HTMLInputElement;
-    input.value = soloDigitos;
-  }
+  get nombre() { return this.contactForm.get('nombre'); }
+  get telefono() { return this.contactForm.get('telefono'); }
+  get correo() { return this.contactForm.get('correo'); }
+  get mensaje() { return this.contactForm.get('mensaje'); }
 
+  
   onSubmit(): void {
-    // Aquí puedes agregar la lógica de envío del formulario
-    console.log('Formulario enviado');
+    if (this.contactForm.invalid) {
+      this.contactForm.markAllAsTouched();
+      return;
+    }
+
+    this.loading = true;
+    const { nombre, telefono, correo, mensaje } = this.contactForm.value;
+
+    const payload = {
+      nombre,
+      telefono: `+52${telefono}`,
+      correo,
+      mensaje
+    };
+
+    this.api.sendEmail(payload).subscribe({  // se pasa el payload correctamente
+      next: () => {
+
+        this.loading = false;
+        this.enviado = true;
+
+        this.contactForm.reset();
+        toast.success('Correo enviado correctamente');
+        setTimeout(() => this.enviado = false, 5000);
+
+      },
+      error: () => {
+        //console.error('Error al enviar:', err);
+        toast.error('No se pudo enviar el correo');
+        this.loading = false;
+      }
+    });
   }
 }
