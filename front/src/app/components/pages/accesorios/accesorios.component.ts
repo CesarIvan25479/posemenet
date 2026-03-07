@@ -41,16 +41,15 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     { index: 1, image: 'images/accesorios/impresora.png', name: 'Impresora Térmica Compacta', description: 'Impresora térmica para recibos y etiquetas', price: '$1,700.00 MXN', delay: 'delay-200' },
     { index: 2, image: 'images/accesorios/cajon2.png', name: 'Cajón de Efectivo Electrónico', description: 'Cajón automático con seguridad integrada y control USB', price: '$800.00 MXN', delay: 'delay-300' },
     { index: 3, image: 'images/accesorios/rollo.png', name: 'Rollos de papel termico', description: 'Rollo de papel térmico c/u', price: '$80.00 MXN', delay: 'delay-100' },
-    { index: 4, image: 'images/accesorios/compu1.png', name: 'Computadora All In One', description: 'Monitor táctil capacitivo, mouse y teclado', price: '$4,999.99 MXN', delay: 'delay-200' },
+    { index: 4, image: 'images/accesorios/quaroni1.png', name: 'Monitor Quaroni MQ19-03', description: 'Monitor LED de 19.5" HD, panel TN, HDMI/VGA', price: '$800.00 MXN', delay: 'delay-200' },
     { index: 5, image: 'images/accesorios/terminal.png', name: 'Terminal de tarjetas', description: 'Sistema completo con software integrado', price: '$450.00 MXN', delay: 'delay-300' },
     { index: 6, image: 'images/accesorios/pc.png', name: 'PC GHIA Frontier Slim 2.0', description: '1 TB Disco, RAM 8 GB - Ideal para punto de venta', price: '$5,500.00 MXN', delay: '' },
     { index: 7, image: 'images/accesorios/monitor3.png', name: 'Monitor GHIA 21.5 pulgadas', description: 'Monitor Full HD para punto de venta y oficina', price: '$1,200.00 MXN', delay: 'delay-100' },
     { index: 8, image: 'images/accesorios/caja.png', name: 'Caja de Rollos Térmicos 76mm', description: 'Caja de 20 rollos térmicos de 76mm compatibles con nuestras impresoras térmicas', price: '$1,500.00 MXN', delay: 'delay-200' },
-    { index: 9, image: 'images/accesorios/paquete.png', name: 'Kit Punto de Venta Básico', description: 'Punto de venta completo impulsado por MyBusiness POS', price: '$12,820.00 MXN', delay: 'delay-300' },
-    { index: 10, image: 'images/accesorios/paquete.png', name: 'Kit Punto de Venta Estándar', description: 'Punto de venta completo impulsado por MyBusiness POS', price: '$30,500.00 MXN', delay: 'delay-300' },
-    { index: 11, image: 'images/accesorios/paquete.png', name: 'Kit Punto de Venta Premium', description: 'Punto de venta completo impulsado por MyBusiness POS', price: '$30,500.00 MXN', delay: 'delay-300' },
-    { index: 12, image: 'images/accesorios/teclado2.png', name: 'Teclado Multimedia', description: 'Teclado con teclas de acceso rápido y pad numérico', price: '$150.00 MXN', delay: 'delay-400' },
-    { index: 13, image: 'images/accesorios/hp.png', name: 'Mouse Óptico', description: 'Mouse ergonómico de 1200 DPI con sensor óptico', price: '$99.00 MXN', delay: 'delay-500' },
+    { index: 9, image: 'images/accesorios/paquete.png', name: 'Kit Punto de Venta Básico', description: 'Punto de venta completo impulsado por MyBusiness POS', price: '$12,730.00 MXN', delay: 'delay-300' },
+    { index: 10, image: 'images/accesorios/paquete.png', name: 'Kit Punto de Venta Premium', description: 'Punto de venta completo impulsado por MyBusiness POS', price: '$19,740.00 MXN', delay: 'delay-300' },
+    { index: 11, image: 'images/accesorios/teclado2.png', name: 'Teclado Multimedia', description: 'Teclado con teclas de acceso rápido y pad numérico', price: '$150.00 MXN', delay: 'delay-400' },
+    { index: 12, image: 'images/accesorios/hp.png', name: 'Mouse Óptico', description: 'Mouse ergonómico de 1200 DPI con sensor óptico', price: '$99.00 MXN', delay: 'delay-500' },
   ];
 
   // Seccion beneficios
@@ -72,7 +71,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     { image: 'images/accesorios/impresora6.png', text: 'Impresoras Térmicas' },
     { image: 'images/accesorios/barras.png', text: 'Lectores de Código' },
     { image: 'images/accesorios/cajon.png', text: 'Cajones de Dinero' },
-    { image: 'images/accesorios/compu.png', text: 'All In One Paquete' },
+    { image: 'images/accesorios/monitor3.png', text: 'Monitor Quaroni' },
     { image: 'images/accesorios/terminal1.png', text: 'Terminal' },
     { image: 'images/accesorios/consumible.png', text: 'Consumibles' }
   ];
@@ -97,7 +96,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       specifications: { 'Tamaño impresión': '76mm', 'Velocidad': '250mm/s', 'Operación': 'Continua estable', 'Tecnología': 'Termica' },
       moreSpecifications: { 'Conexión': 'USB + Ethernet', 'Interfaces': 'Puerto USB 2.0 y Ethernet LAN (RJ-45)', 'Código de barras': '1D/2D, Code 39, EAN13, PDF417, QR, UPC', 'Movilidad': 'Alámbrico' }
     },
-    {  
+    {
       id: 3, name: 'Cajón de Efectivo Electrónico',
       description: 'Cajón automático con seguridad integrada y control USB. Diseñado para un manejo seguro y eficiente del efectivo en tu negocio.',
       price: 750.00, image: 'images/accesorios/cajon5.png',
@@ -116,13 +115,19 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       moreSpecifications: { 'Toners': 'Universal', 'Garantía': 'Calidad garantizada' }
     },
     {
-      id: 5, name: 'Computadora All In One',
-      description: 'Monitor táctil capacitivo con soporte VESA. Interfaz intuitiva y responsive para tu sistema de punto de venta.',
-      price: 4999.99, image: 'images/accesorios/compu2.png',
-      images: ['images/accesorios/compu3.png', 'images/accesorios/compu4.png'],
-      features: ['Tecnología táctil capacitiva proyectada', 'Resolución HD de 1024x768', 'Mouse y teclado incluidos', 'Software POS preinstalado', 'Soporte VESA ajustable'],
-      specifications: { 'Tamaño': '15 pulgadas', 'Resolución': '1024 x 768', 'Brillo': '250 cd/m²' },
-      moreSpecifications: { 'Contraste': '700:1', 'Garantía': '3 años' }
+      id: 5, name: 'Monitor Quaroni MQ19-03',
+      description: 'Pantalla LED de 19.5 pulgadas diseñada para ofrecer una visualización clara y eficiente, ideal para oficina y puntos de venta.',
+      price: 800.00, image: 'images/accesorios/quaroni.png',
+      images: ['images/accesorios/quaroni2.png', 'images/accesorios/quaroni3.png'],
+      features: [
+        'Pantalla de 19.5 pulgadas con resolución HD',
+        'Conexión versátil con puertos HDMI y VGA',
+        'Tiempo de respuesta de 5ms para imágenes fluidas',
+        'Diseño elegante y minimalista en color negro',
+        'Panel tipo TN para un rendimiento confiable'
+      ],
+      specifications: { 'Tamaño': '19.5 pulgadas', 'Resolución': '1366 x 768 (HD)', 'Brillo': '200 cd/m²', 'Panel': 'TN' },
+      moreSpecifications: { 'Contraste': '500:1', 'Conectores': '1x HDMI, 1x VGA', 'Frecuencia': '60 Hz', 'Garantía': '1 año' }
     },
     {
       id: 6, name: 'Terminal Billpocket nano',
@@ -160,35 +165,27 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       specifications: { 'Ancho': '76mm', 'Tipo': 'Papel térmico', 'Compatibilidad': 'Impresoras térmicas 76mm' },
       moreSpecifications: { 'Presentación': 'Caja con múltiples rollos', 'Calidad': 'Premium' }
     },
-  {
+    {
       id: 10, name: 'Kit Punto de Venta Básico',
       description: 'Punto de venta completo y listo para operar, impulsado por MyBusiness POS. Incluye equipo esencial y soporte especializado para que empieces a vender desde el primer día, todo en un solo paquete.',
-      price: 12820.00, image: 'images/software/paquete.png',
-      images: ['images/software/mybusiness2.png', 'images/software/monitor2.png', 'images/software/pc.png', 'images/cajon5.png', 'images/impresora3.png', 'images/barras3.png', 'images/teclado.png'],
-      features: ['Configuración, instalación del sistema completo', 'Todos los accesorios de punto de venta', 'Implementación del sistema de recargas de tiempo aire', 'Implementación del sistema de cobro con tarjeta de débito y crédito', '10 horas de capacitación incluidas', 'Soporte técnico especializado'],
-      specifications: { 'Computadora': 'PC GHIA Frontier Slim 2.0 1 TB Disco RAM 8 GB', 'Procesador': 'Intel Pentium GOLD Core 3.7 GHz', 'Monitor': '23.8 pulgadas', 'Periféricos': 'Teclado y ratón incluidos', 'Sistema Operativo': 'Windows 11', 'Software': 'MyBusiness POS v24', 'Impresora': 'Ticket 3 pulgadas', 'Lector': 'Código de barras', 'Cajón': '5 billetes, 8 monedas' },
-      functions: ['Ventas de productos y servicios', 'Inventario de productos', 'Compras y control de proveedores', 'Control de clientes', 'Cobranza a clientes', 'Impresión de tickets', 'Ventas de tiempo aire', 'Cobros con tarjeta de débito y crédito']
-    },
-  {
-      id: 11, name: 'Kit Punto de Venta Estándar',
-      description: 'Punto de venta completo y listo para operar, impulsado por MyBusiness POS. Incluye equipo esencial y soporte especializado para que empieces a vender desde el primer día, todo en un solo paquete.',
-      price: 30500.00, image: 'images/software/paquete.png',
+      price: 12730.00, image: 'images/software/paquete.png',
       images: ['images/software/mybusiness2.png', 'images/software/monitor2.png', 'images/software/pc.png', 'images/cajon5.png', 'images/impresora3.png', 'images/barras3.png', 'images/teclado.png'],
       features: ['Configuración, instalación del sistema completo', 'Todos los accesorios de punto de venta', 'Implementación del sistema de recargas de tiempo aire', 'Implementación del sistema de cobro con tarjeta de débito y crédito', '10 horas de capacitación incluidas', 'Soporte técnico especializado'],
       specifications: { 'Computadora': 'PC GHIA Frontier Slim 2.0 1 TB Disco RAM 8 GB', 'Procesador': 'Intel Pentium GOLD Core 3.7 GHz', 'Monitor': '23.8 pulgadas', 'Periféricos': 'Teclado y ratón incluidos', 'Sistema Operativo': 'Windows 11', 'Software': 'MyBusiness POS v24', 'Impresora': 'Ticket 3 pulgadas', 'Lector': 'Código de barras', 'Cajón': '5 billetes, 8 monedas' },
       functions: ['Ventas de productos y servicios', 'Inventario de productos', 'Compras y control de proveedores', 'Control de clientes', 'Cobranza a clientes', 'Impresión de tickets', 'Ventas de tiempo aire', 'Cobros con tarjeta de débito y crédito']
     },
     {
-      id: 12, name: 'Kit Punto de Venta Premium',
+      id: 11, name: 'Kit Punto de Venta Premium',
       description: 'Punto de venta completo y listo para operar, impulsado por MyBusiness POS. Incluye equipo esencial y soporte especializado para que empieces a vender desde el primer día, todo en un solo paquete.',
-      price: 30500.00, image: 'images/software/paquete.png',
+      price: 19740.00, image: 'images/software/paquete.png',
       images: ['images/software/mybusiness2.png', 'images/software/monitor2.png', 'images/software/pc.png', 'images/cajon5.png', 'images/impresora3.png', 'images/barras3.png', 'images/teclado.png'],
       features: ['Configuración, instalación del sistema completo', 'Todos los accesorios de punto de venta', 'Implementación del sistema de recargas de tiempo aire', 'Implementación del sistema de cobro con tarjeta de débito y crédito', '10 horas de capacitación incluidas', 'Soporte técnico especializado'],
       specifications: { 'Computadora': 'PC GHIA Frontier Slim 2.0 1 TB Disco RAM 8 GB', 'Procesador': 'Intel Pentium GOLD Core 3.7 GHz', 'Monitor': '23.8 pulgadas', 'Periféricos': 'Teclado y ratón incluidos', 'Sistema Operativo': 'Windows 11', 'Software': 'MyBusiness POS v24', 'Impresora': 'Ticket 3 pulgadas', 'Lector': 'Código de barras', 'Cajón': '5 billetes, 8 monedas' },
       functions: ['Ventas de productos y servicios', 'Inventario de productos', 'Compras y control de proveedores', 'Control de clientes', 'Cobranza a clientes', 'Impresión de tickets', 'Ventas de tiempo aire', 'Cobros con tarjeta de débito y crédito']
     },
+
     {
-      id: 13, name: 'Teclado Alámbrico Multimedia',
+      id: 12, name: 'Teclado Alámbrico Multimedia',
       description: 'Teclado profesional con teclas multimedia y teclado numérico integrado para uso intenso en puntos de venta.',
       price: 150.00, image: 'images/accesorios/teclado1.png',
       images: ['images/accesorios/teclado4.png', 'images/accesorios/teclado3.png'],
@@ -197,7 +194,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       moreSpecifications: { 'Interfaz': 'USB', 'Teclado numérico': 'Sí', 'Multimedia': 'Sí' }
     },
     {
-      id: 14, name: 'Mouse Óptico USB',
+      id: 13, name: 'Mouse Óptico USB',
       description: 'Mouse óptico de alta precisión con sensor de 1200 DPI. Ideal para navegación rápida y precisa en sistemas de punto de venta.',
       price: 99.00, image: 'images/accesorios/mouse.png',
       images: ['images/accesorios/mouse1.png'],
