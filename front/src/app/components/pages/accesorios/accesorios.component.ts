@@ -38,7 +38,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
   // Product cards for grid display
   readonly productCards = [
     { index: 0, image: 'images/accesorios/lector.png', name: 'Lector de código profesional', description: 'Scanner de códigos de alta velocidad y precisión', price: '$600.00 MXN', delay: 'delay-100' },
-    { index: 1, image: 'images/accesorios/impresora.png', name: 'Impresora Térmica Compacta', description: 'Impresora térmica para recibos y etiquetas', price: '$1,700.00 MXN', delay: 'delay-200' },
+    { index: 1, image: 'images/accesorios/impresora.png', name: 'Impresora Térmica EC-Line', description: 'Impresora térmica directa de alta velocidad (300 mm/seg)', price: '$3,350.00 MXN', delay: 'delay-200' },
     { index: 2, image: 'images/accesorios/cajon2.png', name: 'Cajón de Efectivo Electrónico', description: 'Cajón automático con seguridad integrada y control USB', price: '$800.00 MXN', delay: 'delay-300' },
     { index: 3, image: 'images/accesorios/rollo.png', name: 'Rollos de papel termico', description: 'Rollo de papel térmico c/u', price: '$80.00 MXN', delay: 'delay-100' },
     { index: 4, image: 'images/accesorios/quaroni1.png', name: 'Monitor Quaroni MQ19-03', description: 'Monitor LED de 19.5" HD, panel TN, HDMI/VGA', price: '$800.00 MXN', delay: 'delay-200' },
@@ -63,8 +63,8 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
   // Promo banner
   readonly promoItems = [
     { name: 'Lector de código', price: '$1,500 MXN' },
-    { name: 'Impresora térmica', price: '$1,200 MXN' },
-    { name: 'Cajón electrónico', price: '$750 MXNN' },
+    { name: 'Impresora térmica', price: '$3,350 MXN' },
+    { name: 'Cajón electrónico', price: '$750 MXN' },
   ];
 
   galleryItems = [
@@ -88,13 +88,19 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       moreSpecifications: { 'Voltaje': '5V CC', 'Peso': '246gr', 'Cable': '2 metros', 'Medidas': '175mm x 73mm x 102mm' }
     },
     {
-      id: 2, name: 'Impresora Térmica Compacta',
-      description: 'Impresora térmica para recibos y etiquetas. Perfecta para puntos de venta que requieren impresión rápida y silenciosa.',
-      price: 1200.00, image: 'images/accesorios/impresora.png',
+      id: 2, name: 'Impresora Térmica EC-Line',
+      description: 'Miniprinter térmica EC-PM-X30 diseñada para negocios que requieren impresiones rápidas (300 mm/seg), silenciosas y confiables. Ideal para puntos de venta con espacio limitado.',
+      price: 3350.00, image: 'images/accesorios/impresora.png',
       images: ['images/accesorios/impresora4.png', 'images/accesorios/impresora5.png'],
-      features: ['Impresión térmica directa sin tinta.', 'Resolución 203 DPI nítida y profesional.', 'Conexión USB y Ethernet', 'Cortador automático integrado', 'Bandeja de papel de fácil carga'],
-      specifications: { 'Tamaño impresión': '76mm', 'Velocidad': '250mm/s', 'Operación': 'Continua estable', 'Tecnología': 'Termica' },
-      moreSpecifications: { 'Conexión': 'USB + Ethernet', 'Interfaces': 'Puerto USB 2.0 y Ethernet LAN (RJ-45)', 'Código de barras': '1D/2D, Code 39, EAN13, PDF417, QR, UPC', 'Movilidad': 'Alámbrico' }
+      features: [
+        'Velocidad de impresión ultra rápida de 300 mm/s',
+        'Auto-cortador de alta resistencia (2 millones de cortes)',
+        'Conectividad versátil con puertos USB y Ethernet (LAN)',
+        'Carga de papel sencilla (Drop-in)',
+        'Compatibilidad con múltiples sistemas (Windows, Linux, Android, Mac)'
+      ],
+      specifications: { 'Modelo': 'EC-PM-X30', 'Tecnología': 'Térmica Directa', 'Velocidad': '300 mm/s', 'Ancho de Papel': '80 mm / 58 mm' },
+      moreSpecifications: { 'Conexión': 'USB + Ethernet', 'Corte': 'Automático parcial', 'Códigos de barras': '1D/2D (QR, PDF417, UPC, EAN)', 'Vida útil cabezal': '150 KM', 'Dimensiones': '133 x 126 x 130 mm' }
     },
     {
       id: 3, name: 'Cajón de Efectivo Electrónico',
