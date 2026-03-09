@@ -38,18 +38,19 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
   // Product cards for grid display
   readonly productCards = [
     { index: 0, image: 'images/accesorios/lector.png', name: 'Lector de código profesional', description: 'Scanner de códigos de alta velocidad y precisión', price: '$600.00 MXN', delay: 'delay-100' },
-    { index: 1, image: 'images/accesorios/impresora.png', name: 'Impresora Térmica EC-Line', description: 'Impresora térmica directa de alta velocidad (300 mm/seg)', price: '$3,350.00 MXN', delay: 'delay-200' },
+    { index: 1, image: 'images/accesorios/ecline.png', name: 'Impresora Térmica EC-Line', description: 'Impresora térmica directa de alta velocidad (300 mm/seg)', price: '$3,350.00 MXN', delay: 'delay-200' },
     { index: 2, image: 'images/accesorios/cajon2.png', name: 'Cajón de Efectivo Electrónico', description: 'Cajón automático con seguridad integrada y control USB', price: '$800.00 MXN', delay: 'delay-300' },
     { index: 3, image: 'images/accesorios/rollo.png', name: 'Rollos de papel termico', description: 'Rollo de papel térmico c/u', price: '$80.00 MXN', delay: 'delay-100' },
     { index: 4, image: 'images/accesorios/quaroni1.png', name: 'Monitor Quaroni MQ19-03', description: 'Monitor LED de 19.5" HD, panel TN, HDMI/VGA', price: '$800.00 MXN', delay: 'delay-200' },
     { index: 5, image: 'images/accesorios/terminal.png', name: 'Terminal de tarjetas', description: 'Sistema completo con software integrado', price: '$450.00 MXN', delay: 'delay-300' },
-    { index: 6, image: 'images/accesorios/pc.png', name: 'PC GHIA Frontier Slim 2.0', description: '1 TB Disco, RAM 8 GB - Ideal para punto de venta', price: '$5,500.00 MXN', delay: '' },
-    { index: 7, image: 'images/accesorios/monitor3.png', name: 'Monitor GHIA 21.5 pulgadas', description: 'Monitor Full HD para punto de venta y oficina', price: '$1,200.00 MXN', delay: 'delay-100' },
+    { index: 6, image: 'images/accesorios/pc.png', name: 'PC GHIA Frontier Slim 2.0', description: 'Intel N-Series 4 Núcleos 3.40 GHz, 8 GB RAM, 240 GB SSD - Sin Sistema', price: '$5,500.00 MXN', delay: '' },
+    { index: 7, image: 'images/accesorios/monitor3.png', name: 'Monitor GHIA 21.5 pulgadas', description: 'Monitor GHIA MG2225 / 21.5 / VA / FHD / 100Hz / VGA, HDMI / Negro', price: '$1,200.00 MXN', delay: 'delay-100' },
     { index: 8, image: 'images/accesorios/caja.png', name: 'Caja de Rollos Térmicos 76mm', description: 'Caja de 20 rollos térmicos de 76mm compatibles con nuestras impresoras térmicas', price: '$1,500.00 MXN', delay: 'delay-200' },
     { index: 9, image: 'images/accesorios/paquete.png', name: 'Kit Punto de Venta Básico', description: 'Punto de venta completo impulsado por MyBusiness POS', price: '$12,730.00 MXN', delay: 'delay-300' },
     { index: 10, image: 'images/accesorios/paquete.png', name: 'Kit Punto de Venta Premium', description: 'Punto de venta completo impulsado por MyBusiness POS', price: '$19,740.00 MXN', delay: 'delay-300' },
-    { index: 11, image: 'images/accesorios/teclado2.png', name: 'Teclado Multimedia', description: 'Teclado con teclas de acceso rápido y pad numérico', price: '$150.00 MXN', delay: 'delay-400' },
-    { index: 12, image: 'images/accesorios/hp.png', name: 'Mouse Óptico', description: 'Mouse ergonómico de 1200 DPI con sensor óptico', price: '$99.00 MXN', delay: 'delay-500' },
+    { index: 11, image: 'images/accesorios/minipc.png', name: 'Mini PC Hyundai', description: 'Mini PC HYUNDAI HTN4020MPC04, Intel Celeron N4020 4GB DDR4 / 128GB SSD Windows 11 Home', price: '$3,350.00 MXN', delay: 'delay-400' },
+    { index: 12, image: 'images/accesorios/acteck.png', name: 'Kit Teclado y Mouse', description: 'Kit Acteck Creator MK210, Combo alámbrico multimedia, 105 teclas, Mouse 1000 DPI', price: '$190.00 MXN', delay: 'delay-500' },
+    { index: 13, image: 'images/accesorios/next.png', name: 'Impresora Térmica Nextep', description: 'Impresora Térmica 80mm USB/RJ11/LAN / 160 MM/S, 203 DPI', price: '$1,700.00 MXN', delay: 'delay-500' },
   ];
 
   // Seccion beneficios
@@ -90,8 +91,8 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     {
       id: 2, name: 'Impresora Térmica EC-Line',
       description: 'Miniprinter térmica EC-PM-X30 diseñada para negocios que requieren impresiones rápidas (300 mm/seg), silenciosas y confiables. Ideal para puntos de venta con espacio limitado.',
-      price: 3350.00, image: 'images/accesorios/impresora.png',
-      images: ['images/accesorios/impresora4.png', 'images/accesorios/impresora5.png'],
+      price: 3350.00, image: 'images/accesorios/ecline1.png',
+      images: ['images/accesorios/ecline2.png', 'images/accesorios/ecline3.png'],
       features: [
         'Velocidad de impresión ultra rápida de 300 mm/s',
         'Auto-cortador de alta resistencia (2 millones de cortes)',
@@ -107,7 +108,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       description: 'Cajón automático con seguridad integrada y control USB. Diseñado para un manejo seguro y eficiente del efectivo en tu negocio.',
       price: 750.00, image: 'images/accesorios/cajon5.png',
       images: ['images/accesorios/cajon3.png', 'images/accesorios/cajon4.png'],
-      features: ['Apertura automática mediante impulsor', '4 compartimentos para billetes', '8 compartimentos para monedas', 'Cerradura de 3 posiciones', 'Construcción en metal resistente'],
+      features: ['Apertura automática mediante impulsor', '5 compartimentos para billetes', '8 compartimentos para monedas', 'Cerradura de 3 posiciones', 'Construcción en metal resistente'],
       specifications: { 'Interfaces': 'RJ11 para impresora de recibos', 'Capacidad': 'Hasta 500 billetes', 'Ranuras': 'Ranura para documentos' },
       moreSpecifications: { 'Material': 'Metal resistente', 'Dimensiones': '355 x 370 x 80 mm (L x W x H)', 'Apertura': 'Eléctrica/Manual' }
     },
@@ -146,21 +147,34 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     },
     {
       id: 7, name: 'PC GHIA Frontier Slim 2.0',
-      description: 'Computadora de escritorio con excelente rendimiento para punto de venta y oficina. Disco 1 TB y RAM 8 GB para un desempeño óptimo.',
-      price: 5999.99, image: 'images/accesorios/pc1.png',
+      description: 'Computadora de escritorio ultra compacta con procesador Intel de 4 núcleos con bajo consumo energético.',
+      price: 5500.00, image: 'images/accesorios/pc1.png',
       images: ['images/accesorios/pc2.png', 'images/accesorios/pc3.png', 'images/accesorios/mouse1.png', 'images/accesorios/teclado1.png'],
-      features: ['Procesador de alto rendimiento', 'Disco duro de 1 TB de capacidad', 'Diseño slim compacto', 'Ideal para punto de venta y oficina'],
-      specifications: { 'Disco Duro': '1 TB', 'RAM': '8 GB', 'Modelo': 'Frontier Slim 2.0', 'Procesador': 'Intel Pentium GOLD Core 3.7 GHz' },
-      moreSpecifications: { 'Teclado': 'Conexión USB Plug & Play', 'Periféricos': 'Compatibilidad universal con todas las marcas', 'Mouse': 'Sensor óptico de 1200 DPI' }
+      features: [
+        'Procesador Intel N-Series de 4 Núcleos (hasta 3.40 GHz)',
+        'Gabinete Slim SFF optimizado para ahorrar espacio',
+        'Almacenamiento rápido en SSD de 240 GB',
+        'Incluye kit de teclado y mouse alámbricos',
+        'Ideal para uso continuo en puntos de venta'
+      ],
+      specifications: { 'Modelo': 'Frontier Slim 2.0', 'Procesador': 'Intel 4 Núcleos @ 3.40 GHz', 'RAM': '8 GB DDR4', 'Almacenamiento': '240 GB SSD' },
+      moreSpecifications: { 'Sistema Operativo': 'Sin Sistema Operativo', 'Gráficos': 'Intel UHD Graphics', 'Puertos': 'USB 3.0, HDMI, VGA, RJ45 Gigabit', 'Factor de Forma': 'Slim (SFF)' }
     },
     {
-      id: 8, name: 'Monitor GHIA 23.8 pulgadas',
-      description: 'Monitor de alta definición con pantalla de 23.8 pulgadas. Perfecto para punto de venta y uso empresarial con excelente calidad de imagen.',
-      price: 2499.99, image: 'images/accesorios/monitor.png',
-      images: ['images/accesorios/monitor1.png', 'images/accesorios/monitor2.png'],
-      features: ['Pantalla de 23.8 pulgadas', 'Resolución Full HD', 'Conexión HDMI y VGA', 'Diseño elegante y moderno', 'Bajo consumo energético'],
-      specifications: { 'Tamaño': '23.8 pulgadas', 'Resolución': 'Full HD 1920x1080', 'Conexiones': 'HDMI, VGA' },
-      moreSpecifications: { 'Marca': 'GHIA', 'Garantía': '1 año' }
+      id: 8, name: 'Monitor GHIA 21.5 pulgadas',
+      description: 'Monitor GHIA MG2225 de 21.5 pulgadas con panel VA y una tasa de refresco de 100Hz, visualización fluida y nítida.',
+      price: 1200.00, image: 'images/accesorios/monitor.png',
+      images: ['images/accesorios/monitor1.png', 'images/accesorios/monitor2.png', 'images/accesorios/monitor4.png'],
+      features: [
+        'Pantalla de 21.5 pulgadas Full HD (1920x1080)',
+        'Panel VA para contrastes profundos y amplios ángulos de visión',
+        'Frecuencia de actualización de 100Hz para mayor fluidez visual',
+        'Diseño Frameless (Sin bordes) ultra moderno',
+        'Conectividad dual con puertos HDMI y VGA',
+        'Tiempo de respuesta de 5ms perfecto para trabajo diario'
+      ],
+      specifications: { 'Modelo': 'MG2225', 'Tamaño': '21.5 pulgadas', 'Resolución': 'FHD (1920x1080)', 'Panel': 'VA' },
+      moreSpecifications: { 'Frecuencia': '100Hz', 'Puertos': '1x HDMI, 1x VGA', 'VESA': '75 x 75 mm', 'Garantía': '3 años (Directo con marca)' }
     },
     {
       id: 9, name: 'Caja de Rollos Térmicos 76mm',
@@ -175,38 +189,84 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       id: 10, name: 'Kit Punto de Venta Básico',
       description: 'Punto de venta completo y listo para operar, impulsado por MyBusiness POS. Incluye equipo esencial y soporte especializado para que empieces a vender desde el primer día, todo en un solo paquete.',
       price: 12730.00, image: 'images/software/paquete.png',
-      images: ['images/software/mybusiness2.png', 'images/software/monitor2.png', 'images/software/pc.png', 'images/cajon5.png', 'images/impresora3.png', 'images/barras3.png', 'images/teclado.png'],
-      features: ['Configuración, instalación del sistema completo', 'Todos los accesorios de punto de venta', 'Implementación del sistema de recargas de tiempo aire', 'Implementación del sistema de cobro con tarjeta de débito y crédito', '10 horas de capacitación incluidas', 'Soporte técnico especializado'],
-      specifications: { 'Computadora': 'PC GHIA Frontier Slim 2.0 1 TB Disco RAM 8 GB', 'Procesador': 'Intel Pentium GOLD Core 3.7 GHz', 'Monitor': '23.8 pulgadas', 'Periféricos': 'Teclado y ratón incluidos', 'Sistema Operativo': 'Windows 11', 'Software': 'MyBusiness POS v24', 'Impresora': 'Ticket 3 pulgadas', 'Lector': 'Código de barras', 'Cajón': '5 billetes, 8 monedas' },
+      images: ['images/accesorios/minipc1.png', 'images/accesorios/quaroni.png', 'images/accesorios/acteck1.png', 'images/accesorios/cajon3.png', 'images/accesorios/ecline1.png', 'images/accesorios/barras5.png'],
+      features: [
+        'Mini PC Hyundai HTN4020MPC04 con Windows 11 Home',
+        'Monitor Quaroni MQ19-03 de 19.5" HD (HDMI/VGA)',
+        'Kit de Teclado y Mouse Acteck Creator MK210 Alámbrico',
+        'Impresora Térmica Nextep de 80mm (USB/LAN/RJ11)',
+        'Lector de códigos de barras GHIA GSCBI 1D con Base',
+        'Cajón de dinero GHIA GCDS81 de acero reforzado',
+        '3 horas de capacitación y soporte técnico especializado'
+      ],
+      specifications: { 'Computadora': 'Mini PC Hyundai HTN4020MPC04 4GB/128GB', 'Monitor': 'Quaroni MQ19-03 19.5" HD', 'Periféricos': 'Kit Acteck Creator MK210', 'Impresora': 'Nextep Térmica 80mm (160 mm/s)', 'Lector': 'GHIA GSCBI 1D CCD con Base', 'Cajón': 'GHIA GCDS81 (5 billetes / 8 monedas)', 'Sistema Operativo': 'Windows 11 Home', 'Software': 'MyBusiness POS v24' },
       functions: ['Ventas de productos y servicios', 'Inventario de productos', 'Compras y control de proveedores', 'Control de clientes', 'Cobranza a clientes', 'Impresión de tickets', 'Ventas de tiempo aire', 'Cobros con tarjeta de débito y crédito']
     },
     {
       id: 11, name: 'Kit Punto de Venta Premium',
       description: 'Punto de venta completo y listo para operar, impulsado por MyBusiness POS. Incluye equipo esencial y soporte especializado para que empieces a vender desde el primer día, todo en un solo paquete.',
       price: 19740.00, image: 'images/software/paquete.png',
-      images: ['images/software/mybusiness2.png', 'images/software/monitor2.png', 'images/software/pc.png', 'images/cajon5.png', 'images/impresora3.png', 'images/barras3.png', 'images/teclado.png'],
-      features: ['Configuración, instalación del sistema completo', 'Todos los accesorios de punto de venta', 'Implementación del sistema de recargas de tiempo aire', 'Implementación del sistema de cobro con tarjeta de débito y crédito', '10 horas de capacitación incluidas', 'Soporte técnico especializado'],
-      specifications: { 'Computadora': 'PC GHIA Frontier Slim 2.0 1 TB Disco RAM 8 GB', 'Procesador': 'Intel Pentium GOLD Core 3.7 GHz', 'Monitor': '23.8 pulgadas', 'Periféricos': 'Teclado y ratón incluidos', 'Sistema Operativo': 'Windows 11', 'Software': 'MyBusiness POS v24', 'Impresora': 'Ticket 3 pulgadas', 'Lector': 'Código de barras', 'Cajón': '5 billetes, 8 monedas' },
+      images: ['images/accesorios/pc2.png', 'images/accesorios/monitor.png', 'images/accesorios/ecline1.png', 'images/accesorios/barras3.png', 'images/accesorios/cajon5.png'],
+      features: [
+        'Computadora GHIA Frontier Slim 2.0 (Intel 4 Núcleos @ 3.40 GHz)',
+        'Monitor GHIA MG2225 de 21.5" VA FHD 100Hz Frameless',
+        'Impresora Térmica EC-Line EC-PM-X30 (300 mm/seg)',
+        'Lector de códigos de barras GHIA GSCBI 1D con Base',
+        'Cajón de dinero GHIA GCDS81 de acero reforzado',
+        'Incluye kit de teclado y mouse alámbricos',
+        '10 horas de capacitación y soporte técnico premium integral'
+      ],
+      specifications: { 'Computadora': 'GHIA Frontier Slim 20 Intel 4 núcleos @ 3.40 GHz', 'RAM': '8 GB DDR4', 'Almacenamiento': '240 GB SSD', 'Monitor': 'GHIA MG2225 21.5" VA FHD 100Hz', 'Impresora': 'EC-Line EC-PM-X30 80mm (300 mm/s)', 'Lector': 'GHIA GSCBI 1D LED CCD con Base', 'Cajón': 'GHIA GCDS81 (5 billetes / 8 monedas)', 'Sistema Operativo': 'Sin Sistema Operativo', 'Software': 'MyBusiness POS v24' },
       functions: ['Ventas de productos y servicios', 'Inventario de productos', 'Compras y control de proveedores', 'Control de clientes', 'Cobranza a clientes', 'Impresión de tickets', 'Ventas de tiempo aire', 'Cobros con tarjeta de débito y crédito']
     },
 
     {
-      id: 12, name: 'Teclado Alámbrico Multimedia',
-      description: 'Teclado profesional con teclas multimedia y teclado numérico integrado para uso intenso en puntos de venta.',
-      price: 150.00, image: 'images/accesorios/teclado1.png',
-      images: ['images/accesorios/teclado4.png', 'images/accesorios/teclado3.png'],
-      features: ['Conexión USB Plug & Play', 'Incluye teclado numérico', 'Accesos directos multimedia', 'Compatibilidad universal con todas las marcas', 'Diseño resistente al uso diario, ergonomico'],
-      specifications: { 'Conexión': 'Alámbrico USB', 'Longitud de cable': '1.6 metros', 'Color': 'Negro', 'Idioma': 'Español' },
-      moreSpecifications: { 'Interfaz': 'USB', 'Teclado numérico': 'Sí', 'Multimedia': 'Sí' }
+      id: 12, name: 'Mini PC Hyundai',
+      description: 'Mini PC HYUNDAI HTN4020MPC04, una solución compacta y potente diseñada para maximizar la productividad en espacios reducidos. Ideal para puntos de venta, oficinas y señalización digital.',
+      price: 3350.00, image: 'images/accesorios/minipc1.png',
+      images: ['images/accesorios/minipc2.png', 'images/accesorios/minipc3.png'],
+      features: [
+        'Procesador Intel Celeron N4020 (hasta 2.8GHz)',
+        '4GB Memoria RAM DDR4 (Expandible hasta 8GB)',
+        '128GB de almacenamiento interno SSD',
+        'Sistema Operativo Windows 11 Home presinstalado',
+        'Soporte para pantalla dual (HDMI y VGA) con resolución 4K UHD',
+        'Diseño ultra compacto y silencioso (Fanless)'
+      ],
+      specifications: { 'Modelo': 'HTN4020MPC04', 'Procesador': 'Intel Celeron N4020', 'RAM': '4GB DDR4', 'Almacenamiento': '128GB SSD' },
+      moreSpecifications: { 'Sistema Operativo': 'Windows 11 Home', 'Conexión': 'Wi-Fi 5 + Bluetooth 4.2', 'Puertos': 'USB 3.0, HDMI, VGA, RJ45 Gigabit', 'Gráficos': 'Intel UHD Graphics 600' }
     },
     {
-      id: 13, name: 'Mouse Óptico USB',
-      description: 'Mouse óptico de alta precisión con sensor de 1200 DPI. Ideal para navegación rápida y precisa en sistemas de punto de venta.',
-      price: 99.00, image: 'images/accesorios/mouse.png',
-      images: ['images/accesorios/mouse1.png'],
-      features: ['Sensor óptico de 1200 DPI', 'Rueda de desplazamiento (Scroll)', 'Conexión USB Plug & Play', 'Compatibilidad universal con todas las marcas', 'Diseño ergonómico y ambidiestro'],
-      specifications: { 'Conexión': 'Alámbrico USB', 'Longitud de cable': '1.6 metros', 'Color': 'Negro', 'DPI': '1200' },
-      moreSpecifications: { 'Interfaz': 'USB', 'Scroll': 'Sí', 'Apagado automático': 'No' }
+      id: 13, name: 'Kit Teclado y Mouse Acteck',
+      description: 'Kit Acteck Creator MK210, la combinación perfecta para tu espacio de trabajo.',
+      price: 190.00, image: 'images/accesorios/acteck1.png',
+      images: ['images/accesorios/acteck2.png', 'images/accesorios/acteck3.png'],
+      features: [
+        'Conexión USB alámbrica Plug & Play',
+        'Teclado completo con 105 teclas (Layout Español)',
+        'Mouse óptico con resolución de 1000 DPI',
+        'Diseño ergonómico y elegante en color negro',
+        'Largo de cable de 1.5 metros',
+        'Compatibilidad con Windows XP y posteriores'
+      ],
+      specifications: { 'Modelo': 'Creator MK210 (AC-928984)', 'Tipo de kit': 'Alámbrico USB', 'Teclas': '105 Teclas', 'Idioma': 'Español' },
+      moreSpecifications: { 'Resolución Mouse': '1000 DPI', 'Botones': '2 + Scroll', 'Largo Cable': '1.5 metros', 'Vida Útil Click': '3 millones de clicks', 'Material': 'Plástico ABS' }
+    },
+    {
+      id: 14, name: 'Impresora Térmica Nextep',
+      description: 'Impresora térmica Nextep de 80mm diseñada para alto rendimiento en puntos de venta.',
+      price: 1700.00, image: 'images/accesorios/next1.png',
+      images: ['images/accesorios/next2.png', 'images/accesorios/next3.png'],
+      features: [
+        'Impresión térmica directa de alta velocidad (160 mm/s)',
+        'Conectividad triple: USB, LAN (Ethernet) y RJ11 para cajón',
+        'Resolución de 203 DPI para tickets nítidos y legibles',
+        'Ancho de impresión de 80 mm ideal para recibos detallados',
+        'Cortador automático integrado de larga duración',
+        'Diseño compacto y robusto para uso continuo'
+      ],
+      specifications: { 'Modelo': 'NE-511', 'Tecnología': 'Térmica directa', 'Velocidad': '160 mm/s', 'Resolución': '203 DPI', 'Ancho de Papel': '80 mm' },
+      moreSpecifications: { 'Interfaces': 'USB + LAN + RJ11', 'Comandos': 'ESC/POS', 'Vida del cabezal': '150 KM', 'Compatibilidad': 'Windows, Linux, macOS', 'Peso': '1.2 kg' }
     }
   ];
   ngOnInit(): void { }

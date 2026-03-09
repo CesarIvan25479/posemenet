@@ -20,28 +20,30 @@ export class SoftwareComponent implements AfterViewInit, OnDestroy {
   // MyBusiness POS Package data
   posPackage: Product = {
     id: 1,
-    name: 'emenetPOS Punto de Venta',
+    name: 'Kit Punto de Venta Premium',
     description: 'Punto de venta completo y listo para operar, impulsado por MyBusiness POS. Incluye equipo esencial y soporte especializado para que empieces a vender desde el primer día, todo en un solo paquete.',
-    price: 30500,
+    price: 19740,
     image: 'images/software/paquete.png',
-    images: ['images/software/mybusiness2.png', 'images/software/monitor2.png', 'images/software/pc.png', 'images/cajon5.png', 'images/impresora3.png', 'images/barras3.png', 'images/teclado.png'],
+    images: ['images/accesorios/pc2.png', 'images/accesorios/monitor.png', 'images/accesorios/ecline1.png', 'images/accesorios/barras3.png', 'images/accesorios/cajon5.png'],
     features: [
-      'Configuración, instalación y puesta en marcha del sistema completo',
-      'Implementación del sistema de recargas de tiempo aire',
-      'Implementación del sistema de cobro con tarjeta de débito y crédito',
-      '10 horas de capacitación incluidas',
-      'Soporte técnico especializado'
+      'Computadora GHIA Frontier Slim 2.0 (Intel 4 Núcleos @ 3.40 GHz)',
+      'Monitor GHIA MG2225 de 21.5" VA FHD 100Hz Frameless',
+      'Impresora Térmica EC-Line EC-PM-X30 (300 mm/seg)',
+      'Lector de códigos de barras GHIA GSCBI 1D con Base',
+      'Cajón de dinero GHIA GCDS81 de acero reforzado',
+      'Incluye kit de teclado y mouse alámbricos',
+      '10 horas de capacitación y soporte técnico premium integral'
     ],
     specifications: {
-      'Computadora': 'PC GHIA Frontier Slim 2.0 1 TB Disco RAM 8 GB',
-      'Procesador': 'Intel Pentium GOLD Core 3.7 GHz',
-      'Monitor': '23.8 pulgadas',
-      'Periféricos': 'Teclado y ratón incluidos',
-      'Sistema Operativo': 'Windows 11',
-      'Software': 'MyBusiness POS v24',
-      'Impresora': 'Ticket 3 pulgadas',
-      'Lector': 'Código de barras',
-      'Cajón': '5 billetes, 8 monedas'
+      'Computadora': 'GHIA Frontier Slim 20 Intel 4 núcleos @ 3.40 GHz',
+      'RAM': '8 GB DDR4',
+      'Almacenamiento': '240 GB SSD',
+      'Monitor': 'GHIA MG2225 21.5" VA FHD 100Hz',
+      'Impresora': 'EC-Line EC-PM-X30 80mm (300 mm/s)',
+      'Lector': 'GHIA GSCBI 1D LED CCD con Base',
+      'Cajón': 'GHIA GCDS81 (5 billetes / 8 monedas)',
+      'Sistema Operativo': 'Sin Sistema Operativo',
+      'Software': 'MyBusiness POS v24'
     },
     functions: [
       'Ventas de productos y servicios', 'Inventario de productos',
