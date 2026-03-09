@@ -86,7 +86,8 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       images: ['images/accesorios/barras4.png', 'images/accesorios/barras5.png'],
       features: ['Lectura de códigos 1D y 2D', 'Velocidad de escaneo de 300 escaneos/segundo', 'Conexión USB plug and play', 'Compatible con Windows, Mac y Linux', 'Diseño ergonómico para uso prolongado'],
       specifications: { 'Tipo de escaneo': 'Bidireccional', 'IP Class': 'IP52', 'Fuente de luz': '650nm Laser diodo visible', 'Material': 'ABS + PC' },
-      moreSpecifications: { 'Voltaje': '5V CC', 'Peso': '246gr', 'Cable': '2 metros', 'Medidas': '175mm x 73mm x 102mm' }
+      moreSpecifications: { 'Voltaje': '5V CC', 'Peso': '246gr', 'Cable': '2 metros', 'Medidas': '175mm x 73mm x 102mm' },
+      stock: 3
     },
     {
       id: 2, name: 'Impresora Térmica EC-Line',
@@ -101,7 +102,8 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
         'Compatibilidad con múltiples sistemas (Windows, Linux, Android, Mac)'
       ],
       specifications: { 'Modelo': 'EC-PM-X30', 'Tecnología': 'Térmica Directa', 'Velocidad': '300 mm/s', 'Ancho de Papel': '80 mm / 58 mm' },
-      moreSpecifications: { 'Conexión': 'USB + Ethernet', 'Corte': 'Automático parcial', 'Códigos de barras': '1D/2D (QR, PDF417, UPC, EAN)', 'Vida útil cabezal': '150 KM', 'Dimensiones': '133 x 126 x 130 mm' }
+      moreSpecifications: { 'Conexión': 'USB + Ethernet', 'Corte': 'Automático parcial', 'Códigos de barras': '1D/2D (QR, PDF417, UPC, EAN)', 'Vida útil cabezal': '150 KM', 'Dimensiones': '133 x 126 x 130 mm' },
+      stock: 2
     },
     {
       id: 3, name: 'Cajón de Efectivo Electrónico',
@@ -110,7 +112,8 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       images: ['images/accesorios/cajon3.png', 'images/accesorios/cajon4.png'],
       features: ['Apertura automática mediante impulsor', '5 compartimentos para billetes', '8 compartimentos para monedas', 'Cerradura de 3 posiciones', 'Construcción en metal resistente'],
       specifications: { 'Interfaces': 'RJ11 para impresora de recibos', 'Capacidad': 'Hasta 500 billetes', 'Ranuras': 'Ranura para documentos' },
-      moreSpecifications: { 'Material': 'Metal resistente', 'Dimensiones': '355 x 370 x 80 mm (L x W x H)', 'Apertura': 'Eléctrica/Manual' }
+      moreSpecifications: { 'Material': 'Metal resistente', 'Dimensiones': '355 x 370 x 80 mm (L x W x H)', 'Apertura': 'Eléctrica/Manual' },
+      stock: 2
     },
     {
       id: 4, name: 'Consumibles',
@@ -119,7 +122,8 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       images: ['images/accesorios/rollo3.png', 'images/accesorios/rollo4.png'],
       features: ['Papel térmico de alta calidad', 'Etiquetas térmicas adhesivas', 'Papel termico de calidad', 'Precios competitivos por mayoreo'],
       specifications: { 'Papel térmico': '80mm x 70mm', 'Etiquetas': 'Variados tamaños', 'Calidad': 'Alta' },
-      moreSpecifications: { 'Toners': 'Universal', 'Garantía': 'Calidad garantizada' }
+      moreSpecifications: { 'Toners': 'Universal', 'Garantía': 'Calidad garantizada' },
+      stock: 2
     },
     {
       id: 5, name: 'Monitor Quaroni MQ19-03',
@@ -134,7 +138,8 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
         'Panel tipo TN para un rendimiento confiable'
       ],
       specifications: { 'Tamaño': '19.5 pulgadas', 'Resolución': '1366 x 768 (HD)', 'Brillo': '200 cd/m²', 'Panel': 'TN' },
-      moreSpecifications: { 'Contraste': '500:1', 'Conectores': '1x HDMI, 1x VGA', 'Frecuencia': '60 Hz', 'Garantía': '1 año' }
+      moreSpecifications: { 'Contraste': '500:1', 'Conectores': '1x HDMI, 1x VGA', 'Frecuencia': '60 Hz', 'Garantía': '1 año' },
+      stock: 2
     },
     {
       id: 6, name: 'Terminal Billpocket nano',
@@ -143,7 +148,8 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       images: ['images/accesorios/terminal2.png'],
       features: ['Software de gestión incluido', 'Pantalla táctil de 10 pulgadas', 'Impresora térmica integrada', 'Lector de tarjetas NFC', 'Reportes de ventas en tiempo real'],
       specifications: { 'Procesador': 'Quad Core 1.8GHz', 'RAM': '2 GB', 'Almacenamiento': '16 GB' },
-      moreSpecifications: { 'Sistema': 'Android 11', 'Garantía': '2 años' }
+      moreSpecifications: { 'Sistema': 'Android 11', 'Garantía': '2 años' },
+      stock: 2
     },
     {
       id: 7, name: 'PC GHIA Frontier Slim 2.0',
@@ -158,7 +164,8 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
         'Ideal para uso continuo en puntos de venta'
       ],
       specifications: { 'Modelo': 'Frontier Slim 2.0', 'Procesador': 'Intel 4 Núcleos @ 3.40 GHz', 'RAM': '8 GB DDR4', 'Almacenamiento': '240 GB SSD' },
-      moreSpecifications: { 'Sistema Operativo': 'Sin Sistema Operativo', 'Gráficos': 'Intel UHD Graphics', 'Puertos': 'USB 3.0, HDMI, VGA, RJ45 Gigabit', 'Factor de Forma': 'Slim (SFF)' }
+      moreSpecifications: { 'Sistema Operativo': 'Sin Sistema Operativo', 'Gráficos': 'Intel UHD Graphics', 'Puertos': 'USB 3.0, HDMI, VGA, RJ45 Gigabit', 'Factor de Forma': 'Slim (SFF)' },
+      stock: 2
     },
     {
       id: 8, name: 'Monitor GHIA 21.5 pulgadas',
@@ -174,7 +181,8 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
         'Tiempo de respuesta de 5ms perfecto para trabajo diario'
       ],
       specifications: { 'Modelo': 'MG2225', 'Tamaño': '21.5 pulgadas', 'Resolución': 'FHD (1920x1080)', 'Panel': 'VA' },
-      moreSpecifications: { 'Frecuencia': '100Hz', 'Puertos': '1x HDMI, 1x VGA', 'VESA': '75 x 75 mm', 'Garantía': '3 años (Directo con marca)' }
+      moreSpecifications: { 'Frecuencia': '100Hz', 'Puertos': '1x HDMI, 1x VGA', 'VESA': '75 x 75 mm', 'Garantía': '3 años (Directo con marca)' },
+      stock: 2
     },
     {
       id: 9, name: 'Caja de Rollos Térmicos 76mm',
@@ -183,7 +191,8 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       images: ['images/accesorios/caja2.png', 'images/accesorios/caja3.png'],
       features: ['20 Rollos térmicos de 76mm', 'Compatible con impresoras térmicas', 'Alta calidad de impresión', 'Larga duración del papel', 'Empaque por caja económica'],
       specifications: { 'Ancho': '76mm', 'Tipo': 'Papel térmico', 'Compatibilidad': 'Impresoras térmicas 76mm' },
-      moreSpecifications: { 'Presentación': 'Caja con múltiples rollos', 'Calidad': 'Premium' }
+      moreSpecifications: { 'Presentación': 'Caja con múltiples rollos', 'Calidad': 'Premium' },
+      stock: 2
     },
     {
       id: 10, name: 'Kit Punto de Venta Básico',
@@ -200,7 +209,8 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
         '3 horas de capacitación y soporte técnico especializado'
       ],
       specifications: { 'Computadora': 'Mini PC Hyundai HTN4020MPC04 4GB/128GB', 'Monitor': 'Quaroni MQ19-03 19.5" HD', 'Periféricos': 'Kit Acteck Creator MK210', 'Impresora': 'Nextep Térmica 80mm (160 mm/s)', 'Lector': 'GHIA GSCBI 1D CCD con Base', 'Cajón': 'GHIA GCDS81 (5 billetes / 8 monedas)', 'Sistema Operativo': 'Windows 11 Home', 'Software': 'MyBusiness POS v24' },
-      functions: ['Ventas de productos y servicios', 'Inventario de productos', 'Compras y control de proveedores', 'Control de clientes', 'Cobranza a clientes', 'Impresión de tickets', 'Ventas de tiempo aire', 'Cobros con tarjeta de débito y crédito']
+      functions: ['Ventas de productos y servicios', 'Inventario de productos', 'Compras y control de proveedores', 'Control de clientes', 'Cobranza a clientes', 'Impresión de tickets', 'Ventas de tiempo aire', 'Cobros con tarjeta de débito y crédito'],
+      stock: 2
     },
     {
       id: 11, name: 'Kit Punto de Venta Premium',
@@ -217,7 +227,8 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
         '10 horas de capacitación y soporte técnico premium integral'
       ],
       specifications: { 'Computadora': 'GHIA Frontier Slim 20 Intel 4 núcleos @ 3.40 GHz', 'RAM': '8 GB DDR4', 'Almacenamiento': '240 GB SSD', 'Monitor': 'GHIA MG2225 21.5" VA FHD 100Hz', 'Impresora': 'EC-Line EC-PM-X30 80mm (300 mm/s)', 'Lector': 'GHIA GSCBI 1D LED CCD con Base', 'Cajón': 'GHIA GCDS81 (5 billetes / 8 monedas)', 'Sistema Operativo': 'Sin Sistema Operativo', 'Software': 'MyBusiness POS v24' },
-      functions: ['Ventas de productos y servicios', 'Inventario de productos', 'Compras y control de proveedores', 'Control de clientes', 'Cobranza a clientes', 'Impresión de tickets', 'Ventas de tiempo aire', 'Cobros con tarjeta de débito y crédito']
+      functions: ['Ventas de productos y servicios', 'Inventario de productos', 'Compras y control de proveedores', 'Control de clientes', 'Cobranza a clientes', 'Impresión de tickets', 'Ventas de tiempo aire', 'Cobros con tarjeta de débito y crédito'],
+      stock: 2
     },
 
     {
@@ -234,7 +245,8 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
         'Diseño ultra compacto y silencioso (Fanless)'
       ],
       specifications: { 'Modelo': 'HTN4020MPC04', 'Procesador': 'Intel Celeron N4020', 'RAM': '4GB DDR4', 'Almacenamiento': '128GB SSD' },
-      moreSpecifications: { 'Sistema Operativo': 'Windows 11 Home', 'Conexión': 'Wi-Fi 5 + Bluetooth 4.2', 'Puertos': 'USB 3.0, HDMI, VGA, RJ45 Gigabit', 'Gráficos': 'Intel UHD Graphics 600' }
+      moreSpecifications: { 'Sistema Operativo': 'Windows 11 Home', 'Conexión': 'Wi-Fi 5 + Bluetooth 4.2', 'Puertos': 'USB 3.0, HDMI, VGA, RJ45 Gigabit', 'Gráficos': 'Intel UHD Graphics 600' },
+      stock: 2
     },
     {
       id: 13, name: 'Kit Teclado y Mouse Acteck',
@@ -250,7 +262,8 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
         'Compatibilidad con Windows XP y posteriores'
       ],
       specifications: { 'Modelo': 'Creator MK210 (AC-928984)', 'Tipo de kit': 'Alámbrico USB', 'Teclas': '105 Teclas', 'Idioma': 'Español' },
-      moreSpecifications: { 'Resolución Mouse': '1000 DPI', 'Botones': '2 + Scroll', 'Largo Cable': '1.5 metros', 'Vida Útil Click': '3 millones de clicks', 'Material': 'Plástico ABS' }
+      moreSpecifications: { 'Resolución Mouse': '1000 DPI', 'Botones': '2 + Scroll', 'Largo Cable': '1.5 metros', 'Vida Útil Click': '3 millones de clicks', 'Material': 'Plástico ABS' },
+      stock: 2
     },
     {
       id: 14, name: 'Impresora Térmica Nextep',
@@ -266,7 +279,8 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
         'Diseño compacto y robusto para uso continuo'
       ],
       specifications: { 'Modelo': 'NE-511', 'Tecnología': 'Térmica directa', 'Velocidad': '160 mm/s', 'Resolución': '203 DPI', 'Ancho de Papel': '80 mm' },
-      moreSpecifications: { 'Interfaces': 'USB + LAN + RJ11', 'Comandos': 'ESC/POS', 'Vida del cabezal': '150 KM', 'Compatibilidad': 'Windows, Linux, macOS', 'Peso': '1.2 kg' }
+      moreSpecifications: { 'Interfaces': 'USB + LAN + RJ11', 'Comandos': 'ESC/POS', 'Vida del cabezal': '150 KM', 'Compatibilidad': 'Windows, Linux, macOS', 'Peso': '1.2 kg' },
+      stock: 2
     }
   ];
   ngOnInit(): void { }

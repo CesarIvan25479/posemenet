@@ -50,7 +50,8 @@ export class SoftwareComponent implements AfterViewInit, OnDestroy {
       'Compras y control de proveedores', 'Control de clientes',
       'Cobranza a clientes', 'Impresión de tickets',
       'Ventas de tiempo aire', 'Cobros con tarjeta de débito y crédito'
-    ]
+    ],
+    stock: 2
   };
 
   ngAfterViewInit() {

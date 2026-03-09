@@ -240,10 +240,6 @@
     margin-bottom: 15px;
 }
 
-.modal-price-section {
-    margin-bottom: 15px;
-}
-
 .modal-price {
     font-size: 1.6rem;
     color: #001b73;
@@ -257,6 +253,39 @@
     margin-left: 6px;
     vertical-align: middle;
     letter-spacing: 0.04em;
+}
+
+.modal-price-section {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.modal-stock {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #f0f4ff;
+    border: 1px solid #d0daf5;
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #003796;
+}
+
+.stock-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #dc3545;
+    flex-shrink: 0;
+}
+
+.stock-dot.in-stock {
+    background: #28a745;
 }
 
 .modal-features {
