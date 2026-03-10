@@ -46,14 +46,17 @@ export class ProductModalComponent implements OnDestroy, OnChanges {
       if (this.isOpen && this.product) {
         this.currentIndex = 0;
         this.startAutoPlay();
-      } else {
+        document.body.style.overflow = 'hidden';
+      } else if (changes['isOpen'] && !this.isOpen) {
         this.stopAutoPlay();
+        document.body.style.overflow = '';
       }
     }
   }
 
   ngOnDestroy(): void {
     this.stopAutoPlay();
+    document.body.style.overflow = '';
   }
 
   get allImages(): string[] {

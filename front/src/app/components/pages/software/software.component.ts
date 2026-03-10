@@ -104,13 +104,11 @@ export class SoftwareComponent implements AfterViewInit, OnDestroy {
   openModal(): void {
     this.selectedProduct = this.posPackage;
     this.isModalOpen = true;
-    document.body.style.overflow = 'hidden';
   }
 
   closeModal(): void {
     this.isModalOpen = false;
     this.selectedProduct = null;
-    document.body.style.overflow = 'auto';
   }
 
   onContact(product: Product): void {

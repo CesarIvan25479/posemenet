@@ -317,13 +317,11 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
   openModal(product: Product): void {
     this.selectedProduct = product;
     this.isModalOpen = true;
-    document.body.style.overflow = 'hidden';
   }
 
   closeModal(): void {
     this.isModalOpen = false;
     this.selectedProduct = null;
-    document.body.style.overflow = 'auto';
   }
 
   onContact(product: Product): void {
