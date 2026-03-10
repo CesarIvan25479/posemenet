@@ -45,7 +45,7 @@
         <span class="price-period">MXN/sin mensualidades</span>
       </div>
       <div class="hero-actions">
-        <a class="btn-primary" [routerLink]="'/contacto'">🚀 Pruébalo Ahora</a>
+        <a class="btn-primary" [routerLink]="'/contacto'"><i class="fa-brands fa-space-awesome"></i> Pruébalo Ahora</a>
         <a href="https://api.whatsapp.com/send?phone=5217131334557&text=Hola%20buen%20d%C3%ADa%2C%20necesito%20informaci%C3%B3n%20sobre%20emenetPOS"
           class="btn-ghost" target="_blank" rel="noopener noreferrer">Contáctanos</a>
       </div>
@@ -116,7 +116,12 @@
 
   <div class="giros-grid">
     <div *ngFor="let giro of giros; let i = index" class="giro-card reveal zoom-in" [ngClass]="getDelayClass(i)">
-      <div class="giro-icon" [ngClass]="giro.iconClass">{{ giro.icon }}</div>
+      <div class="giro-icon" [ngClass]="giro.iconClass">
+        <svg [ngClass]="['giro-svg', 'anim-' + giro.anim]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+          fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          [innerHTML]="giro.svg">
+        </svg>
+      </div>
       <span class="giro-name">{{ giro.name }}</span>
     </div>
   </div>
@@ -127,7 +132,8 @@
 
   <div class="giros-cta">
     <a href="https://api.whatsapp.com/send?phone=5217131334557&text=Hola%20buen%20d%C3%ADa%2C%20necesito%20informaci%C3%B3n%20sobre%20emenetPOS"
-      class="btn-primary" target="_blank" rel="noopener noreferrer">🚀 Pruébalo Ahora</a>
+      class="btn-primary" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-space-awesome"></i> Pruébalo
+      Ahora</a>
   </div>
 
 </section>
@@ -138,7 +144,7 @@
 <section class="comp-section reveal fade-up">
 
   <div class="comp-header reveal fade-up">
-    <div class="comp-badge">🏆 ¿Por qué elegirnos?</div>
+    <div class="comp-badge">¿Por qué elegirnos?</div>
     <h2 class="comp-title">
       MyBusinessPos vs.<br><span class="accent">la competencia</span>
     </h2>
@@ -169,35 +175,37 @@
           </tr>
         </thead>
         <tbody>
-
           <tr>
-            <td class="feat-name"><span class="feat-icon">🧾</span>Facturación CFDI 4.0</td>
+            <td class="feat-name"><span class="feat-icon"><i class="fa-solid fa-file-invoice"></i></span>Facturación
+              CFDI 4.0</td>
             <td class="col-pulpos"><span class="ic-yes">✓</span></td>
             <td class="col-comp"><span class="ic-partial">~</span></td>
           </tr>
           <tr>
-            <td class="feat-name"><span class="feat-icon">🔄</span>Actualizaciones automáticas</td>
+            <td class="feat-name"><span class="feat-icon"><i class="fa-solid fa-rotate"></i></span>Actualizaciones
+              automáticas</td>
             <td class="col-pulpos"><span class="ic-yes">✓</span></td>
             <td class="col-comp"><span class="ic-no">✕</span></td>
           </tr>
           <tr>
-            <td class="feat-name"><span class="feat-icon">📊</span>Reportes en tiempo real</td>
-            <td class="col-pulpos"><span class="ic-yes">✓</span></td>
-            <td class="col-comp"><span class="ic-partial">~</span></td>
-          </tr>
-
-          <tr>
-            <td class="feat-name"><span class="feat-icon">🏪</span>Multisucursal</td>
+            <td class="feat-name"><span class="feat-icon"><i class="fa-solid fa-chart-line"></i></span>Reportes en
+              tiempo real</td>
             <td class="col-pulpos"><span class="ic-yes">✓</span></td>
             <td class="col-comp"><span class="ic-partial">~</span></td>
           </tr>
           <tr>
-            <td class="feat-name"><span class="feat-icon">🎓</span>Capacitación incluida</td>
+            <td class="feat-name"><span class="feat-icon"><i class="fa-solid fa-store"></i></span>Multisucursal</td>
+            <td class="col-pulpos"><span class="ic-yes">✓</span></td>
+            <td class="col-comp"><span class="ic-partial">~</span></td>
+          </tr>
+          <tr>
+            <td class="feat-name"><span class="feat-icon"><i class="fa-solid fa-graduation-cap"></i></span>Capacitación
+              incluida</td>
             <td class="col-pulpos"><span class="ic-yes">✓</span></td>
             <td class="col-comp"><span class="ic-no">✕</span></td>
           </tr>
           <tr class="row-price">
-            <td class="feat-name"><span class="feat-icon">💰</span>Un solo pago</td>
+            <td class="feat-name"><span class="feat-icon"><i class="fa-solid fa-coins"></i></span>Un solo pago</td>
             <td class="col-pulpos"><span class="price-tag">$3,790.00 MXN</span></td>
             <td class="col-comp"><span class="price-tag expensive">Mensual $800 MXN</span></td>
           </tr>
@@ -225,39 +233,43 @@
           </tr>
         </thead>
         <tbody>
-
           <tr>
-            <td class="feat-name"><span class="feat-icon">🧾</span>Facturación CFDI 4.0</td>
+            <td class="feat-name"><span class="feat-icon"><i class="fa-solid fa-file-invoice"></i></span>Facturación
+              CFDI 4.0</td>
             <td class="col-pulpos"><span class="ic-yes">✓</span></td>
             <td class="col-comp"><span class="ic-yes">✓</span></td>
           </tr>
           <tr>
-            <td class="feat-name"><span class="feat-icon">⚡</span>Configuración rápida</td>
+            <td class="feat-name"><span class="feat-icon"><i class="fa-solid fa-bolt"></i></span>Configuración rápida
+            </td>
             <td class="col-pulpos"><span class="ic-yes">✓</span></td>
             <td class="col-comp"><span class="ic-no">✕</span></td>
           </tr>
           <tr>
-            <td class="feat-name"><span class="feat-icon">📊</span>Reportes en tiempo real</td>
+            <td class="feat-name"><span class="feat-icon"><i class="fa-solid fa-chart-line"></i></span>Reportes en
+              tiempo real</td>
             <td class="col-pulpos"><span class="ic-yes">✓</span></td>
             <td class="col-comp"><span class="ic-yes">✓</span></td>
           </tr>
           <tr>
-            <td class="feat-name"><span class="feat-icon">🤖</span>Soporte y capacitación</td>
+            <td class="feat-name"><span class="feat-icon"><i class="fa-solid fa-headset"></i></span>Soporte y
+              capacitación</td>
             <td class="col-pulpos"><span class="ic-yes">✓</span></td>
             <td class="col-comp"><span class="ic-no">✕</span></td>
           </tr>
           <tr>
-            <td class="feat-name"><span class="feat-icon">🔄</span>Actualizaciones automáticas</td>
+            <td class="feat-name"><span class="feat-icon"><i class="fa-solid fa-rotate"></i></span>Actualizaciones
+              automáticas</td>
             <td class="col-pulpos"><span class="ic-yes">✓</span></td>
             <td class="col-comp"><span class="ic-no">✕</span></td>
           </tr>
           <tr>
-            <td class="feat-name"><span class="feat-icon">🏪</span>Multisucursal</td>
+            <td class="feat-name"><span class="feat-icon"><i class="fa-solid fa-store"></i></span>Multisucursal</td>
             <td class="col-pulpos"><span class="ic-yes">✓</span></td>
             <td class="col-comp"><span class="ic-yes">✓</span></td>
           </tr>
           <tr class="row-price">
-            <td class="feat-name"><span class="feat-icon">💰</span>Un solo pago</td>
+            <td class="feat-name"><span class="feat-icon"><i class="fa-solid fa-coins"></i></span>Un solo pago</td>
             <td class="col-pulpos"><span class="price-tag">$3,790.00 MXN</span></td>
             <td class="col-comp"><span class="price-tag expensive">Mensual $1,200 MXN</span></td>
           </tr>
@@ -285,34 +297,36 @@
           </tr>
         </thead>
         <tbody>
-
           <tr>
-            <td class="feat-name"><span class="feat-icon">🧾</span>Facturación CFDI 4.0</td>
+            <td class="feat-name"><span class="feat-icon"><i class="fa-solid fa-file-invoice"></i></span>Facturación
+              CFDI 4.0</td>
             <td class="col-pulpos"><span class="ic-yes">✓</span></td>
             <td class="col-comp"><span class="ic-partial">~</span></td>
           </tr>
           <tr>
-            <td class="feat-name"><span class="feat-icon">🔄</span>Actualizaciones automáticas</td>
+            <td class="feat-name"><span class="feat-icon"><i class="fa-solid fa-rotate"></i></span>Actualizaciones
+              automáticas</td>
             <td class="col-pulpos"><span class="ic-yes">✓</span></td>
             <td class="col-comp"><span class="ic-no">✕</span></td>
           </tr>
           <tr>
-            <td class="feat-name"><span class="feat-icon">🤖</span>Soporte y capacitación</td>
+            <td class="feat-name"><span class="feat-icon"><i class="fa-solid fa-headset"></i></span>Soporte y
+              capacitación</td>
             <td class="col-pulpos"><span class="ic-yes">✓</span></td>
             <td class="col-comp"><span class="ic-no">✕</span></td>
           </tr>
           <tr>
-            <td class="feat-name"><span class="feat-icon">🎯</span>Multi-giro</td>
+            <td class="feat-name"><span class="feat-icon"><i class="fa-solid fa-bullseye"></i></span>Multi-giro</td>
             <td class="col-pulpos"><span class="ic-yes">✓</span></td>
             <td class="col-comp"><span class="ic-partial">~</span></td>
           </tr>
           <tr>
-            <td class="feat-name"><span class="feat-icon">🏪</span>Multisucursal</td>
+            <td class="feat-name"><span class="feat-icon"><i class="fa-solid fa-store"></i></span>Multisucursal</td>
             <td class="col-pulpos"><span class="ic-yes">✓</span></td>
             <td class="col-comp"><span class="ic-no">✕</span></td>
           </tr>
           <tr class="row-price">
-            <td class="feat-name"><span class="feat-icon">💰</span>Un solo pago</td>
+            <td class="feat-name"><span class="feat-icon"><i class="fa-solid fa-coins"></i></span>Un solo pago</td>
             <td class="col-pulpos"><span class="price-tag">$3,790.00 MXN</span></td>
             <td class="col-comp"><span class="price-tag expensive">Mensual $500 MXN</span></td>
           </tr>
@@ -341,38 +355,41 @@
         </thead>
         <tbody>
           <tr>
-            <td class="feat-name"><span class="feat-icon">🇲🇽</span>Hecho para México</td>
+            <td class="feat-name"><span class="feat-icon"><i class="fa-solid fa-flag"></i></span>Hecho para México</td>
             <td class="col-pulpos"><span class="ic-yes">✓</span></td>
             <td class="col-comp"><span class="ic-no">✕</span></td>
           </tr>
           <tr>
-            <td class="feat-name"><span class="feat-icon">🧾</span>Facturación CFDI 4.0</td>
+            <td class="feat-name"><span class="feat-icon"><i class="fa-solid fa-file-invoice"></i></span>Facturación
+              CFDI 4.0</td>
             <td class="col-pulpos"><span class="ic-yes">✓</span></td>
             <td class="col-comp"><span class="ic-no">✕</span></td>
           </tr>
-
           <tr>
-            <td class="feat-name"><span class="feat-icon">🤖</span>Soporte y capacitación</td>
+            <td class="feat-name"><span class="feat-icon"><i class="fa-solid fa-headset"></i></span>Soporte y
+              capacitación</td>
             <td class="col-pulpos"><span class="ic-yes">✓</span></td>
             <td class="col-comp"><span class="ic-partial">~</span></td>
           </tr>
           <tr>
-            <td class="feat-name"><span class="feat-icon">🗣️</span>Soporte en español</td>
+            <td class="feat-name"><span class="feat-icon"><i class="fa-solid fa-language"></i></span>Soporte en español
+            </td>
             <td class="col-pulpos"><span class="ic-yes">✓</span></td>
             <td class="col-comp"><span class="ic-partial">~</span></td>
           </tr>
           <tr>
-            <td class="feat-name"><span class="feat-icon">🏪</span>Multisucursal</td>
+            <td class="feat-name"><span class="feat-icon"><i class="fa-solid fa-store"></i></span>Multisucursal</td>
             <td class="col-pulpos"><span class="ic-yes">✓</span></td>
             <td class="col-comp"><span class="ic-yes">✓</span></td>
           </tr>
           <tr>
-            <td class="feat-name"><span class="feat-icon">⚡</span>Sin contratos anuales</td>
+            <td class="feat-name"><span class="feat-icon"><i class="fa-solid fa-file-contract"></i></span>Sin contratos
+              anuales</td>
             <td class="col-pulpos"><span class="ic-yes">✓</span></td>
             <td class="col-comp"><span class="ic-no">✕</span></td>
           </tr>
           <tr class="row-price">
-            <td class="feat-name"><span class="feat-icon">💰</span>Un solo pago</td>
+            <td class="feat-name"><span class="feat-icon"><i class="fa-solid fa-coins"></i></span>Un solo pago</td>
             <td class="col-pulpos"><span class="price-tag">$3,790.00 MXN</span></td>
             <td class="col-comp"><span class="price-tag expensive">Mensual $750 MXN</span></td>
           </tr>
@@ -401,38 +418,42 @@
         </thead>
         <tbody>
           <tr>
-            <td class="feat-name"><span class="feat-icon">🏪</span>Multi-giro (no solo farmacias)</td>
+            <td class="feat-name"><span class="feat-icon"><i class="fa-solid fa-bullseye"></i></span>Multi-giro (no solo
+              farmacias)</td>
             <td class="col-pulpos"><span class="ic-yes">✓</span></td>
             <td class="col-comp"><span class="ic-no">✕</span></td>
           </tr>
-
           <tr>
-            <td class="feat-name"><span class="feat-icon">🧾</span>Facturación CFDI 4.0</td>
+            <td class="feat-name"><span class="feat-icon"><i class="fa-solid fa-file-invoice"></i></span>Facturación
+              CFDI 4.0</td>
             <td class="col-pulpos"><span class="ic-yes">✓</span></td>
             <td class="col-comp"><span class="ic-partial">~</span></td>
           </tr>
           <tr>
-            <td class="feat-name"><span class="feat-icon">🤖</span>Soporte y capacitación</td>
+            <td class="feat-name"><span class="feat-icon"><i class="fa-solid fa-headset"></i></span>Soporte y
+              capacitación</td>
             <td class="col-pulpos"><span class="ic-yes">✓</span></td>
             <td class="col-comp"><span class="ic-no">✕</span></td>
           </tr>
           <tr>
-            <td class="feat-name"><span class="feat-icon">🔄</span>Actualizaciones automáticas</td>
+            <td class="feat-name"><span class="feat-icon"><i class="fa-solid fa-rotate"></i></span>Actualizaciones
+              automáticas</td>
             <td class="col-pulpos"><span class="ic-yes">✓</span></td>
             <td class="col-comp"><span class="ic-no">✕</span></td>
           </tr>
           <tr>
-            <td class="feat-name"><span class="feat-icon">📊</span>Reportes avanzados</td>
+            <td class="feat-name"><span class="feat-icon"><i class="fa-solid fa-chart-bar"></i></span>Reportes avanzados
+            </td>
             <td class="col-pulpos"><span class="ic-yes">✓</span></td>
             <td class="col-comp"><span class="ic-partial">~</span></td>
           </tr>
           <tr>
-            <td class="feat-name"><span class="feat-icon">🏪</span>Multisucursal</td>
+            <td class="feat-name"><span class="feat-icon"><i class="fa-solid fa-store"></i></span>Multisucursal</td>
             <td class="col-pulpos"><span class="ic-yes">✓</span></td>
             <td class="col-comp"><span class="ic-no">✕</span></td>
           </tr>
           <tr class="row-price">
-            <td class="feat-name"><span class="feat-icon">💰</span>Un solo pago</td>
+            <td class="feat-name"><span class="feat-icon"><i class="fa-solid fa-coins"></i></span>Un solo pago</td>
             <td class="col-pulpos"><span class="price-tag">$3,790.00 MXN</span></td>
             <td class="col-comp"><span class="price-tag expensive">Mensual $400 MXN</span></td>
           </tr>
@@ -461,39 +482,42 @@
         </thead>
         <tbody>
           <tr>
-            <td class="feat-name"><span class="feat-icon">🏪</span>Multi-giro (no solo farmacias)</td>
+            <td class="feat-name"><span class="feat-icon"><i class="fa-solid fa-bullseye"></i></span>Multi-giro (no solo
+              farmacias)</td>
             <td class="col-pulpos"><span class="ic-yes">✓</span></td>
             <td class="col-comp"><span class="ic-no">✕</span></td>
           </tr>
-
-
           <tr>
-            <td class="feat-name"><span class="feat-icon">🧾</span>Facturación CFDI 4.0</td>
+            <td class="feat-name"><span class="feat-icon"><i class="fa-solid fa-file-invoice"></i></span>Facturación
+              CFDI 4.0</td>
             <td class="col-pulpos"><span class="ic-yes">✓</span></td>
             <td class="col-comp"><span class="ic-partial">~</span></td>
           </tr>
           <tr>
-            <td class="feat-name"><span class="feat-icon">🤖</span>Soporte y capacitación</td>
+            <td class="feat-name"><span class="feat-icon"><i class="fa-solid fa-headset"></i></span>Soporte y
+              capacitación</td>
             <td class="col-pulpos"><span class="ic-yes">✓</span></td>
             <td class="col-comp"><span class="ic-no">✕</span></td>
           </tr>
           <tr>
-            <td class="feat-name"><span class="feat-icon">⚡</span>Configuración en minutos</td>
+            <td class="feat-name"><span class="feat-icon"><i class="fa-solid fa-bolt"></i></span>Configuración en
+              minutos</td>
             <td class="col-pulpos"><span class="ic-yes">✓</span></td>
             <td class="col-comp"><span class="ic-no">✕</span></td>
           </tr>
           <tr>
-            <td class="feat-name"><span class="feat-icon">🔄</span>Actualizaciones automáticas</td>
+            <td class="feat-name"><span class="feat-icon"><i class="fa-solid fa-rotate"></i></span>Actualizaciones
+              automáticas</td>
             <td class="col-pulpos"><span class="ic-yes">✓</span></td>
             <td class="col-comp"><span class="ic-no">✕</span></td>
           </tr>
           <tr>
-            <td class="feat-name"><span class="feat-icon">🏪</span>Multisucursal</td>
+            <td class="feat-name"><span class="feat-icon"><i class="fa-solid fa-store"></i></span>Multisucursal</td>
             <td class="col-pulpos"><span class="ic-yes">✓</span></td>
             <td class="col-comp"><span class="ic-partial">~</span></td>
           </tr>
           <tr class="row-price">
-            <td class="feat-name"><span class="feat-icon">💰</span>Un solo pago</td>
+            <td class="feat-name"><span class="feat-icon"><i class="fa-solid fa-coins"></i></span>Un solo pago</td>
             <td class="col-pulpos"><span class="price-tag">$3,790.00 MXN</span></td>
             <td class="col-comp"><span class="price-tag expensive">Mensual $600 MXN</span></td>
           </tr>
@@ -511,7 +535,8 @@
   <div class="comp-cta">
     <p>¿Listo para pasarte a la mejor opción del mercado?</p>
     <a href="https://api.whatsapp.com/send?phone=5217131334557&text=Hola%20buen%20d%C3%ADa%2C%20necesito%20informaci%C3%B3n%20sobre%20emenetPOS"
-      class="btn-primary" target="_blank" rel="noopener noreferrer">🚀 Probar MyBusinessPos</a>
+      class="btn-primary" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Probar
+      MyBusinessPos</a>
   </div>
 
 
