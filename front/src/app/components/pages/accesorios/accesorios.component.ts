@@ -46,7 +46,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     { index: 6, image: 'images/accesorios/pc.png', name: 'PC GHIA Frontier Slim 2.0', description: 'Intel N-Series 4 Núcleos 3.40 GHz, 8 GB RAM, 240 GB SSD - Sin Sistema', price: '$5,500.00 MXN', delay: '' },
     { index: 7, image: 'images/accesorios/monitor3.png', name: 'Monitor GHIA 21.5 pulgadas', description: 'Monitor GHIA MG2225 / 21.5 / VA / FHD / 100Hz / VGA, HDMI / Negro', price: '$1,200.00 MXN', delay: 'delay-100' },
     { index: 8, image: 'images/accesorios/caja.png', name: 'Caja de Rollos Térmicos 76mm', description: 'Caja de 20 rollos térmicos de 76mm compatibles con nuestras impresoras térmicas', price: '$1,500.00 MXN', delay: 'delay-200' },
-    { index: 9, image: 'images/accesorios/basico.png', name: 'Kit Punto de Venta Básico', description: 'Punto de venta completo impulsado por MyBusiness POS', price: '$12,730.00 MXN', delay: 'delay-300' },
+    { index: 9, image: 'images/accesorios/basico.png', name: 'Kit Punto de Venta Básico', description: 'Punto de venta completo impulsado por MyBusiness POS', price: '$12,430.00 MXN', delay: 'delay-300' },
     { index: 10, image: 'images/accesorios/premium.png', name: 'Kit Punto de Venta Premium', description: 'Punto de venta completo impulsado por MyBusiness POS', price: '$19,740.00 MXN', delay: 'delay-300' },
     { index: 11, image: 'images/accesorios/minipc.png', name: 'Mini PC Hyundai', description: 'Mini PC HYUNDAI HTN4020MPC04, Intel Celeron N4020 4GB DDR4 / 128GB SSD Windows 11 Home', price: '$3,350.00 MXN', delay: 'delay-400' },
     { index: 12, image: 'images/accesorios/acteck.png', name: 'Kit Teclado y Mouse', description: 'Kit Acteck Creator MK210, Combo alámbrico multimedia, 105 teclas, Mouse 1000 DPI', price: '$190.00 MXN', delay: 'delay-500' },
@@ -197,7 +197,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     {
       id: 10, name: 'Kit Punto de Venta Básico',
       description: 'Punto de venta completo y listo para operar, impulsado por MyBusiness POS. Incluye equipo esencial y soporte especializado para que empieces a vender desde el primer día, todo en un solo paquete.',
-      price: 12730.00, image: 'images/accesorios/basico1.png',
+      price: 12430.00, image: 'images/accesorios/basico1.png',
       images: ['images/accesorios/minipc.png', 'images/accesorios/quaroni.png', 'images/accesorios/acteck1.png', 'images/accesorios/cajon3.png', 'images/accesorios/next1.png', 'images/accesorios/barras5.png'],
       features: [
         'Mini PC Hyundai HTN4020MPC04 con Windows 11 Home',
@@ -216,7 +216,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       id: 11, name: 'Kit Punto de Venta Premium',
       description: 'Punto de venta completo y listo para operar, impulsado por MyBusiness POS. Incluye equipo esencial y soporte especializado para que empieces a vender desde el primer día, todo en un solo paquete.',
       price: 19740.00, image: 'images/accesorios/premium1.png',
-      images: ['images/accesorios/pc2.png', 'images/accesorios/monitor.png', 'images/accesorios/ecline1.png', 'images/accesorios/barras3.png', 'images/accesorios/cajon5.png'],
+      images: ['images/accesorios/pc3.png', 'images/accesorios/monitor4.png', 'images/accesorios/ecline1.png', 'images/accesorios/barras4.png', 'images/accesorios/cajon4.png'],
       features: [
         'Computadora GHIA Frontier Slim 2.0 (Intel 4 Núcleos @ 3.40 GHz)',
         'Monitor GHIA MG2225 de 21.5" VA FHD 100Hz Frameless',
