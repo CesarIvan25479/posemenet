@@ -42,15 +42,14 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     { index: 2, image: 'images/accesorios/cajon2.png', name: 'Cajón de Efectivo Electrónico', description: 'Cajón automático con seguridad integrada y control USB', price: '$800.00 MXN', delay: 'delay-300' },
     { index: 3, image: 'images/accesorios/rollo.png', name: 'Rollos de papel termico', description: 'Rollo de papel térmico c/u', price: '$80.00 MXN', delay: 'delay-100' },
     { index: 4, image: 'images/accesorios/quaroni1.png', name: 'Monitor Quaroni MQ19-03', description: 'Monitor LED de 19.5" HD, panel TN, HDMI/VGA', price: '$800.00 MXN', delay: 'delay-200' },
-    { index: 5, image: 'images/accesorios/terminal.png', name: 'Terminal de tarjetas', description: 'Sistema completo con software integrado', price: '$450.00 MXN', delay: 'delay-300' },
-    { index: 6, image: 'images/accesorios/pc.png', name: 'PC GHIA Frontier Slim 2.0', description: 'Intel N-Series 4 Núcleos 3.40 GHz, 8 GB RAM, 240 GB SSD - Sin Sistema', price: '$5,500.00 MXN', delay: '' },
-    { index: 7, image: 'images/accesorios/monitor3.png', name: 'Monitor GHIA 21.5 pulgadas', description: 'Monitor GHIA MG2225 / 21.5 / VA / FHD / 100Hz / VGA, HDMI / Negro', price: '$1,200.00 MXN', delay: 'delay-100' },
-    { index: 8, image: 'images/accesorios/caja.png', name: 'Caja de Rollos Térmicos 76mm', description: 'Caja de 20 rollos térmicos de 76mm compatibles con nuestras impresoras térmicas', price: '$1,500.00 MXN', delay: 'delay-200' },
-    { index: 9, image: 'images/accesorios/basico.png', name: 'Kit Punto de Venta Básico', description: 'Punto de venta completo impulsado por MyBusiness POS', price: '$12,430.00 MXN', delay: 'delay-300' },
-    { index: 10, image: 'images/accesorios/premium.png', name: 'Kit Punto de Venta Premium', description: 'Punto de venta completo impulsado por MyBusiness POS', price: '$19,740.00 MXN', delay: 'delay-300' },
-    { index: 11, image: 'images/accesorios/minipc.png', name: 'Mini PC Hyundai', description: 'Mini PC HYUNDAI HTN4020MPC04, Intel Celeron N4020 4GB DDR4 / 128GB SSD Windows 11 Home', price: '$3,350.00 MXN', delay: 'delay-400' },
-    { index: 12, image: 'images/accesorios/acteck.png', name: 'Kit Teclado y Mouse', description: 'Kit Acteck Creator MK210, Combo alámbrico multimedia, 105 teclas, Mouse 1000 DPI', price: '$190.00 MXN', delay: 'delay-500' },
-    { index: 13, image: 'images/accesorios/next.png', name: 'Impresora Térmica Nextep', description: 'Impresora Térmica 80mm USB/RJ11/LAN / 160 MM/S, 203 DPI', price: '$1,700.00 MXN', delay: 'delay-500' },
+    { index: 5, image: 'images/accesorios/pc.png', name: 'PC GHIA Frontier Slim 2.0', description: 'Intel N-Series 4 Núcleos 3.40 GHz, 8 GB RAM, 240 GB SSD - Sin Sistema', price: '$5,500.00 MXN', delay: '' },
+    { index: 6, image: 'images/accesorios/monitor3.png', name: 'Monitor GHIA 21.5 pulgadas', description: 'Monitor GHIA MG2225 / 21.5 / VA / FHD / 100Hz / VGA, HDMI / Negro', price: '$1,200.00 MXN', delay: 'delay-100' },
+    { index: 7, image: 'images/accesorios/caja.png', name: 'Caja de Rollos Térmicos 76mm', description: 'Caja de 20 rollos térmicos de 76mm compatibles con nuestras impresoras térmicas', price: '$1,500.00 MXN', delay: 'delay-200' },
+    { index: 8, image: 'images/accesorios/basico.png', name: 'Kit Punto de Venta Básico', description: 'Punto de venta completo impulsado por MyBusiness POS', price: '$12,430.00 MXN', delay: 'delay-300' },
+    { index: 9, image: 'images/accesorios/premium.png', name: 'Kit Punto de Venta Premium', description: 'Punto de venta completo impulsado por MyBusiness POS', price: '$19,740.00 MXN', delay: 'delay-300' },
+    { index: 10, image: 'images/accesorios/minipc.png', name: 'Mini PC Hyundai', description: 'Mini PC HYUNDAI HTN4020MPC04, Intel Celeron N4020 4GB DDR4 / 128GB SSD Windows 11 Home', price: '$3,350.00 MXN', delay: 'delay-400' },
+    { index: 11, image: 'images/accesorios/acteck.png', name: 'Kit Teclado y Mouse', description: 'Kit Acteck Creator MK210, Combo alámbrico multimedia, 105 teclas, Mouse 1000 DPI', price: '$190.00 MXN', delay: 'delay-500' },
+    { index: 12, image: 'images/accesorios/next.png', name: 'Impresora Térmica Nextep', description: 'Impresora Térmica 80mm USB/RJ11/LAN / 160 MM/S, 203 DPI', price: '$1,700.00 MXN', delay: 'delay-500' },
   ];
 
   // Seccion beneficios — SVGs from Lucide Icons, sanitized in constructor
@@ -163,16 +162,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       moreSpecifications: { 'Contraste': '500:1', 'Conectores': '1x HDMI, 1x VGA', 'Frecuencia': '60 Hz', 'Garantía': '1 año' },
     },
     {
-      id: 6, name: 'Terminal Billpocket nano',
-      description: 'Sistema completo con software integrado. La solución todo-en-uno para gestionar tu punto de venta de manera profesional.',
-      price: 450.00, image: 'images/accesorios/terminal3.png',
-      images: ['images/accesorios/terminal2.png'],
-      features: ['Software de gestión incluido', 'Pantalla táctil de 10 pulgadas', 'Impresora térmica integrada', 'Lector de tarjetas NFC', 'Reportes de ventas en tiempo real'],
-      specifications: { 'Procesador': 'Quad Core 1.8GHz', 'RAM': '2 GB', 'Almacenamiento': '16 GB' },
-      moreSpecifications: { 'Sistema': 'Android 11', 'Garantía': '2 años' },
-    },
-    {
-      id: 7, name: 'PC GHIA Frontier Slim 2.0',
+      id: 6, name: 'PC GHIA Frontier Slim 2.0',
       description: 'Computadora de escritorio ultra compacta con procesador Intel de 4 núcleos con bajo consumo energético.',
       price: 5500.00, image: 'images/accesorios/pc1.png',
       images: ['images/accesorios/pc2.png', 'images/accesorios/pc3.png', 'images/accesorios/mouse1.png', 'images/accesorios/teclado1.png'],
@@ -187,7 +177,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       moreSpecifications: { 'Sistema Operativo': 'Sin Sistema Operativo', 'Gráficos': 'Intel UHD Graphics', 'Puertos': 'USB 3.0, HDMI, VGA, RJ45 Gigabit', 'Factor de Forma': 'Slim (SFF)' },
     },
     {
-      id: 8, name: 'Monitor GHIA 21.5 pulgadas',
+      id: 7, name: 'Monitor GHIA 21.5 pulgadas',
       description: 'Monitor GHIA MG2225 de 21.5 pulgadas con panel VA y una tasa de refresco de 100Hz, visualización fluida y nítida.',
       price: 1200.00, image: 'images/accesorios/monitor.png',
       images: ['images/accesorios/monitor1.png', 'images/accesorios/monitor2.png', 'images/accesorios/monitor4.png'],
@@ -203,7 +193,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       moreSpecifications: { 'Frecuencia': '100Hz', 'Puertos': '1x HDMI, 1x VGA', 'VESA': '75 x 75 mm', 'Garantía': '3 años (Directo con marca)' },
     },
     {
-      id: 9, name: 'Caja de Rollos Térmicos 76mm',
+      id: 8, name: 'Caja de Rollos Térmicos 76mm',
       description: 'Caja de 20 rollos térmicos de 76mm, compatibles con nuestras impresoras térmicas. Alta calidad de impresión.',
       price: 1500.00, image: 'images/accesorios/caja1.png',
       images: ['images/accesorios/caja2.png', 'images/accesorios/caja3.png'],
@@ -212,7 +202,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       moreSpecifications: { 'Presentación': 'Caja con múltiples rollos', 'Calidad': 'Premium' },
     },
     {
-      id: 10, name: 'Kit Punto de Venta Básico',
+      id: 9, name: 'Kit Punto de Venta Básico',
       description: 'Punto de venta completo y listo para operar, impulsado por MyBusiness POS. Incluye equipo esencial y soporte especializado para que empieces a vender desde el primer día, todo en un solo paquete.',
       price: 12430.00, image: 'images/accesorios/basico1.png',
       images: ['images/accesorios/minipc.png', 'images/accesorios/quaroni.png', 'images/accesorios/acteck1.png', 'images/accesorios/cajon3.png', 'images/accesorios/next1.png', 'images/accesorios/barras5.png'],
@@ -229,7 +219,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       functions: ['Ventas de productos y servicios', 'Inventario de productos', 'Compras y control de proveedores', 'Control de clientes', 'Cobranza a clientes', 'Impresión de tickets', 'Ventas de tiempo aire', 'Cobros con tarjeta de débito y crédito'],
     },
     {
-      id: 11, name: 'Kit Punto de Venta Premium',
+      id: 10, name: 'Kit Punto de Venta Premium',
       description: 'Punto de venta completo y listo para operar, impulsado por MyBusiness POS. Incluye equipo esencial y soporte especializado para que empieces a vender desde el primer día, todo en un solo paquete.',
       price: 19740.00, image: 'images/accesorios/premium1.png',
       images: ['images/accesorios/pc3.png', 'images/accesorios/monitor4.png', 'images/accesorios/ecline1.png', 'images/accesorios/barras4.png', 'images/accesorios/cajon4.png'],
@@ -247,7 +237,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     },
 
     {
-      id: 12, name: 'Mini PC Hyundai',
+      id: 11, name: 'Mini PC Hyundai',
       description: 'Mini PC HYUNDAI HTN4020MPC04, una solución compacta y potente diseñada para maximizar la productividad en espacios reducidos. Ideal para puntos de venta, oficinas y señalización digital.',
       price: 3350.00, image: 'images/accesorios/minipc1.png',
       images: ['images/accesorios/minipc2.png', 'images/accesorios/minipc3.png'],
@@ -263,7 +253,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       moreSpecifications: { 'Sistema Operativo': 'Windows 11 Home', 'Conexión': 'Wi-Fi 5 + Bluetooth 4.2', 'Puertos': 'USB 3.0, HDMI, VGA, RJ45 Gigabit', 'Gráficos': 'Intel UHD Graphics 600' },
     },
     {
-      id: 13, name: 'Kit Teclado y Mouse Acteck',
+      id: 12, name: 'Kit Teclado y Mouse Acteck',
       description: 'Kit Acteck Creator MK210, la combinación perfecta para tu espacio de trabajo.',
       price: 190.00, image: 'images/accesorios/acteck1.png',
       images: ['images/accesorios/acteck2.png', 'images/accesorios/acteck3.png'],
@@ -279,7 +269,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       moreSpecifications: { 'Resolución Mouse': '1000 DPI', 'Botones': '2 + Scroll', 'Largo Cable': '1.5 metros', 'Vida Útil Click': '3 millones de clicks', 'Material': 'Plástico ABS' },
     },
     {
-      id: 14, name: 'Impresora Térmica Nextep',
+      id: 13, name: 'Impresora Térmica Nextep',
       description: 'Impresora térmica Nextep de 80mm diseñada para alto rendimiento en puntos de venta.',
       price: 1700.00, image: 'images/accesorios/next1.png',
       images: ['images/accesorios/next2.png', 'images/accesorios/next3.png'],
