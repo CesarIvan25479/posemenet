@@ -14,7 +14,6 @@ export interface Product {
   specifications?: { [key: string]: string };
   moreSpecifications?: { [key: string]: string };
   functions?: string[];
-  stock?: number;
 }
 
 @Component({
