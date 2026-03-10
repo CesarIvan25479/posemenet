@@ -86,7 +86,8 @@
                     <div class="input-group">
                         <label for="nombre">Nombre completo</label>
                         <input id="nombre" type="text" formControlName="nombre" placeholder="Tu nombre" />
-                        <div *ngIf="nombre?.invalid && (nombre?.dirty || nombre?.touched)" class="mt-2 small text-danger">
+                        <div *ngIf="nombre?.invalid && (nombre?.dirty || nombre?.touched)"
+                            class="mt-2 small text-danger">
                             <small *ngIf="nombre?.errors?.['required']">
                                 Campo requerido
                             </small>
@@ -100,7 +101,8 @@
                             <input id="telefono" type="tel" formControlName="telefono" placeholder="10 dígitos"
                                 maxlength="10" />
                         </div>
-                        <div *ngIf="telefono?.invalid && (telefono?.dirty || telefono?.touched)" class="mt-2 small text-danger">
+                        <div *ngIf="telefono?.invalid && (telefono?.dirty || telefono?.touched)"
+                            class="mt-2 small text-danger">
                             <small *ngIf="telefono?.errors?.['required']">
                                 Campo requerido
                             </small>
@@ -128,7 +130,8 @@
                     <label for="mensaje">Mensaje</label>
                     <textarea id="mensaje" rows="5" formControlName="mensaje"
                         placeholder="Escribe tu consulta o comentario..."></textarea>
-                    <div *ngIf="mensaje?.invalid && (mensaje?.dirty || mensaje?.touched)" class="mt-2 small text-danger">
+                    <div *ngIf="mensaje?.invalid && (mensaje?.dirty || mensaje?.touched)"
+                        class="mt-2 small text-danger">
                         <small *ngIf="mensaje?.errors?.['required']">
                             Campo requerido
                         </small>

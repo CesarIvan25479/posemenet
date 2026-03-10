@@ -149,7 +149,12 @@
             <div class="acc-benefits-grid">
                 @for (benefit of benefits; track benefit.name) {
                 <div class="acc-benefit-card reveal fade-up" [ngClass]="benefit.delay">
-                    <div class="acc-benefit-icon" aria-hidden="true">{{ benefit.icon }}</div>
+                    <div class="acc-benefit-icon" aria-hidden="true">
+                        <svg [ngClass]="['benefit-svg', 'anim-' + benefit.anim]" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" [innerHTML]="benefit.svg">
+                        </svg>
+                    </div>
                     <div class="acc-benefit-card-body">
                         <p class="acc-benefit-name">{{ benefit.name }}</p>
                         <p class="acc-benefit-desc">{{ benefit.desc }}</p>

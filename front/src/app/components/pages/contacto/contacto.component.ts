@@ -33,7 +33,7 @@ export class ContactoComponent {
   get correo() { return this.contactForm.get('correo'); }
   get mensaje() { return this.contactForm.get('mensaje'); }
 
-  
+
   onSubmit(): void {
     if (this.contactForm.invalid) {
       this.contactForm.markAllAsTouched();

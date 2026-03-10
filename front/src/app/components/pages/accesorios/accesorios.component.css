@@ -688,7 +688,6 @@ body {
     background: var(--navy-light);
     display: grid;
     place-items: center;
-    font-size: 1.5rem;
     flex-shrink: 0;
     position: relative;
     z-index: 1;
@@ -698,6 +697,90 @@ body {
 .acc-benefit-card:hover .acc-benefit-icon {
     transform: scale(1.12) rotate(-4deg);
     background: var(--navy);
+}
+
+/* ── SVG base ── */
+.benefit-svg {
+    width: 24px;
+    height: 24px;
+    display: block;
+    stroke: rgba(255, 255, 255, .9);
+}
+
+/* ── Keyframes de animación (reutilizables) ── */
+@keyframes ben-bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-7px);
+    }
+
+    60% {
+        transform: translateY(-3px);
+    }
+}
+
+@keyframes ben-pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.28);
+    }
+}
+
+@keyframes ben-wiggle {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    20% {
+        transform: rotate(-15deg);
+    }
+
+    50% {
+        transform: rotate(13deg);
+    }
+
+    75% {
+        transform: rotate(-7deg);
+    }
+}
+
+@keyframes ben-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ── Disparo de animaciones en hover ── */
+.acc-benefit-card:hover .benefit-svg.anim-bounce {
+    animation: ben-bounce 0.6s cubic-bezier(.33, 1, .68, 1);
+}
+
+.acc-benefit-card:hover .benefit-svg.anim-pulse {
+    animation: ben-pulse 0.5s ease-in-out;
+}
+
+.acc-benefit-card:hover .benefit-svg.anim-wiggle {
+    animation: ben-wiggle 0.6s ease-in-out;
+}
+
+.acc-benefit-card:hover .benefit-svg.anim-spin {
+    animation: ben-spin 0.7s linear;
 }
 
 .acc-benefit-card-body {

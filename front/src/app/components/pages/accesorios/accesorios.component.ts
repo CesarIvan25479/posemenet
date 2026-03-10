@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy, ElementRef, ViewChild, AfterViewInit } fr
 import { CommonModule } from '@angular/common';
 import { CircularGalleryApp } from './circular-gallery.service';
 import { ProductModalComponent, Product } from '../../product-modal/product-modal.component';
-import { disableDebugTools } from '@angular/platform-browser';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-accesorios',
@@ -53,12 +53,38 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     { index: 13, image: 'images/accesorios/next.png', name: 'Impresora Térmica Nextep', description: 'Impresora Térmica 80mm USB/RJ11/LAN / 160 MM/S, 203 DPI', price: '$1,700.00 MXN', delay: 'delay-500' },
   ];
 
-  // Seccion beneficios
-  readonly benefits = [
-    { icon: '🔌', name: 'Integración inmediata', desc: 'Todos los equipos funcionan desde el primer enchufe con MyBusinessPOS. Sin configuraciones complicadas.', delay: 'delay-100' },
-    { icon: '🏆', name: 'Calidad probada', desc: 'Hardware seleccionado tras pruebas reales en comercios mexicanos. Rendimiento garantizado en uso continuo.', delay: 'delay-200' },
-    { icon: '💬', name: 'Soporte y capacitación', desc: '10 horas de capacitación y asesoría. Resolvemos cualquier duda sobre instalación, compatibilidad o uso.', delay: 'delay-300' },
-    { icon: '💰', name: 'Precios accesibles', desc: 'Desde $80 MXN por rollo hasta equipos completos. Hay opción para cualquier presupuesto y tamaño de negocio.', delay: 'delay-400' },
+  // Seccion beneficios — SVGs from Lucide Icons, sanitized in constructor
+  benefits: { svg: SafeHtml; name: string; desc: string; delay: string; anim: string }[] = [];
+
+  private readonly rawBenefits = [
+    {
+      // Plug — integración inmediata
+      svg: `<path d="M12 22v-5"/><path d="M9 8V2"/><path d="M15 8V2"/><path d="M18 8H6a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2z"/>`,
+      name: 'Integración inmediata',
+      desc: 'Todos los equipos funcionan desde el primer enchufe con MyBusinessPOS. Sin configuraciones complicadas.',
+      delay: 'delay-100', anim: 'bounce'
+    },
+    {
+      // ShieldCheck — calidad probada
+      svg: `<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/>`,
+      name: 'Calidad probada',
+      desc: 'Hardware seleccionado tras pruebas reales en comercios mexicanos. Rendimiento garantizado en uso continuo.',
+      delay: 'delay-200', anim: 'pulse'
+    },
+    {
+      // Headset — soporte y capacitación
+      svg: `<path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z"/><path d="M21 16v2a4 4 0 0 1-4 4h-5"/>`,
+      name: 'Soporte y capacitación',
+      desc: '10 horas de capacitación y asesoría. Resolvemos cualquier duda sobre instalación, compatibilidad o uso.',
+      delay: 'delay-300', anim: 'wiggle'
+    },
+    {
+      // Banknote — precios accesibles
+      svg: `<rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/><path d="M6 15h.01M10 15h4"/>`,
+      name: 'Precios accesibles',
+      desc: 'Desde $80 MXN por rollo hasta equipos completos. Hay opción para cualquier presupuesto y tamaño de negocio.',
+      delay: 'delay-400', anim: 'spin'
+    },
   ];
 
   // Promo banner
@@ -283,6 +309,13 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       stock: 2
     }
   ];
+  constructor(private sanitizer: DomSanitizer) {
+    this.benefits = this.rawBenefits.map(b => ({
+      ...b,
+      svg: this.sanitizer.bypassSecurityTrustHtml(b.svg)
+    }));
+  }
+
   ngOnInit(): void { }
 
   ngAfterViewInit(): void {
