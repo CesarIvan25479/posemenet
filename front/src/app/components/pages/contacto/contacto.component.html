@@ -1,4 +1,4 @@
-<!-- ===== HEADER ===== -->
+<!--  HEADER  -->
 <header class="hero">
     <div class="hero-carousel">
         <div class="slide active" style="background-image:url('images/portada.png')"></div>
@@ -18,7 +18,7 @@
     </div>
 </header>
 
-<!-- ===== CONTACT CARDS ===== -->
+<!--  CONTACT CARDS  -->
 <section class="contact-info">
     <div class="container">
         <div class="section-label">Canales de atención</div>
@@ -31,7 +31,7 @@
                     <i class="fas fa-phone-alt"></i>
                 </div>
                 <h3>Llámanos</h3>
-                <p class="card-main">713 133 4557 Ext. 33</p>
+                <p class="card-main">713 133 4557</p>
                 <p class="card-desc">Atención personalizada con nuestro equipo de soporte.</p>
                 <a href="tel:7131334557" class="card-link">Llamar ahora <i class="fas fa-arrow-right"></i></a>
             </div>
@@ -51,7 +51,7 @@
                 <div class="card-icon-wrap">
                     <i class="fa-brands fa-whatsapp"></i>
                 </div>
-                <h3>Cobranza</h3>
+                <h3>Envianos un mensaje</h3>
                 <p class="card-main">729 179 2524</p>
                 <p class="card-desc">Consulta tu saldo, pagos o estados de cuenta.</p>
                 <a href="https://wa.me/527291792524" target="_blank" class="card-link">Escribir por WhatsApp <i
@@ -62,16 +62,18 @@
     </div>
 </section>
 
-<!-- ===== FORMULARIO ===== -->
+<!--  FORMULARIO  -->
 <section class="form-section reveal fade-up">
     <div class="container">
         <div class="form-wrapper">
-
             <div class="form-left">
-                <div class="section-label">Formulario de contacto</div>
-                <h2 class="form-title">Cuéntanos en qué<br>podemos ayudarte</h2>
-                <p class="form-desc">Completa el formulario y uno de nuestros asesores se pondrá en contacto contigo a
-                    la brevedad posible.</p>
+                <div class="section-label"> Formulario de contacto</div>
+
+                <h2 class="form-title"> Cuéntanos en qué <br> podemos ayudarte</h2>
+                <p class="form-desc">
+                    Completa el formulario y uno de nuestros asesores
+                    se pondrá en contacto contigo a la brevedad posible.
+                </p>
                 <ul class="form-perks">
                     <li><i class="fas fa-check-circle"></i> Respuesta en menos de 24 horas</li>
                     <li><i class="fas fa-check-circle"></i> Atención personalizada</li>
@@ -79,49 +81,72 @@
                 </ul>
             </div>
 
-            <form class="form-card" (ngSubmit)="onSubmit()" #contactForm="ngForm">
-
+            <form class="form-card" [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
                 <div class="input-row">
                     <div class="input-group">
                         <label for="nombre">Nombre completo</label>
-                        <input id="nombre" type="text" name="nombre" placeholder="Tu nombre" required
-                            autocomplete="name" />
+                        <input id="nombre" type="text" formControlName="nombre" placeholder="Tu nombre" />
+                        <div *ngIf="nombre?.invalid && (nombre?.dirty || nombre?.touched)" class="mt-2 small text-danger">
+                            <small *ngIf="nombre?.errors?.['required']">
+                                Campo requerido
+                            </small>
+                        </div>
                     </div>
 
                     <div class="input-group">
                         <label for="telefono">Teléfono</label>
-                        <div class="phone-input-wrap">
+                        <div class="phone-wrapper">
                             <span class="phone-prefix">+52</span>
-                            <input id="telefono" type="tel" name="telefono" placeholder="10 dígitos" required
-                                maxlength="10" inputmode="numeric" pattern="[0-9]{10}" (keypress)="soloNumeros($event)"
-                                (paste)="pegadoNumeros($event)" autocomplete="tel" />
+                            <input id="telefono" type="tel" formControlName="telefono" placeholder="10 dígitos"
+                                maxlength="10" />
                         </div>
-                        <span class="input-hint">Solo números, sin espacios ni guiones</span>
+                        <div *ngIf="telefono?.invalid && (telefono?.dirty || telefono?.touched)" class="mt-2 small text-danger">
+                            <small *ngIf="telefono?.errors?.['required']">
+                                Campo requerido
+                            </small>
+                            <small *ngIf="telefono?.errors?.['pattern']">
+                                Debe contener 10 dígitos
+                            </small>
+                        </div>
                     </div>
                 </div>
 
                 <div class="input-group">
-                    <label for="email">Correo electrónico</label>
-                    <input id="email" type="email" name="email" placeholder="correo&#64;ejemplo.com" required
-                        autocomplete="email" />
+                    <label for="correo">Correo electrónico</label>
+                    <input id="correo" type="email" formControlName="correo" placeholder="correo@ejemplo.com" />
+                    <div *ngIf="correo?.invalid && (correo?.dirty || correo?.touched)" class="mt-2 small text-danger">
+                        <small *ngIf="correo?.errors?.['required']">
+                            Campo requerido
+                        </small>
+                        <small *ngIf="correo?.errors?.['email']">
+                            Formato de correo inválido
+                        </small>
+                    </div>
                 </div>
 
                 <div class="input-group">
                     <label for="mensaje">Mensaje</label>
-                    <textarea id="mensaje" name="mensaje" placeholder="Escribe tu consulta o comentario..." rows="5"
-                        required></textarea>
-                </div>
+                    <textarea id="mensaje" rows="5" formControlName="mensaje"
+                        placeholder="Escribe tu consulta o comentario..."></textarea>
+                    <div *ngIf="mensaje?.invalid && (mensaje?.dirty || mensaje?.touched)" class="mt-2 small text-danger">
+                        <small *ngIf="mensaje?.errors?.['required']">
+                            Campo requerido
+                        </small>
+                    </div>
 
+                </div>
                 <div class="form-footer">
                     <p class="privacy-note"><i class="fas fa-lock"></i> Tu información está protegida y no será
                         compartida.</p>
-                    <button type="submit" class="btn-submit">
-                        <span>Enviar mensaje</span>
+                    <button type="submit" class="btn-submit" [disabled]="loading">
+                        <span *ngIf="!loading">Enviar mensaje</span>
+                        <span *ngIf="loading">Enviando...</span>
                         <i class="fas fa-paper-plane"></i>
                     </button>
                 </div>
-
             </form>
         </div>
     </div>
+
 </section>
+<ngx-sonner-toaster richColors position="bottom-right" />
