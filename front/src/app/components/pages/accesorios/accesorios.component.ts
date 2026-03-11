@@ -2,12 +2,13 @@ import { Component, OnInit, OnDestroy, ElementRef, ViewChild, AfterViewInit } fr
 import { CommonModule } from '@angular/common';
 import { CircularGalleryApp } from './circular-gallery.service';
 import { ProductModalComponent, Product } from '../../product-modal/product-modal.component';
+import { TimbresModalComponent } from '../../shared/timbres-modal/timbres-modal.component';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-accesorios',
   standalone: true,
-  imports: [CommonModule, ProductModalComponent],
+  imports: [CommonModule, ProductModalComponent, TimbresModalComponent],
   templateUrl: './accesorios.component.html',
   styleUrl: './accesorios.component.css'
 })
@@ -20,9 +21,12 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
 
   galleryTextColor = '#003796';
 
-  // Modal state
+  // Modal state — producto genérico
   isModalOpen = false;
   selectedProduct: Product | null = null;
+
+  // Modal state — Timbres Fiscales
+  isTimbresModalOpen = false;
 
   // Hero checklist items
   readonly checkItems = ['Entrega rápida', 'Adquiere desde sucursal o en línea', 'Compatibles con POS', 'Soporte técnico'];
@@ -52,6 +56,10 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     { index: 12, image: 'images/accesorios/impresora/nextep/next.png', name: 'Impresora Térmica Nextep', description: 'Impresora Térmica 80mm USB/RJ11/LAN / 160 MM/S, 203 DPI', price: '$1,700.00 MXN', delay: 'delay-500' },
     { index: 13, image: 'images/accesorios/terminal/terminal.png', name: 'Terminal Prosepago', description: 'Acepta tarjetas de crédito, débito, vales y NFC. Depósito al siguiente día hábil.', price: '$1,160.00 MXN', delay: 'delay-300' },
     { index: 14, image: 'images/accesorios/sistema/sistema.png', name: 'Software MyBusiness POS', description: 'Software líder de punto de venta en México con facturación CFDI 4.0, control de inventarios y más.', price: '$3,790.00 MXN', delay: 'delay-300' },
+    { index: 15, image: 'images/accesorios/monitor/acteck/acteck.png', name: 'Monitor Acteck CB185', description: 'Monitor LED 18.5" HD, panel TN, 60 Hz, 5 ms, HDMI/VGA, VESA 75 mm. Modelo AC-944526.', price: '$900.00 MXN', delay: 'delay-300' },
+    { index: 16, image: 'images/accesorios/pc/vorago/vorago.png', name: 'PC Vorago Slimbay 5', description: 'Computadora compacta Slim, Celeron N4020, 8 GB RAM, 240 GB SSD, sin OS. Modelo SB5 CLN N4020-NOS-13.', price: '$4,000.00 MXN', delay: 'delay-300' },
+    { index: 17, image: 'images/accesorios/timbres/timbres1.png', name: 'Timbres Fiscales', description: 'Paquetes de Timbres Fiscales. Selecciona el paquete que mejor se adapte a tu negocio paquetes desde.', price: '$465.16 MXN', delay: 'delay-300' },
+
   ];
 
   // Seccion beneficios — SVGs from Lucide Icons, sanitized in constructor
@@ -215,7 +223,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
         'Impresora Térmica Nextep de 80mm (USB/LAN/RJ11)',
         'Lector de códigos de barras GHIA GSCBI 1D con Base',
         'Cajón de dinero GHIA GCDS81 de acero reforzado',
-        '3 horas de capacitación y soporte técnico especializado'
+        '2 horas de capacitación y soporte técnico especializado'
       ],
       specifications: { 'Computadora': 'Mini PC Hyundai HTN4020MPC04 4GB/128GB', 'Monitor': 'Quaroni MQ19-03 19.5" HD', 'Periféricos': 'Kit Acteck Creator MK210', 'Impresora': 'Nextep Térmica 80mm (160 mm/s)', 'Lector': 'GHIA GSCBI 1D CCD con Base', 'Cajón': 'GHIA GCDS81 (5 billetes / 8 monedas)', 'Sistema Operativo': 'Windows 11 Home', 'Software': 'MyBusiness POS v24' },
       functions: ['Ventas de productos y servicios', 'Inventario de productos', 'Compras y control de proveedores', 'Control de clientes', 'Cobranza a clientes', 'Impresión de tickets', 'Ventas de tiempo aire', 'Cobros con tarjeta de débito y crédito'],
@@ -320,6 +328,51 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       specifications: { 'Sistema Operativo': 'Windows 10 / Windows 11', 'Procesador': 'Intel Core i3 o superior (2.0 GHz+)', 'RAM': '4 GB mínimo (8 GB recomendado)', 'Almacenamiento': '10 GB libres (SSD recomendado)' },
       moreSpecifications: { 'Base de Datos': 'Microsoft SQL Server (incluye Express)', 'Arquitectura': 'Cliente-Servidor 64 bits', 'Compatibilidad': 'Impresoras, escáneres, básculas y cajones', 'Licencia': 'Vitalicia por equipo' },
     },
+    {
+      id: 16, name: 'Monitor Acteck Captive Brite CB185',
+      description: 'Monitor LED de 18.5 pulgadas con panel TN y resolución HD, diseñado para ofrecer una visualización clara y cómoda en estaciones de trabajo y puntos de venta.',
+      price: 900.00, image: 'images/accesorios/monitor/acteck/acteck1.png',
+      images: ['images/accesorios/monitor/acteck/acteck2.png', 'images/accesorios/monitor/acteck/acteck3.png'],
+      features: [
+        'Pantalla plana de 18.5 pulgadas con relación de aspecto 16:9',
+        'Panel TN con tiempo de respuesta de 5 ms para imagen fluida',
+        'Frecuencia de actualización de 60 Hz sin parpadeo',
+        'Doble entrada de video: HDMI y VGA (compatibilidad universal)',
+        'Soporte de montaje VESA 75 x 75 mm (pared o brazo articulado)',
+        'Brillo de 200 cd/m² y contraste 600:1 para imagen nítida',
+        'Diseño compacto en color negro mate profesional'
+      ],
+      specifications: { 'Modelo': 'Captive Brite CB185 (AC-944526)', 'Tamaño': '18.5 pulgadas (16:9)', 'Resolución': 'HD (1366 x 768 píxeles)', 'Panel': 'TN (Twisted Nematic)' },
+      moreSpecifications: { 'Frecuencia': '60 Hz', 'Tiempo de Respuesta': '5 ms', 'Conectores': '1x HDMI, 1x VGA', 'Brillo': '200 cd/m²', 'VESA': '75 x 75 mm' },
+    },
+    {
+      id: 17, name: 'PC Vorago Slimbay 5',
+      description: 'Computadora de escritorio compacta en formato Slim, ideal para oficina, hogar y puntos de venta.',
+      price: 4000.00, image: 'images/accesorios/pc/vorago/vorago1.png',
+      images: ['images/accesorios/pc/vorago/vorago2.png', 'images/accesorios/pc/vorago/vorago3.png'],
+      features: [
+        'Procesador Intel Celeron N4020 (hasta 2.8 GHz Turbo, 2 núcleos)',
+        '8 GB de RAM DDR4 expandible para multitarea fluida',
+        'Almacenamiento SSD de 240 GB SATA III para arranque rápido',
+        'Diseño Slim ultra-delgado que ahorra espacio en el escritorio',
+        'Salidas de video duales HDMI y VGA para uno o dos monitores',
+        'Conectividad Gigabit Ethernet RJ45 para red de alta velocidad',
+        'Puertos USB-C, USB 3.0 y USB 2.0 frontales y posteriores'
+      ],
+      specifications: { 'Modelo': 'SB5 CLN N4020-NOS-13 (CPUVC05220)', 'Procesador': 'Intel Celeron N4020 (hasta 2.8 GHz)', 'RAM': '8 GB DDR4', 'Almacenamiento': '240 GB SSD SATA III' },
+      moreSpecifications: { 'Gráficos': 'Intel UHD Graphics 600', 'Puertos Video': 'HDMI + VGA', 'Conectividad': 'Ethernet Gigabit RJ45', 'Sistema Operativo': 'Sin sistema operativo (NOS)', 'Factor de Forma': 'Slim Tower' },
+    },
+    {
+      id: 18, name: 'Timbres Fiscales',
+      description: '',
+      price: 0.00, image: '',
+      images: [''],
+      features: [
+        'Facturación electrónica CFDI 4.0 nativa y simplificada'
+      ],
+      specifications: { 'Paquete': '100 Timbres Fiscales', 'Precio': '$465.00' },
+      moreSpecifications: { 'Vigencia': 'Hasta terminar' },
+    },
 
   ];
   constructor(private sanitizer: DomSanitizer) {
@@ -361,13 +414,22 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   openModal(product: Product): void {
-    this.selectedProduct = product;
-    this.isModalOpen = true;
+    if (product?.id === 18) {
+      // Abrir modal especial de Timbres Fiscales
+      this.isTimbresModalOpen = true;
+    } else {
+      this.selectedProduct = product;
+      this.isModalOpen = true;
+    }
   }
 
   closeModal(): void {
     this.isModalOpen = false;
     this.selectedProduct = null;
+  }
+
+  closeTimbresModal(): void {
+    this.isTimbresModalOpen = false;
   }
 
   onContact(product: Product): void {

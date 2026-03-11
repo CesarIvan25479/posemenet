@@ -1,0 +1,63 @@
+<!-- ===== MODAL TIMBRES FISCALES ===== -->
+<div class="tm-overlay" [class.tm-overlay--open]="isOpen" (click)="closeModal()">
+  <div class="tm-modal" [class.tm-modal--open]="isOpen" (click)="$event.stopPropagation()">
+
+    <!-- Header del modal -->
+    <div class="tm-header">
+      <div>
+        <h2 class="tm-title">Paquetes de Timbres Fiscales</h2>
+        <p class="tm-subtitle">Selecciona el paquete que mejor se adapte a tu negocio</p>
+      </div>
+      <button class="tm-close" (click)="closeModal()" aria-label="Cerrar modal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M18 6L6 18M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Contenido -->
+    <div class="tm-body">
+
+      <!-- Selector de paquetes -->
+      <div class="tm-packages">
+        <p class="tm-packages-label">Elige tu paquete:</p>
+        <div class="tm-packages-grid">
+          <button *ngFor="let pkg of packages" class="tm-pkg-card"
+            [class.tm-pkg-card--active]="selectedPackage.id === pkg.id"
+            [class.tm-pkg-card--highlight]="pkg.highlight"
+            (click)="selectPackage(pkg)">
+            <span *ngIf="pkg.badge" class="tm-pkg-badge">{{ pkg.badge }}</span>
+            <span class="tm-pkg-qty">{{ pkg.quantity }}</span>
+            <span class="tm-pkg-unit">timbres</span>
+            <span class="tm-pkg-price">{{ pkg.price }}</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Detalle del paquete seleccionado -->
+      <div class="tm-detail">
+        <div class="tm-detail-left">
+          <div class="tm-detail-circle">
+            <span class="tm-detail-num">{{ selectedPackage.quantity }}</span>
+            <span class="tm-detail-word">timbres</span>
+            <span class="tm-detail-word">fiscales</span>
+          </div>
+        </div>
+        <div class="tm-detail-right">
+          <h3 class="tm-detail-title">{{ selectedPackage.title }}</h3>
+          <p class="tm-detail-desc">{{ selectedPackage.description }}</p>
+          <div class="tm-detail-price-row">
+            <span class="tm-detail-price">{{ selectedPackage.price }}</span>
+            <span class="tm-detail-price-note">pago único</span>
+          </div>
+          <a [href]="'https://api.whatsapp.com/send?phone=5217131334557&text=Hola%2C%20quiero%20adquirir%20el%20' + selectedPackage.title + '%20por%20' + selectedPackage.price"
+            target="_blank" rel="noopener noreferrer" class="tm-btn-buy">
+            <i class="fas fa-shopping-cart"></i> Comprar ahora
+          </a>
+          <p class="tm-detail-legal">✦ Precio con IVA incluido · Facturas CFDI 4.0 válidas ante el SAT</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
