@@ -337,7 +337,7 @@
 
 /* Left side */
 .form-left {
-    position: sticky;
+    position: static;
     top: 100px;
 }
 
