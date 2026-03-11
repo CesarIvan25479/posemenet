@@ -63,13 +63,13 @@
 /* Botón cerrar */
 .tm-close {
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 10px;
+    right: 12px;
     background: #003796;
     color: white;
     border: none;
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
     cursor: pointer;
     display: flex;
@@ -86,8 +86,8 @@
 }
 
 .tm-close svg {
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
     stroke: white;
     stroke-width: 2.5;
 }
@@ -96,24 +96,24 @@
 .tm-header {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    padding: 25px 25px 0 25px;
+    gap: 0.75rem;
+    padding: 14px 20px 14px 20px;
     background: transparent;
-    border-radius: 0;
+    border-bottom: 1px solid #eef0f6;
     position: static;
 }
 
 .tm-title {
-    font-size: 1.4rem;
+    font-size: 1.05rem;
     font-weight: 700;
     color: #003796;
     margin: 0;
 }
 
 .tm-subtitle {
-    font-size: 0.85rem;
-    color: #666;
-    margin: 0.15rem 0 0;
+    font-size: 0.78rem;
+    color: #888;
+    margin: 0.1rem 0 0;
 }
 
 /* Body */

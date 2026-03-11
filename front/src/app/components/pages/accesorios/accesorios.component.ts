@@ -58,7 +58,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     { index: 14, image: 'images/accesorios/sistema/sistema.png', name: 'Software MyBusiness POS', description: 'Software líder de punto de venta en México con facturación CFDI 4.0, control de inventarios y más.', price: '$3,790.00 MXN', delay: 'delay-300' },
     { index: 15, image: 'images/accesorios/monitor/acteck/acteck.png', name: 'Monitor Acteck CB185', description: 'Monitor LED 18.5" HD, panel TN, 60 Hz, 5 ms, HDMI/VGA, VESA 75 mm. Modelo AC-944526.', price: '$900.00 MXN', delay: 'delay-300' },
     { index: 16, image: 'images/accesorios/pc/vorago/vorago.png', name: 'PC Vorago Slimbay 5', description: 'Computadora compacta Slim, Celeron N4020, 8 GB RAM, 240 GB SSD, sin OS. Modelo SB5 CLN N4020-NOS-13.', price: '$4,000.00 MXN', delay: 'delay-300' },
-    { index: 17, image: 'images/accesorios/timbres/timbres1.png', name: 'Timbres Fiscales', description: 'Paquetes de Timbres Fiscales. Selecciona el paquete que mejor se adapte a tu negocio paquetes desde.', price: '$465.16 MXN', delay: 'delay-300' },
+    { index: 17, image: 'images/accesorios/timbres/timbres1.png', name: 'Timbres Fiscales', description: 'Paquetes de Timbres Fiscales desdé.', price: '$465.16 MXN', delay: 'delay-300' },
 
   ];
 
