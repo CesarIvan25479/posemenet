@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CircularGalleryApp } from './circular-gallery.service';
+import { CircularGalleryApp } from '../../../services/circular-gallery.service';
 import { ProductModalComponent, Product } from '../../product-modal/product-modal.component';
 import { TimbresModalComponent } from '../../shared/timbres-modal/timbres-modal.component';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
