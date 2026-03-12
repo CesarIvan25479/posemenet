@@ -1,125 +1,15 @@
-<header>
-  <div class="hero-blob"></div>
-  <div class="hero-dots"></div>
 
-  <!-- IZQUIERDA -->
-  <div class="hero-left hero-reveal">
-    <div class="hero-badge"> emenetPos — Facturación Electrónica</div>
+<app-header-modal
+  badge="emenetPOS — Facturación Electrónica"
+  titulo="La Facturación más fácil y segura de México"
+  descripcion="Genera facturas CFDI 100% válidas ante el SAT."
+  imagen="images/facturacion/puntoventa.png"
+  [features]="features"
+  [floatCards]="floatCards">
+</app-header-modal>
 
-    <h1 class="hero-h1">
-      La <span class="accent">Facturación</span><br>
-      más fácil y segura<br>
-      de México
-    </h1>
 
-    <p class="hero-sub">
-      Genera facturas CFDI 100% válidas ante el SAT.
-      Envía por email, controla tu repertorio y cumple con todas las obligaciones fiscales.
-    </p>
 
-    <div class="hero-features">
-      <div class="feature-item">
-        <span class="check">
-          <svg viewBox="0 0 12 12">
-            <polyline points="2,6 5,9 10,3" />
-          </svg>
-        </span>
-        Facturas CFDI válidas ante el SAT
-      </div>
-      <div class="feature-item">
-        <span class="check">
-          <svg viewBox="0 0 12 12">
-            <polyline points="2,6 5,9 10,3" />
-          </svg>
-        </span>
-        Envío automático por email
-      </div>
-      <div class="feature-item">
-        <span class="check">
-          <svg viewBox="0 0 12 12">
-            <polyline points="2,6 5,9 10,3" />
-          </svg>
-        </span>
-        Repertorio de clientes y productos
-      </div>
-      <div class="feature-item">
-        <span class="check">
-          <svg viewBox="0 0 12 12">
-            <polyline points="2,6 5,9 10,3" />
-          </svg>
-        </span>
-        Reportes y contabilidad simplificada
-      </div>
-    </div>
-
-    <div class="hero-actions">
-      <a class="btn-hero-primary" [routerLink]="'/contacto'"><i class="fa-brands fa-space-awesome"></i> Probar Ahora</a>
-
-      <a href="https://api.whatsapp.com/send?phone=5217131334557&text=Hola%20buen%20d%C3%ADa%2C%20necesito%20informaci%C3%B3n%20sobre%20emenetPOS"
-        class="btn-hero-ghost" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-handshake"></i>
-        Contáctanos</a>
-    </div>
-
-    <div class="hero-social-proof">
-      <div class="avatars">
-        <span>MV</span>
-        <span>CI</span>
-        <span>RC</span>
-      </div>
-      <div class="social-text">
-        <strong>+2,000 negocios</strong> ya usan emenetPOS<br>en todo México
-      </div>
-    </div>
-  </div>
-
-  <!-- DERECHA -->
-  <div class="hero-right hero-reveal" style="animation-delay: 0.3s">
-    <!-- Floating card timbres -->
-    <div class="float-card fc-ventas">
-      <div class="float-card-icon">🎫</div>
-      <div class="float-card-text">
-        <strong>Desde $465</strong>
-        <span>paquete de 100 timbres</span>
-      </div>
-    </div>
-
-    <!-- Floating card CFDI -->
-    <div class="float-card fc-ticket">
-      <div class="float-card-icon">🧾</div>
-      <div class="float-card-text">
-        <strong>Factura CFDI</strong>
-        <span>emitida en segundos</span>
-      </div>
-    </div>
-
-    <div class="mockup-wrapper">
-      <div class="screen-mockup">
-
-        <!-- MARCO + PANTALLA -->
-        <div class="screen-frame">
-          <div class="screen-cam"></div>
-          <div class="screen-display">
-            <img src="images/facturacion/puntoventa.png" alt="Facturación Electrónica emenetPos">
-          </div>
-        </div>
-
-        <!-- BASE DEL MONITOR -->
-        <div class="screen-foot">
-          <div class="screen-neck"></div>
-          <div class="screen-stand"></div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <!-- Wave -->
-  <div class="hero-wave">
-    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#ffffff" />
-    </svg>
-  </div>
-</header>
 <br>
 <!-- ===== HERO SECTION ===== -->
 <section class="facturacion-hero-section reveal fade-up">
