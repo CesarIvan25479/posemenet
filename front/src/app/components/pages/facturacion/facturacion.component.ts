@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { HeaderModalComponent } from "../../header-modal/header-modal.component";
+import { TimbresModalComponent } from '../../shared/timbres-modal/timbres-modal.component';
 
 export interface TimbrePackage {
   id: string;
@@ -17,7 +18,7 @@ export interface TimbrePackage {
 @Component({
   selector: 'app-tiempo-aire',
   standalone: true,
-  imports: [RouterLink, CommonModule, HeaderModalComponent],
+  imports: [RouterLink, CommonModule, HeaderModalComponent, TimbresModalComponent],
   templateUrl: './facturacion.component.html',
   styleUrl: './facturacion.component.css'
 })
