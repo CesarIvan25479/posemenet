@@ -53,11 +53,10 @@
                 </div>
                 <h3>Envianos un mensaje</h3>
                 <p class="card-main">729 179 2524</p>
-                <p class="card-desc">Consulta tu saldo, pagos o estados de cuenta.</p>
+                <p class="card-desc">Solicita informacion sobre EmenetPOS.</p>
                 <a href="https://wa.me/527291792524" target="_blank" class="card-link">Escribir por WhatsApp <i
                         class="fas fa-arrow-right"></i></a>
             </div>
-
         </div>
     </div>
 </section>
@@ -81,13 +80,12 @@
                 </ul>
             </div>
 
-            <form class="form-card" [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+            <form class="form-card" [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate autocomplete="off">
                 <div class="input-row">
                     <div class="input-group">
                         <label for="nombre">Nombre completo</label>
-                        <input id="nombre" type="text" formControlName="nombre" placeholder="Tu nombre" />
-                        <div *ngIf="nombre?.invalid && (nombre?.dirty || nombre?.touched)"
-                            class="mt-2 small text-danger">
+                        <input id="nombre" type="text" formControlName="nombre" placeholder="Tu nombre" autocomplete="off"/>
+                        <div *ngIf="nombre?.invalid && (nombre?.dirty || nombre?.touched)" class="mt-2 small text-danger">
                             <small *ngIf="nombre?.errors?.['required']">
                                 Campo requerido
                             </small>
@@ -99,7 +97,7 @@
                         <div class="phone-wrapper">
                             <span class="phone-prefix">+52</span>
                             <input id="telefono" type="tel" formControlName="telefono" placeholder="10 dígitos"
-                                maxlength="10" />
+                                maxlength="10" autocomplete="off" />
                         </div>
                         <div *ngIf="telefono?.invalid && (telefono?.dirty || telefono?.touched)"
                             class="mt-2 small text-danger">
@@ -115,7 +113,7 @@
 
                 <div class="input-group">
                     <label for="correo">Correo electrónico</label>
-                    <input id="correo" type="email" formControlName="correo" placeholder="correo@ejemplo.com" />
+                    <input id="correo" type="email" formControlName="correo" placeholder="correo@ejemplo.com" autocomplete="off"/>
                     <div *ngIf="correo?.invalid && (correo?.dirty || correo?.touched)" class="mt-2 small text-danger">
                         <small *ngIf="correo?.errors?.['required']">
                             Campo requerido
