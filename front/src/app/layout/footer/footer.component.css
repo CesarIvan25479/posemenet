@@ -40,7 +40,8 @@ a {
 }
 
 .content-foo a:hover {
-    color: #cea841; /* Gold highlight */
+    color: #a4c4ffb9;
+    /* Gold highlight */
 }
 
 .content-foo p {
@@ -74,6 +75,7 @@ a {
         grid-template-columns: 1fr;
         text-align: center;
     }
+
     .footer-logo {
         order: -1;
         margin-bottom: var(--spacing-lg);
