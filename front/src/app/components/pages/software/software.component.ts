@@ -24,7 +24,7 @@ export class SoftwareComponent implements AfterViewInit, OnDestroy {
     description: 'Punto de venta completo y listo para operar, impulsado por MyBusiness POS. Incluye equipo esencial y soporte especializado para que empieces a vender desde el primer día, todo en un solo paquete.',
     price: 19740,
     image: 'images/software/paquete.png',
-    images: ['images/accesorios/pc2.png', 'images/accesorios/monitor.png', 'images/accesorios/ecline1.png', 'images/accesorios/barras3.png', 'images/accesorios/cajon5.png'],
+    images: ['images/accesorios/pc/ghia/pc3.png', 'images/accesorios/monitor/ghia/monitor4.png', 'images/accesorios/impresora/ecline/ecline1.png', 'images/accesorios/lector/ghia/barras4.png', 'images/accesorios/cajon/ghia/cajon4.png'],
     features: [
       'Computadora GHIA Frontier Slim 2.0 (Intel 4 Núcleos @ 3.40 GHz)',
       'Monitor GHIA MG2225 de 21.5" VA FHD 100Hz Frameless',
