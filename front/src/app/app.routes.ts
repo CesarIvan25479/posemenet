@@ -21,6 +21,6 @@ export const routes: Routes = [{
     {path: "modificaciones", component: ModificacionesComponent,},
     {path: "contacto", component: ContactoComponent},
     {path: "accesorios", component: AccesoriosComponent},
-    {path: "giros", component: GirosComponent}
+    {path: "giros", component: GirosComponent},
   ]
 }];
