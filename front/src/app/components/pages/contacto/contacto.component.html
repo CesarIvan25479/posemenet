@@ -1,9 +1,9 @@
 <!--  HEADER  -->
 <header class="hero">
     <div class="hero-carousel">
-        <div class="slide active" style="background-image:url('images/portada.png')"></div>
-        <div class="slide" style="background-image:url('images/portada2.png')"></div>
-        <div class="slide" style="background-image:url('images/img3.png')"></div>
+        <div class="slide active" style="background-image:url('images/contacto/portada.png')"></div>
+        <div class="slide" style="background-image:url('images/contacto/portada2.png')"></div>
+        <div class="slide" style="background-image:url('images/home/img3.webp')"></div>
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-content hero-reveal">
@@ -84,8 +84,10 @@
                 <div class="input-row">
                     <div class="input-group">
                         <label for="nombre">Nombre completo</label>
-                        <input id="nombre" type="text" formControlName="nombre" placeholder="Tu nombre" autocomplete="off"/>
-                        <div *ngIf="nombre?.invalid && (nombre?.dirty || nombre?.touched)" class="mt-2 small text-danger">
+                        <input id="nombre" type="text" formControlName="nombre" placeholder="Tu nombre"
+                            autocomplete="off" />
+                        <div *ngIf="nombre?.invalid && (nombre?.dirty || nombre?.touched)"
+                            class="mt-2 small text-danger">
                             <small *ngIf="nombre?.errors?.['required']">
                                 Campo requerido
                             </small>
@@ -113,7 +115,8 @@
 
                 <div class="input-group">
                     <label for="correo">Correo electrónico</label>
-                    <input id="correo" type="email" formControlName="correo" placeholder="correo@ejemplo.com" autocomplete="off"/>
+                    <input id="correo" type="email" formControlName="correo" placeholder="correo@ejemplo.com"
+                        autocomplete="off" />
                     <div *ngIf="correo?.invalid && (correo?.dirty || correo?.touched)" class="mt-2 small text-danger">
                         <small *ngIf="correo?.errors?.['required']">
                             Campo requerido

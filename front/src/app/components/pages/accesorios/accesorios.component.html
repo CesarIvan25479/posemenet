@@ -62,7 +62,7 @@
             <!-- Chips flotantes -->
             @for (chip of heroChips; track chip.label) {
             <div class="acc-chip" [ngClass]="chip.pos">
-                <span class="acc-chip-icon">{{ chip.icon }}</span>
+                <span class="acc-chip-icon"><i [class]="chip.icon" [style.color]="chip.color"></i></span>
                 {{ chip.label }}
             </div>
             }

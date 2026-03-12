@@ -33,10 +33,10 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
 
   // Hero floating chips
   readonly heroChips = [
-    { icon: '⚡', label: 'Plug & Play', pos: 'acc-chip--tl' },
-    { icon: '🛡️', label: 'Seguridad', pos: 'acc-chip--tr' },
-    { icon: '📦', label: 'Envío rápido', pos: 'acc-chip--bl' },
-    { icon: '✅', label: 'Certificado', pos: 'acc-chip--br' }
+    { icon: 'fa-solid fa-bolt', label: 'Plug & Play', pos: 'acc-chip--tl', color: 'rgb(255, 183, 0)' },
+    { icon: 'fa-solid fa-shield-halved', label: 'Seguridad', pos: 'acc-chip--tr', color: 'rgb(0, 157, 255)' },
+    { icon: 'fa-solid fa-truck-fast', label: 'Envío rápido', pos: 'acc-chip--bl', color: 'rgb(255, 94, 0)' },
+    { icon: 'fa-solid fa-circle-check', label: 'Certificado', pos: 'acc-chip--br', color: 'rgb(0, 181, 30)' }
   ];
 
   // Product cards for grid display
