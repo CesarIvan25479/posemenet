@@ -15,6 +15,7 @@ export class HeaderModalComponent {
   @Input() titulo: string = '';
   @Input() descripcion: string = '';
   @Input() imagen: string = '';
+  @Input() imagenBackground: string = "";
   @Input() features: string[] = [];
   @Input() floatCards: FloatCard[] = [];
 

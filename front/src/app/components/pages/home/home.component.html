@@ -1,124 +1,15 @@
-<!-- ===== HEADER ===== -->
-<header>
-  <!-- Imagen de fondo -->
-  <div class="hero-bg">
-    <img src="images/home/img3.webp" alt="Tienda de ropa">
-  </div>
-  <div class="hero-blob"></div>
-  <div class="hero-dots"></div>
 
-  <!-- IZQUIERDA -->
-  <div class="hero-left">
-    <div class="hero-badge"> emenetPos — Distribuidor autorizado</div>
-
-    <h1 class="hero-h1">
-      El <span class="accent"> Punto de Venta</span><br>
-      más fácil de usar<br>
-      de México
-    </h1>
-
-    <p class="hero-sub">
-      Gestiona ventas, inventario y clientes desde cualquier dispositivo.
-      Emite facturas CFDI, controla tu caja y haz crecer tu negocio.
-    </p>
+<app-header-modal
+  badge="emenetPOS — Distribuidor autorizado"
+  titulo="El punto de venta más fácil de usar en México"
+  descripcion="Gestiona ventas, inventarios y clientes desde cualquier dispositivo, haz crecer tu negocio"
+  imagen="images/home/puntoventa.png"
+  imagenBackground="images/home/img3.webp"
+  [features]="features"
+  [floatCards]="floatCards">
+</app-header-modal>
 
 
-    <div class="hero-features">
-
-      <div class="feature-item">
-        <span class="check">
-          <svg viewBox="0 0 12 12">
-            <polyline points="2,6 5,9 10,3" />
-          </svg>
-        </span>
-        Controla el efectivo de tu caja
-      </div>
-      <div class="feature-item">
-        <span class="check">
-          <svg viewBox="0 0 12 12">
-            <polyline points="2,6 5,9 10,3" />
-          </svg>
-        </span>
-        Emite facturas CFDI de tus ventas
-      </div>
-      <div class="feature-item">
-        <span class="check">
-          <svg viewBox="0 0 12 12">
-            <polyline points="2,6 5,9 10,3" />
-          </svg>
-        </span>
-        Reportes e inventario en tiempo real
-      </div>
-    </div>
-
-    <div class="hero-actions">
-      <a class="btn-hero-primary" [routerLink]="'/contacto'"><i class="fa-brands fa-space-awesome"></i> Probar Ahora</a>
-
-      <a href="https://api.whatsapp.com/send?phone=5217131334557&text=Hola%20buen%20d%C3%ADa%2C%20necesito%20informaci%C3%B3n%20sobre%20emenetPOS"
-        class="btn-hero-ghost" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-handshake"></i>
-        Contáctanos</a>
-    </div>
-
-    <div class="hero-social-proof">
-      <div class="avatars">
-        <span>MV</span>
-        <span>CI</span>
-        <span>RC</span>
-      </div>
-      <div class="social-text">
-        <strong>+2,000 negocios</strong> ya usan emenetPOS<br>en todo México
-      </div>
-    </div>
-  </div>
-
-  <!-- DERECHA -->
-  <div class="hero-right">
-    <!-- Floating card ventas -->
-    <div class="float-card fc-ventas">
-      <div class="float-card-icon"><i class="fa-solid fa-chart-line" style="color: rgb(249, 0, 0);"></i></div>
-      <div class="float-card-text">
-        <strong>+34% ventas</strong>
-        <span>este mes vs anterior</span>
-      </div>
-    </div>
-
-    <!-- Floating card ticket -->
-    <div class="float-card fc-ticket">
-      <div class="float-card-icon"><i class="fa-solid fa-book-atlas" style="color: rgb(0, 0, 0);"></i></div>
-      <div class="float-card-text">
-        <strong>Factura CFDI</strong>
-        <span>emitida correctamente</span>
-      </div>
-    </div>
-
-    <div class="mockup-wrapper">
-      <div class="screen-mockup">
-
-        <!-- MARCO + PANTALLA -->
-        <div class="screen-frame">
-          <div class="screen-cam"></div>
-          <div class="screen-display">
-            <img src="images/home/puntoventa.png" alt="MyBusiness POS V24">
-          </div>
-        </div>
-
-        <!-- BASE DEL MONITOR -->
-        <div class="screen-foot">
-          <div class="screen-neck"></div>
-          <div class="screen-stand"></div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <!-- Wave -->
-  <div class="hero-wave">
-    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#ffffff" />
-    </svg>
-  </div>
-</header>
 
 <!-- ===== SOBRE NOSOTROS SECTION ===== -->
 <section class="contenedor sobre-nosotros reveal fade-up">
