@@ -1,101 +1,13 @@
 <!-- ===== HEADER ===== -->
-<header>
-    <div class="hero-blob"></div>
-    <div class="hero-dots"></div>
+<app-header-modal
+  badge="emenetPOS — Recargas en un mismo lugar"
+  titulo="Tus recargas en un solo software al instante"
+  descripcion="Aumenta tus ganancias ofreciendo recargas, con un punto de venta completo y fácil de usar."
+  imagen="images/tiempoaire/puntoventa.png"
+  [features]="features"
+  [floatCards]="floatCards">
+</app-header-modal>
 
-    <!-- IZQUIERDA -->
-    <div class="hero-left hero-reveal">
-        <div class="hero-badge"> MyBusinessPos — Recargas en un mismo lugar</div>
-
-        <h1 class="hero-h1">
-            Tus<span class="accent">&nbsp; Recargas</span><br>
-            en un solo software al instante
-        </h1>
-
-        <p class="hero-sub">
-            Aumenta tus ganancias ofreciendo recargas, con un punto de venta completo y fácil de usar.
-        </p>
-        <div class="hero-features">
-            <div class="feature-item">
-                <span class="check">
-                    <svg viewBox="0 0 12 12">
-                        <polyline points="2,6 5,9 10,3" />
-                    </svg>
-                </span>
-                Realiza recargas y gana comisiones al instante
-            </div>
-        </div>
-
-        <div class="hero-actions">
-
-            <a class="btn-hero-primary" [routerLink]="'/contacto'"><i class="fa-brands fa-space-awesome"></i> Probar
-                Ahora</a>
-            <a href="https://api.whatsapp.com/send?phone=5217131334557&text=Hola%20buen%20d%C3%ADa%2C%20necesito%20informaci%C3%B3n%20sobre%20emenetPOS"
-                class="btn-hero-ghost" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-handshake"></i>
-                &nbsp; Contáctanos</a>
-        </div>
-
-        <div class="hero-social-proof">
-            <div class="avatars">
-                <span>MV</span>
-                <span>CI</span>
-                <span>RC</span>
-            </div>
-            <div class="social-text">
-                <strong>+2,000 negocios</strong> ya usan emenetPOS<br>en todo México
-            </div>
-        </div>
-    </div>
-
-    <!-- DERECHA -->
-    <div class="hero-right hero-reveal" style="animation-delay: 0.3s">
-        <!-- Floating card ventas -->
-        <div class="float-card fc-ventas">
-            <div class="float-card-icon"><i class="fa-solid fa-percent" style="color: rgb(249, 0, 0);"></i></div>
-            <div class="float-card-text">
-                <strong>+5% comisiones</strong>
-                <span>Todas las operadoras</span>
-            </div>
-        </div>
-
-        <!-- Floating card ticket -->
-        <div class="float-card fc-ticket">
-            <div class="float-card-icon"><i class="fa-solid fa-hand-holding-dollar" style="color: rgb(0, 169, 25);"></i>
-            </div>
-            <div class="float-card-text">
-                <strong>Pagos de servicio</strong>
-                <span>Todo en un solo lugar</span>
-            </div>
-        </div>
-
-        <div class="mockup-wrapper">
-            <div class="screen-mockup">
-
-                <!-- MARCO + PANTALLA -->
-                <div class="screen-frame">
-                    <div class="screen-cam"></div>
-                    <div class="screen-display">
-                        <img src="images/tiempoaire/puntoventa.png" alt="MyBusiness POS V24">
-                    </div>
-                </div>
-
-                <!-- BASE DEL MONITOR -->
-                <div class="screen-foot">
-                    <div class="screen-neck"></div>
-                    <div class="screen-stand"></div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <!-- Wave -->
-    <div class="hero-wave">
-        <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#ffffff" />
-        </svg>
-    </div>
-</header>
 
 <!-- ===== HERO SECTION ===== -->
 <section class="recargas-hero-section reveal fade-up">

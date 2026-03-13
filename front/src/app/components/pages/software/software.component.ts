@@ -2,10 +2,11 @@ import { Component, AfterViewInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ProductModalComponent, Product } from '../../product-modal/product-modal.component';
+import { HeaderModalComponent } from "../../header-modal/header-modal.component";
 
 @Component({
   selector: 'app-software',
-  imports: [CommonModule, RouterModule, ProductModalComponent],
+  imports: [CommonModule, RouterModule, ProductModalComponent, HeaderModalComponent],
   templateUrl: './software.component.html',
   styleUrl: './software.component.css'
 })
@@ -116,4 +117,21 @@ export class SoftwareComponent implements AfterViewInit, OnDestroy {
     window.open(whatsappUrl, '_blank');
     this.closeModal();
   }
+
+floatCards = [
+  {
+    icon: "fa-solid fa-chart-line",
+    color: "rgb(249, 0, 0)",
+    title: "+34% ventas",
+    description: "este mes vs anterior",
+    class: "fc-ventas"
+  },
+  {
+    icon: "fa-solid fa-book-atlas",
+    color: " rgb(0, 204, 255)",
+    title: "Factura CFDI",
+    description: "emitida correctamente",
+    class: "fc-ticket"
+  }
+];
 }

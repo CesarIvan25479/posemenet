@@ -1,4 +1,5 @@
 <header>
+    
     <div class="hero-blob"></div>
     <div class="hero-dots"></div>
 
@@ -54,7 +55,7 @@
         <div *ngFor="let card of floatCards" class="float-card" [ngClass]="card.class">
 
             <div class="float-card-icon">
-                <i [class]="card.icon"></i>
+                <i [class]="card.icon" [style.color]="card.color"></i>
             </div>
             <div class="float-card-text">
                 <strong>{{ card.title }}</strong>

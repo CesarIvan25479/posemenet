@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { HeaderModalComponent } from "../../header-modal/header-modal.component";
 import { TimbresModalComponent } from '../../shared/timbres-modal/timbres-modal.component';
@@ -18,7 +17,7 @@ export interface TimbrePackage {
 @Component({
   selector: 'app-tiempo-aire',
   standalone: true,
-  imports: [RouterLink, CommonModule, HeaderModalComponent, TimbresModalComponent],
+  imports: [CommonModule, HeaderModalComponent, TimbresModalComponent],
   templateUrl: './facturacion.component.html',
   styleUrl: './facturacion.component.css'
 })
@@ -34,29 +33,28 @@ export class FacturacionComponent {
     this.isModalOpen = false;
   }
 
-    features = [
-  'Facturas CFDI válidas ante el SAT',
-  'Envío automático por email',
-  'Repertorio de clientes y productos',
-  'Reportes y contabilidad simplificada',
-  'Soporte técnico especializado',
-  'Integración con sistemas contables',
-  'Acceso desde cualquier dispositivo',
-];
+  features = [
+    'Facturas CFDI válidas ante el SAT',
+    'Envío automático por email',
+    'Repertorio de clientes y productos',
+    'Reportes y contabilidad simplificada'
+  ];
 
 
-floatCards = [
-  {
-    icon: "fa-solid fa-ticket",
-    title: "Desde $465",
-    description: "paquete de 100 timbres",
-    class: "fc-ventas"
-  },
-  {
-    icon: "m",
-    title: "Factura CFDI",
-    description: "emitida en segundos",
-    class: "fc-ticket"
-  }
-];
+  floatCards = [
+    {
+      icon: "fa-solid fa-hand-holding-dollar",
+      color: "rgb(129, 249, 0)",
+      title: "Desde $465",
+      description: "paquete de 100 timbres",
+      class: "fc-ventas"
+    },
+    {
+      icon: "fa-solid fa-laptop-filefa-solid fa-file-invoice",
+      color: " rgb(0, 164, 249)",
+      title: "Factura CFDI",
+      description: "emitida en segundos",
+      class: "fc-ticket"
+    }
+  ];
 }
