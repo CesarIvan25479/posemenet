@@ -861,6 +861,16 @@
         height: 420px;
     }
 
+    .app-header {
+        padding: 25px 15px 12px;
+        font-size: 1.05rem;
+    }
+
+    .app-content {
+        padding: 15px;
+        gap: 12px;
+    }
+
     .carrier-grid {
         gap: 8px;
     }
@@ -875,6 +885,13 @@
 
     .carrier-item span {
         font-size: .75rem;
+    }
+
+    .recarga-animation {
+        padding: 10px;
+        font-size: 1.05rem;
+        gap: 8px;
+        border-radius: 10px;
     }
 }
 
@@ -910,6 +927,38 @@
 
     .screen-stand {
         width: 84px;
+    }
+
+    .phone-mockup {
+        width: 210px;
+        height: 380px;
+    }
+
+    .app-header {
+        padding: 20px 10px 10px;
+        font-size: 0.95rem;
+    }
+
+    .app-content {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .carrier-item {
+        padding: 8px;
+    }
+
+    .carrier-item i {
+        font-size: 1.2rem;
+    }
+
+    .carrier-item span {
+        font-size: 0.7rem;
+    }
+
+    .recarga-animation {
+        padding: 8px;
+        font-size: 0.9rem;
     }
 }
 
