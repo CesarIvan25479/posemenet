@@ -27,11 +27,26 @@ export class HeaderComponent implements OnInit {
     if (!this.isMobileMenuOpen) {
       this.isDropdownOpen = false;
     }
+    this.lockScroll(this.isMobileMenuOpen);
   }
 
   closeMobileMenu(): void {
     this.isMobileMenuOpen = false;
     this.isDropdownOpen = false;
+    this.lockScroll(false);
+  }
+
+  private lockScroll(lock: boolean): void {
+    const value = lock ? 'hidden' : '';
+    document.body.style.overflow = value;
+    document.documentElement.style.overflow = value;
+  }
+
+  @HostListener('window:resize')
+  onResize(): void {
+    if (window.innerWidth > 768 && this.isMobileMenuOpen) {
+      this.closeMobileMenu();
+    }
   }
 
   toggleDropdown(): void {
