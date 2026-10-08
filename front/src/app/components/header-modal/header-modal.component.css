@@ -639,16 +639,59 @@ header::before {
         font-size: clamp(1.8rem, 5vw, 2.4rem);
     }
 
+    /* Botones compactos lado a lado en móvil */
     .hero-actions {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: .6rem;
         width: 100%;
     }
 
     .btn-hero-primary,
     .btn-hero-ghost {
-        width: 100%;
-        text-align: center;
-        padding: 1rem 1.5rem;
+        flex: 1 1 0;
+        max-width: 180px;
+        padding: .7rem 1.1rem;
+        gap: .45rem;
+        font-size: .88rem;
+        font-weight: 500;
+    }
+
+    .btn-hero-primary i,
+    .btn-hero-ghost i {
+        font-size: .8rem;
+    }
+
+    .btn-hero-primary {
+        box-shadow: 0 4px 12px -6px rgba(0, 24, 69, .45);
+    }
+
+    .btn-hero-ghost {
+        background: rgba(255, 255, 255, .75);
+        border-color: rgba(0, 24, 69, .15);
+    }
+}
+
+/* En pantallas táctiles: sin flecha ni elevación "pegada" tras tocar */
+@media (hover: none) {
+    .btn-hero-primary::after {
+        display: none;
+    }
+
+    .btn-hero-primary:hover,
+    .btn-hero-ghost:hover {
+        transform: none;
+    }
+
+    .btn-hero-primary:hover i,
+    .btn-hero-ghost:hover i {
+        transform: none;
+    }
+
+    .btn-hero-primary:active,
+    .btn-hero-ghost:active {
+        transform: scale(.96);
     }
 }
 
@@ -673,6 +716,19 @@ header::before {
 
     .feature-item {
         font-size: 0.85rem;
+    }
+
+    .btn-hero-primary,
+    .btn-hero-ghost {
+        padding: .65rem .9rem;
+        font-size: .84rem;
+    }
+}
+
+@media (max-width: 340px) {
+    .btn-hero-primary i,
+    .btn-hero-ghost i {
+        display: none;
     }
 }
 
