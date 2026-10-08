@@ -1321,19 +1321,25 @@ header {
   display: block;
 }
 
-/* CTA inferior */
+/* CTA inferior comparativa */
 .comp-cta {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: .8rem;
-  margin-top: 3rem;
+  gap: 1.25rem;
+  margin-top: 3.5rem;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
-.comp-cta p {
-  font-size: .9rem;
-  color: var(--gray-text);
+.comp-cta-text {
+  font-family: 'Outfit', var(--font-head), sans-serif;
+  font-size: clamp(1.05rem, 2.2vw, 1.25rem);
+  font-weight: 600;
+  color: #001845;
+  letter-spacing: -.02em;
+  margin: 0;
 }
 
 @media (max-width: 768px) {
@@ -1463,17 +1469,9 @@ header {
     gap: 1.5rem !important;
   }
 
-  /* Botones compactos lado a lado en móvil */
-  .hero-actions {
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    justify-content: center !important;
-    gap: .6rem !important;
-    width: 100% !important;
-  }
-
-  .btn-hero-primary,
-  .btn-hero-ghost {
+  /* Botones compactos lado a lado en el Hero de móvil */
+  .hero-actions .btn-hero-primary,
+  .hero-actions .btn-hero-ghost {
     flex: 1 1 0 !important;
     max-width: 180px !important;
     padding: .7rem 1.1rem !important;
@@ -1484,18 +1482,27 @@ header {
     width: auto !important;
   }
 
-  .btn-hero-primary i,
-  .btn-hero-ghost i {
+  .hero-actions .btn-hero-primary i,
+  .hero-actions .btn-hero-ghost i {
     font-size: .8rem;
   }
 
-  .btn-hero-primary {
+  .hero-actions .btn-hero-primary {
     box-shadow: 0 4px 12px -6px rgba(0, 24, 69, .45);
   }
 
-  .btn-hero-ghost {
+  .hero-actions .btn-hero-ghost {
     background: rgba(255, 255, 255, .75);
     border-color: rgba(0, 24, 69, .15);
+  }
+
+  /* Botones CTA individuales: tamaño cómodo y visible en móviles */
+  .comp-cta .btn-hero-primary,
+  .giros-cta .btn-hero-primary {
+    padding: .95rem 2rem !important;
+    font-size: 1rem !important;
+    width: min(100%, 320px) !important;
+    box-shadow: 0 8px 24px -6px rgba(0, 24, 69, .4) !important;
   }
 
   .giros-grid {
@@ -1538,10 +1545,18 @@ header {
     gap: 1.2rem !important;
   }
 
-  .btn-hero-primary,
-  .btn-hero-ghost {
+  .hero-actions .btn-hero-primary,
+  .hero-actions .btn-hero-ghost {
     padding: .65rem .9rem !important;
     font-size: .84rem !important;
+  }
+
+  .comp-cta .btn-hero-primary,
+  .giros-cta .btn-hero-primary {
+    padding: .9rem 1.8rem !important;
+    font-size: .95rem !important;
+    width: 100% !important;
+    max-width: 320px !important;
   }
 
   .hero-price {
