@@ -1051,6 +1051,7 @@ nav::after {
     .nav-link:hover,
     .dropdown-label:hover,
     .dropdown-label.active,
+    .dropdown:hover .dropdown-label,
     .dropdown:has(.dropdown-content.show) .dropdown-label {
         color: #001845;
         background: rgba(0, 24, 69, 0.05);
@@ -1091,48 +1092,119 @@ nav::after {
         transform: translateY(-2px) rotate(45deg);
         transition: transform 0.3s ease, opacity 0.2s ease;
     }
+    .dropdown:hover .dropdown-label::after,
     .dropdown:has(.dropdown-content.show) .dropdown-label::after {
         opacity: 0.9;
         transform: translateY(1px) rotate(-135deg);
     }
 
-    /* Menú desplegable tipo tarjeta */
-    .dropdown-content {
-        min-width: 290px;
+    /* Puente invisible para que el hover no se pierda entre etiqueta y menú */
+    .dropdown::after {
+        content: '';
+        position: absolute;
+        left: -20px;
+        right: -20px;
+        top: 100%;
+        height: 18px;
+    }
+
+    /* Submenú: se desliza hacia abajo al pasar el cursor */
+    .dropdown-content,
+    .dropdown-content.show {
+        display: block;
+        min-width: 280px;
         padding: 6px;
-        top: calc(100% + 14px);
-        border-radius: 16px;
-        border: 1px solid rgba(0, 24, 69, 0.08);
-        box-shadow: 0 24px 48px -16px rgba(0, 24, 69, 0.22),
-                    0 2px 6px rgba(0, 24, 69, 0.04);
+        top: calc(100% + 12px);
+        background: #ffffff;
+        border-radius: 14px;
+        border: 1px solid rgba(0, 24, 69, 0.07);
+        box-shadow: 0 20px 40px -18px rgba(0, 24, 69, 0.25),
+                    0 1px 3px rgba(0, 24, 69, 0.05);
+        animation: none;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateX(-50%) translateY(-8px);
+        transform-origin: top center;
+        transition: opacity 0.25s ease,
+                    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                    visibility 0s linear 0.35s;
+    }
+    .dropdown:hover .dropdown-content,
+    .dropdown-content.show {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateX(-50%) translateY(0);
+        transition-delay: 0s;
     }
     .dropdown-content::before { display: none; }
 
+    /* Elementos: entrada escalonada */
     .dropdown-content a {
-        padding: 9px 12px;
+        position: relative;
+        padding: 8px 34px 8px 10px;
         gap: 12px;
-        font-size: 0.9rem;
+        font-size: 0.88rem;
         font-weight: 500;
-        color: #1a2236;
-        border-radius: 10px;
-        transition: background-color 0.15s ease, color 0.15s ease;
-    }
-    .dropdown-content a i {
-        width: 32px;
-        height: 32px;
+        color: #2b3447;
         border-radius: 9px;
-        background: #f2f5fa;
-        color: #003796;
-        font-size: 0.82rem;
+        opacity: 0;
+        transform: translateY(-4px);
+        transition: background-color 0.2s ease, color 0.2s ease,
+                    opacity 0.3s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     }
+    .dropdown:hover .dropdown-content a,
+    .dropdown-content.show a {
+        opacity: 1;
+        transform: none;
+    }
+    .dropdown:hover .dropdown-content a:nth-child(1), .dropdown-content.show a:nth-child(1) { transition-delay: 0.03s; }
+    .dropdown:hover .dropdown-content a:nth-child(2), .dropdown-content.show a:nth-child(2) { transition-delay: 0.06s; }
+    .dropdown:hover .dropdown-content a:nth-child(3), .dropdown-content.show a:nth-child(3) { transition-delay: 0.09s; }
+    .dropdown:hover .dropdown-content a:nth-child(4), .dropdown-content.show a:nth-child(4) { transition-delay: 0.12s; }
+    .dropdown:hover .dropdown-content a:nth-child(5), .dropdown-content.show a:nth-child(5) { transition-delay: 0.15s; }
+
+    /* Iconos sutiles */
+    .dropdown-content a i {
+        width: 30px;
+        height: 30px;
+        border-radius: 8px;
+        background: transparent;
+        border: 1px solid rgba(0, 24, 69, 0.09);
+        color: #003796;
+        font-size: 0.8rem;
+        transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    }
+
+    /* Flecha que aparece al hover */
+    .dropdown-content a::after {
+        content: '';
+        position: absolute;
+        right: 14px;
+        top: 50%;
+        width: 6px;
+        height: 6px;
+        border-right: 1.5px solid #003796;
+        border-top: 1.5px solid #003796;
+        opacity: 0;
+        transform: translate(-6px, -50%) rotate(45deg);
+        transition: opacity 0.2s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
     .dropdown-content a:hover {
-        background: #f5f7fb;
+        background: #f4f6fa;
         color: #001845;
-        padding-left: 12px;
+        padding-left: 10px;
     }
     .dropdown-content a:hover i {
         background: #001845;
+        border-color: #001845;
         color: #ffffff;
+    }
+    .dropdown-content a:hover::after {
+        opacity: 1;
+        transform: translate(0, -50%) rotate(45deg);
     }
 
     /* CTA Contacto */
@@ -1164,4 +1236,83 @@ nav::after {
 
 @media (min-width: 769px) and (max-width: 880px) {
     .logo-text { display: none; }
+}
+
+/* ===== LOGO · animaciones (hover, clic y entrada) ===== */
+.nav-logo a {
+    position: relative;
+    padding: 4px 8px 4px 4px;
+    margin-left: -4px;
+    border-radius: 12px;
+    -webkit-tap-highlight-color: transparent;
+    animation: logoIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+
+.nav-logo img {
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1),
+                filter 0.4s ease;
+}
+
+/* Texto con destello que recorre las letras */
+.nav-logo .logo-text {
+    color: #001845;
+    background: linear-gradient(100deg,
+            #001845 0%, #001845 40%,
+            #1a6bff 50%,
+            #001845 60%, #001845 100%);
+    background-size: 250% 100%;
+    background-position: 100% 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: background-position 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                letter-spacing 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Hover */
+.nav-logo a:hover img {
+    transform: rotate(-12deg) scale(1.08);
+    filter: drop-shadow(0 4px 10px rgba(0, 55, 150, 0.28));
+}
+.nav-logo a:hover .logo-text {
+    background-position: 0 0;
+    transform: translateX(2px);
+}
+
+/* Clic / toque: efecto de presión */
+.nav-logo a:active {
+    transform: scale(0.95);
+    transition: transform 0.1s ease;
+}
+.nav-logo a:active img {
+    transform: rotate(-20deg) scale(0.96);
+    transition-duration: 0.15s;
+}
+
+/* Accesibilidad con teclado */
+.nav-logo a:focus-visible {
+    outline: 2px solid #003796;
+    outline-offset: 2px;
+}
+
+@keyframes logoIn {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* Respeta usuarios que prefieren menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+    .nav-logo a,
+    .nav-logo img,
+    .nav-logo .logo-text {
+        animation: none;
+        transition: none;
+    }
 }
