@@ -142,23 +142,23 @@ export class GirosComponent implements AfterViewInit, OnDestroy {
       iconClass: 'gi-26', name: 'Tiendas de Deportes', anim: 'bounce'
     },
     {
-      svg: `<rect x="2" y="11" width="20" height="12" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/><circle cx="12" cy="17" r="1"/>`,
-      iconClass: 'gi-27', name: 'Jugueterías', anim: 'shake'
+      svg: `<rect width="8" height="8" x="3" y="13" rx="2"/><rect width="8" height="8" x="13" y="13" rx="2"/><rect width="8" height="8" x="8" y="3" rx="2"/><path d="M12 7v0M7 17v0M17 17v0"/>`,
+      iconClass: 'gi-27', name: 'Jugueterías', anim: 'bounce'
     },
     {
       svg: `<path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/>`,
       iconClass: 'gi-28', name: 'Construcción', anim: 'wiggle'
     },
     {
-      svg: `<path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>`,
-      iconClass: 'gi-29', name: 'Sex Shops', anim: 'pulse'
+      svg: `<rect x="2" y="11" width="20" height="12" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/><circle cx="12" cy="17" r="1"/>`,
+      iconClass: 'gi-29', name: 'Seguridad', anim: 'shake'
     },
     {
       svg: `<path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>`,
       iconClass: 'gi-30', name: 'Tienda de música', anim: 'bounce'
     },
     {
-      svg: `<rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/>`,
+      svg: `<line x1="6" x2="10" y1="11" y2="11"/><line x1="8" x2="8" y1="9" y2="13"/><line x1="15" x2="15.01" y1="12" y2="12"/><line x1="18" x2="18.01" y1="10" y2="10"/><path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.368 3.49 1.487 6.74 4.542 7.89l1.79.67a2 2 0 0 0 1.412 0l.488-.18a2 2 0 0 1 1.492 0l.488.18a2 2 0 0 0 1.412 0l1.79-.67c3.055-1.15 4.91-4.4 4.542-7.89A4 4 0 0 0 17.32 5z"/>`,
       iconClass: 'gi-31', name: 'Tienda gamer', anim: 'shake'
     },
     {
