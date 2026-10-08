@@ -500,32 +500,31 @@ header {
   background: rgba(0, 24, 69, .07);
 }
 
-/* Wave */
+/* ════ Wave decorativa fluida ════ */
 .hero-wave {
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   right: 0;
-  z-index: 1;
+  z-index: 3;
   line-height: 0;
+  pointer-events: none;
 }
 
 .hero-wave svg {
   display: block;
   width: 100%;
+  height: clamp(35px, 5.5vw, 65px);
 }
 
-/* ═══════════════════════════════════════════
-   SECCIÓN GIROS
 /* ═══════════════════════════════════════════
    SECCIÓN GIROS — Diseño Minimalista & Profesional
 ═══════════════════════════════════════════ */
 .giros-section {
-  padding: 110px clamp(1.5rem, 6vw, 5rem) 100px;
+  padding: 100px clamp(1.5rem, 6vw, 5rem) 100px;
   background: linear-gradient(180deg, #F8FAFC 0%, #F1F5F9 100%);
   position: relative;
   overflow: hidden;
-  border-top: 1px solid rgba(0, 24, 69, 0.05);
   border-bottom: 1px solid rgba(0, 24, 69, 0.05);
 }
 
@@ -1381,8 +1380,8 @@ header {
     margin: 0 auto;
   }
 
-  .hero-wave {
-    display: none;
+  .hero-wave svg {
+    height: 40px;
   }
 
   .hero-bg::after {
