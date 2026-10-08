@@ -1,9 +1,9 @@
 import { Component, HostListener, ElementRef, OnInit } from '@angular/core';
-import { RouterLink, Router, NavigationStart } from "@angular/router";
+import { RouterLink, RouterLinkActive, Router, NavigationStart } from "@angular/router";
 
 @Component({
   selector: 'app-header',
-  imports: [RouterLink],
+  imports: [RouterLink, RouterLinkActive],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })

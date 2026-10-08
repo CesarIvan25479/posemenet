@@ -987,3 +987,181 @@ nav::after {
     .mobile-social-links a { width: 36px; height: 36px; }
     .mobile-footer { padding-top: 16px; }
 }
+
+/* ===== DESKTOP NAV · profesional y minimalista (solo > 768px) ===== */
+@media (min-width: 769px) {
+    nav {
+        height: 72px;
+        background: rgba(255, 255, 255, 0.82);
+        backdrop-filter: saturate(180%) blur(16px);
+        -webkit-backdrop-filter: saturate(180%) blur(16px);
+        border-bottom: 1px solid rgba(0, 24, 69, 0.07);
+        box-shadow: none;
+    }
+    nav::after { display: none; }
+
+    /* Logo sobrio */
+    .nav-logo img {
+        height: 38px;
+        filter: none;
+    }
+    .nav-logo a:hover img { transform: none; }
+    .logo-text {
+        font-size: 1.2rem;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+    }
+    .logo-text::after { display: none; }
+    .nav-logo a:hover .logo-text { color: #001845; }
+
+    .nav-menu { gap: 2px; }
+
+    /* Enlaces: texto limpio con iconos sutiles, sin cajas pesadas */
+    .nav-link,
+    .dropdown-label {
+        padding: 0.5rem 0.95rem;
+        font-size: 0.92rem;
+        font-weight: 500;
+        letter-spacing: 0;
+        color: #5a6478;
+        border-radius: 999px;
+        background: transparent;
+        box-shadow: none;
+        transition: color 0.2s ease, background-color 0.2s ease;
+    }
+    .nav-link i {
+        display: inline-block;
+        font-size: 0.8rem;
+        opacity: 0.6;
+        transform: none;
+        transition: opacity 0.2s ease, color 0.2s ease;
+    }
+    .nav-link:hover i,
+    .nav-link.is-active i {
+        opacity: 1;
+        color: #003796;
+        transform: none;
+    }
+    .nav-link.nav-cta i,
+    .nav-link.nav-cta:hover i {
+        color: #ffffff;
+        opacity: 0.9;
+    }
+
+    .nav-link:hover,
+    .dropdown-label:hover,
+    .dropdown-label.active,
+    .dropdown:has(.dropdown-content.show) .dropdown-label {
+        color: #001845;
+        background: rgba(0, 24, 69, 0.05);
+        transform: none;
+        box-shadow: none;
+    }
+
+    /* Indicador de página activa: punto discreto */
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 1px;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: #003796;
+        transform: translateX(-50%) scale(0);
+        transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .nav-link.is-active {
+        color: #001845;
+        font-weight: 600;
+    }
+    .nav-link.is-active::after { transform: translateX(-50%) scale(1); }
+
+    /* Chevron fino en lugar de ▾ */
+    .dropdown-label::after,
+    .dropdown-label.active::after {
+        content: '';
+        width: 6px;
+        height: 6px;
+        margin-left: 4px;
+        border-right: 1.5px solid currentColor;
+        border-bottom: 1.5px solid currentColor;
+        color: inherit;
+        opacity: 0.55;
+        transform: translateY(-2px) rotate(45deg);
+        transition: transform 0.3s ease, opacity 0.2s ease;
+    }
+    .dropdown:has(.dropdown-content.show) .dropdown-label::after {
+        opacity: 0.9;
+        transform: translateY(1px) rotate(-135deg);
+    }
+
+    /* Menú desplegable tipo tarjeta */
+    .dropdown-content {
+        min-width: 290px;
+        padding: 6px;
+        top: calc(100% + 14px);
+        border-radius: 16px;
+        border: 1px solid rgba(0, 24, 69, 0.08);
+        box-shadow: 0 24px 48px -16px rgba(0, 24, 69, 0.22),
+                    0 2px 6px rgba(0, 24, 69, 0.04);
+    }
+    .dropdown-content::before { display: none; }
+
+    .dropdown-content a {
+        padding: 9px 12px;
+        gap: 12px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: #1a2236;
+        border-radius: 10px;
+        transition: background-color 0.15s ease, color 0.15s ease;
+    }
+    .dropdown-content a i {
+        width: 32px;
+        height: 32px;
+        border-radius: 9px;
+        background: #f2f5fa;
+        color: #003796;
+        font-size: 0.82rem;
+    }
+    .dropdown-content a:hover {
+        background: #f5f7fb;
+        color: #001845;
+        padding-left: 12px;
+    }
+    .dropdown-content a:hover i {
+        background: #001845;
+        color: #ffffff;
+    }
+
+    /* CTA Contacto */
+    .nav-link.nav-cta {
+        margin-left: 10px;
+        padding: 0.55rem 1.2rem;
+        color: #ffffff;
+        background: #001845;
+        font-weight: 500;
+    }
+    .nav-link.nav-cta::after { display: none; }
+    .nav-link.nav-cta:hover,
+    .nav-link.nav-cta.is-active {
+        color: #ffffff;
+        background: #003796;
+        box-shadow: 0 8px 20px -10px rgba(0, 55, 150, 0.6);
+    }
+}
+
+/* Tablets horizontales: compactar para que todo quepa */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .nav-link,
+    .dropdown-label {
+        padding: 0.45rem 0.7rem;
+        font-size: 0.88rem;
+    }
+    .nav-link.nav-cta { margin-left: 4px; padding: 0.5rem 1rem; }
+}
+
+@media (min-width: 769px) and (max-width: 880px) {
+    .logo-text { display: none; }
+}

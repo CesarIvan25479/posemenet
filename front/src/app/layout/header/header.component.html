@@ -18,7 +18,7 @@
         <!-- Menú a la derecha -->
         <div class="nav-menu" [class.mobile-open]="isMobileMenuOpen" (click)="$event.stopPropagation()">
             <!-- Menú desplegable de Productos -->
-            <a [routerLink]="'/'" class="nav-link" (click)="closeMobileMenu()"><i class="fa-solid fa-house"></i> Inicio</a>
+            <a [routerLink]="'/'" class="nav-link" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMobileMenu()"><i class="fa-solid fa-house"></i> Inicio</a>
             <div class="dropdown">
                 <label class="dropdown-label" (click)="toggleDropdown(); $event.stopPropagation()">
                     Productos
@@ -33,12 +33,12 @@
                 </div>
             </div>
             <!--Link accesorios-->
-            <a [routerLink]="'/accesorios'" class="nav-link" (click)="closeMobileMenu()"><i class="fa-solid fa-cart-shopping"></i> Accesorios</a>
+            <a [routerLink]="'/accesorios'" class="nav-link" routerLinkActive="is-active" (click)="closeMobileMenu()"><i class="fa-solid fa-cart-shopping"></i> Accesorios</a>
             <!--Link giros-->
-            <a [routerLink]="'/giros'" class="nav-link" (click)="closeMobileMenu()"><i class="fa-solid fa-money-bill-transfer"></i> Giros</a>
+            <a [routerLink]="'/giros'" class="nav-link" routerLinkActive="is-active" (click)="closeMobileMenu()"><i class="fa-solid fa-money-bill-transfer"></i> Giros</a>
 
             <!-- Link Contacto -->
-            <a [routerLink]="'/contacto'" class="nav-link" (click)="closeMobileMenu()"><i class="fa-regular fa-address-card"></i> Contacto</a>
+            <a [routerLink]="'/contacto'" class="nav-link nav-cta" routerLinkActive="is-active" (click)="closeMobileMenu()"><i class="fa-regular fa-address-card"></i> Contacto</a>
 
             <!-- Redes sociales y copyright para móvil -->
             <div class="mobile-footer">
