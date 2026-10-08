@@ -252,64 +252,102 @@
 }
 
 
-/* Botones servicios */
+/* ===== BOTONES SERVICIOS & SOLUCIONES (Minimalistas & Fluidos) ===== */
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 18px;
+}
 
 .btn-moderno {
-    /* Estructura y Alineación */
     display: inline-flex;
     align-items: center;
-    gap: 12px;
-    padding: 10px 15px;
+    justify-content: center;
+    gap: 9px;
+    padding: 10px 22px;
     text-decoration: none;
-    font-family: 'Segoe UI', Roboto, sans-serif;
-    font-weight: 600;
-    font-size: 16px;
-    /* Estilo Visual */
-    color: #ffffff;
-    background: linear-gradient(135deg, #0204a1 0%, #0e3e7d 100%);
-    /* Gradiente Indigo a Púrpura */
-    border-radius: 50px;
-    /* Bordes redondeados modernos */
-    border: none;
-    /* Sombra y Transición */
-    box-shadow: 0 10px 20px -10px rgba(168, 85, 247, 0.5);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    cursor: pointer;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 500;
+    font-size: 0.92rem;
+    letter-spacing: -0.01em;
+    color: #001845;
+    background: rgba(0, 30, 90, 0.04);
+    border: 1px solid rgba(0, 24, 69, 0.12);
+    border-radius: 999px;
     position: relative;
     overflow: hidden;
-    margin-top: 10px;
-    /* Espacio con el texto de arriba */
-    margin-bottom: 10px;
-    /* Espacio con el texto de abajo */
-
-
+    cursor: pointer;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 2px 6px rgba(0, 24, 69, 0.04);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
+/* Efecto destello / shimmer sutil al pasar el mouse */
+.btn-moderno::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    transform: skewX(-20deg);
+    transition: left 0.65s ease;
+    pointer-events: none;
+}
+
+.btn-moderno i {
+    font-size: 0.85rem;
+    color: #003796;
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.3s ease;
+}
+
+.btn-moderno span {
+    position: relative;
+    z-index: 1;
+    transition: transform 0.35s ease;
+}
 
 /* Efectos al pasar el cursor (Hover) */
-
 .btn-moderno:hover {
-    transform: translateY(-3px);
-    /* Elevación suave */
-    box-shadow: 0 15px 25px -10px rgba(168, 85, 247, 0.6);
-    filter: brightness(1.1);
-    /* Brillo adicional */
+    background: #001845;
+    color: #ffffff;
+    border-color: #001845;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px -4px rgba(0, 24, 69, 0.28);
 }
 
-
-/* Efecto al hacer clic */
-
-.btn-moderno:active {
-    transform: translateY(-1px);
-    box-shadow: 0 5px 10px -5px rgba(168, 85, 247, 0.5);
+.btn-moderno:hover::before {
+    left: 140%;
 }
-
-
-/* Animación opcional para el icono */
 
 .btn-moderno:hover i {
-    transform: rotate(15deg) scale(1.2);
-    transition: transform 0.3s ease;
+    color: #ffffff;
+    transform: scale(1.15) rotate(8deg);
+}
+
+.btn-moderno:hover span {
+    transform: translateX(1px);
+}
+
+/* Efecto al presionar / clic táctil */
+.btn-moderno:active {
+    transform: scale(0.96) translateY(0);
+    box-shadow: 0 3px 10px rgba(0, 24, 69, 0.2);
+    transition-duration: 0.1s;
+}
+
+.btn-moderno:focus-visible {
+    outline: 2px solid #003796;
+    outline-offset: 3px;
 }
 
 
@@ -430,33 +468,65 @@
     position: relative;
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    background: #003796;
+    gap: 10px;
+    background: #001845;
     color: #ffffff;
+    font-family: 'Outfit', sans-serif;
     font-size: 1rem;
-    font-weight: 600;
-    letter-spacing: 0.01em;
-    padding: 14px 32px;
-    border-radius: 100px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    padding: 14px 34px;
+    border-radius: 999px;
     text-decoration: none;
-    transition: background 0.2s ease, gap 0.2s ease, box-shadow 0.2s ease;
-    box-shadow: 0 4px 20px rgba(0, 55, 150, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 6px 20px -4px rgba(0, 24, 69, 0.3);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.sw-cta-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.25),
+        transparent
+    );
+    transform: skewX(-20deg);
+    transition: left 0.7s ease;
 }
 
 .sw-cta-btn svg {
     width: 16px;
     height: 16px;
-    transition: transform 0.2s ease;
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .sw-cta-btn:hover {
-    background: #001b4f;
-    gap: 12px;
-    box-shadow: 0 8px 32px rgba(0, 27, 79, 0.35);
+    background: #003796;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px -6px rgba(0, 55, 150, 0.4);
+}
+
+.sw-cta-btn:hover::before {
+    left: 140%;
 }
 
 .sw-cta-btn:hover svg {
-    transform: translateX(3px);
+    transform: translateX(4px);
+}
+
+.sw-cta-btn:active {
+    transform: scale(0.96) translateY(0);
+    box-shadow: 0 4px 12px rgba(0, 24, 69, 0.25);
+    transition-duration: 0.1s;
 }
 
 
