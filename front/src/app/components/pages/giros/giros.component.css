@@ -665,40 +665,79 @@ header {
 .giro-icon {
   width: 50px;
   height: 50px;
-  border-radius: 12px;
+  border-radius: 13px;
   display: grid;
   place-items: center;
   flex-shrink: 0;
   background: #F1F5F9;
   border: 1px solid rgba(0, 24, 69, 0.06);
+  box-shadow: 0 2px 6px rgba(0, 24, 69, 0.02);
   transition: background-color .35s ease,
               border-color .35s ease,
               box-shadow .35s cubic-bezier(.16, 1, .3, 1),
               transform .35s cubic-bezier(.16, 1, .3, 1);
 }
 
-.giro-card:hover .giro-icon {
-  background: #001845;
-  border-color: #001845;
-  box-shadow: 0 8px 22px -4px rgba(0, 24, 69, 0.38);
+.giro-card:hover .giro-icon,
+.giro-card:active .giro-icon {
+  background: var(--gi-color, #001845);
+  border-color: var(--gi-color, #001845);
+  box-shadow: 0 8px 22px -4px rgba(0, 24, 69, 0.25);
   transform: translateY(-2px);
 }
 
-/* ── SVG icon base ── */
+/* ── SVG icon base (el trazo/borde del icono lleva el color temático) ── */
 .giro-svg {
-  width: 24px;
-  height: 24px;
+  width: 25px;
+  height: 25px;
   display: block;
-  stroke: #001845;
-  stroke-width: 1.8;
+  stroke: var(--gi-color, #001845);
+  stroke-width: 1.85;
   transform-origin: center center;
   will-change: transform;
-  transition: stroke .3s ease;
+  transition: stroke .25s ease;
 }
 
-.giro-card:hover .giro-svg {
+.giro-card:hover .giro-svg,
+.giro-card:active .giro-svg {
   stroke: #ffffff;
 }
+
+/* ════ Colores individuales para el trazo/borde de cada icono ════ */
+.gi-1  { --gi-color: #0984e3; }
+.gi-2  { --gi-color: #e84393; }
+.gi-3  { --gi-color: #e17055; }
+.gi-4  { --gi-color: #00b894; }
+.gi-5  { --gi-color: #20bf6b; }
+.gi-6  { --gi-color: #fa8231; }
+.gi-7  { --gi-color: #f7b731; }
+.gi-8  { --gi-color: #3867d6; }
+.gi-9  { --gi-color: #4b6584; }
+.gi-10 { --gi-color: #2bcbba; }
+.gi-11 { --gi-color: #45aaf2; }
+.gi-12 { --gi-color: #a55eea; }
+.gi-13 { --gi-color: #d35400; }
+.gi-14 { --gi-color: #fc5c65; }
+.gi-15 { --gi-color: #26de81; }
+.gi-16 { --gi-color: #fd9644; }
+.gi-17 { --gi-color: #2ed573; }
+.gi-18 { --gi-color: #ffa502; }
+.gi-19 { --gi-color: #00cec9; }
+.gi-20 { --gi-color: #cd853f; }
+.gi-21 { --gi-color: #1e90ff; }
+.gi-22 { --gi-color: #576574; }
+.gi-23 { --gi-color: #70a1ff; }
+.gi-24 { --gi-color: #ff6b81; }
+.gi-25 { --gi-color: #ff4757; }
+.gi-26 { --gi-color: #2ed573; }
+.gi-27 { --gi-color: #ffa502; }
+.gi-28 { --gi-color: #f39c12; }
+.gi-29 { --gi-color: #3742fa; }
+.gi-30 { --gi-color: #8e44ad; }
+.gi-31 { --gi-color: #6c5ce7; }
+.gi-32 { --gi-color: #00d2d3; }
+.gi-33 { --gi-color: #fd79a8; }
+.gi-34 { --gi-color: #ff4757; }
 
 /* ════ KEYFRAMES de animación refinados & fluidos ════ */
 @keyframes icon-spin {
