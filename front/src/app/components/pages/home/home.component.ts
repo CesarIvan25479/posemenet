@@ -10,6 +10,13 @@ import { HeaderModalComponent } from "../../header-modal/header-modal.component"
 })
 export class HomeComponent {
 
+  spot(e: MouseEvent) {
+    const el = e.currentTarget as HTMLElement;
+    const r = el.getBoundingClientRect();
+    el.style.setProperty('--mx', `${e.clientX - r.left}px`);
+    el.style.setProperty('--my', `${e.clientY - r.top}px`);
+  }
+
     features = [
     'Controla el efectivo de tu caja',
     'Emite facturas CFDI de tus ventas',

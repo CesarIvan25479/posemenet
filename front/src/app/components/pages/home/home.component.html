@@ -14,113 +14,134 @@
 <!-- ===== SOBRE NOSOTROS SECTION ===== -->
 <section class="contenedor sobre-nosotros reveal fade-up">
   <div class="contenedor-sobre-nosotros">
+    <div class="about-visual">
+      <div class="about-glow"></div>
+      <img src="images/home/home.webp" alt="emenetPOS" class="imagen-about-us">
+    </div>
     <div class="contenido-textos">
-      <h1>emenetPOS gestiona tus ventas, inventarios y más desde un solo lugar.</h1>
-      <p>Somos distribuidores autorizados de MyBusiness POS.
-        Te ayudamos a administrar tu negocio de forma eficiente, desde tu primer día hasta el crecimiento de tu empresa,
+      <span class="about-eyebrow">Distribuidor autorizado MyBusiness POS</span>
+      <h1>emenetPOS gestiona tus ventas, inventarios y <em>más</em> desde un solo lugar.</h1>
+      <p>Te ayudamos a administrar tu negocio de forma eficiente, desde tu primer día hasta el crecimiento de tu empresa,
         brindándote capacitación, seguimiento y soporte continuo.
         Con emenetPOS, no solo adquieres un sistema, obtienes respaldo y acompañamiento para hacer crecer tu negocio.
       </p>
     </div>
-    <img src="images/home/home.webp" alt="" class="imagen-about-us">
   </div>
 </section>
-<!-- ===== SERVICIOS SECTION ===== -->
-<section class="servicios reveal fade-up">
+
+<!-- ===== SERVICIOS SECTION (BENTO OSCURO) ===== -->
+<section class="bento-section dark">
   <div class="contenedor">
-    <h2 class="titulo">Nuestros servicios</h2>
-    <div class="servicio-cont">
-      <div class="servicio-ind reveal fade-up delay-100">
-        <img src="images/home/giro.png" alt="">
-        <h3>Giro de negocios</h3>
-        <p>MyBusiness POS funciona en múltiples negocios, te mostramos cómo funciona en cada uno.</p>
-        <div class="buttons-container">
-          <a [routerLink]="'/software'" class="btn-moderno">
-            <i class="fa-solid fa-circle-info"></i>
-            <span>Más información</span>
-          </a>
-        </div>
+    <p class="bento-eyebrow reveal fade-up">Servicios</p>
+    <h2 class="bento-title reveal fade-up">Todo lo que tu negocio necesita.<br><span>En un solo sistema.</span></h2>
+    <div class="bento-grid">
 
-      </div>
+      <article class="bento-card span-4 reveal fade-up delay-100" (mousemove)="spot($event)">
+        <div class="bento-text">
+          <span class="bento-num">01</span>
+          <h3>Giro de negocios</h3>
+          <p>MyBusiness POS funciona en múltiples negocios, te mostramos cómo funciona en cada uno.</p>
+          <a [routerLink]="'/software'" class="bento-link">Más información <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="bento-img" xml:space="preserve" fill="currentColor">
+          <path d="m80.161 60.441-15.66-7.47-6.622-3.159c2.892-1.822 5.241-4.634 6.778-8.021a21.7 21.7 0 0 0 1.945-8.99c0-1.827-.29-3.562-.694-5.236-1.97-8.112-8.305-14.088-15.91-14.088-7.461 0-13.7 5.763-15.792 13.644-.483 1.808-.815 3.688-.815 5.68 0 3.459.808 6.684 2.181 9.489 1.587 3.254 3.94 5.937 6.804 7.662l-6.342 2.953-16.168 7.53c-1.404.658-2.327 2.242-2.327 4.011v17.765c0 2.381 1.659 4.311 3.707 4.311h24.013V72.92a.8.8 0 0 1 .119-.396l-.01-.006 3.933-6.812.01.006c.14-.24.389-.41.687-.41s.547.169.687.41l.004-.003.036.063.016.028 3.881 6.721-.005.003a.8.8 0 0 1 .119.397v13.602h24.013c2.048 0 3.708-1.93 3.708-4.311V64.446c.003-1.763-.905-3.332-2.296-4.005M54.62 55.886l.01.006-3.934 6.812-.01-.006a.8.8 0 0 1-.687.409.8.8 0 0 1-.687-.409l-.005.003-.04-.069-.012-.02-3.881-6.723.004-.003a.8.8 0 0 1-.119-.397c0-.445.361-.806.806-.806h7.866c.445 0 .806.361.806.806a.76.76 0 0 1-.117.397"/>
+        </svg>
+      </article>
 
-      <div class="servicio-ind reveal fade-up delay-200">
-        <img src="images/home/recargas.png" alt="">
-        <h3>Recargas de tiempo aire</h3>
-        <p>Aumentamos tus ganancias y flujo de clientes ofreciendo recargas y pago de servicios.</p>
-        <div class="buttons-container">
-          <a [routerLink]="'/tiempo-aire'" class="btn-moderno">
-            <i class="fa-solid fa-circle-info"></i>
-            <span>Más información</span>
-          </a>
+      <article class="bento-card span-2 reveal fade-up delay-200" (mousemove)="spot($event)">
+        <div class="bento-text">
+          <span class="bento-num">02</span>
+          <h3>Recargas de tiempo aire</h3>
+          <p>Aumentamos tus ganancias y flujo de clientes ofreciendo recargas y pago de servicios.</p>
+          <a [routerLink]="'/tiempo-aire'" class="bento-link">Más información <i class="fa-solid fa-arrow-right"></i></a>
         </div>
-      </div>
-      <div class="servicio-ind reveal fade-up delay-300">
-        <img src="images/home/factura.png" alt="">
-        <h3>Facturación CFDI 4.0</h3>
-        <p>Emite tus CFDI directamente desde el sistema, sin procesos adicionales.</p>
-        <div class="buttons-container">
-          <a [routerLink]="'/facturacion'" class="btn-moderno">
-            <i class="fa-solid fa-circle-info"></i>
-            <span>Más información</span>
-          </a>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="-16 0 512 512" class="bento-img" fill="currentColor">
+          <path d="M226 480H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h178c26.51 0 48 21.49 48 48v352c0 26.492-21.461 47.971-48 48m-66-64h-48c-8.852.015-16 7.172-16 16 0 8.837 7.163 16 16 16h48c8.837 0 16-7.163 16-16 0-8.828-7.148-15.985-16-16m80-304H34v288h206zm126.215 14.221c6.628-11.479 21.306-15.412 32.785-8.785 30.198 17.435 52.562 43.227 65.859 72.768a159 159 0 0 1 14.168 65.856 159 159 0 0 1-14.129 65.649c-13.292 29.578-35.67 55.403-65.898 72.855-11.479 6.628-26.157 2.695-32.785-8.784s-2.694-26.158 8.785-32.785c17.396-10.043 31.078-24.049 40.565-40.219q.207-.39.43-.776a113 113 0 0 0 5.137-10.012 112.6 112.6 0 0 0 9.887-45.942 112.6 112.6 0 0 0-9.918-46.103 113 113 0 0 0-5.106-9.943 24 24 0 0 1-.428-.773c-9.487-16.171-23.17-30.178-40.567-40.222-11.479-6.627-15.412-21.305-8.785-32.784M351 200.574c-11.479-6.627-26.157-2.694-32.785 8.785s-2.694 26.157 8.785 32.784a15.9 15.9 0 0 1 5.74 5.653l.071.125.046.079q.397.69.72 1.401a16.1 16.1 0 0 1 1.426 6.648 16.1 16.1 0 0 1-1.392 6.475q-.336.75-.755 1.476l-.119.21a15.9 15.9 0 0 1-5.737 5.646c-11.479 6.628-15.412 21.306-8.785 32.785s21.306 15.412 32.785 8.785c12.103-6.988 21.061-17.332 26.375-29.178a63.6 63.6 0 0 0 5.636-26.188 63.6 63.6 0 0 0-5.674-26.392c-5.319-11.811-14.263-22.123-26.337-29.094M144 64h-16c-8.852.015-16 7.173-16 16 0 8.837 7.163 16 16 16h16c8.837 0 16-7.163 16-16 0-8.827-7.148-15.985-16-16"/>
+        </svg>
+      </article>
+
+      <article class="bento-card span-2 reveal fade-up delay-300" (mousemove)="spot($event)">
+        <div class="bento-text">
+          <span class="bento-num">03</span>
+          <h3>Facturación CFDI 4.0</h3>
+          <p>Emite tus CFDI directamente desde el sistema, sin procesos adicionales.</p>
+          <a [routerLink]="'/facturacion'" class="bento-link">Más información <i class="fa-solid fa-arrow-right"></i></a>
         </div>
-      </div>
-      <div class="servicio-ind reveal fade-up delay-400">
-        <img src="images/home/corporativo.png" alt="">
-        <h3>Todo a la medida</h3>
-        <p>El único sistema de punto de venta que se adecúa a tu requerimiento particular o giro comercial.</p>
-        <div class="buttons-container">
-          <a [routerLink]="'/modificaciones'" class="btn-moderno">
-            <i class="fa-solid fa-circle-info"></i>
-            <span>Más información</span>
-          </a>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 489.8 489.8" class="bento-img" xml:space="preserve" fill="currentColor">
+          <path d="M215.031 199.446v-64.6h17.226c5.8 0 10.5-4.701 10.5-10.5s-4.701-10.5-10.5-10.5h-17.226v-9.499c0-5.799-4.701-10.5-10.5-10.5s-10.5 4.701-10.5 10.5v10.552c-24.086 4.883-42.273 26.217-42.273 51.721 0 25.505 18.188 46.84 42.273 51.723v64.598h-19.955c-5.799 0-10.5 4.701-10.5 10.5s4.701 10.5 10.5 10.5h19.955v9.498c0 5.799 4.701 10.5 10.5 10.5s10.5-4.701 10.5-10.5v-10.551c24.085-4.882 42.271-26.216 42.271-51.721.001-25.504-18.186-46.838-42.271-51.721m-42.273-32.826c0-13.841 8.899-25.635 21.273-29.981v59.965c-12.374-4.347-21.273-16.142-21.273-29.984m42.273 114.529v-59.964c12.373 4.347 21.271 16.142 21.271 29.982.001 13.84-8.898 25.636-21.271 29.982"/>
+          <path d="m483.116 405.324-85.586-85.587 15.606-15.606c7.91-7.911 10.815-17.025 7.97-25.007-2.661-7.464-9.846-12.512-19.87-14.053 5.198-18.208 7.827-37.049 7.827-56.179 0-54.632-21.275-105.995-59.906-144.626S259.163 4.36 204.531 4.36C91.752 4.36 0 96.112 0 208.892s91.752 204.534 204.531 204.534c22.75 0 44.961-3.698 66.211-10.98 3.621 11.18 12.007 15.357 19.002 15.357 4.434 0 11.287-1.568 18.758-9.04l15.608-15.608 85.585 85.588a22.72 22.72 0 0 0 16.166 6.695 22.72 22.72 0 0 0 16.167-6.696l41.088-41.089c8.912-8.914 8.911-23.417 0-32.329M21 208.892c0-101.2 82.332-183.532 183.531-183.532 49.023 0 95.112 19.09 129.777 53.755s53.755 80.754 53.755 129.777c0 18.425-2.718 36.545-8.079 53.98l-34.89-3.518c5.807-16.121 8.756-33.033 8.756-50.462 0-82.335-66.984-149.319-149.319-149.319S55.213 126.557 55.213 208.892c0 82.336 66.984 149.32 149.318 149.32 20.604 0 40.964-4.282 59.704-12.45l3.572 35.445c-20.225 7.44-41.472 11.218-63.276 11.218C103.332 392.426 21 310.093 21 208.892m245.425 55.306c-6.04 6.68-8.832 15.655-7.862 25.271l3.442 34.158a128.4 128.4 0 0 1-57.474 13.585c-70.755 0-128.318-57.564-128.318-128.32S133.776 80.573 204.531 80.573 332.85 138.137 332.85 208.892c0 16.766-3.159 32.973-9.396 48.28l-29.612-2.984a37 37 0 0 0-3.689-.187c-9.356.001-17.782 3.622-23.728 10.197m24.018 133.006-10.986-109.841c-.367-3.636.537-6.86 2.545-9.081 2.236-2.474 5.689-3.603 9.735-3.199l109.586 11.162-26.066 26.067c-4.101 4.101-4.101 10.749 0 14.85l93.01 93.012a1.864 1.864 0 0 1-.001 2.633l-41.086 41.086a1.83 1.83 0 0 1-1.318.547c-.353 0-.866-.095-1.317-.546l-93.009-93.012a10.47 10.47 0 0 0-7.425-3.075 10.47 10.47 0 0 0-7.425 3.075z"/>
+        </svg>
+      </article>
+
+      <article class="bento-card span-4 reveal fade-up delay-400" (mousemove)="spot($event)">
+        <div class="bento-text">
+          <span class="bento-num">04</span>
+          <h3>Todo a la medida</h3>
+          <p>El único sistema de punto de venta que se adecúa a tu requerimiento particular o giro comercial.</p>
+          <a [routerLink]="'/modificaciones'" class="bento-link">Más información <i class="fa-solid fa-arrow-right"></i></a>
         </div>
-      </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 490" class="bento-img" xml:space="preserve" fill="currentColor">
+          <path d="M122.704.238H8.274A8.273 8.273 0 0 0 0 8.512v472.976a8.273 8.273 0 0 0 8.274 8.274h114.43a8.274 8.274 0 0 0 8.274-8.274V8.512a8.273 8.273 0 0 0-8.274-8.274m-8.274 472.976H16.549v-36.852h60.384a8.274 8.274 0 0 0 0-16.548H16.549v-24.137h22.24a8.274 8.274 0 0 0 0-16.548h-22.24V354.99h22.24a8.273 8.273 0 0 0 8.274-8.274 8.273 8.273 0 0 0-8.274-8.274h-22.24v-24.137h60.384a8.274 8.274 0 0 0 0-16.548H16.549V273.62h22.24a8.273 8.273 0 0 0 8.274-8.274 8.273 8.273 0 0 0-8.274-8.274h-22.24v-24.137h22.24c4.57 0 8.274-3.704 8.274-8.274s-3.704-8.274-8.274-8.274h-22.24V192.25h60.384a8.274 8.274 0 0 0 0-16.548H16.549v-24.137h22.24c4.57 0 8.274-3.704 8.274-8.274s-3.704-8.274-8.274-8.274h-22.24V110.88h22.24a8.274 8.274 0 0 0 0-16.548h-22.24V70.187h60.384a8.274 8.274 0 0 0 0-16.548H16.549V16.786h97.881zm374.143 3.629L167.695 3.866a8.274 8.274 0 0 0-15.122 4.646v472.976a8.273 8.273 0 0 0 8.274 8.274h320.878a8.274 8.274 0 0 0 6.848-12.919m-319.451-3.629V35.447l296.991 437.767z"/>
+          <path d="M214.723 428.734h154.821a8.274 8.274 0 0 0 6.848-12.92L221.57 187.607a8.275 8.275 0 0 0-15.121 4.646V420.46a8.273 8.273 0 0 0 8.274 8.274m8.274-209.547 130.934 192.998H222.997z"/>
+        </svg>
+      </article>
     </div>
   </div>
 </section>
-<!-- =====  SOLUCIONES SECTION ===== -->
-<section class="servicios reveal fade-up">
-  <div class="contenedor">
-    <h2 class="titulo">Más soluciones para tu negocio</h2>
-    <div class="servicio-cont">
-      <div class="servicio-ind reveal fade-up delay-100">
-        <img src="images/home/tools.png" alt="">
-        <h3>Control de Usuarios y Permisos</h3>
-        <p>Asigna roles y permisos personalizados para mayor seguridad y control interno.</p>
-        <div class="buttons-container">
-          <a [routerLink]="'/contacto'" class="btn-moderno">
-            <i class="fa-solid fa-thumbs-up"></i>
-            <span>Me interesa</span>
-          </a>
-        </div>
-      </div>
-      <div class="servicio-ind reveal fade-up delay-200">
-        <img src="images/home/accesorios.png" alt="">
-        <h3>Accesorios</h3>
-        <p>También contamos con accesorios, consumibles y soporte técnico
-          para que tu negocio siempre esté listo para vender.
 
-        </p>
-        <div class="buttons-container">
-          <a [routerLink]="'/accesorios'" class="btn-moderno">
-            <i class="fa-solid fa-thumbs-up"></i>
-            <span>Me interesa</span>
-          </a>
+<!-- =====  SOLUCIONES SECTION (BENTO CLARO) ===== -->
+<section class="bento-section light">
+  <div class="contenedor">
+    <p class="bento-eyebrow reveal fade-up">Y hay más</p>
+    <h2 class="bento-title reveal fade-up">Más soluciones para tu negocio.</h2>
+    <div class="bento-grid">
+
+      <article class="bento-card span-2 stack reveal fade-up delay-100" (mousemove)="spot($event)">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" class="bento-img" fill="currentColor">
+          <path class="clr-i-outline clr-i-outline-path-1" d="M17.9 17.3c2.7 0 4.8-2.2 4.8-4.9s-2.2-4.8-4.9-4.8S13 9.8 13 12.4c0 2.7 2.2 4.9 4.9 4.9m-.1-7.7q.15 0 0 0c1.6 0 2.9 1.3 2.9 2.9s-1.3 2.8-2.9 2.8S15 14 15 12.5c0-1.6 1.3-2.9 2.8-2.9"/>
+          <path class="clr-i-outline clr-i-outline-path-2" d="M32.7 16.7c-1.9-1.7-4.4-2.6-7-2.5h-.8q-.3 1.2-.9 2.1c.6-.1 1.1-.1 1.7-.1 1.9-.1 3.8.5 5.3 1.6V25h2v-8z"/>
+          <path class="clr-i-outline clr-i-outline-path-3" d="M23.4 7.8c.5-1.2 1.9-1.8 3.2-1.3 1.2.5 1.8 1.9 1.3 3.2-.4.9-1.3 1.5-2.2 1.5-.2 0-.5 0-.7-.1.1.5.1 1 .1 1.4v.6c.2 0 .4.1.6.1 2.5 0 4.5-2 4.5-4.4 0-2.5-2-4.5-4.4-4.5-1.6 0-3 .8-3.8 2.2.5.3 1 .7 1.4 1.3"/>
+          <path class="clr-i-outline clr-i-outline-path-4" d="M12 16.4q-.6-.9-.9-2.1h-.8c-2.6-.1-5.1.8-7 2.4L3 17v8h2v-7.2c1.6-1.1 3.4-1.7 5.3-1.6.6 0 1.2.1 1.7.2"/>
+          <path class="clr-i-outline clr-i-outline-path-5" d="M10.3 13.1c.2 0 .4 0 .6-.1v-.6c0-.5 0-1 .1-1.4-.2.1-.5.1-.7.1-1.3 0-2.4-1.1-2.4-2.4S9 6.3 10.3 6.3c1 0 1.9.6 2.3 1.5.4-.5 1-1 1.5-1.4-1.3-2.1-4-2.8-6.1-1.5s-2.8 4-1.5 6.1c.8 1.3 2.2 2.1 3.8 2.1"/>
+          <path class="clr-i-outline clr-i-outline-path-6" d="m26.1 22.7-.2-.3c-2-2.2-4.8-3.5-7.8-3.4-3-.1-5.9 1.2-7.9 3.4l-.2.3v7.6c0 .9.7 1.7 1.7 1.7h12.8c.9 0 1.7-.8 1.7-1.7v-7.6zm-2 7.3H12v-6.6c1.6-1.6 3.8-2.4 6.1-2.4 2.2-.1 4.4.8 6 2.4z"/>
+          <path fill="none" d="M0 0h36v36H0z"/>
+        </svg>
+        <div class="bento-text">
+          <h3>Control de Usuarios y Permisos</h3>
+          <p>Asigna roles y permisos personalizados para mayor seguridad y control interno.</p>
+          <a [routerLink]="'/contacto'" class="bento-link">Me interesa <i class="fa-solid fa-arrow-right"></i></a>
         </div>
-      </div>
-      <div class="servicio-ind reveal fade-up delay-300">
-        <img src="images/home/nube.png" alt="">
-        <h3>Sincronización en la nube</h3>
-        <p>Puedes instalar tu punto de venta en una o en todas tus sucursales y la información estará siempre
-          sincronizada.</p>
-        <div class="buttons-container">
-          <a [routerLink]="'/servicios-nube'" class="btn-moderno">
-            <i class="fa-solid fa-thumbs-up"></i>
-            <span>Me interesa</span>
-          </a>
+      </article>
+
+      <article class="bento-card span-2 stack reveal fade-up delay-200" (mousemove)="spot($event)">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="bento-img">
+          <path d="M8.875 1047.4c.013.169.031.327.031.5 0 1.863-.746 3.505-1.906 4.5h10c-1.16-.995-1.906-2.637-1.906-4.5 0-.173.018-.331.031-.5z" fill="#95a5a6" transform="translate(0 -1028.4)"/>
+          <path d="M8.875 1047.4c.013.1.031.3.031.5 0 .5-.046 1-.156 1.5h6.5c-.11-.5-.156-1-.156-1.5 0-.2.018-.4.031-.5z" fill="#7f8c8d" transform="translate(0 -1028.4)"/>
+          <path d="M1 1031.4c-.552 0-1 .4-1 1v15c0 .5.448 1 1 1h22c.552 0 1-.5 1-1v-15c0-.6-.448-1-1-1z" fill="#bdc3c7" transform="translate(0 -1028.4)"/>
+          <path fill="#34495e" d="M1 1032.4h22v14H1z" transform="translate(0 -1028.4)"/>
+          <path d="m23 1033.4-21 13h21z" fill="#2c3e50" transform="translate(0 -1028.4)"/>
+        </svg>
+        <div class="bento-text">
+          <h3>Accesorios</h3>
+          <p>También contamos con accesorios, consumibles y soporte técnico para que tu negocio siempre esté listo para vender.</p>
+          <a [routerLink]="'/accesorios'" class="bento-link">Me interesa <i class="fa-solid fa-arrow-right"></i></a>
         </div>
-      </div>
+      </article>
+
+      <article class="bento-card span-2 stack reveal fade-up delay-300" (mousemove)="spot($event)">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="bento-img">
+          <path d="m23.88 27.3-2.65-2.65a1 1 0 0 1-.29-.71V18h2v5.53l2.36 2.35Zm-15.76 0L6.7 25.88l2.36-2.35V18h2v5.94a1 1 0 0 1-.29.71ZM15 18h2v6h-2z" fill="currentColor"/>
+          <path fill="#8ec5fc" d="M25 7h-.52a9 9 0 0 0-17 0H7a6 6 0 0 0 0 12h18a6 6 0 0 0 0-12"/>
+          <circle fill="#8ec5fc" cx="16" cy="27" r="4"/>
+          <circle fill="#8ec5fc" cx="26" cy="28" r="3"/>
+          <circle fill="#8ec5fc" cx="6" cy="28" r="3"/>
+        </svg>
+        <div class="bento-text">
+          <h3>Sincronización en la nube</h3>
+          <p>Instala tu punto de venta en una o en todas tus sucursales y la información estará siempre sincronizada.</p>
+          <a [routerLink]="'/servicios-nube'" class="bento-link">Me interesa <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
     </div>
   </div>
 </section>

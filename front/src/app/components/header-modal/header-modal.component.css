@@ -46,9 +46,10 @@ header {
     min-height: 100svh;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: center;
+    align-content: start;   /* contenido pegado arriba, sin hueco superior */
+    align-items: center;    /* texto y monitor alineados entre sí */
     gap: 2rem;
-    padding: 60px clamp(1.5rem, 6vw, 5rem) 60px;
+    padding: 40px clamp(1.5rem, 6vw, 5rem) 60px;
     overflow: hidden;
 }
 
@@ -408,6 +409,24 @@ header::before {
         0 0 0 1px rgba(0, 0, 0, .5),
         0 32px 64px rgba(0, 24, 69, .35);
     position: relative;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.screen-display {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 6px;
+    background: #000;
+    line-height: 0;
+}
+
+.screen-display img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
 
@@ -633,6 +652,30 @@ header::before {
 @media (max-width: 768px) {
     header {
         padding: 100px clamp(1rem, 4vw, 3rem) 60px;
+        overflow: hidden;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .hero-right {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+
+    .mockup-wrapper {
+        width: 100%;
+        max-width: min(100%, 420px);
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+
+    .screen-mockup {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
     .hero-h1 {
@@ -699,6 +742,30 @@ header::before {
     header {
         padding: 90px 1rem 50px;
         gap: 2rem;
+        overflow: hidden;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .mockup-wrapper {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .screen-frame {
+        padding: 8px;
+        border-radius: 12px 12px 8px 8px;
+    }
+
+    .screen-neck {
+        width: 60px;
+        height: 10px;
+    }
+
+    .screen-stand {
+        width: 120px;
+        height: 6px;
     }
 
     .hero-badge {
