@@ -589,142 +589,308 @@
     position: relative;
     padding: clamp(70px, 9vw, 110px) 0;
     background:
-        radial-gradient(circle at 50% 0%, rgba(10, 132, 255, 0.04) 0%, transparent 60%),
-        linear-gradient(180deg, #f8faff 0%, #ffffff 100%);
+        radial-gradient(circle at 15% 20%, rgba(10, 132, 255, 0.05) 0%, transparent 45%),
+        radial-gradient(circle at 85% 80%, rgba(0, 200, 83, 0.04) 0%, transparent 45%),
+        linear-gradient(180deg, #f7faff 0%, #ffffff 100%);
     overflow: clip;
 }
 
-.ta-benefits-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 22px;
+.ta-benefits-tag {
+    display: inline-block;
+    padding: 6px 16px;
+    background: rgba(10, 132, 255, 0.1);
+    color: #0066cc;
+    border: 1px solid rgba(10, 132, 255, 0.22);
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
 }
 
-.ta-benefit-box {
+.section-subtitle {
+    max-width: 620px;
+    margin: 12px auto 0;
+    font-size: 1.05rem;
+    color: #5b6e88;
+    line-height: 1.6;
+}
+
+/* Experiencia Dividida: Visual Terminal + Cards Grid */
+.ta-benefits-experience {
+    display: grid;
+    grid-template-columns: 1fr 1.35fr;
+    gap: 36px;
+    align-items: center;
+    margin-top: 48px;
+}
+
+/* ─── TERMINAL POS VISUAL (SIMULADOR EN VIVO) ─── */
+.ta-visual-terminal {
+    background: #061326;
+    border-radius: 28px;
+    padding: 24px;
+    box-shadow: 0 30px 60px -15px rgba(2, 12, 28, 0.35),
+                0 0 0 1px rgba(255, 255, 255, 0.08);
     position: relative;
-    background: #ffffff;
-    border-radius: 24px;
-    padding: 30px 24px 26px;
+    overflow: hidden;
+    color: #ffffff;
+}
+
+.ta-visual-terminal::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 50% 20%, rgba(10, 132, 255, 0.15) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.terminal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.terminal-dots {
+    display: flex;
+    gap: 6px;
+}
+
+.terminal-dots span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.terminal-dots span:nth-child(1) { background: #ff5f56; }
+.terminal-dots span:nth-child(2) { background: #ffbd2e; }
+.terminal-dots span:nth-child(3) { background: #27c93f; }
+
+.terminal-title {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.65);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.terminal-status {
+    font-size: 0.74rem;
+    font-weight: 700;
+    color: #00e676;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.terminal-status i {
+    font-size: 0.55rem;
+    animation: terminalBlink 1.8s infinite;
+}
+
+@keyframes terminalBlink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+.terminal-screen {
+    padding: 24px 8px 8px;
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-direction: column;
-    gap: 14px;
-    border: 1px solid rgba(0, 24, 69, 0.08);
-    box-shadow: 0 4px 20px rgba(0, 24, 69, 0.03);
-    transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
-                box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1),
-                border-color 0.35s ease;
+    align-items: center;
+    text-align: center;
 }
 
-.ta-benefit-box:hover {
-    transform: translateY(-8px);
-    border-color: rgba(0, 55, 150, 0.25);
-    box-shadow: 0 22px 50px -12px rgba(0, 24, 69, 0.12);
+.terminal-badge-success {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0, 230, 118, 0.12);
+    border: 1px solid rgba(0, 230, 118, 0.3);
+    color: #00e676;
+    padding: 6px 14px;
+    border-radius: 100px;
+    font-size: 0.84rem;
+    font-weight: 700;
+    margin-bottom: 18px;
 }
 
-.benefit-card-top {
+.terminal-badge-success i {
+    font-size: 1rem;
+}
+
+.terminal-amount-box {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 4px;
+    position: relative;
+    margin-bottom: 22px;
+}
+
+.terminal-amount-box .curr {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.terminal-amount-box .val {
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    color: #ffffff;
+    line-height: 1;
+}
+
+.terminal-amount-box .carrier-name {
+    margin-left: 10px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    background: rgba(10, 132, 255, 0.2);
+    color: #60a5fa;
+    padding: 4px 10px;
+    border-radius: 6px;
+    align-self: center;
+}
+
+.terminal-meta-rows {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 14px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.terminal-meta-rows .t-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 2px;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
 }
 
-.benefit-pill {
-    font-size: 0.72rem;
+.terminal-meta-rows .t-row strong {
     font-weight: 700;
-    padding: 4px 11px;
-    border-radius: 100px;
-    letter-spacing: 0.02em;
+    color: #ffffff;
 }
 
-.benefit-pill.green {
-    background: rgba(0, 200, 83, 0.1);
-    color: #009624;
+.terminal-meta-rows .t-row .t-green {
+    color: #00e676;
+    font-size: 0.95rem;
 }
 
-.benefit-pill.blue {
-    background: rgba(10, 132, 255, 0.1);
-    color: #0066cc;
+.terminal-meta-rows .t-row .t-blue {
+    color: #38bdf8;
+    font-size: 0.82rem;
 }
 
-.benefit-pill.purple {
-    background: rgba(138, 43, 226, 0.1);
-    color: #7b1fa2;
+.terminal-live-pulse {
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.55);
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-.benefit-pill.teal {
-    background: rgba(11, 191, 191, 0.12);
-    color: #007788;
+.terminal-live-pulse i {
+    color: #38bdf8;
 }
 
-.box-icon-container {
-    width: 54px;
-    height: 54px;
-    border-radius: 16px;
+/* ─── TARJETAS DE BENEFICIOS (GRID INNOVADOR) ─── */
+.ta-benefits-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.ta-benefit-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 35, 100, 0.08);
+    border-radius: 20px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: 0 4px 18px rgba(0, 24, 69, 0.03);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 0.3s ease;
+    position: relative;
+}
+
+.ta-benefit-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(10, 132, 255, 0.3);
+    box-shadow: 0 16px 36px -8px rgba(0, 35, 100, 0.1);
+}
+
+.b-icon-wrap {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
     display: grid;
     place-items: center;
-    font-size: 1.35rem;
-    transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+    font-size: 1.25rem;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.ta-benefit-box:hover .box-icon-container {
+.ta-benefit-card:hover .b-icon-wrap {
     transform: scale(1.1) rotate(-6deg);
 }
 
-.box-icon-container.green {
+.b-icon-wrap.green {
     background: rgba(0, 200, 83, 0.12);
     color: #00a844;
-    border: 1px solid rgba(0, 200, 83, 0.2);
+    border: 1px solid rgba(0, 200, 83, 0.25);
 }
 
-.box-icon-container.blue {
+.b-icon-wrap.blue {
     background: rgba(10, 132, 255, 0.12);
     color: #0066cc;
-    border: 1px solid rgba(10, 132, 255, 0.2);
+    border: 1px solid rgba(10, 132, 255, 0.25);
 }
 
-.box-icon-container.purple {
+.b-icon-wrap.purple {
     background: rgba(138, 43, 226, 0.12);
     color: #7b1fa2;
-    border: 1px solid rgba(138, 43, 226, 0.2);
+    border: 1px solid rgba(138, 43, 226, 0.25);
 }
 
-.box-icon-container.teal {
-    background: rgba(11, 191, 191, 0.14);
-    color: #089a9a;
+.b-icon-wrap.teal {
+    background: rgba(11, 191, 191, 0.12);
+    color: #008f8f;
     border: 1px solid rgba(11, 191, 191, 0.25);
 }
 
-.ta-benefit-box h3 {
-    font-size: 1.25rem;
+.b-content h3 {
+    font-size: 1.15rem;
     font-weight: 800;
     color: #001845;
-    margin: 0;
-    line-height: 1.3;
+    margin: 0 0 8px;
+    line-height: 1.25;
     letter-spacing: -0.01em;
 }
 
-.ta-benefit-box p {
-    font-size: 0.94rem;
-    line-height: 1.68;
-    color: #5a6a80;
-    margin: 0;
-}
-
-.benefit-card-footer {
-    margin-top: auto;
-    padding-top: 14px;
-    border-top: 1px dashed rgba(0, 55, 150, 0.12);
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: #003796;
-    display: flex;
-    align-items: center;
-    gap: 7px;
-}
-
-.benefit-card-footer i {
-    color: #0a84ff;
+.b-content p {
     font-size: 0.88rem;
+    line-height: 1.6;
+    color: #55667e;
+    margin: 0;
 }
 
 
@@ -737,6 +903,17 @@
     .ta-benefits-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
+    }
+
+    .ta-benefits-experience {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .ta-visual-terminal {
+        max-width: 520px;
+        margin: 0 auto;
+        width: 100%;
     }
 
     .ta-earnings-banner {
@@ -752,9 +929,19 @@
 
 @media screen and (max-width: 640px) {
     .ta-carriers-grid,
-    .ta-benefits-grid {
+    .ta-benefits-grid,
+    .ta-benefits-cards-grid {
         grid-template-columns: 1fr;
         gap: 16px;
+    }
+
+    .ta-visual-terminal {
+        padding: 18px 14px;
+        border-radius: 20px;
+    }
+
+    .terminal-amount-box .val {
+        font-size: 2.25rem;
     }
 
     .earnings-right {
@@ -767,9 +954,10 @@
     }
 
     .ta-carrier-card,
-    .ta-benefit-box {
-        padding: 24px 20px;
-        border-radius: 20px;
+    .ta-benefit-box,
+    .ta-benefit-card {
+        padding: 20px 18px;
+        border-radius: 18px;
     }
 }
 /* ══════════════════════════════════════════════
