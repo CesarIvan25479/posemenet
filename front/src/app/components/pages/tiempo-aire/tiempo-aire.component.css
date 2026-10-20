@@ -794,9 +794,31 @@
     font-size: 0.95rem;
 }
 
+.terminal-meta-rows .t-row .t-amber {
+    color: #fbbf24;
+    font-size: 0.95rem;
+}
+
+.terminal-meta-rows .t-row .t-cyan {
+    color: #38bdf8;
+    font-size: 0.95rem;
+}
+
 .terminal-meta-rows .t-row .t-blue {
     color: #38bdf8;
     font-size: 0.82rem;
+}
+
+.terminal-meta-rows .t-row.deduction-row,
+.terminal-meta-rows .t-row.balance-row {
+    padding: 6px 10px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.terminal-meta-rows .t-row.balance-row {
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    background: rgba(56, 189, 248, 0.08);
 }
 
 .terminal-live-pulse {
