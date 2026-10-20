@@ -378,177 +378,400 @@
 }
 
 /* ══════════════════════════════════════════════
-   15. SECCIÓN OPERADORAS
-══════════════════════════════════════════════ */
+/* ═════════════════════════════════════════════════════════
+   15. SECCIÓN OPERADORAS CON DISEÑO MODERNO & CHIPS
+═════════════════════════════════════════════════════════ */
 
-.section-subtitle {
+.ta-carriers-section {
+    position: relative;
+    padding: clamp(70px, 9vw, 110px) 0;
+    background: linear-gradient(180deg, #ffffff 0%, #f7faff 100%);
+    overflow: clip;
+}
+
+.ta-container {
+    width: 90%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.ta-section-header {
     text-align: center;
-    color: var(--color-text-light, #5A6A80);
-    font-size: 1.1rem;
-    max-width: 600px;
-    margin: 0 auto var(--spacing-xl, 4rem);
+    max-width: 700px;
+    margin: 0 auto clamp(36px, 5vw, 55px);
 }
 
-.operadoras-section {
-    padding: var(--spacing-xl, 4rem) 0;
-    background: var(--color-white, #fff);
-}
-
-.operadoras-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--spacing-lg, 2rem);
-    margin-top: var(--spacing-lg, 2rem);
-}
-
-.operadora-card {
-    background: var(--color-white, #fff);
-    border-radius: var(--border-radius, 16px);
-    padding: var(--spacing-lg, 2rem);
-    text-align: center;
-    box-shadow: var(--shadow-md, 0 4px 20px rgba(0, 0, 0, .08));
-    transition: var(--transition, all .25s ease);
-    border: 2px solid transparent;
-}
-
-.operadora-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-lg, 0 12px 40px rgba(0, 0, 0, .12));
-}
-
-.operadora-card.telcel {
-    border-color: #ff3d00;
-}
-
-.operadora-card.movistar {
-    border-color: #00a1df;
-}
-
-.operadora-card.att {
-    border-color: #ff6d00;
-}
-
-.operadora-card.unefon {
-    border-color: #00bcd4;
-}
-
-.operadora-logo {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto var(--spacing-md, 1.25rem);
-    border-radius: 50%;
-    display: flex;
+.ta-eyebrow {
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
-    font-size: 2.5rem;
-    color: white;
+    gap: 8px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #003796;
+    margin-bottom: 12px;
 }
 
-.operadora-card.telcel .operadora-logo {
-    background: linear-gradient(135deg, #ff3d00, #d32f2f);
+.ta-eyebrow::before,
+.ta-eyebrow::after {
+    content: '';
+    width: 20px;
+    height: 2px;
+    border-radius: 2px;
+    background: currentColor;
+    opacity: 0.6;
 }
 
-.operadora-card.movistar .operadora-logo {
-    background: linear-gradient(135deg, #00a1df, #0277bd);
+.ta-title {
+    font-size: clamp(1.9rem, 3.8vw, 2.7rem);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: #001845;
+    margin-bottom: 14px;
 }
 
-.operadora-card.att .operadora-logo {
-    background: linear-gradient(135deg, #ff6d00, #e65100);
+.ta-title span {
+    background: linear-gradient(90deg, #003796, #0a84ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.operadora-card.unefon .operadora-logo {
-    background: linear-gradient(135deg, #00bcd4, #0097a7);
+.ta-lead {
+    font-size: 1.02rem;
+    line-height: 1.7;
+    color: #5a6a80;
 }
 
-.operadora-card h3 {
-    color: var(--color-primary-dark, #001845);
-    font-size: 1.4rem;
-    margin-bottom: var(--spacing-xs, .5rem);
+/* ── Grid Operadoras ── */
+.ta-carriers-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
 }
 
-.operadora-card p {
-    color: var(--color-text-light, #5A6A80);
-    font-size: .95rem;
-    margin-bottom: var(--spacing-md, 1.25rem);
+.ta-carrier-card {
+    position: relative;
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 30px 22px 26px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0, 24, 69, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 24, 69, 0.04);
+    transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 0.35s ease;
+    overflow: hidden;
 }
 
-.operadora-amounts {
+.ta-carrier-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.ta-carrier-card.telcel::before { background: linear-gradient(90deg, #003399, #0066cc); }
+.ta-carrier-card.movistar::before { background: linear-gradient(90deg, #00a1df, #0077b6); }
+.ta-carrier-card.bait::before { background: linear-gradient(90deg, #e60067, #ff3388); }
+.ta-carrier-card.att::before { background: linear-gradient(90deg, #009fdb, #005088); }
+
+.ta-carrier-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 24px 50px -12px rgba(0, 24, 69, 0.16);
+}
+
+.ta-carrier-card:hover::before {
+    opacity: 1;
+}
+
+.ta-carrier-card.telcel:hover { border-color: rgba(0, 51, 153, 0.25); }
+.ta-carrier-card.movistar:hover { border-color: rgba(0, 161, 223, 0.25); }
+.ta-carrier-card.bait:hover { border-color: rgba(230, 0, 103, 0.25); }
+.ta-carrier-card.att:hover { border-color: rgba(0, 159, 219, 0.25); }
+
+.carrier-brand {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.carrier-icon-circle {
+    width: 68px;
+    height: 68px;
+    margin: 0 auto 16px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 1.6rem;
+    color: #ffffff;
+    transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.ta-carrier-card:hover .carrier-icon-circle {
+    transform: scale(1.1) rotate(-6deg);
+}
+
+.telcel-glow {
+    background: linear-gradient(135deg, #003399 0%, #0066cc 100%);
+    box-shadow: 0 8px 22px rgba(0, 51, 153, 0.35);
+}
+
+.movistar-glow {
+    background: linear-gradient(135deg, #00a1df 0%, #006699 100%);
+    box-shadow: 0 8px 22px rgba(0, 161, 223, 0.35);
+}
+
+.bait-glow {
+    background: linear-gradient(135deg, #e60067 0%, #ff3388 100%);
+    box-shadow: 0 8px 22px rgba(230, 0, 103, 0.35);
+}
+
+.att-glow {
+    background: linear-gradient(135deg, #009fdb 0%, #004c87 100%);
+    box-shadow: 0 8px 22px rgba(0, 159, 219, 0.35);
+}
+
+.carrier-brand h3 {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #001845;
+    margin: 0 0 6px 0;
+}
+
+.carrier-brand p {
+    font-size: 0.88rem;
+    color: #5a6a80;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.carrier-chips {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 7px;
     justify-content: center;
+    margin-top: auto;
 }
 
-.amount-tag {
-    background: var(--color-gray-light, #F4F7FB);
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: .85rem;
-    font-weight: 600;
-    color: var(--color-text, #001845);
-    transition: var(--transition, all .25s ease);
+.chip {
+    padding: 5px 11px;
+    border-radius: 9px;
+    background: #f4f7fb;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #001845;
+    border: 1px solid rgba(0, 24, 69, 0.05);
+    transition: all 0.25s ease;
+    cursor: default;
 }
 
-.amount-tag:hover {
-    background: var(--color-primary, #0BBFBF);
-    color: white;
+.chip:hover {
+    background: #001845;
+    color: #ffffff;
+    border-color: #001845;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 24, 69, 0.2);
 }
 
-/* ══════════════════════════════════════════════
-   16. SECCIÓN BENEFICIOS
-══════════════════════════════════════════════ */
 
-.recargas-benefits-section {
-    padding: var(--spacing-xl, 4rem) 0;
-    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+/* ═════════════════════════════════════════════════════════
+   16. SECCIÓN BENEFICIOS (DISEÑO REFINADO Y ELEGANTE)
+═════════════════════════════════════════════════════════ */
+
+.ta-benefits-section {
+    position: relative;
+    padding: clamp(70px, 9vw, 110px) 0;
+    background:
+        radial-gradient(circle at 50% 0%, rgba(10, 132, 255, 0.04) 0%, transparent 60%),
+        linear-gradient(180deg, #f8faff 0%, #ffffff 100%);
+    overflow: clip;
 }
 
-.benefits-grid {
+.ta-benefits-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--spacing-lg, 2rem);
-    margin-top: var(--spacing-xl, 4rem);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
 }
 
-.benefit-card {
-    background: var(--color-white, #fff);
-    padding: var(--spacing-xl, 4rem);
-    border-radius: var(--border-radius, 16px);
-    text-align: center;
-    box-shadow: var(--shadow-md, 0 4px 20px rgba(0, 0, 0, .08));
-    transition: var(--transition, all .25s ease);
+.ta-benefit-box {
+    position: relative;
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 30px 24px 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    border: 1px solid rgba(0, 24, 69, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 24, 69, 0.03);
+    transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 0.35s ease;
 }
 
-.benefit-card:hover {
+.ta-benefit-box:hover {
     transform: translateY(-8px);
-    box-shadow: var(--shadow-lg, 0 12px 40px rgba(0, 0, 0, .12));
+    border-color: rgba(0, 55, 150, 0.25);
+    box-shadow: 0 22px 50px -12px rgba(0, 24, 69, 0.12);
 }
 
-.benefit-icon {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto var(--spacing-md, 1.25rem);
-    background: linear-gradient(135deg, #00c853, #009624);
-    border-radius: 50%;
+.benefit-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2px;
+}
+
+.benefit-pill {
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 4px 11px;
+    border-radius: 100px;
+    letter-spacing: 0.02em;
+}
+
+.benefit-pill.green {
+    background: rgba(0, 200, 83, 0.1);
+    color: #009624;
+}
+
+.benefit-pill.blue {
+    background: rgba(10, 132, 255, 0.1);
+    color: #0066cc;
+}
+
+.benefit-pill.purple {
+    background: rgba(138, 43, 226, 0.1);
+    color: #7b1fa2;
+}
+
+.benefit-pill.teal {
+    background: rgba(11, 191, 191, 0.12);
+    color: #007788;
+}
+
+.box-icon-container {
+    width: 54px;
+    height: 54px;
+    border-radius: 16px;
+    display: grid;
+    place-items: center;
+    font-size: 1.35rem;
+    transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.ta-benefit-box:hover .box-icon-container {
+    transform: scale(1.1) rotate(-6deg);
+}
+
+.box-icon-container.green {
+    background: rgba(0, 200, 83, 0.12);
+    color: #00a844;
+    border: 1px solid rgba(0, 200, 83, 0.2);
+}
+
+.box-icon-container.blue {
+    background: rgba(10, 132, 255, 0.12);
+    color: #0066cc;
+    border: 1px solid rgba(10, 132, 255, 0.2);
+}
+
+.box-icon-container.purple {
+    background: rgba(138, 43, 226, 0.12);
+    color: #7b1fa2;
+    border: 1px solid rgba(138, 43, 226, 0.2);
+}
+
+.box-icon-container.teal {
+    background: rgba(11, 191, 191, 0.14);
+    color: #089a9a;
+    border: 1px solid rgba(11, 191, 191, 0.25);
+}
+
+.ta-benefit-box h3 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #001845;
+    margin: 0;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+}
+
+.ta-benefit-box p {
+    font-size: 0.94rem;
+    line-height: 1.68;
+    color: #5a6a80;
+    margin: 0;
+}
+
+.benefit-card-footer {
+    margin-top: auto;
+    padding-top: 14px;
+    border-top: 1px dashed rgba(0, 55, 150, 0.12);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #003796;
     display: flex;
     align-items: center;
-    justify-content: center;
-    font-size: 2.5rem;
-    color: white;
-    box-shadow: 0 4px 15px rgba(0, 200, 83, .3);
+    gap: 7px;
 }
 
-.benefit-card h3 {
-    color: var(--color-primary-dark, #001845);
-    font-size: 1.3rem;
-    margin-bottom: var(--spacing-sm, .75rem);
+.benefit-card-footer i {
+    color: #0a84ff;
+    font-size: 0.88rem;
 }
 
-.benefit-card p {
-    color: var(--color-text-light, #5A6A80);
-    line-height: 1.7;
+
+/* ═════════════════════════════════════════════════════════
+   RESPONSIVE DESIGN TIEMPO AIRE
+═════════════════════════════════════════════════════════ */
+
+@media screen and (max-width: 1024px) {
+    .ta-carriers-grid,
+    .ta-benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .ta-earnings-banner {
+        grid-template-columns: 1fr;
+        padding: 30px;
+        text-align: center;
+    }
+
+    .earnings-left {
+        align-items: center;
+    }
 }
 
+@media screen and (max-width: 640px) {
+    .ta-carriers-grid,
+    .ta-benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .earnings-right {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .ta-earnings-banner {
+        padding: 24px 20px;
+    }
+
+    .ta-carrier-card,
+    .ta-benefit-box {
+        padding: 24px 20px;
+        border-radius: 20px;
+    }
+}
 /* ══════════════════════════════════════════════
    17. SECCIÓN SERVICIOS
 ══════════════════════════════════════════════ */

@@ -43,13 +43,12 @@
 
 header {
     position: relative;
-    min-height: 100svh;
+    min-height: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-content: start;   /* contenido pegado arriba, sin hueco superior */
-    align-items: center;    /* texto y monitor alineados entre sí */
+    align-items: center;    /* texto y monitor perfectamente centrados y alineados entre sí */
     gap: 2rem;
-    padding: 40px clamp(1.5rem, 6vw, 5rem) 60px;
+    padding: clamp(40px, 6vw, 70px) clamp(1.5rem, 6vw, 5rem) clamp(50px, 6vw, 80px);
     overflow: hidden;
 }
 

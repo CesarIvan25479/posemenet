@@ -1,97 +1,172 @@
-
-<app-header-modal
-  badge="emenetPOS — Facturación Electrónica"
-  titulo="La Facturación más fácil y segura de México"
-  descripcion="Genera facturas CFDI 100% válidas ante el SAT."
-  imagen="images/facturacion/puntoventa.png"
-  [features]="features"
-  [floatCards]="floatCards">
+<app-header-modal badge="emenetPOS — Facturación Electrónica" titulo="La Facturación más fácil y segura de México"
+  descripcion="Genera facturas CFDI 100% válidas ante el SAT." imagen="images/facturacion/puntoventa.png"
+  [features]="features" [floatCards]="floatCards">
 </app-header-modal>
 
 
 
 <br>
-<!-- ===== HERO SECTION ===== -->
-<section class="facturacion-hero-section reveal fade-up">
-  <div class="facturacion-hero-container">
-    <div class="facturacion-hero-content">
-      <div class="facturacion-badge">
-        <i class="fas fa-check-circle"></i>
-        <span>100% Legal</span>
+<!-- ===== HERO SECTION (MODERN SPLIT SHOWCASE) ===== -->
+<section class="fac-showcase-section reveal fade-up">
+  <div class="fac-showcase-container">
+    <div class="fac-showcase-content">
+      <div class="fac-badge-legal">
+        <span class="badge-pulse"></span>
+        <i class="fas fa-shield-halved"></i>
+        <span>100% Válido ante el SAT · CFDI 4.0</span>
       </div>
-      <h2 class="facturacion-hero-title">Facturación Digital Profesional</h2>
-      <p class="facturacion-hero-description">Genera facturas electrónicas para tus clientes de forma fácil y rápida.
+
+      <h2 class="fac-showcase-title">
+        Facturación Digital <span>Inteligente y Sin Errores</span>
+      </h2>
+
+      <p class="fac-showcase-lead">
+        Genera facturas electrónicas para tus clientes de forma ágil, segura y sin complicaciones técnicas.
       </p>
-      <p class="facturacion-hero-subtitle">MyBusiness POS te permite emitir facturas electrónicas 100% válidas en tiempo
-        real, cumpliendo automáticamente con todas las normativas fiscales vigentes.
-        Y con el respaldo de emenetPOS, recibirás capacitación, seguimiento y soporte continuo para que tu facturación
-        funcione siempre de manera correcta y sin complicaciones.
+
+      <p class="fac-showcase-text">
+        MyBusiness POS emite comprobantes fiscales digitales válidos en tiempo real cumpliendo al 100% con las
+        disposiciones tributarias en México. Con el respaldo integral de emenetPOS, cuentas con acompañamiento, asesoría
+        fiscal y soporte permanente para que tu facturación marche siempre impecable.
       </p>
-      <button class="facturacion-btn-comprar" (click)="openModal()">
-        <i class="fas fa-shopping-cart"></i> Comprar Timbres Fiscales
-      </button>
-    </div>
-    <div class="facturacion-hero-image">
-      <img src="images/facturacion/facturacion.webp" alt="Facturación Electrónica" class="facturacion-image">
-    </div>
-  </div>
-</section>
-<!-- ===== BENEFICIOS SECTION ===== -->
-<section class="facturacion-benefits-section">
-  <div class="contenedor">
-    <h2 class="titulo">Beneficios de Emitir Facturas Electrónicas</h2>
-    <div class="facturacion-beneficios-grid">
-      <div class="facturacion-burbuja">
-        <div class="facturacion-burbuja-icon">
-          <i class="fas fa-clock"></i>
+
+      <div class="fac-showcase-actions">
+        <button class="fac-btn-primary" (click)="openModal()">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span>Comprar Timbres Fiscales</span>
+        </button>
+        <div class="fac-meta-info">
+          <i class="fas fa-circle-check"></i>
+          <span>Activación inmediata</span>
         </div>
-        <h3>Ahorro de Tiempo</h3>
-        <p>Emite facturas en segundos sin llenar formularios complejos.</p>
       </div>
-      <div class="facturacion-burbuja">
-        <div class="facturacion-burbuja-icon">
-          <i class="fas fa-shield-alt"></i>
+    </div>
+
+    <div class="fac-showcase-visual">
+      <div class="fac-glow-bg"></div>
+      <div class="fac-image-card">
+        <img src="images/facturacion/facturacion.webp" alt="Facturación Electrónica" class="fac-main-img">
+        <div class="fac-floating-chip">
+          <div class="chip-icon"><i class="fas fa-certificate"></i></div>
+          <div class="chip-data">
+            <strong>Timbrado Inmediato</strong>
+            <span>PAC Autorizado SAT</span>
+          </div>
         </div>
-        <h3>Seguridad y Legalidad</h3>
-        <p>Facturas con firma digital certificada.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== CARACTERISTICAS SECTION ===== -->
-<section class="facturacion-caracteristicas-section">
-  <div class="contenedor">
-    <h2 class="titulo">Características Principales</h2>
-    <div class="facturacion-caracteristicas-grid">
-      <div class="facturacion-caracteristica-item">
-        <div class="caracteristica-icon">
-          <i class="fas fa-file-invoice-dollar"></i>
-        </div>
-        <h3>Emisión Legal</h3>
-        <p>Genera facturas 100% válidas con firma digital y respaldo del SAT</p>
+<!-- ===== CARACTERISTICAS Y BENEFICIOS (CENTRADOS E INNOVADORES) ===== -->
+<section class="fac-features-section reveal fade-up">
+  <div class="fac-features-container">
+    <div class="fac-section-head">
+      <span class="fac-eyebrow">Ventajas Competitivas</span>
+      <h2 class="fac-title">Potencia, rapidez y certeza en cada <span>CFDI</span></h2>
+      <p class="fac-lead">
+        Todo el ciclo de comprobación fiscal diseñado para agilizar el cobro y mantener tus cuentas al día sin perder
+        tiempo.
+      </p>
+    </div>
+
+    <!-- Grid simétrico y centrado: 2x2 equilibrado + Barra de Timbres inferior -->
+    <div class="fac-cards-container">
+      <div class="fac-grid-quad">
+        <!-- Card 1: Emisión en segundos -->
+        <article class="fac-feature-card reveal zoom-in delay-100">
+          <div class="fac-card-top">
+            <div class="fac-card-icon-wrap primary">
+              <i class="fas fa-bolt"></i>
+            </div>
+            <span class="fac-card-badge">Rápido</span>
+          </div>
+          <div class="fac-card-main">
+            <h3>Emisión en Segundos</h3>
+            <p>Emite facturas directamente desde el ticket de venta en un solo clic, sin formularios confusos ni
+              pérdidas de tiempo.</p>
+          </div>
+          <div class="fac-card-footer">
+            <i class="fas fa-gauge-high"></i>
+            <span>Menos de 3 segundos por timbrado</span>
+          </div>
+        </article>
+
+        <!-- Card 2: Legalidad 100% SAT -->
+        <article class="fac-feature-card reveal zoom-in delay-200">
+          <div class="fac-card-top">
+            <div class="fac-card-icon-wrap success">
+              <i class="fa-solid fa-scale-unbalanced-flip"></i>
+            </div>
+            <span class="fac-card-badge success">Garantía SAT</span>
+          </div>
+          <div class="fac-card-main">
+            <h3>Emisión Legal 100% Válida</h3>
+            <p>Genera CFDIs con sello digital certificado, cadenas originales del SAT y timbrado avalado con total apego
+              a la normativa 4.0.</p>
+          </div>
+          <div class="fac-card-footer">
+            <i class="fas fa-certificate"></i>
+            <span>PAC Autorizado Oficial</span>
+          </div>
+        </article>
+
+        <!-- Card 3: Nube y Resguardo -->
+        <article class="fac-feature-card reveal zoom-in delay-300">
+          <div class="fac-card-top">
+            <div class="fac-card-icon-wrap info">
+              <i class="fas fa-cloud-arrow-up"></i>
+            </div>
+            <span class="fac-card-badge info">Seguridad 24/7</span>
+          </div>
+          <div class="fac-card-main">
+            <h3>Almacenamiento Seguro</h3>
+            <p>Tus archivos XML y PDF respaldados en servidores de alta seguridad. Reenvía facturas por correo a tus
+              clientes al instante.</p>
+          </div>
+          <div class="fac-card-footer">
+            <i class="fas fa-lock"></i>
+            <span>Respaldo</span>
+          </div>
+        </article>
+
+        <!-- Card 4: Reportes Financieros -->
+        <article class="fac-feature-card reveal zoom-in delay-400">
+          <div class="fac-card-top">
+            <div class="fac-card-icon-wrap warning">
+              <i class="fas fa-chart-pie"></i>
+            </div>
+            <span class="fac-card-badge warning">Visibilidad Total</span>
+          </div>
+          <div class="fac-card-main">
+            <h3>Reportes y Análisis Fiscal</h3>
+            <p>Obtén métricas de facturación acumulada, IVA trasladado y resúmenes periódicos para facilitar la labor
+              contable.</p>
+          </div>
+          <div class="fac-card-footer">
+            <i class="fas fa-arrow-trend-up"></i>
+            <span>Control</span>
+          </div>
+        </article>
       </div>
-      <div class="facturacion-caracteristica-item">
-        <div class="caracteristica-icon">
-          <i class="fas fa-cloud-upload-alt"></i>
+
+      <!-- Banner Inferior de Timbres: Centrado, Premium y Proporcional -->
+      <article class="fac-promo-banner reveal zoom-in delay-500">
+        <div class="fac-promo-body">
+          <div class="fac-promo-icon">
+            <i class="fas fa-stamp"></i>
+          </div>
+          <div class="fac-promo-details">
+            <span class="fac-promo-tag">Timbres Fiscales Transparentes</span>
+            <h3>Paquetes económicos y flexibles sin plazos forzosos</h3>
+            <p>Desde 100 timbres con activación inmediata. Sin mensualidades obligatorias ni cobros ocultos.</p>
+          </div>
         </div>
-        <h3>Almacenamiento Seguro</h3>
-        <p>Todas tus facturas se guardan en nuestros servidores en la nube</p>
-      </div>
-      <div class="facturacion-caracteristica-item">
-        <div class="caracteristica-icon">
-          <i class="fas fa-envelope"></i>
-        </div>
-        <h3>Timbres fiscales</h3>
-        <p>Emite facturas de manera rápida y segura con timbres fiscales válidos</p>
-      </div>
-      <div class="facturacion-caracteristica-item">
-        <div class="caracteristica-icon">
-          <i class="fas fa-chart-bar"></i>
-        </div>
-        <h3>Reportes</h3>
-        <p>Análisis completos de tus facturas emitidas y cumplimiento fiscal</p>
-      </div>
+        <button class="fac-btn-banner" (click)="openModal()">
+          <span>Ver Paquetes de Timbres</span>
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </article>
     </div>
   </div>
 </section>
