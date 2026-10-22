@@ -1,8 +1,3 @@
-/* ========================================================
-   TIMBRES MODAL — Estilos compartidos
-   Usado en: facturacion y accesorios
-======================================================== */
-
 /* Overlay */
 .tm-overlay {
     position: fixed;
@@ -28,8 +23,13 @@
 }
 
 @keyframes tm-fadeIn {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 /* Modal card */
@@ -56,8 +56,15 @@
 }
 
 @keyframes tm-slideUp {
-    from { opacity: 0; transform: translateY(50px); }
-    to   { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Botón cerrar */
@@ -239,7 +246,9 @@
     transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.tm-detail-circle:hover { transform: scale(1.04); }
+.tm-detail-circle:hover {
+    transform: scale(1.04);
+}
 
 .tm-detail-num {
     font-size: 2.4rem;
@@ -332,7 +341,9 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-    .tm-modal { max-height: 85vh; }
+    .tm-modal {
+        max-height: 85vh;
+    }
 
     .tm-detail {
         flex-direction: column;
@@ -347,16 +358,44 @@
         padding: 15px;
     }
 
-    .tm-detail-price-row { justify-content: center; }
-    .tm-btn-buy { width: 100%; justify-content: center; }
-    .tm-detail-right { align-items: center; }
-    .tm-packages-grid { grid-template-columns: repeat(2, 1fr); }
+    .tm-detail-price-row {
+        justify-content: center;
+    }
+
+    .tm-btn-buy {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .tm-detail-right {
+        align-items: center;
+    }
+
+    .tm-packages-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 480px) {
-    .tm-header { padding: 20px 20px 0; padding-right: 60px; }
-    .tm-body { padding: 15px 20px 20px; }
-    .tm-title { font-size: 1.15rem; }
-    .tm-detail-circle { width: 130px; height: 130px; }
-    .tm-detail-num { font-size: 2rem; }
+    .tm-header {
+        padding: 20px 20px 0;
+        padding-right: 60px;
+    }
+
+    .tm-body {
+        padding: 15px 20px 20px;
+    }
+
+    .tm-title {
+        font-size: 1.15rem;
+    }
+
+    .tm-detail-circle {
+        width: 130px;
+        height: 130px;
+    }
+
+    .tm-detail-num {
+        font-size: 2rem;
+    }
 }

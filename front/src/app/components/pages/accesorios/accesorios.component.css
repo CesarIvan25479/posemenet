@@ -1,8 +1,4 @@
-/* =============================================
-   ACCESORIOS – Rediseño completo
-   ============================================= */
-
-/* ─── Reset mínimo ─── */
+/* Reset mínimo */
 * {
     margin: 0;
     padding: 0;
@@ -20,9 +16,7 @@ body {
     overflow-x: hidden;
 }
 
-/* =============================================
-   VARIABLES LOCALES
-   ============================================= */
+/* VARIABLES LOCALES */
 :host {
     --navy: #001845;
     --navy-light: #003796;
@@ -36,9 +30,7 @@ body {
     --ease: cubic-bezier(.4, 0, .2, 1);
 }
 
-/* =============================================
-   HEADER / HERO
-   ============================================= */
+/* HEADER / HERO */
 :host {
     display: block;
     animation: pageFadeIn 0.8s ease-out both;
@@ -99,7 +91,7 @@ body {
     z-index: 0;
 }
 
-/* ─── HERO GRID ─── */
+/* HERO GRID */
 .acc-hero {
     position: relative;
     z-index: 1;
@@ -112,7 +104,7 @@ body {
     margin: 0 auto;
 }
 
-/* ─── Columna texto ─── */
+/* Columna texto */
 .acc-hero-text {
     display: flex;
     flex-direction: column;
@@ -221,7 +213,7 @@ body {
     fill: none;
 }
 
-/* ─── Columna visual ─── */
+/* Columna visual */
 .acc-hero-visual {
     position: relative;
     display: flex;
@@ -257,7 +249,7 @@ body {
     animation: floatImg 6s ease-in-out infinite;
 }
 
-/* ─── Chips flotantes ─── */
+/* Chips flotantes */
 .acc-chip {
     position: absolute;
     z-index: 3;
@@ -305,7 +297,7 @@ body {
     animation-delay: .7s;
 }
 
-/* ── Wave bottom ── */
+/* Wave bottom */
 .acc-header-wave {
     position: relative;
     z-index: 1;
@@ -319,10 +311,7 @@ body {
     height: 60px;
 }
 
-/* ─────────────────────────────────────────────────────
-   SECCIÓN — CTA DE SCROLL (el gancho final)
-   Invita visualmente a ver más abajo
-───────────────────────────────────────────────────── */
+/* CTA DE SCROLL (el gancho final) Invita visualmente a ver más abajo */
 .acc-scroll-cta {
     position: relative;
     z-index: 1;
@@ -434,9 +423,7 @@ body {
     width: 100%;
 }
 
-/* ═══════════════════════════════════════════════════════
-   KEYFRAMES
-═══════════════════════════════════════════════════════ */
+/* KEYFRAMES */
 @keyframes fadeUp {
     from {
         opacity: 0;
@@ -540,9 +527,7 @@ body {
     }
 }
 
-/* ─────────────────────────────────────────────────────
-   SECCIÓN — BARRA DE STATS / CONFIANZA
-───────────────────────────────────────────────────── */
+/* SECCIÓN — BARRA DE STATS / CONFIANZA */
 .acc-trust-bar {
     position: relative;
     z-index: 1;
@@ -593,9 +578,7 @@ body {
     flex-shrink: 0;
 }
 
-/* ─────────────────────────────────────────────────────
-   SECCIÓN — TARJETAS DE BENEFICIOS
-───────────────────────────────────────────────────── */
+/* SECCIÓN — TARJETAS DE BENEFICIOS */
 .acc-benefits {
     position: relative;
     z-index: 1;
@@ -699,7 +682,7 @@ body {
     background: var(--navy);
 }
 
-/* ── SVG base ── */
+/* SVG base */
 .benefit-svg {
     width: 24px;
     height: 24px;
@@ -707,7 +690,7 @@ body {
     stroke: rgba(255, 255, 255, .9);
 }
 
-/* ── Keyframes de animación (reutilizables) ── */
+/* Keyframes de animación (reutilizables) */
 @keyframes ben-bounce {
 
     0%,
@@ -766,7 +749,7 @@ body {
     }
 }
 
-/* ── Disparo de animaciones en hover ── */
+/* Disparo de animaciones en hover */
 .acc-benefit-card:hover .benefit-svg.anim-bounce {
     animation: ben-bounce 0.6s cubic-bezier(.33, 1, .68, 1);
 }
@@ -802,10 +785,7 @@ body {
     line-height: 1.6;
 }
 
-/* ─────────────────────────────────────────────────────
-   SECCIÓN  — BANNER PROMO DIAGONAL
-   El "gancho" que hace que el usuario quiera bajar
-───────────────────────────────────────────────────── */
+/* SECCIÓN  — BANNER PROMO DIAGONAL El "gancho" que hace que el usuario quiera bajar*/
 .acc-promo-banner {
     position: relative;
     z-index: 1;
@@ -917,9 +897,7 @@ body {
     color: var(--teal);
 }
 
-/* =============================================
-   GALLERY SECTION  (sin tocar gallery-container)
-   ============================================= */
+/*  GALLERY SECTION  (sin tocar gallery-container) */
 .gallery-section {
     width: 100%;
     padding: 80px 0 96px;
@@ -974,9 +952,7 @@ body {
     height: 100%;
 }
 
-/* =============================================
-   VENTAS SECTION – Productos
-   ============================================= */
+/* VENTAS SECTION – Productos */
 .ventas-section {
     width: 100%;
     padding: 80px 0 96px;
@@ -1012,14 +988,14 @@ body {
     animation: fadeUp .9s ease-out .1s both;
 }
 
-/* ─── Grid de productos ─── */
+/* Grid de productos */
 .products-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
 }
 
-/* ─── Tarjeta de producto ─── */
+/* Tarjeta de producto */
 .product-card {
     display: flex;
     flex-direction: column;
@@ -1041,7 +1017,7 @@ body {
     box-shadow: 0 16px 48px rgba(0, 24, 69, .14);
 }
 
-/* ─── Imagen y overlay ─── */
+/* Imagen y overlay */
 .product-image-wrapper {
     position: relative;
     width: 100%;
@@ -1090,7 +1066,7 @@ body {
     background: rgba(255, 255, 255, .1);
 }
 
-/* ─── Info del producto ─── */
+/* Info del producto */
 .product-info {
     display: flex;
     flex-direction: column;
@@ -1114,7 +1090,7 @@ body {
     line-height: 1.55;
 }
 
-/* ─── Footer de tarjeta ─── */
+/* Footer de tarjeta */
 .product-footer {
     display: flex;
     align-items: center;
@@ -1131,7 +1107,7 @@ body {
     letter-spacing: -.01em;
 }
 
-/* ─── Botón ─── */
+/* Botón */
 .btn-more-info {
     padding: 9px 18px;
     background: linear-gradient(135deg, var(--navy-light), var(--navy));
@@ -1158,9 +1134,7 @@ body {
 
 /* Duplicate @keyframes removed — already defined above */
 
-/* =============================================
-   RESPONSIVE — TABLET  (≤1024px)
-   ============================================= */
+/* RESPONSIVE — TABLET  (≤1024px) */
 @media (max-width: 1024px) {
     .products-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -1172,9 +1146,7 @@ body {
     }
 }
 
-/* =============================================
-   RESPONSIVE — TABLET PEQUEÑA / MÓVIL GRANDE (≤768px)
-   ============================================= */
+/* RESPONSIVE — TABLET PEQUEÑA / MÓVIL GRANDE (≤768px) */
 @media (max-width: 768px) {
 
     /* Hero: columna única */
@@ -1235,9 +1207,7 @@ body {
     }
 }
 
-/* =============================================
-   RESPONSIVE — MÓVIL  (≤580px)
-   ============================================= */
+/* RESPONSIVE — MÓVIL  (≤580px) */
 @media (max-width: 580px) {
     .acc-hero {
         padding: 44px 1rem 36px;
@@ -1292,9 +1262,7 @@ body {
     /* gallery-container: clamp() ya cubre este rango */
 }
 
-/* =============================================
-   RESPONSIVE — MÓVIL PEQUEÑO  (≤380px)
-   ============================================= */
+/* RESPONSIVE — MÓVIL PEQUEÑO  (≤380px) */
 @media (max-width: 380px) {
     .products-grid {
         grid-template-columns: 1fr;

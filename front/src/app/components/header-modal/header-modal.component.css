@@ -39,14 +39,15 @@
 
 
 
-/* ===== HEADER HERO ===== */
+/* HEADER HERO */
 
 header {
     position: relative;
     min-height: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: center;    /* texto y monitor perfectamente centrados y alineados entre sí */
+    align-items: center;
+    /* texto y monitor perfectamente centrados y alineados entre sí */
     gap: 2rem;
     padding: clamp(40px, 6vw, 70px) clamp(1.5rem, 6vw, 5rem) clamp(50px, 6vw, 80px);
     overflow: hidden;
@@ -86,7 +87,7 @@ header::before {
     mask-image: radial-gradient(ellipse 60% 60% at 80% 50%, black 0%, transparent 70%);
 }
 
-/* ── IZQUIERDA ── */
+/* IZQUIERDA */
 .hero-left {
     position: relative;
     z-index: 2;
@@ -217,8 +218,8 @@ header::before {
     overflow: hidden;
     isolation: isolate;
     transition: transform .4s cubic-bezier(.16, 1, .3, 1),
-                box-shadow .4s cubic-bezier(.16, 1, .3, 1),
-                background-color .35s ease, color .35s ease, border-color .35s ease;
+        box-shadow .4s cubic-bezier(.16, 1, .3, 1),
+        background-color .35s ease, color .35s ease, border-color .35s ease;
 }
 
 .btn-hero-primary i,
@@ -244,8 +245,8 @@ header::before {
     margin-left: -.6rem;
     transform: translateX(-6px);
     transition: width .4s cubic-bezier(.16, 1, .3, 1),
-                opacity .3s ease, margin .4s cubic-bezier(.16, 1, .3, 1),
-                transform .4s cubic-bezier(.16, 1, .3, 1);
+        opacity .3s ease, margin .4s cubic-bezier(.16, 1, .3, 1),
+        transform .4s cubic-bezier(.16, 1, .3, 1);
 }
 
 /* Destello */
@@ -267,7 +268,9 @@ header::before {
     box-shadow: 0 14px 30px -10px rgba(0, 55, 150, .55);
 }
 
-.btn-hero-primary:hover::before { left: 130%; }
+.btn-hero-primary:hover::before {
+    left: 130%;
+}
 
 .btn-hero-primary:hover::after {
     width: 1em;
@@ -276,7 +279,9 @@ header::before {
     transform: none;
 }
 
-.btn-hero-primary:hover i { transform: rotate(-12deg) scale(1.12); }
+.btn-hero-primary:hover i {
+    transform: rotate(-12deg) scale(1.12);
+}
 
 /* Secundario: contorno fino que se rellena desde abajo */
 .btn-hero-ghost {
@@ -305,9 +310,13 @@ header::before {
     box-shadow: 0 10px 24px -12px rgba(0, 24, 69, .35);
 }
 
-.btn-hero-ghost:hover::before { transform: scaleY(1); }
+.btn-hero-ghost:hover::before {
+    transform: scaleY(1);
+}
 
-.btn-hero-ghost:hover i { transform: scale(1.15) rotate(-8deg); }
+.btn-hero-ghost:hover i {
+    transform: scale(1.15) rotate(-8deg);
+}
 
 /* Presión táctil */
 .btn-hero-primary:active,
@@ -371,7 +380,7 @@ header::before {
     font-weight: 600;
 }
 
-/* ── DERECHA / MOCKUP ── */
+/* DERECHA / MOCKUP */
 .hero-right {
     position: relative;
     z-index: 2;
@@ -387,9 +396,7 @@ header::before {
     max-width: 580px;
 }
 
-/* ════════════════════════════════════
-   PANTALLA / MONITOR MOCKUP
-══════════════════════════════════ */
+/* PANTALLA / MONITOR MOCKUP */
 .screen-mockup {
     position: relative;
     width: 100%;
@@ -514,9 +521,7 @@ header::before {
     background: rgba(0, 24, 69, .07);
 }
 
-/* ═══════════════════════════════════════════
-   WAVE
-═══════════════════════════════════════════ */
+/* WAVE */
 .hero-wave {
     position: absolute;
     bottom: 0;
@@ -531,7 +536,7 @@ header::before {
     width: 100%;
 }
 
-/* ===== ANIMATIONS ===== */
+/* ANIMATIONS */
 
 @keyframes fadeUp {
     from {
@@ -792,11 +797,9 @@ header::before {
 }
 
 @media (max-width: 340px) {
+
     .btn-hero-primary i,
     .btn-hero-ghost i {
         display: none;
     }
 }
-
-
-

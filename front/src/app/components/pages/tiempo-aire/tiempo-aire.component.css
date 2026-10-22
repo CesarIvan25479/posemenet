@@ -1,6 +1,4 @@
-/* ══════════════════════════════════════════════
-   12. BOTONES GENERALES (fuera del hero)
-══════════════════════════════════════════════ */
+/* 12. BOTONES GENERALES (fuera del hero)*/
 
 .cta-buttons {
     display: flex;
@@ -52,9 +50,7 @@
     font-size: 1.1rem;
 }
 
-/* ══════════════════════════════════════════════
-   13. SECCIÓN CTA
-══════════════════════════════════════════════ */
+/* 13. SECCIÓN CTA */
 
 .cta-section {
     padding: var(--spacing-xl, 4rem) var(--spacing-md, 1.5rem);
@@ -81,9 +77,7 @@
     opacity: .95;
 }
 
-/* ══════════════════════════════════════════════
-   14. SECCIÓN RECARGAS
-══════════════════════════════════════════════ */
+/* 14. SECCIÓN RECARGAS */
 
 .recargas-header {
     background: linear-gradient(135deg, hsla(235, 84%, 55%, .85), hsla(189, 70%, 41%, .85)), url(/images/portada.png);
@@ -184,22 +178,38 @@
 }
 
 @keyframes pointRight {
-    0% { transform: translateX(0); filter: drop-shadow(0 0 2px rgba(0, 230, 118, 0.3)); }
-    100% { transform: translateX(8px); filter: drop-shadow(0 0 10px rgba(0, 230, 118, 0.9)); }
+    0% {
+        transform: translateX(0);
+        filter: drop-shadow(0 0 2px rgba(0, 230, 118, 0.3));
+    }
+
+    100% {
+        transform: translateX(8px);
+        filter: drop-shadow(0 0 10px rgba(0, 230, 118, 0.9));
+    }
 }
 
 @keyframes pointDown {
-    0% { transform: translateY(0); filter: drop-shadow(0 0 2px rgba(0, 230, 118, 0.3)); }
-    100% { transform: translateY(8px); filter: drop-shadow(0 0 10px rgba(0, 230, 118, 0.9)); }
+    0% {
+        transform: translateY(0);
+        filter: drop-shadow(0 0 2px rgba(0, 230, 118, 0.3));
+    }
+
+    100% {
+        transform: translateY(8px);
+        filter: drop-shadow(0 0 10px rgba(0, 230, 118, 0.9));
+    }
 }
 
 @media (max-width: 1024px) {
     .click-instruction {
         margin: 0 auto var(--spacing-lg, 2rem);
     }
+
     .desktop-arrow {
         display: none;
     }
+
     .mobile-arrow {
         display: inline-block;
         animation: pointDown 1s infinite alternate ease-in-out;
@@ -345,6 +355,7 @@
         opacity: 0.2;
         transform: translateY(-3px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(3px);
@@ -377,10 +388,7 @@
     animation: lightning .5s infinite alternate;
 }
 
-/* ══════════════════════════════════════════════
-/* ═════════════════════════════════════════════════════════
-   15. SECCIÓN OPERADORAS CON DISEÑO MODERNO & CHIPS
-═════════════════════════════════════════════════════════ */
+/* 15. SECCIÓN OPERADORAS CON DISEÑO MODERNO & CHIPS */
 
 .ta-carriers-section {
     position: relative;
@@ -445,7 +453,7 @@
     color: #5a6a80;
 }
 
-/* ── Grid Operadoras ── */
+/* Grid Operadoras */
 .ta-carriers-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -462,8 +470,8 @@
     border: 1px solid rgba(0, 24, 69, 0.08);
     box-shadow: 0 4px 20px rgba(0, 24, 69, 0.04);
     transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
-                box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1),
-                border-color 0.35s ease;
+        box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 0.35s ease;
     overflow: hidden;
 }
 
@@ -478,10 +486,21 @@
     transition: opacity 0.35s ease;
 }
 
-.ta-carrier-card.telcel::before { background: linear-gradient(90deg, #003399, #0066cc); }
-.ta-carrier-card.movistar::before { background: linear-gradient(90deg, #00a1df, #0077b6); }
-.ta-carrier-card.bait::before { background: linear-gradient(90deg, #e60067, #ff3388); }
-.ta-carrier-card.att::before { background: linear-gradient(90deg, #009fdb, #005088); }
+.ta-carrier-card.telcel::before {
+    background: linear-gradient(90deg, #003399, #0066cc);
+}
+
+.ta-carrier-card.movistar::before {
+    background: linear-gradient(90deg, #00a1df, #0077b6);
+}
+
+.ta-carrier-card.bait::before {
+    background: linear-gradient(90deg, #e60067, #ff3388);
+}
+
+.ta-carrier-card.att::before {
+    background: linear-gradient(90deg, #009fdb, #005088);
+}
 
 .ta-carrier-card:hover {
     transform: translateY(-8px);
@@ -492,10 +511,21 @@
     opacity: 1;
 }
 
-.ta-carrier-card.telcel:hover { border-color: rgba(0, 51, 153, 0.25); }
-.ta-carrier-card.movistar:hover { border-color: rgba(0, 161, 223, 0.25); }
-.ta-carrier-card.bait:hover { border-color: rgba(230, 0, 103, 0.25); }
-.ta-carrier-card.att:hover { border-color: rgba(0, 159, 219, 0.25); }
+.ta-carrier-card.telcel:hover {
+    border-color: rgba(0, 51, 153, 0.25);
+}
+
+.ta-carrier-card.movistar:hover {
+    border-color: rgba(0, 161, 223, 0.25);
+}
+
+.ta-carrier-card.bait:hover {
+    border-color: rgba(230, 0, 103, 0.25);
+}
+
+.ta-carrier-card.att:hover {
+    border-color: rgba(0, 159, 219, 0.25);
+}
 
 .carrier-brand {
     text-align: center;
@@ -581,9 +611,7 @@
 }
 
 
-/* ═════════════════════════════════════════════════════════
-   16. SECCIÓN BENEFICIOS (DISEÑO REFINADO Y ELEGANTE)
-═════════════════════════════════════════════════════════ */
+/* 16. SECCIÓN BENEFICIOS (DISEÑO REFINADO Y ELEGANTE) */
 
 .ta-benefits-section {
     position: relative;
@@ -626,13 +654,13 @@
     margin-top: 48px;
 }
 
-/* ─── TERMINAL POS VISUAL (SIMULADOR EN VIVO) ─── */
+/* TERMINAL POS VISUAL (SIMULADOR EN VIVO) */
 .ta-visual-terminal {
     background: #061326;
     border-radius: 28px;
     padding: 24px;
     box-shadow: 0 30px 60px -15px rgba(2, 12, 28, 0.35),
-                0 0 0 1px rgba(255, 255, 255, 0.08);
+        0 0 0 1px rgba(255, 255, 255, 0.08);
     position: relative;
     overflow: hidden;
     color: #ffffff;
@@ -671,9 +699,17 @@
     display: inline-block;
 }
 
-.terminal-dots span:nth-child(1) { background: #ff5f56; }
-.terminal-dots span:nth-child(2) { background: #ffbd2e; }
-.terminal-dots span:nth-child(3) { background: #27c93f; }
+.terminal-dots span:nth-child(1) {
+    background: #ff5f56;
+}
+
+.terminal-dots span:nth-child(2) {
+    background: #ffbd2e;
+}
+
+.terminal-dots span:nth-child(3) {
+    background: #27c93f;
+}
 
 .terminal-title {
     font-size: 0.78rem;
@@ -698,8 +734,15 @@
 }
 
 @keyframes terminalBlink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.3; }
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
 }
 
 .terminal-screen {
@@ -833,7 +876,7 @@
     color: #38bdf8;
 }
 
-/* ─── TARJETAS DE BENEFICIOS (GRID INNOVADOR) ─── */
+/* TARJETAS DE BENEFICIOS (GRID INNOVADOR) */
 .ta-benefits-cards-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -850,8 +893,8 @@
     gap: 16px;
     box-shadow: 0 4px 18px rgba(0, 24, 69, 0.03);
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-                box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-                border-color 0.3s ease;
+        box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 0.3s ease;
     position: relative;
 }
 
@@ -916,11 +959,10 @@
 }
 
 
-/* ═════════════════════════════════════════════════════════
-   RESPONSIVE DESIGN TIEMPO AIRE
-═════════════════════════════════════════════════════════ */
+/* RESPONSIVE DESIGN TIEMPO AIRE */
 
 @media screen and (max-width: 1024px) {
+
     .ta-carriers-grid,
     .ta-benefits-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -950,6 +992,7 @@
 }
 
 @media screen and (max-width: 640px) {
+
     .ta-carriers-grid,
     .ta-benefits-grid,
     .ta-benefits-cards-grid {
@@ -982,9 +1025,8 @@
         border-radius: 18px;
     }
 }
-/* ══════════════════════════════════════════════
-   17. SECCIÓN SERVICIOS
-══════════════════════════════════════════════ */
+
+/* 17. SECCIÓN SERVICIOS */
 
 .servicios-section {
     padding: var(--spacing-xl, 4rem) 0;
@@ -1036,12 +1078,7 @@
     font-size: .9rem;
 }
 
-
-/* ══════════════════════════════════════════════════════════════
-   18. RESPONSIVE — UN SOLO BLOQUE ORDENADO Y SIN CONFLICTOS
-══════════════════════════════════════════════════════════════ */
-
-/* ── TABLET GRANDE ≤ 1024px ── */
+/* TABLET GRANDE ≤ 1024px */
 @media (max-width: 1024px) {
 
     /* Decorativos más pequeños */
@@ -1076,7 +1113,7 @@
     }
 }
 
-/* ── TABLET PEQUEÑA ≤ 768px ── */
+/*  TABLET PEQUEÑA ≤ 768px */
 @media (max-width: 768px) {
 
     header {
@@ -1181,7 +1218,7 @@
     }
 }
 
-/* ── MÓVIL ≤ 480px ── */
+/* MÓVIL ≤ 480px */
 @media (max-width: 480px) {
 
     header {
@@ -1328,7 +1365,7 @@
     }
 }
 
-/* ── MÓVIL MUY PEQUEÑO ≤ 360px ── */
+/* MÓVIL MUY PEQUEÑO ≤ 360px */
 @media (max-width: 360px) {
 
     header {
@@ -1395,10 +1432,7 @@
     }
 }
 
-/* ══════════════════════════════════════════════
-   19. ACCESIBILIDAD — REDUCE MOTION
-══════════════════════════════════════════════ */
-
+/* 19. ACCESIBILIDAD — REDUCE MOTION */
 @media (prefers-reduced-motion: reduce) {
 
     *,
@@ -1410,9 +1444,7 @@
     }
 }
 
-/* ═══════════════════════════════════════════════
-   TIMBRES PROMO — Estilo Apple (minimalista)
-═══════════════════════════════════════════════ */
+/* TIMBRES PROMO — Estilo Apple (minimalista)*/
 
 .tf-promo-section {
     background: #f5f5f7;
@@ -1466,7 +1498,7 @@
     font-weight: 400;
 }
 
-/* ── Grid de paquetes ── */
+/* Grid de paquetes */
 .tf-packages {
     width: 100%;
     display: grid;
@@ -1601,7 +1633,7 @@
     color: rgba(255, 255, 255, 0.5);
 }
 
-/* ── Nota promocional / Cero software ── */
+/* Nota promocional / Cero software */
 .tf-promo-note {
     max-width: 620px;
     margin: 0 auto 2.4rem;
@@ -1616,7 +1648,7 @@
     font-weight: 600;
 }
 
-/* ── CTA link Apple-style ── */
+/* CTA link Apple-style */
 .tf-promo-cta {
     display: inline-flex;
     align-items: center;
@@ -1655,7 +1687,7 @@
     transform: translateX(4px);
 }
 
-/* ── Responsive ── */
+/* Responsive */
 @media (max-width: 768px) {
     .tf-promo-section {
         padding: 72px 20px;
@@ -1698,11 +1730,12 @@
     }
 }
 
-/* ===== FONDO UNIFICADO (igual que home): blanco minimalista, sin tonos de color ===== */
+/* FONDO UNIFICADO (igual que home): blanco minimalista, sin tonos de color */
 :host {
     display: block;
     background: linear-gradient(180deg, #ffffff 0%, #f9fafb 50%, #ffffff 100%);
 }
+
 .recargas-hero-section,
 .ta-carriers-section,
 .ta-benefits-section,
@@ -1710,4 +1743,3 @@
 .tf-promo-section {
     background: transparent;
 }
-

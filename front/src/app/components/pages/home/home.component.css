@@ -1,5 +1,3 @@
-/* ===== HOME PAGE STYLES ===== */
-
 /* Fondo único, minimalista y blanco para toda la página */
 :host {
     display: block;
@@ -8,7 +6,7 @@
 
 
 
-/* ===== SOBRE NOSOTROS SECTION ===== */
+/* SOBRE NOSOTROS SECTION */
 
 .sobre-nosotros {
     padding: clamp(64px, 9vw, 120px) 0;
@@ -107,7 +105,7 @@
 }
 
 
-/* ===== BENTO SECTIONS ===== */
+/* BENTO SECTIONS*/
 
 .bento-section {
     padding: clamp(72px, 10vw, 130px) 0;
@@ -423,7 +421,7 @@
     }
 }
 
-/* ===== RESPONSIVE ===== */
+/* RESPONSIVE*/
 
 /* Hero Responsive */
 @media (max-width: 1024px) {
@@ -566,7 +564,7 @@
 }
 
 
-/* ===== BOTONES SERVICIOS & SOLUCIONES (Minimalistas & Fluidos) ===== */
+/* BOTONES SERVICIOS & SOLUCIONES (Minimalistas & Fluidos) */
 
 .buttons-container {
     display: flex;
@@ -663,9 +661,7 @@
 }
 
 
-/* ═══════════════════════════════════════════════
-   SW — SECCIÓN CTA / STATS (Minimalista Premium)
-═══════════════════════════════════════════════ */
+/* SW — SECCIÓN CTA / STATS (Minimalista Premium) */
 
 .sw-cta-section {
     position: relative;
@@ -840,7 +836,7 @@
 }
 
 
-/* ── Responsive ── */
+/*  Responsive */
 @media (max-width: 768px) {
     .sw-cta-section {
         padding: 72px 20px;

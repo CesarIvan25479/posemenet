@@ -1,4 +1,4 @@
-/* ===== MODAL OVERLAY ===== */
+/*  MODAL OVERLAY  */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -24,7 +24,7 @@
     }
 }
 
-/* ===== MODAL CONTAINER ===== */
+/*  MODAL CONTAINER  */
 .modal-container {
     background: white;
     border-radius: 16px;
@@ -39,7 +39,7 @@
     overflow: hidden;
 }
 
-/* ===== MODAL HEADER BAR (always visible, holds close btn) ===== */
+/*  MODAL HEADER BAR (always visible, holds close btn)  */
 .modal-header-bar {
     display: flex;
     align-items: center;
@@ -65,7 +65,7 @@
     }
 }
 
-/* ===== CLOSE BUTTON ===== */
+/*  CLOSE BUTTON  */
 .modal-close {
     position: static;
     background: #003796;
@@ -89,7 +89,7 @@
     transform: rotate(90deg);
 }
 
-/* ===== MODAL CONTENT ===== */
+/*  MODAL CONTENT  */
 .modal-content {
     display: flex;
     flex-direction: column;
@@ -97,7 +97,7 @@
     overflow-y: auto;
 }
 
-/* ===== CUERPO PRINCIPAL - DOS COLUMNAS ===== */
+/*  CUERPO PRINCIPAL - DOS COLUMNAS  */
 .modal-body {
     display: flex;
     flex-direction: row;
@@ -106,7 +106,7 @@
     flex: 1;
 }
 
-/* ===== CARRUSEL DE IMÁGENES - COLUMNA IZQUIERDA ===== */
+/*  CARRUSEL DE IMÁGENES - COLUMNA IZQUIERDA  */
 .modal-carousel {
     flex: 0 0 45%;
     display: flex;
@@ -219,7 +219,7 @@
     background: #003796;
 }
 
-/* ===== INFORMACIÓN - COLUMNA DERECHA ===== */
+/*  INFORMACIÓN - COLUMNA DERECHA  */
 .modal-info {
     flex: 1;
     display: flex;
@@ -321,7 +321,7 @@
     font-weight: bold;
 }
 
-/* ===== FOOTER - ESPECIFICACIONES, FUNCIONES Y BOTONES ===== */
+/*  FOOTER - ESPECIFICACIONES, FUNCIONES Y BOTONES  */
 .modal-footer {
     padding: 20px 25px;
     border-top: 1px solid #eee;
@@ -462,7 +462,7 @@
     outline-offset: 2px;
 }
 
-/* ===== ZOOM MODAL ===== */
+/*  ZOOM MODAL  */
 .zoom-overlay {
     position: fixed;
     top: 0;
@@ -571,7 +571,7 @@
     transform: scale(1.1);
 }
 
-/* ===== RESPONSIVE ===== */
+/*  RESPONSIVE  */
 @media (max-width: 768px) {
     .modal-container {
         max-width: 95%;

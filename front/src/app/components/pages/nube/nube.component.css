@@ -1,5 +1,3 @@
-/* ===== SERVICIOS EN LA NUBE PAGE STYLES (MODERNO & PROFESIONAL) ===== */
-
 /* ─── Variables Locales del Módulo Nube ─── */
 :host {
     --nube-primary: #0a84ff;
@@ -32,12 +30,10 @@
     margin-bottom: 12px;
 }
 
-/* ═════════════════════════════════════════════════
-   1. HERO SECTION: TU NEGOCIO EN CUALQUIER DISPOSITIVO
-═════════════════════════════════════════════════ */
+/* HERO SECTION */
 .servicios-hero-section {
     padding: clamp(60px, 8vw, 100px) 0;
-    background: 
+    background:
         radial-gradient(circle at 10% 20%, rgba(124, 77, 255, 0.06) 0%, transparent 45%),
         radial-gradient(circle at 90% 70%, rgba(10, 132, 255, 0.07) 0%, transparent 45%),
         linear-gradient(180deg, #f7faff 0%, #ffffff 100%);
@@ -109,8 +105,8 @@
     border-radius: 16px;
     box-shadow: 0 4px 14px rgba(0, 35, 100, 0.03);
     transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
-                border-color 0.3s ease,
-                box-shadow 0.35s ease;
+        border-color 0.3s ease,
+        box-shadow 0.35s ease;
 }
 
 .servicio-feature:hover {
@@ -137,7 +133,7 @@
     font-size: 0.98rem;
 }
 
-/* ─── CLOUD NETWORK HUB (COLUMNA VISUAL) ─── */
+/* CLOUD NETWORK HUB (COLUMNA VISUAL) */
 .servicios-hero-image {
     display: flex;
     justify-content: center;
@@ -222,8 +218,13 @@
 }
 
 @keyframes floatBadge {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-10px); }
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
 }
 
 .cloud-mockup {
@@ -238,7 +239,7 @@
     align-items: center;
     justify-content: center;
     gap: 16px;
-    box-shadow: 
+    box-shadow:
         0 24px 60px -15px rgba(0, 35, 100, 0.18),
         inset 0 0 0 1px rgba(255, 255, 255, 0.9),
         0 0 0 8px rgba(10, 132, 255, 0.04);
@@ -263,7 +264,9 @@
 }
 
 @keyframes rotateRing {
-    to { transform: rotate(360deg); }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .cloud-icon {
@@ -324,9 +327,7 @@
     font-size: 0.95rem;
 }
 
-/* ═════════════════════════════════════════════════
-   2. MAIN SECTION: LO QUE INCLUYE LA SINCRONIZACIÓN
-═════════════════════════════════════════════════ */
+/* MAIN SECTION */
 .servicios-main-section {
     padding: clamp(70px, 9vw, 110px) 0;
     background: #f8fbff;
@@ -350,8 +351,8 @@
     border: 1px solid rgba(0, 35, 100, 0.08);
     box-shadow: 0 6px 20px rgba(0, 24, 69, 0.03);
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-                box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-                border-color 0.3s ease;
+        box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 0.3s ease;
     overflow: hidden;
 }
 
@@ -466,12 +467,10 @@
     color: #0a84ff;
 }
 
-/* ═════════════════════════════════════════════════
-   3. BENEFITS SECTION: ¿POR QUÉ ELEGIR SERVICIOS EN LA NUBE?
-═════════════════════════════════════════════════ */
+/* BENEFITS SECTION */
 .servicios-benefits-section {
     padding: clamp(70px, 9vw, 110px) 0;
-    background: 
+    background:
         radial-gradient(circle at 50% 0%, rgba(10, 132, 255, 0.05) 0%, transparent 60%),
         linear-gradient(180deg, #ffffff 0%, #f7faff 100%);
     position: relative;
@@ -492,8 +491,8 @@
     flex-direction: column;
     box-shadow: 0 4px 18px rgba(0, 24, 69, 0.03);
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-                box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-                border-color 0.3s ease;
+        box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 0.3s ease;
 }
 
 .benefit-card:hover {
@@ -573,9 +572,7 @@
     margin: 0;
 }
 
-/* ═════════════════════════════════════════════════
-   4. RESPONSIVE DESIGN (NUBE)
-═════════════════════════════════════════════════ */
+/*  RESPONSIVE DESIGN (NUBE) */
 @media screen and (max-width: 1024px) {
     .servicios-hero-section .contenedor {
         grid-template-columns: 1fr;
@@ -610,6 +607,7 @@
 }
 
 @media screen and (max-width: 640px) {
+
     .servicios-grid,
     .benefits-grid {
         grid-template-columns: 1fr;
@@ -696,7 +694,7 @@
 }
 
 
-/* ===== SECCIÓN CTA (LLAMADA A ACCIÓN) ===== */
+/* SECCIÓN CTA (LLAMADA A ACCIÓN) */
 
 .cta-section {
     padding: var(--spacing-xl) var(--spacing-md);
@@ -730,9 +728,7 @@
     flex-wrap: wrap;
 }
 
-/* ═══════════════════════════════════════════════
-   TIMBRES PROMO — Estilo Apple (minimalista)
-═══════════════════════════════════════════════ */
+/* TIMBRES PROMO */
 
 .tf-promo-section {
     background: #f5f5f7;
@@ -921,7 +917,7 @@
     color: rgba(255, 255, 255, 0.5);
 }
 
-/* ── CTA link Apple-style ── */
+/* CTA link Apple-style */
 .tf-promo-cta {
     display: inline-flex;
     align-items: center;
@@ -952,7 +948,7 @@
     transform: translateX(3px);
 }
 
-/* ── Responsive ── */
+/*  Responsive */
 @media (max-width: 768px) {
     .tf-promo-section {
         padding: 72px 20px;
@@ -982,11 +978,13 @@
         font-size: 2.4rem;
     }
 }
-/* ===== FONDO UNIFICADO (igual que home): blanco minimalista, sin tonos de color ===== */
+
+/* FONDO UNIFICADO */
 :host {
     display: block;
     background: linear-gradient(180deg, #ffffff 0%, #f9fafb 50%, #ffffff 100%);
 }
+
 .servicios-hero-section,
 .servicios-main-section,
 .servicios-benefits-section,
@@ -997,4 +995,3 @@
 .cloud-hub-glow {
     display: none;
 }
-

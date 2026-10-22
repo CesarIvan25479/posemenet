@@ -1,8 +1,4 @@
-/* =============================================
-   CONTACTO – Apple-style redesign
-   ============================================= */
-
-/* ---- Variables (overrides / extras) ---- */
+/* Variables (overrides / extras) */
 :host {
     --white: #ffffff;
     --off-white: #f5f5f7;
@@ -48,9 +44,7 @@
     line-height: 1.15;
 }
 
-/* =============================================
-   HERO / HEADER
-   ============================================= */
+/* HERO / HEADER */
 .hero {
     position: relative;
     width: 100%;
@@ -182,9 +176,7 @@
     height: 80px;
 }
 
-/* =============================================
-   CONTACT INFO CARDS
-   ============================================= */
+/* CONTACT INFO CARDS */
 .contact-info {
     background: var(--off-white);
     padding: 80px 0 96px;
@@ -320,9 +312,7 @@
     transform: translateX(4px);
 }
 
-/* =============================================
-   FORMULARIO
-   ============================================= */
+/* FORMULARIO */
 .form-section {
     background: var(--white);
     padding: 96px 0 112px;
@@ -414,29 +404,29 @@
 }
 
 /* Phone input wrapper */
-.phone-wrapper{
-    display:flex;
-    align-items:center;
-    border:1px solid #ddd;
-    border-radius:12px;
-    overflow:hidden;
-    background:#fff;
+.phone-wrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
 }
 
-.phone-prefix{
-    padding:12px 14px;
-    background:#f5f5f577;
-    font-weight:600;
-    color:#555555;
-    border-right:1px solid #9c010100;
+.phone-prefix {
+    padding: 12px 14px;
+    background: #f5f5f577;
+    font-weight: 600;
+    color: #555555;
+    border-right: 1px solid #9c010100;
 }
 
-.phone-wrapper input{
-    flex:1;
-    border:none;
-    padding:12px;
-    outline:none;
-    font-size:14px;
+.phone-wrapper input {
+    flex: 1;
+    border: none;
+    padding: 12px;
+    outline: none;
+    font-size: 14px;
 }
 
 
@@ -548,12 +538,10 @@
 }
 
 .pulse-animation {
-  animation: pulse 1.8s ease-in-out infinite;
+    animation: pulse 1.8s ease-in-out infinite;
 }
 
-/* =============================================
-   ANIMATIONS
-   ============================================= */
+/* ANIMATIONS */
 @keyframes fadeUp {
     from {
         opacity: 0;
@@ -566,10 +554,7 @@
     }
 }
 
-
-/* =============================================
-   RESPONSIVE
-   ============================================= */
+/* RESPONSIVE */
 @media (max-width: 1024px) {
     .form-wrapper {
         grid-template-columns: 1fr;

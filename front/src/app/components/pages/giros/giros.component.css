@@ -65,7 +65,7 @@ header {
       rgba(255, 255, 255, .05) 100%);
 }
 
-/* ── IZQUIERDA ── */
+/*  IZQUIERDA */
 .hero-left {
   position: relative;
   z-index: 2;
@@ -245,8 +245,8 @@ header {
   overflow: hidden;
   isolation: isolate;
   transition: transform .4s cubic-bezier(.16, 1, .3, 1),
-              box-shadow .4s cubic-bezier(.16, 1, .3, 1),
-              background-color .35s ease, color .35s ease, border-color .35s ease;
+    box-shadow .4s cubic-bezier(.16, 1, .3, 1),
+    background-color .35s ease, color .35s ease, border-color .35s ease;
 }
 
 .btn-hero-primary i,
@@ -272,8 +272,8 @@ header {
   margin-left: -.6rem;
   transform: translateX(-6px);
   transition: width .4s cubic-bezier(.16, 1, .3, 1),
-              opacity .3s ease, margin .4s cubic-bezier(.16, 1, .3, 1),
-              transform .4s cubic-bezier(.16, 1, .3, 1);
+    opacity .3s ease, margin .4s cubic-bezier(.16, 1, .3, 1),
+    transform .4s cubic-bezier(.16, 1, .3, 1);
 }
 
 /* Destello */
@@ -295,7 +295,9 @@ header {
   box-shadow: 0 14px 30px -10px rgba(0, 55, 150, .55);
 }
 
-.btn-hero-primary:hover::before { left: 130%; }
+.btn-hero-primary:hover::before {
+  left: 130%;
+}
 
 .btn-hero-primary:hover::after {
   width: 1em;
@@ -304,7 +306,9 @@ header {
   transform: none;
 }
 
-.btn-hero-primary:hover i { transform: rotate(-12deg) scale(1.12); }
+.btn-hero-primary:hover i {
+  transform: rotate(-12deg) scale(1.12);
+}
 
 /* Secundario: contorno fino que se rellena desde abajo */
 .btn-hero-ghost {
@@ -333,9 +337,13 @@ header {
   box-shadow: 0 10px 24px -12px rgba(0, 24, 69, .35);
 }
 
-.btn-hero-ghost:hover::before { transform: scaleY(1); }
+.btn-hero-ghost:hover::before {
+  transform: scaleY(1);
+}
 
-.btn-hero-ghost:hover i { transform: scale(1.15) rotate(-8deg); }
+.btn-hero-ghost:hover i {
+  transform: scale(1.15) rotate(-8deg);
+}
 
 /* Presión táctil */
 .btn-hero-primary:active,
@@ -350,7 +358,7 @@ header {
   outline-offset: 3px;
 }
 
-/* ── DERECHA / MOCKUP ── */
+/*  DERECHA / MOCKUP  */
 .hero-right {
   position: relative;
   z-index: 2;
@@ -500,7 +508,7 @@ header {
   background: rgba(0, 24, 69, .07);
 }
 
-/* ════ Wave decorativa fluida ════ */
+/*  Wave decorativa fluida  */
 .hero-wave {
   position: absolute;
   bottom: -1px;
@@ -517,9 +525,7 @@ header {
   height: clamp(35px, 5.5vw, 65px);
 }
 
-/* ═══════════════════════════════════════════
-   SECCIÓN GIROS — Diseño Minimalista & Profesional
-═══════════════════════════════════════════ */
+/*  SECCIÓN GIROS — Diseño Minimalista & Profesional  */
 .giros-section {
   padding: 100px clamp(1.5rem, 6vw, 5rem) 100px;
   background: linear-gradient(180deg, #F8FAFC 0%, #F1F5F9 100%);
@@ -630,8 +636,8 @@ header {
   box-shadow: 0 2px 12px -4px rgba(0, 24, 69, .04);
   cursor: pointer;
   transition: transform .35s cubic-bezier(.16, 1, .3, 1),
-              box-shadow .35s cubic-bezier(.16, 1, .3, 1),
-              border-color .3s ease;
+    box-shadow .35s cubic-bezier(.16, 1, .3, 1),
+    border-color .3s ease;
   position: relative;
   overflow: hidden;
   isolation: isolate;
@@ -673,9 +679,9 @@ header {
   border: 1px solid rgba(0, 24, 69, 0.06);
   box-shadow: 0 2px 6px rgba(0, 24, 69, 0.02);
   transition: background-color .35s ease,
-              border-color .35s ease,
-              box-shadow .35s cubic-bezier(.16, 1, .3, 1),
-              transform .35s cubic-bezier(.16, 1, .3, 1);
+    border-color .35s ease,
+    box-shadow .35s cubic-bezier(.16, 1, .3, 1),
+    transform .35s cubic-bezier(.16, 1, .3, 1);
 }
 
 .giro-card:hover .giro-icon,
@@ -686,7 +692,7 @@ header {
   transform: translateY(-2px);
 }
 
-/* ── SVG icon base (el trazo/borde del icono lleva el color temático) ── */
+/*  SVG icon base (el trazo/borde del icono lleva el color temático)  */
 .giro-svg {
   width: 25px;
   height: 25px;
@@ -703,110 +709,233 @@ header {
   stroke: #ffffff;
 }
 
-/* ════ Colores individuales para el trazo/borde de cada icono ════ */
-.gi-1  { --gi-color: #0984e3; }
-.gi-2  { --gi-color: #e84393; }
-.gi-3  { --gi-color: #e17055; }
-.gi-4  { --gi-color: #00b894; }
-.gi-5  { --gi-color: #20bf6b; }
-.gi-6  { --gi-color: #fa8231; }
-.gi-7  { --gi-color: #f7b731; }
-.gi-8  { --gi-color: #3867d6; }
-.gi-9  { --gi-color: #4b6584; }
-.gi-10 { --gi-color: #2bcbba; }
-.gi-11 { --gi-color: #45aaf2; }
-.gi-12 { --gi-color: #a55eea; }
-.gi-13 { --gi-color: #d35400; }
-.gi-14 { --gi-color: #fc5c65; }
-.gi-15 { --gi-color: #26de81; }
-.gi-16 { --gi-color: #fd9644; }
-.gi-17 { --gi-color: #2ed573; }
-.gi-18 { --gi-color: #ffa502; }
-.gi-19 { --gi-color: #00cec9; }
-.gi-20 { --gi-color: #cd853f; }
-.gi-21 { --gi-color: #1e90ff; }
-.gi-22 { --gi-color: #576574; }
-.gi-23 { --gi-color: #70a1ff; }
-.gi-24 { --gi-color: #ff6b81; }
-.gi-25 { --gi-color: #ff4757; }
-.gi-26 { --gi-color: #2ed573; }
-.gi-27 { --gi-color: #ffa502; }
-.gi-28 { --gi-color: #f39c12; }
-.gi-29 { --gi-color: #3742fa; }
-.gi-30 { --gi-color: #8e44ad; }
-.gi-31 { --gi-color: #6c5ce7; }
-.gi-32 { --gi-color: #00d2d3; }
-.gi-33 { --gi-color: #fd79a8; }
-.gi-34 { --gi-color: #ff4757; }
+/*  Colores individuales para el trazo/borde de cada icono  */
+.gi-1 {
+  --gi-color: #0984e3;
+}
 
-/* ════ KEYFRAMES de animación refinados & fluidos ════ */
+.gi-2 {
+  --gi-color: #e84393;
+}
+
+.gi-3 {
+  --gi-color: #e17055;
+}
+
+.gi-4 {
+  --gi-color: #00b894;
+}
+
+.gi-5 {
+  --gi-color: #20bf6b;
+}
+
+.gi-6 {
+  --gi-color: #fa8231;
+}
+
+.gi-7 {
+  --gi-color: #f7b731;
+}
+
+.gi-8 {
+  --gi-color: #3867d6;
+}
+
+.gi-9 {
+  --gi-color: #4b6584;
+}
+
+.gi-10 {
+  --gi-color: #2bcbba;
+}
+
+.gi-11 {
+  --gi-color: #45aaf2;
+}
+
+.gi-12 {
+  --gi-color: #a55eea;
+}
+
+.gi-13 {
+  --gi-color: #d35400;
+}
+
+.gi-14 {
+  --gi-color: #fc5c65;
+}
+
+.gi-15 {
+  --gi-color: #26de81;
+}
+
+.gi-16 {
+  --gi-color: #fd9644;
+}
+
+.gi-17 {
+  --gi-color: #2ed573;
+}
+
+.gi-18 {
+  --gi-color: #ffa502;
+}
+
+.gi-19 {
+  --gi-color: #00cec9;
+}
+
+.gi-20 {
+  --gi-color: #cd853f;
+}
+
+.gi-21 {
+  --gi-color: #1e90ff;
+}
+
+.gi-22 {
+  --gi-color: #576574;
+}
+
+.gi-23 {
+  --gi-color: #70a1ff;
+}
+
+.gi-24 {
+  --gi-color: #ff6b81;
+}
+
+.gi-25 {
+  --gi-color: #ff4757;
+}
+
+.gi-26 {
+  --gi-color: #2ed573;
+}
+
+.gi-27 {
+  --gi-color: #ffa502;
+}
+
+.gi-28 {
+  --gi-color: #f39c12;
+}
+
+.gi-29 {
+  --gi-color: #3742fa;
+}
+
+.gi-30 {
+  --gi-color: #8e44ad;
+}
+
+.gi-31 {
+  --gi-color: #6c5ce7;
+}
+
+.gi-32 {
+  --gi-color: #00d2d3;
+}
+
+.gi-33 {
+  --gi-color: #fd79a8;
+}
+
+.gi-34 {
+  --gi-color: #ff4757;
+}
+
+/*  KEYFRAMES de animación refinados & fluidos  */
 @keyframes icon-spin {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
 
 @keyframes icon-bounce {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0) scale(1);
   }
+
   30% {
     transform: translateY(-8px) scale(1.08, 0.94);
   }
+
   60% {
     transform: translateY(2px) scale(0.96, 1.04);
   }
+
   80% {
     transform: translateY(-3px) scale(1.02);
   }
 }
 
 @keyframes icon-wiggle {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: rotate(0deg);
   }
+
   20% {
     transform: rotate(-16deg) scale(1.06);
   }
+
   40% {
     transform: rotate(14deg) scale(1.06);
   }
+
   60% {
     transform: rotate(-10deg);
   }
+
   80% {
     transform: rotate(6deg);
   }
 }
 
 @keyframes icon-pulse {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1);
   }
+
   40% {
     transform: scale(1.22);
   }
+
   70% {
     transform: scale(0.95);
   }
 }
 
 @keyframes icon-shake {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateX(0) rotate(0deg);
   }
+
   20% {
     transform: translateX(-4px) rotate(-6deg);
   }
+
   40% {
     transform: translateX(4px) rotate(6deg);
   }
+
   60% {
     transform: translateX(-3px) rotate(-3deg);
   }
+
   80% {
     transform: translateX(3px) rotate(3deg);
   }
@@ -816,51 +945,65 @@ header {
   0% {
     transform: perspective(400px) rotateY(0deg);
   }
+
   50% {
     transform: perspective(400px) rotateY(180deg) scale(1.1);
   }
+
   100% {
     transform: perspective(400px) rotateY(360deg) scale(1);
   }
 }
 
 @keyframes icon-ping {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1);
   }
+
   30% {
     transform: scale(1.28);
   }
+
   60% {
     transform: scale(0.9);
   }
+
   85% {
     transform: scale(1.06);
   }
 }
 
 @keyframes icon-jello {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1, 1);
   }
+
   30% {
     transform: scale(1.25, 0.75);
   }
+
   40% {
     transform: scale(0.75, 1.25);
   }
+
   50% {
     transform: scale(1.15, 0.85);
   }
+
   65% {
     transform: scale(0.95, 1.05);
   }
+
   75% {
     transform: scale(1.05, 0.95);
   }
 }
 
-/* ════ Disparo de animaciones al :hover de la tarjeta ════ */
+/*  Disparo de animaciones al :hover de la tarjeta  */
 .giro-card:hover .giro-svg.anim-spin {
   animation: icon-spin 0.75s cubic-bezier(.34, 1.56, .64, 1);
 }
@@ -954,8 +1097,15 @@ header {
 }
 
 @keyframes pulseDot {
-  0%, 100% { box-shadow: 0 0 0 3px rgba(0, 184, 148, 0.25); }
-  50% { box-shadow: 0 0 0 6px rgba(0, 184, 148, 0.1); }
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 3px rgba(0, 184, 148, 0.25);
+  }
+
+  50% {
+    box-shadow: 0 0 0 6px rgba(0, 184, 148, 0.1);
+  }
 }
 
 /* CTA de giros */
@@ -967,9 +1117,7 @@ header {
   z-index: 1;
 }
 
-/* ═══════════════════════════════════════════
-   ANIMATIONS
-   ═══════════════════════════════════════════ */
+/*  ANIMATIONS  */
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -994,9 +1142,7 @@ header {
   }
 }
 
-/* ═══════════════════════════════════════════
-   SECCIÓN COMPARATIVA
-═══════════════════════════════════════════ */
+/*  SECCIÓN COMPARATIVA  */
 .comp-section {
   padding: 100px clamp(1.5rem, 6vw, 5rem);
   background: #fff;
@@ -1387,9 +1533,7 @@ header {
   }
 }
 
-/* ═══════════════════════════════════════════
-   RESPONSIVE
-═══════════════════════════════════════════ */
+/*  RESPONSIVE  */
 @media (max-width: 1024px) {
   header {
     grid-template-columns: 1fr !important;
@@ -1587,6 +1731,7 @@ header {
 }
 
 @media (max-width: 340px) {
+
   .btn-hero-primary i,
   .btn-hero-ghost i {
     display: none;
