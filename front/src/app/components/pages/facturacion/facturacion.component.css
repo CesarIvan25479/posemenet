@@ -5,7 +5,7 @@
 .fac-showcase-section {
     position: relative;
     padding: clamp(60px, 8vw, 110px) 0 clamp(40px, 6vw, 80px);
-    background: linear-gradient(180deg, #ffffff 0%, #f7faff 100%);
+    background: #ffffff;
     overflow: clip;
 }
 
@@ -31,12 +31,12 @@
     align-items: center;
     gap: 0.6rem;
     padding: 0.4rem 1.1rem;
-    background: rgba(11, 191, 191, 0.1);
-    border: 1px solid rgba(11, 191, 191, 0.35);
+    background: rgba(0, 88, 184, 0.08);
+    border: 1px solid rgba(0, 88, 184, 0.25);
     border-radius: 100px;
     font-size: 0.82rem;
     font-weight: 700;
-    color: #007788;
+    color: #0058b8;
     width: fit-content;
     letter-spacing: 0.02em;
 }
@@ -44,9 +44,9 @@
 .badge-pulse {
     width: 8px;
     height: 8px;
-    background: #0bbfbf;
+    background: #0058b8;
     border-radius: 50%;
-    box-shadow: 0 0 0 0 rgba(11, 191, 191, 0.7);
+    box-shadow: 0 0 0 0 rgba(0, 88, 184, 0.7);
     animation: facPulse 2s infinite;
 }
 
@@ -250,9 +250,7 @@
 .fac-features-section {
     position: relative;
     padding: clamp(70px, 9vw, 110px) 0;
-    background:
-        radial-gradient(circle at 50% 0%, rgba(10, 132, 255, 0.05) 0%, transparent 60%),
-        linear-gradient(180deg, #f7faff 0%, #ffffff 100%);
+    background: #ffffff;
     overflow: clip;
 }
 
@@ -782,8 +780,7 @@
 ═══════════════════════════════════════════════ */
 
 .tf-promo-section {
-    background: #f5f5f7;
-    /* Gris Apple */
+    background: #ffffff;
     padding: 100px 24px;
     text-align: center;
 }
@@ -1643,18 +1640,126 @@
     }
 }
 
-/* ===== FONDO UNIFICADO (igual que home): blanco minimalista, sin tonos de color ===== */
+/* ===== FONDO UNIFICADO (blanco minimalista y parejo en todas las secciones) ===== */
 :host {
     display: block;
-    background: linear-gradient(180deg, #ffffff 0%, #f9fafb 50%, #ffffff 100%);
+    background: #ffffff;
 }
+
 .fac-showcase-section,
 .fac-features-section,
 .tf-promo-section {
-    background: transparent;
+    background: #ffffff;
 }
 
 .fac-glow-bg {
     display: none;
 }
 
+/* ===== FACTURACIÓN: banners oscuros -> vidrio claro minimalista con alto contraste ===== */
+.fac-promo-banner,
+.acc-promo-banner {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(220, 235, 255, 0.5));
+    border: 1px solid rgba(0, 88, 184, 0.2);
+    color: #0b1e3a;
+    box-shadow: 0 10px 40px -12px rgba(0, 88, 184, 0.18);
+    -webkit-backdrop-filter: blur(22px) saturate(180%);
+    backdrop-filter: blur(22px) saturate(180%);
+}
+
+.fac-promo-banner::before,
+.acc-promo-banner::before,
+.acc-promo-banner::after {
+    display: none;
+}
+
+.fac-promo-icon {
+    background: #eaf3ff;
+    border-color: rgba(0, 88, 184, 0.18);
+    color: #0058b8;
+}
+
+.fac-promo-tag { color: #0058b8; font-weight: 700; }
+.fac-promo-details h3 { color: #0b1e3a; }
+.fac-promo-details p { color: #3d4a5c; }
+
+.fac-btn-banner,
+.acc-promo-btn {
+    background: #0058b8;
+    color: #ffffff;
+    box-shadow: 0 8px 22px -8px rgba(0, 88, 184, 0.5);
+}
+
+.fac-btn-banner:hover,
+.acc-promo-btn:hover {
+    background: #003f8a;
+    color: #ffffff;
+}
+
+.fac-btn-banner:focus-visible { outline-color: #0058b8; }
+
+.acc-promo-eyebrow { color: #0058b8; }
+.acc-promo-eyebrow::before { background: #0058b8; }
+.acc-promo-h2 { color: #0b1e3a; }
+
+.acc-promo-h2 em {
+    background: none;
+    -webkit-text-fill-color: #0058b8;
+    color: #0058b8;
+}
+
+.acc-promo-desc { color: #3d4a5c; }
+
+.acc-promo-price-item {
+    background: rgba(255, 255, 255, 0.85);
+    border-color: rgba(0, 88, 184, 0.16);
+}
+
+.acc-promo-price-item:hover {
+    background: #ffffff;
+    border-color: rgba(0, 88, 184, 0.35);
+}
+
+.acc-promo-price-item span:first-child { color: #4a5568; }
+.acc-promo-price-val { color: #0b1e3a; }
+
+/* Tarjetas de características: fondo blanco con borde sutil y textos oscuros */
+.fac-feature-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 88, 184, 0.14);
+    box-shadow: 0 4px 24px -6px rgba(0, 88, 184, 0.08);
+}
+
+.fac-feature-card::before {
+    display: none;
+}
+
+.fac-eyebrow { color: #0058b8; }
+.fac-title { color: #0b1e3a; }
+.fac-lead,
+.fac-card-main p { color: #3d4a5c; }
+.fac-card-main h3 { color: #0b1e3a; }
+
+/* Paquete destacado de timbres: tarjeta integrada sin bloque negro */
+.tf-pkg--featured {
+    background: #f0f7ff;
+    border: 2px solid #0058b8;
+}
+
+.tf-pkg--featured:hover {
+    background: #e4efff;
+}
+
+.tf-pkg--featured .tf-pkg-qty,
+.tf-pkg--featured .tf-pkg-price {
+    color: #002b7a;
+}
+
+.tf-pkg--featured .tf-pkg-label,
+.tf-pkg--featured .tf-pkg-currency {
+    color: #4a5568;
+}
+
+.tf-pkg--featured .tf-pkg-divider {
+    background: rgba(0, 88, 184, 0.25);
+}
