@@ -1697,3 +1697,17 @@
         font-size: 0.92rem;
     }
 }
+
+/* ===== FONDO UNIFICADO (igual que home): blanco minimalista, sin tonos de color ===== */
+:host {
+    display: block;
+    background: linear-gradient(180deg, #ffffff 0%, #f9fafb 50%, #ffffff 100%);
+}
+.recargas-hero-section,
+.ta-carriers-section,
+.ta-benefits-section,
+.servicios-section,
+.tf-promo-section {
+    background: transparent;
+}
+

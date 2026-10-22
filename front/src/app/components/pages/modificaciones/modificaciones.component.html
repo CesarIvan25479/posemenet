@@ -10,41 +10,54 @@
 </app-header-modal>
 
 <!-- ===== HERO SECTION ===== -->
-<section class="modificaciones-hero-section reveal fade-up">
+<section class="mod-hero reveal fade-up">
+  <div class="mod-hero-bg" aria-hidden="true">
+    <span class="mod-orb mod-orb-1"></span>
+    <span class="mod-orb mod-orb-2"></span>
+  </div>
   <div class="contenedor">
-    <div class="modificaciones-hero-content">
+    <div class="mod-hero-content">
       <div class="modificaciones-badge">
         <i class="fas fa-cogs"></i>
         <span>Personalizado</span>
       </div>
-      <h2 class="modificaciones-hero-title">Tu negocio es único, tu sistema también</h2>
+      <h2 class="modificaciones-hero-title">Tu negocio es único, <span class="mod-gradient-text">tu sistema también</span></h2>
       <p class="modificaciones-hero-description">
         En emenetPOS entendemos que cada negocio tiene necesidades diferentes. Por eso te ofrecemos modificaciones a la
         medida para que el sistema se ajuste perfectamente a tus procesos y requerimientos específicos.
       </p>
       <div class="modificaciones-stats">
         <div class="mod-stat">
+          <i class="fas fa-store mod-stat-icon"></i>
           <span class="stat-number">1000</span>
           <span class="stat-label">Negocios adaptados</span>
         </div>
         <div class="mod-stat">
+          <i class="fas fa-smile-beam mod-stat-icon"></i>
           <span class="stat-number">+10000</span>
           <span class="stat-label">Clientes satisfechos</span>
         </div>
         <div class="mod-stat">
-          <span class="stat-number">+ 10</span>
+          <i class="fas fa-award mod-stat-icon"></i>
+          <span class="stat-number">+10</span>
           <span class="stat-label">Años de experiencia</span>
         </div>
       </div>
     </div>
   </div>
 </section>
+
 <!-- ===== SERVICIOS SECTION ===== -->
 <section class="modificaciones-services-section reveal fade-up">
   <div class="contenedor">
-    <h2 class="titulo">Servicios de Personalización</h2>
+    <div class="mod-section-head">
+      <span class="mod-eyebrow">Qué hacemos</span>
+      <h2 class="titulo">Servicios de Personalización</h2>
+      <p class="mod-section-sub">Soluciones diseñadas para que tu sistema trabaje como tú lo necesitas.</p>
+    </div>
     <div class="modificaciones-grid">
       <div class="mod-card reveal zoom-in delay-100">
+        <span class="mod-card-index">01</span>
         <div class="mod-icon">
           <i class="fas fa-code"></i>
         </div>
@@ -52,6 +65,7 @@
         <p>Ajustamos módulos, procesos, impuestos, precios y funciones según las necesidades de tu giro comercial.</p>
       </div>
       <div class="mod-card reveal zoom-in delay-200">
+        <span class="mod-card-index">02</span>
         <div class="mod-icon">
           <i class="fas fa-plug"></i>
         </div>
@@ -60,6 +74,7 @@
           utilices.</p>
       </div>
       <div class="mod-card reveal zoom-in delay-300">
+        <span class="mod-card-index">03</span>
         <div class="mod-icon">
           <i class="fas fa-chart-bar"></i>
         </div>
@@ -67,6 +82,7 @@
         <p>Adaptamos el sistema a tu forma de vender y administrar, respetando tus procesos internos.</p>
       </div>
       <div class="mod-card reveal zoom-in delay-400">
+        <span class="mod-card-index">04</span>
         <div class="mod-icon">
           <i class="fas fa-paint-brush"></i>
         </div>
@@ -75,6 +91,7 @@
         </p>
       </div>
       <div class="mod-card reveal zoom-in delay-500">
+        <span class="mod-card-index">05</span>
         <div class="mod-icon">
           <i class="fas fa-graduation-cap"></i>
         </div>
@@ -82,6 +99,7 @@
         <p>Entrenamiento personalizado para que aproveches al máximo cada función del sistema.</p>
       </div>
       <div class="mod-card reveal zoom-in delay-500">
+        <span class="mod-card-index">06</span>
         <div class="mod-icon">
           <i class="fas fa-tools"></i>
         </div>
@@ -93,27 +111,31 @@
 </section>
 
 <!-- ===== PROCESO SECTION ===== -->
-<section class="modificaciones-proceso-section">
+<section class="modificaciones-proceso-section reveal fade-up">
   <div class="contenedor">
-    <h2 class="titulo">Nuestro Proceso</h2>
+    <div class="mod-section-head">
+      <span class="mod-eyebrow">Cómo trabajamos</span>
+      <h2 class="titulo">Nuestro Proceso</h2>
+      <p class="mod-section-sub">Cuatro pasos simples, de la idea a tu negocio funcionando.</p>
+    </div>
     <div class="proceso-grid">
-      <div class="proceso-card">
-        <div class="proceso-number">1</div>
+      <div class="proceso-card reveal fade-up delay-100">
+        <div class="proceso-number"><i class="fas fa-comments"></i><b>1</b></div>
         <h3>Consulta</h3>
         <p>Escuchamos tus necesidades y requerimientos específicos</p>
       </div>
-      <div class="proceso-card">
-        <div class="proceso-number">2</div>
+      <div class="proceso-card reveal fade-up delay-200">
+        <div class="proceso-number"><i class="fas fa-file-invoice-dollar"></i><b>2</b></div>
         <h3>Propuesta</h3>
         <p>Te presentamos una solución personalizada y un presupuesto claro</p>
       </div>
-      <div class="proceso-card">
-        <div class="proceso-number">3</div>
+      <div class="proceso-card reveal fade-up delay-300">
+        <div class="proceso-number"><i class="fas fa-laptop-code"></i><b>3</b></div>
         <h3>Desarrollo</h3>
         <p>Creamos la solución a medida con los más altos estándares de calidad</p>
       </div>
-      <div class="proceso-card">
-        <div class="proceso-number">4</div>
+      <div class="proceso-card reveal fade-up delay-400">
+        <div class="proceso-number"><i class="fas fa-rocket"></i><b>4</b></div>
         <h3>Implementación</h3>
         <p>Instalamos, configuramos y probamos el sistema en tu negocio</p>
       </div>

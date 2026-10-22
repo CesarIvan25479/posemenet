@@ -982,3 +982,19 @@
         font-size: 2.4rem;
     }
 }
+/* ===== FONDO UNIFICADO (igual que home): blanco minimalista, sin tonos de color ===== */
+:host {
+    display: block;
+    background: linear-gradient(180deg, #ffffff 0%, #f9fafb 50%, #ffffff 100%);
+}
+.servicios-hero-section,
+.servicios-main-section,
+.servicios-benefits-section,
+.tf-promo-section {
+    background: transparent;
+}
+
+.cloud-hub-glow {
+    display: none;
+}
+
