@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, OnInit, OnDestroy, ElementRef, ViewChild, AfterViewInit, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CircularGalleryApp } from '../../../services/circular-gallery.service';
 import { ProductModalComponent, Product } from '../../product-modal/product-modal.component';
@@ -41,12 +41,12 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
   // Product cards for grid display
   readonly productCards = [
     { index: 0, image: 'images/accesorios/lector/ghia/lector.png', name: 'Lector de código profesional', description: 'Scanner de códigos de alta velocidad y precisión', price: '$600.00 MXN', delay: 'delay-100' },
-    { index: 1, image: 'images/accesorios/impresora/ecline/ecline.png', name: 'Impresora Térmica EC-Line', description: 'Impresora térmica directa de alta velocidad (300 mm/seg)', price: '$3,350.00 MXN', delay: 'delay-200' },
+    { index: 1, image: 'images/accesorios/impresora/ecline/ecline.png', name: 'Impresora Térmica EPSON', description: 'Impresora térmica directa de alta velocidad (300 mm/seg)', price: '$3,350.00 MXN', delay: 'delay-200' },
     { index: 2, image: 'images/accesorios/cajon/ghia/cajon2.png', name: 'Cajón de Efectivo Electrónico', description: 'Cajón automático con seguridad integrada y control USB', price: '$800.00 MXN', delay: 'delay-300' },
     { index: 3, image: 'images/accesorios/rollos/rollo.png', name: 'Rollos de papel termico', description: 'Rollo de papel térmico c/u', price: '$80.00 MXN', delay: 'delay-100' },
     { index: 4, image: 'images/accesorios/monitor/quaroni/quaroni1.png', name: 'Monitor Quaroni MQ19-03', description: 'Monitor LED de 19.5" HD, panel TN, HDMI/VGA', price: '$800.00 MXN', delay: 'delay-200' },
     { index: 5, image: 'images/accesorios/pc/ghia/pc.png', name: 'PC GHIA Frontier Slim 2.0', description: 'Intel N-Series 4 Núcleos 3.40 GHz, 8 GB RAM, 240 GB SSD - Sin Sistema', price: '$5,500.00 MXN', delay: '' },
-    { index: 6, image: 'images/accesorios/monitor/ghia/monitor3.png', name: 'Monitor GHIA 21.5 pulgadas', description: 'Monitor GHIA MG2225 / 21.5 / VA / FHD / 100Hz / VGA, HDMI / Negro', price: '$1,200.00 MXN', delay: 'delay-100' },
+    { index: 6, image: 'images/accesorios/monitor/ghia/monitor3.png', name: 'Monitor ACKTECK 21.5 pulgadas', description: 'Monitor ACKTECK / 21.5 / VA / FHD / 100Hz / VGA, HDMI / Negro', price: '$1,200.00 MXN', delay: 'delay-100' },
     { index: 7, image: 'images/accesorios/rollos/caja.png', name: 'Caja de Rollos Térmicos 76mm', description: 'Caja de 20 rollos térmicos de 76mm compatibles con nuestras impresoras térmicas', price: '$1,500.00 MXN', delay: 'delay-200' },
     { index: 8, image: 'images/accesorios/basico.png', name: 'Kit Punto de Venta Básico', description: 'Punto de venta completo impulsado por MyBusiness POS', price: '$12,430.00 MXN', delay: 'delay-300' },
     { index: 9, image: 'images/accesorios/premium.png', name: 'Kit Punto de Venta Premium', description: 'Punto de venta completo impulsado por MyBusiness POS', price: '$19,740.00 MXN', delay: 'delay-300' },
@@ -123,7 +123,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       moreSpecifications: { 'Voltaje': '5V CC', 'Peso': '246gr', 'Cable': '2 metros', 'Medidas': '175mm x 73mm x 102mm' },
     },
     {
-      id: 2, name: 'Impresora Térmica EC-Line',
+      id: 2, name: 'Impresora Térmica EPSON',
       description: 'Miniprinter térmica EC-PM-X30 diseñada para negocios que requieren impresiones rápidas (300 mm/seg), silenciosas y confiables. Ideal para puntos de venta con espacio limitado.',
       price: 3350.00, image: 'images/accesorios/impresora/ecline/ecline1.png',
       images: ['images/accesorios/impresora/ecline/ecline2.png', 'images/accesorios/impresora/ecline/ecline3.png'],
@@ -186,8 +186,8 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       moreSpecifications: { 'Sistema Operativo': 'Sin Sistema Operativo', 'Gráficos': 'Intel UHD Graphics', 'Puertos': 'USB 3.0, HDMI, VGA, RJ45 Gigabit', 'Factor de Forma': 'Slim (SFF)' },
     },
     {
-      id: 7, name: 'Monitor GHIA 21.5 pulgadas',
-      description: 'Monitor GHIA MG2225 de 21.5 pulgadas con panel VA y una tasa de refresco de 100Hz, visualización fluida y nítida.',
+      id: 7, name: 'Monitor ACKTECK 21.5',
+      description: 'Monitor ACKTECK 21.5 pulgadas con panel VA y una tasa de refresco de 100Hz, visualización fluida y nítida.',
       price: 1200.00, image: 'images/accesorios/monitor/ghia/monitor.png',
       images: ['images/accesorios/monitor/ghia/monitor1.png', 'images/accesorios/monitor/ghia/monitor2.png', 'images/accesorios/monitor/ghia/monitor4.png'],
       features: [
@@ -234,7 +234,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
       images: ['images/accesorios/pc/ghia/pc3.png', 'images/accesorios/monitor/ghia/monitor4.png', 'images/accesorios/impresora/ecline/ecline1.png', 'images/accesorios/lector/ghia/barras4.png', 'images/accesorios/cajon/ghia/cajon4.png'],
       features: [
         'Computadora GHIA Frontier Slim 2.0 (Intel 4 Núcleos @ 3.40 GHz)',
-        'Monitor GHIA MG2225 de 21.5" VA FHD 100Hz Frameless',
+        'Monitor ACKTECK 21.5 pulgadas VA FHD 100Hz Frameless',
         'Impresora Térmica EC-Line EC-PM-X30 (300 mm/seg)',
         'Lector de códigos de barras GHIA GSCBI 1D con Base',
         'Cajón de dinero GHIA GCDS81 de acero reforzado',
@@ -429,6 +429,12 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
 
   closeTimbresModal(): void {
     this.isTimbresModalOpen = false;
+  }
+
+  @HostListener('document:keydown.escape')
+  onEscape(): void {
+    // El modal de producto maneja su propio Escape (zoom primero, luego modal)
+    if (this.isTimbresModalOpen) this.closeTimbresModal();
   }
 
   onContact(product: Product): void {

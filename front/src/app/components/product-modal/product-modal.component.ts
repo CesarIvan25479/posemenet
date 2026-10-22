@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, OnDestroy, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnDestroy, OnChanges, SimpleChanges, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
@@ -47,6 +47,7 @@ export class ProductModalComponent implements OnDestroy, OnChanges {
         this.startAutoPlay();
         document.body.style.overflow = 'hidden';
       } else if (changes['isOpen'] && !this.isOpen) {
+        this.isZoomOpen = false;
         this.stopAutoPlay();
         document.body.style.overflow = '';
       }
@@ -174,6 +175,15 @@ export class ProductModalComponent implements OnDestroy, OnChanges {
   closeZoom(): void {
     this.isZoomOpen = false;
     this.startAutoPlay();
+  }
+
+  @HostListener('document:keydown.escape')
+  onEscape(): void {
+    if (this.isZoomOpen) {
+      this.closeZoom();
+    } else if (this.isOpen) {
+      this.closeModal();
+    }
   }
 
   closeModal(): void {
