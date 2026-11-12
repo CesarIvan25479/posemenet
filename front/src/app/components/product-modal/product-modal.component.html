@@ -54,8 +54,8 @@
                     <p class="modal-description">{{ product.description }}</p>
 
                     <div class="modal-price-section">
-                        <span class="modal-price">{{ product.price | currency }}<span
-                                class="price-currency">MXN</span></span>
+                        <span class="modal-price">{{ isNumberPrice(product.price) ? (product.price | currency) : product.price }}<span
+                                class="price-currency" *ngIf="isNumberPrice(product.price)">MXN</span></span>
                         <span class="modal-stock">Bajo disponibilidad</span>
                     </div>
 

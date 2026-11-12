@@ -6,7 +6,7 @@ export interface Product {
   id: number;
   name: string;
   description: string;
-  price: number;
+  price: number | string;
   image: string;
   images?: string[];
   features?: string[];
@@ -66,6 +66,10 @@ export class ProductModalComponent implements OnDestroy, OnChanges {
 
   get currentImage(): string {
     return this.allImages[this.currentIndex] || '';
+  }
+
+  isNumberPrice(price: number | string | undefined): price is number {
+    return typeof price === 'number';
   }
 
   // ===== AUTO PLAY =====

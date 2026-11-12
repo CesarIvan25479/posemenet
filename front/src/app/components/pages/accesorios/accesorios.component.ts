@@ -40,24 +40,24 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
 
   // Product cards for grid display
   readonly productCards = [
-    { index: 0, image: 'images/accesorios/lector/ghia/lector.png', name: 'Lector de código profesional', description: 'Scanner de códigos de alta velocidad y precisión', price: '$600.00 MXN', delay: 'delay-100' },
-    { index: 1, image: 'images/accesorios/impresora/ecline/ecline.png', name: 'Impresora Térmica EPSON', description: 'Impresora térmica directa de alta velocidad (300 mm/seg)', price: '$3,350.00 MXN', delay: 'delay-200' },
-    { index: 2, image: 'images/accesorios/cajon/ghia/cajon2.png', name: 'Cajón de Efectivo Electrónico', description: 'Cajón automático con seguridad integrada y control USB', price: '$800.00 MXN', delay: 'delay-300' },
-    { index: 3, image: 'images/accesorios/rollos/rollo.png', name: 'Rollos de papel termico', description: 'Rollo de papel térmico c/u', price: '$80.00 MXN', delay: 'delay-100' },
-    { index: 4, image: 'images/accesorios/monitor/quaroni/quaroni1.png', name: 'Monitor Quaroni MQ19-03', description: 'Monitor LED de 19.5" HD, panel TN, HDMI/VGA', price: '$800.00 MXN', delay: 'delay-200' },
-    { index: 5, image: 'images/accesorios/pc/ghia/pc.png', name: 'PC GHIA Frontier Slim 2.0', description: 'Intel N-Series 4 Núcleos 3.40 GHz, 8 GB RAM, 240 GB SSD - Sin Sistema', price: '$5,500.00 MXN', delay: '' },
-    { index: 6, image: 'images/accesorios/monitor/ghia/monitor3.png', name: 'Monitor ACKTECK 21.5 pulgadas', description: 'Monitor ACKTECK / 21.5 / VA / FHD / 100Hz / VGA, HDMI / Negro', price: '$1,200.00 MXN', delay: 'delay-100' },
-    { index: 7, image: 'images/accesorios/rollos/caja.png', name: 'Caja de Rollos Térmicos 76mm', description: 'Caja de 20 rollos térmicos de 76mm compatibles con nuestras impresoras térmicas', price: '$1,500.00 MXN', delay: 'delay-200' },
-    { index: 8, image: 'images/accesorios/basico.png', name: 'Kit Punto de Venta Básico', description: 'Punto de venta completo impulsado por MyBusiness POS', price: '$12,430.00 MXN', delay: 'delay-300' },
-    { index: 9, image: 'images/accesorios/premium.png', name: 'Kit Punto de Venta Premium', description: 'Punto de venta completo impulsado por MyBusiness POS', price: '$19,740.00 MXN', delay: 'delay-300' },
-    { index: 10, image: 'images/accesorios/pc/hyundai/minipc.png', name: 'Mini PC Hyundai', description: 'Mini PC HYUNDAI HTN4020MPC04, Intel Celeron N4020 4GB DDR4 / 128GB SSD Windows 11 Home', price: '$3,350.00 MXN', delay: 'delay-400' },
-    { index: 11, image: 'images/accesorios/teclado/acteck/acteck.png', name: 'Kit Teclado y Mouse', description: 'Kit Acteck Creator MK210, Combo alámbrico multimedia, 105 teclas, Mouse 1000 DPI', price: '$190.00 MXN', delay: 'delay-500' },
-    { index: 12, image: 'images/accesorios/impresora/nextep/next.png', name: 'Impresora Térmica Nextep', description: 'Impresora Térmica 80mm USB/RJ11/LAN / 160 MM/S, 203 DPI', price: '$1,700.00 MXN', delay: 'delay-500' },
-    { index: 13, image: 'images/accesorios/terminal/terminal.png', name: 'Terminal Prosepago', description: 'Acepta tarjetas de crédito, débito, vales y NFC. Depósito al siguiente día hábil.', price: '$1,160.00 MXN', delay: 'delay-300' },
-    { index: 14, image: 'images/accesorios/sistema/sistema.png', name: 'Software MyBusiness POS', description: 'Software líder de punto de venta en México con facturación CFDI 4.0, control de inventarios y más.', price: '$3,790.00 MXN', delay: 'delay-300' },
-    { index: 15, image: 'images/accesorios/monitor/acteck/acteck.png', name: 'Monitor Acteck CB185', description: 'Monitor LED 18.5" HD, panel TN, 60 Hz, 5 ms, HDMI/VGA, VESA 75 mm. Modelo AC-944526.', price: '$900.00 MXN', delay: 'delay-300' },
-    { index: 16, image: 'images/accesorios/pc/vorago/vorago.png', name: 'PC Vorago Slimbay 5', description: 'Computadora compacta Slim, Celeron N4020, 8 GB RAM, 240 GB SSD, sin OS. Modelo SB5 CLN N4020-NOS-13.', price: '$4,000.00 MXN', delay: 'delay-300' },
-    { index: 17, image: 'images/accesorios/timbres/timbres1.png', name: 'Timbres Fiscales', description: 'Paquetes de Timbres Fiscales desdé.', price: '$465.16 MXN', delay: 'delay-300' },
+    { index: 0, image: 'images/accesorios/lector/ghia/lector.png', name: 'Lector de código profesional', description: 'Scanner de códigos de alta velocidad y precisión', price: 'Comprar ahora', delay: 'delay-100' },
+    { index: 1, image: 'images/accesorios/impresora/ecline/ecline.png', name: 'Impresora Térmica EPSON', description: 'Impresora térmica directa de alta velocidad (300 mm/seg)', price: 'Comprar ahora', delay: 'delay-200' },
+    { index: 2, image: 'images/accesorios/cajon/ghia/cajon2.png', name: 'Cajón de Efectivo Electrónico', description: 'Cajón automático con seguridad integrada y control USB', price: 'Comprar ahora', delay: 'delay-300' },
+    { index: 3, image: 'images/accesorios/rollos/rollo.png', name: 'Rollos de papel termico', description: 'Rollo de papel térmico c/u', price: 'Comprar ahora', delay: 'delay-100' },
+    { index: 4, image: 'images/accesorios/monitor/quaroni/quaroni1.png', name: 'Monitor Quaroni MQ19-03', description: 'Monitor LED de 19.5" HD, panel TN, HDMI/VGA', price: 'Comprar ahora', delay: 'delay-200' },
+    { index: 5, image: 'images/accesorios/pc/ghia/pc.png', name: 'PC GHIA Frontier Slim 2.0', description: 'Intel N-Series 4 Núcleos 3.40 GHz, 8 GB RAM, 240 GB SSD - Sin Sistema', price: 'Comprar ahora', delay: '' },
+    { index: 6, image: 'images/accesorios/monitor/ghia/monitor3.png', name: 'Monitor ACKTECK 21.5 pulgadas', description: 'Monitor ACKTECK / 21.5 / VA / FHD / 100Hz / VGA, HDMI / Negro', price: 'Comprar ahora', delay: 'delay-100' },
+    { index: 7, image: 'images/accesorios/rollos/caja.png', name: 'Caja de Rollos Térmicos 76mm', description: 'Caja de 20 rollos térmicos de 76mm compatibles con nuestras impresoras térmicas', price: 'Comprar ahora', delay: 'delay-200' },
+    { index: 8, image: 'images/accesorios/basico.png', name: 'Kit Punto de Venta Básico', description: 'Punto de venta completo impulsado por MyBusiness POS', price: 'Comprar ahora', delay: 'delay-300' },
+    { index: 9, image: 'images/accesorios/premium.png', name: 'Kit Punto de Venta Premium', description: 'Punto de venta completo impulsado por MyBusiness POS', price: 'Comprar ahora', delay: 'delay-300' },
+    { index: 10, image: 'images/accesorios/pc/hyundai/minipc.png', name: 'Mini PC Hyundai', description: 'Mini PC HYUNDAI HTN4020MPC04, Intel Celeron N4020 4GB DDR4 / 128GB SSD Windows 11 Home', price: 'Comprar ahora', delay: 'delay-400' },
+    { index: 11, image: 'images/accesorios/teclado/acteck/acteck.png', name: 'Kit Teclado y Mouse', description: 'Kit Acteck Creator MK210, Combo alámbrico multimedia, 105 teclas, Mouse 1000 DPI', price: 'Comprar ahora', delay: 'delay-500' },
+    { index: 12, image: 'images/accesorios/impresora/nextep/next.png', name: 'Impresora Térmica Nextep', description: 'Impresora Térmica 80mm USB/RJ11/LAN / 160 MM/S, 203 DPI', price: 'Comprar ahora', delay: 'delay-500' },
+    { index: 13, image: 'images/accesorios/terminal/terminal.png', name: 'Terminal Prosepago', description: 'Acepta tarjetas de crédito, débito, vales y NFC. Depósito al siguiente día hábil.', price: 'Comprar ahora', delay: 'delay-300' },
+    { index: 14, image: 'images/accesorios/sistema/sistema.png', name: 'Software MyBusiness POS', description: 'Software líder de punto de venta en México con facturación CFDI 4.0, control de inventarios y más.', price: 'Comprar ahora', delay: 'delay-300' },
+    { index: 15, image: 'images/accesorios/monitor/acteck/acteck.png', name: 'Monitor Acteck CB185', description: 'Monitor LED 18.5" HD, panel TN, 60 Hz, 5 ms, HDMI/VGA, VESA 75 mm. Modelo AC-944526.', price: 'Comprar ahora', delay: 'delay-300' },
+    { index: 16, image: 'images/accesorios/pc/vorago/vorago.png', name: 'PC Vorago Slimbay 5', description: 'Computadora compacta Slim, Celeron N4020, 8 GB RAM, 240 GB SSD, sin OS. Modelo SB5 CLN N4020-NOS-13.', price: 'Comprar ahora', delay: 'delay-300' },
+    { index: 17, image: 'images/accesorios/timbres/timbres1.png', name: 'Timbres Fiscales', description: 'Paquetes de Timbres Fiscales desdé.', price: 'Comprar ahora', delay: 'delay-300' },
 
   ];
 
@@ -97,9 +97,9 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
 
   // Promo banner
   readonly promoItems = [
-    { name: 'Lector de código', price: '$600 MXN' },
-    { name: 'Impresora térmica', price: '$1,700 MXN' },
-    { name: 'Cajón electrónico', price: '$800 MXN' },
+    { name: 'Lector de código', price: 'Comprar ahora' },
+    { name: 'Impresora térmica', price: 'Comprar ahora' },
+    { name: 'Cajón electrónico', price: 'Comprar ahora' },
   ];
 
   galleryItems = [
@@ -116,7 +116,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     {
       id: 1, name: 'Lector de código profesional',
       description: 'Fácil de operar por su función Plug and Play, identifica códigos de barra ID en celulares y monitores.',
-      price: 600.00, image: 'images/accesorios/lector/ghia/barras3.png',
+      price: 'Comprar ahora', image: 'images/accesorios/lector/ghia/barras3.png',
       images: ['images/accesorios/lector/ghia/barras4.png', 'images/accesorios/lector/ghia/barras5.png'],
       features: ['Lectura de códigos 1D y 2D', 'Velocidad de escaneo de 300 escaneos/segundo', 'Conexión USB plug and play', 'Compatible con Windows, Mac y Linux', 'Diseño ergonómico para uso prolongado'],
       specifications: { 'Tipo de escaneo': 'Bidireccional', 'IP Class': 'IP52', 'Fuente de luz': '650nm Laser diodo visible', 'Material': 'ABS + PC' },
@@ -125,7 +125,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     {
       id: 2, name: 'Impresora Térmica EPSON',
       description: 'Miniprinter térmica EC-PM-X30 diseñada para negocios que requieren impresiones rápidas (300 mm/seg), silenciosas y confiables. Ideal para puntos de venta con espacio limitado.',
-      price: 3350.00, image: 'images/accesorios/impresora/ecline/ecline1.png',
+      price: 'EC-PM-X30', image: 'images/accesorios/impresora/ecline/ecline1.png',
       images: ['images/accesorios/impresora/ecline/ecline2.png', 'images/accesorios/impresora/ecline/ecline3.png'],
       features: [
         'Velocidad de impresión ultra rápida de 300 mm/s',
@@ -140,7 +140,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     {
       id: 3, name: 'Cajón de Efectivo Electrónico',
       description: 'Cajón automático con seguridad integrada y control USB. Diseñado para un manejo seguro y eficiente del efectivo en tu negocio.',
-      price: 800.00, image: 'images/accesorios/cajon/ghia/cajon5.png',
+      price: 'Comprar ahora', image: 'images/accesorios/cajon/ghia/cajon5.png',
       images: ['images/accesorios/cajon/ghia/cajon3.png', 'images/accesorios/cajon/ghia/cajon4.png'],
       features: ['Apertura automática mediante impulsor', '5 compartimentos para billetes', '8 compartimentos para monedas', 'Cerradura de 3 posiciones', 'Construcción en metal resistente'],
       specifications: { 'Interfaces': 'RJ11 para impresora de recibos', 'Capacidad': 'Hasta 500 billetes', 'Ranuras': 'Ranura para documentos' },
@@ -149,7 +149,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     {
       id: 4, name: 'Rollo de papel térmico',
       description: 'Papel Térmico, Etiquetas. Todo lo necesario para tu punto de venta.',
-      price: 80.00, image: 'images/accesorios/rollos/rollo2.png',
+      price: 'Comprar ahora', image: 'images/accesorios/rollos/rollo2.png',
       images: ['images/accesorios/rollos/rollo3.png', 'images/accesorios/rollos/rollo4.png'],
       features: ['Papel térmico de alta calidad', 'Etiquetas térmicas adhesivas', 'Papel termico de calidad', 'Precios competitivos por mayoreo'],
       specifications: { 'Papel térmico': '80mm x 70mm', 'Etiquetas': 'Variados tamaños', 'Calidad': 'Alta' },
@@ -158,7 +158,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     {
       id: 5, name: 'Monitor Quaroni MQ19-03',
       description: 'Pantalla LED de 19.5 pulgadas diseñada para ofrecer una visualización clara y eficiente, ideal para oficina y puntos de venta.',
-      price: 800.00, image: 'images/accesorios/monitor/quaroni/quaroni.png',
+      price: 'Comprar ahora', image: 'images/accesorios/monitor/quaroni/quaroni.png',
       images: ['images/accesorios/monitor/quaroni/quaroni2.png', 'images/accesorios/monitor/quaroni/quaroni3.png'],
       features: [
         'Pantalla de 19.5 pulgadas con resolución HD',
@@ -173,7 +173,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     {
       id: 6, name: 'PC GHIA Frontier Slim 2.0',
       description: 'Computadora de escritorio ultra compacta con procesador Intel de 4 núcleos con bajo consumo energético.',
-      price: 5500.00, image: 'images/accesorios/pc/ghia/pc1.png',
+      price: 'Comprar ahora', image: 'images/accesorios/pc/ghia/pc1.png',
       images: ['images/accesorios/pc/ghia/pc2.png', 'images/accesorios/pc/ghia/pc3.png', 'images/accesorios/mouse1.png', 'images/accesorios/teclado1.png'],
       features: [
         'Procesador Intel N-Series de 4 Núcleos (hasta 3.40 GHz)',
@@ -188,7 +188,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     {
       id: 7, name: 'Monitor ACKTECK 21.5',
       description: 'Monitor ACKTECK 21.5 pulgadas con panel VA y una tasa de refresco de 100Hz, visualización fluida y nítida.',
-      price: 1200.00, image: 'images/accesorios/monitor/ghia/monitor.png',
+      price: 'Comprar ahora', image: 'images/accesorios/monitor/ghia/monitor.png',
       images: ['images/accesorios/monitor/ghia/monitor1.png', 'images/accesorios/monitor/ghia/monitor2.png', 'images/accesorios/monitor/ghia/monitor4.png'],
       features: [
         'Pantalla de 21.5 pulgadas Full HD (1920x1080)',
@@ -204,7 +204,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     {
       id: 8, name: 'Caja de Rollos Térmicos 76mm',
       description: 'Caja de 20 rollos térmicos de 76mm, compatibles con nuestras impresoras térmicas. Alta calidad de impresión.',
-      price: 1500.00, image: 'images/accesorios/rollos/caja1.png',
+      price: 'Comprar ahora', image: 'images/accesorios/rollos/caja1.png',
       images: ['images/accesorios/rollos/caja2.png', 'images/accesorios/rollos/caja3.png'],
       features: ['20 Rollos térmicos de 76mm', 'Compatible con impresoras térmicas', 'Alta calidad de impresión', 'Larga duración del papel', 'Empaque por caja económica'],
       specifications: { 'Ancho': '76mm', 'Tipo': 'Papel térmico', 'Compatibilidad': 'Impresoras térmicas 76mm' },
@@ -213,7 +213,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     {
       id: 9, name: 'Kit Punto de Venta Básico',
       description: 'Punto de venta completo y listo para operar, impulsado por MyBusiness POS. Incluye equipo esencial y soporte especializado para que empieces a vender desde el primer día, todo en un solo paquete.',
-      price: 12430.00, image: 'images/accesorios/basico1.png',
+      price: 'Comprar ahora', image: 'images/accesorios/basico1.png',
       images: ['images/accesorios/pc/hyundai/minipc2.png', 'images/accesorios/monitor/quaroni/quaroni.png', 'images/accesorios/teclado/acteck/acteck1.png', 'images/accesorios/cajon/ghia/cajon3.png', 'images/accesorios/impresora/nextep/next1.png', 'images/accesorios/lector/ghia/barras5.png'],
       features: [
         'Mini PC Hyundai HTN4020MPC04 con Windows 11 Home',
@@ -230,7 +230,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     {
       id: 10, name: 'Kit Punto de Venta Premium',
       description: 'Punto de venta completo y listo para operar, impulsado por MyBusiness POS. Incluye equipo esencial y soporte especializado para que empieces a vender desde el primer día, todo en un solo paquete.',
-      price: 19740.00, image: 'images/accesorios/premium1.png',
+      price: 'Comprar ahora', image: 'images/accesorios/premium1.png',
       images: ['images/accesorios/pc/ghia/pc3.png', 'images/accesorios/monitor/ghia/monitor4.png', 'images/accesorios/impresora/ecline/ecline1.png', 'images/accesorios/lector/ghia/barras4.png', 'images/accesorios/cajon/ghia/cajon4.png'],
       features: [
         'Computadora GHIA Frontier Slim 2.0 (Intel 4 Núcleos @ 3.40 GHz)',
@@ -248,7 +248,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     {
       id: 11, name: 'Mini PC Hyundai',
       description: 'Mini PC HYUNDAI HTN4020MPC04, una solución compacta y potente diseñada para maximizar la productividad en espacios reducidos. Ideal para puntos de venta, oficinas y señalización digital.',
-      price: 3350.00, image: 'images/accesorios/pc/hyundai/minipc1.png',
+      price: 'Comprar ahora', image: 'images/accesorios/pc/hyundai/minipc1.png',
       images: ['images/accesorios/pc/hyundai/minipc2.png', 'images/accesorios/pc/hyundai/minipc3.png'],
       features: [
         'Procesador Intel Celeron N4020 (hasta 2.8GHz)',
@@ -264,7 +264,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     {
       id: 12, name: 'Kit Teclado y Mouse Acteck',
       description: 'Kit Acteck Creator MK210, la combinación perfecta para tu espacio de trabajo.',
-      price: 190.00, image: 'images/accesorios/teclado/acteck/acteck1.png',
+      price: 'Comprar ahora', image: 'images/accesorios/teclado/acteck/acteck1.png',
       images: ['images/accesorios/teclado/acteck/acteck2.png', 'images/accesorios/teclado/acteck/acteck3.png'],
       features: [
         'Conexión USB alámbrica Plug & Play',
@@ -280,7 +280,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     {
       id: 13, name: 'Impresora Térmica Nextep',
       description: 'Impresora térmica Nextep de 80mm diseñada para alto rendimiento en puntos de venta.',
-      price: 1700.00, image: 'images/accesorios/impresora/nextep/next1.png',
+      price: 'Comprar ahora', image: 'images/accesorios/impresora/nextep/next1.png',
       images: ['images/accesorios/impresora/nextep/next2.png', 'images/accesorios/impresora/nextep/next3.png'],
       features: [
         'Impresión térmica directa de alta velocidad (160 mm/s)',
@@ -296,7 +296,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     {
       id: 14, name: 'Terminal Prosepago',
       description: 'Terminal inteligente de cobro diseñada para modernizar cualquier negocio en México.',
-      price: 1160.00, image: 'images/accesorios/terminal/terminal1.png',
+      price: 'Comprar ahora', image: 'images/accesorios/terminal/terminal1.png',
       images: ['images/accesorios/terminal/terminal2.png', 'images/accesorios/terminal/terminal3.png'],
       features: [
         'Acepta tarjetas Visa, Mastercard, American Express y Carnet',
@@ -313,7 +313,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     {
       id: 15, name: 'Software MyBusiness POS',
       description: 'Software líder de punto de venta y control administrativo en México (v24). Automatiza tu comercio con facturación electrónica CFDI 4.0, control de inventarios, compras, clientes y más. Escala desde un solo equipo hasta grandes cadenas con múltiples sucursales.',
-      price: 3790.00, image: 'images/accesorios/sistema/sistema1.png',
+      price: 'Comprar ahora', image: 'images/accesorios/sistema/sistema1.png',
       images: ['images/accesorios/sistema/sistema2.png', 'images/accesorios/sistema/sistema3.png'],
       features: [
         'Facturación electrónica CFDI 4.0 nativa y simplificada',
@@ -330,7 +330,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     {
       id: 16, name: 'Monitor Acteck Captive Brite CB185',
       description: 'Monitor LED de 18.5 pulgadas con panel TN y resolución HD, diseñado para ofrecer una visualización clara y cómoda en estaciones de trabajo y puntos de venta.',
-      price: 900.00, image: 'images/accesorios/monitor/acteck/acteck1.png',
+      price: 'Comprar ahora', image: 'images/accesorios/monitor/acteck/acteck1.png',
       images: ['images/accesorios/monitor/acteck/acteck2.png', 'images/accesorios/monitor/acteck/acteck3.png'],
       features: [
         'Pantalla plana de 18.5 pulgadas con relación de aspecto 16:9',
@@ -347,7 +347,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     {
       id: 17, name: 'PC Vorago Slimbay 5',
       description: 'Computadora de escritorio compacta en formato Slim, ideal para oficina, hogar y puntos de venta.',
-      price: 4000.00, image: 'images/accesorios/pc/vorago/vorago1.png',
+      price: 'Comprar ahora', image: 'images/accesorios/pc/vorago/vorago1.png',
       images: ['images/accesorios/pc/vorago/vorago2.png', 'images/accesorios/pc/vorago/vorago3.png'],
       features: [
         'Procesador Intel Celeron N4020 (hasta 2.8 GHz Turbo, 2 núcleos)',
@@ -364,7 +364,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     {
       id: 18, name: 'Timbres Fiscales',
       description: '',
-      price: 0.00, image: '',
+      price: 'Comprar ahora', image: '',
       images: [''],
       features: [
         'Facturación electrónica CFDI 4.0 nativa y simplificada'
@@ -438,7 +438,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   onContact(product: Product): void {
-    const message = `Hola, estoy interesado en el producto: ${product.name} ($${product.price})`;
+    const message = `Hola, estoy interesado en el producto: ${product.name}`;
     const whatsappUrl = `https://api.whatsapp.com/send?phone=5217131334557&text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
     this.closeModal();
