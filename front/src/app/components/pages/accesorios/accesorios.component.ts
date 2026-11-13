@@ -241,7 +241,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
         'Incluye kit de teclado y mouse alámbricos',
         '10 horas de capacitación y soporte técnico premium integral'
       ],
-      specifications: { 'Computadora': 'GHIA Frontier Slim 20 Intel 4 núcleos @ 3.40 GHz', 'RAM': '8 GB DDR4', 'Almacenamiento': '240 GB SSD', 'Monitor': 'GHIA MG2225 21.5" VA FHD 100Hz', 'Impresora': 'EC-Line EC-PM-X30 80mm (300 mm/s)', 'Lector': 'GHIA GSCBI 1D LED CCD con Base', 'Cajón': 'GHIA GCDS81 (5 billetes / 8 monedas)', 'Sistema Operativo': 'Sin Sistema Operativo', 'Software': 'MyBusiness POS v24' },
+      specifications: { 'Computadora': 'GHIA Frontier Slim 20 Intel 4 núcleos @ 3.40 GHz', 'RAM': '8 GB DDR4', 'Almacenamiento': '240 GB SSD', 'Monitor': 'Acteck 21.5" VA FHD 100Hz', 'Impresora': 'Epson 80mm (300 mm/s)', 'Lector': 'GHIA GSCBI 1D LED CCD con Base', 'Cajón': 'GHIA GCDS81 (5 billetes / 8 monedas)', 'Sistema Operativo': 'Sin Sistema Operativo', 'Software': 'MyBusiness POS v24' },
       functions: ['Ventas de productos y servicios', 'Inventario de productos', 'Compras y control de proveedores', 'Control de clientes', 'Cobranza a clientes', 'Impresión de tickets', 'Ventas de tiempo aire', 'Cobros con tarjeta de débito y crédito'],
     },
 

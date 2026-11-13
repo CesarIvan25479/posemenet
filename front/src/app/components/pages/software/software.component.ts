@@ -23,15 +23,15 @@ export class SoftwareComponent implements AfterViewInit, OnDestroy {
     id: 1,
     name: 'Kit Punto de Venta Premium',
     description: 'Punto de venta completo y listo para operar, impulsado por MyBusiness POS. Incluye equipo esencial y soporte especializado para que empieces a vender desde el primer día, todo en un solo paquete.',
-    price: 19740,
+    price: 24750,
     image: 'images/software/paquete.png',
-    images: ['images/accesorios/pc/ghia/pc3.png', 'images/accesorios/monitor/ghia/monitor4.png', 'images/accesorios/impresora/ecline/ecline1.png', 'images/accesorios/lector/ghia/barras4.png', 'images/accesorios/cajon/ghia/cajon4.png'],
+    images: ['images/accesorios/pc/ghia/pc3.png', 'images/accesorios/monitor/acteck2/monitor3.png', 'images/accesorios/impresora/ecline/epson.png', 'images/accesorios/lector/ghia/barras4.png', 'images/accesorios/cajon/ghia/nextep.png'],
     features: [
       'Computadora GHIA Frontier Slim 2.0 (Intel 4 Núcleos @ 3.40 GHz)',
-      'Monitor GHIA MG2225 de 21.5" VA FHD 100Hz Frameless',
-      'Impresora Térmica EC-Line EC-PM-X30 (300 mm/seg)',
+      'Monitor Acteck de 21.5" VA FHD 100Hz Frameless',
+      'Impresora Térmica Epson (300 mm/seg)',
       'Lector de códigos de barras GHIA GSCBI 1D con Base',
-      'Cajón de dinero GHIA GCDS81 de acero reforzado',
+      'Cajón de dinero Nextep de acero reforzado',
       'Incluye kit de teclado y mouse alámbricos',
       '10 horas de capacitación y soporte técnico premium integral'
     ],
@@ -39,10 +39,10 @@ export class SoftwareComponent implements AfterViewInit, OnDestroy {
       'Computadora': 'GHIA Frontier Slim 20 Intel 4 núcleos @ 3.40 GHz',
       'RAM': '8 GB DDR4',
       'Almacenamiento': '240 GB SSD',
-      'Monitor': 'GHIA MG2225 21.5" VA FHD 100Hz',
-      'Impresora': 'EC-Line EC-PM-X30 80mm (300 mm/s)',
+      'Monitor': 'Acteck 121.5" VA FHD 100Hz',
+      'Impresora': 'Epson 80mm (300 mm/s)',
       'Lector': 'GHIA GSCBI 1D LED CCD con Base',
-      'Cajón': 'GHIA GCDS81 (5 billetes / 8 monedas)',
+      'Cajón': 'Nextep (5 billetes / 8 monedas)',
       'Sistema Operativo': 'Sin Sistema Operativo',
       'Software': 'MyBusiness POS v24'
     },
@@ -118,20 +118,20 @@ export class SoftwareComponent implements AfterViewInit, OnDestroy {
     this.closeModal();
   }
 
-floatCards = [
-  {
-    icon: "fa-solid fa-chart-line",
-    color: "rgb(249, 0, 0)",
-    title: "+34% ventas",
-    description: "este mes vs anterior",
-    class: "fc-ventas"
-  },
-  {
-    icon: "fa-solid fa-book-atlas",
-    color: " rgb(0, 204, 255)",
-    title: "Factura CFDI",
-    description: "emitida correctamente",
-    class: "fc-ticket"
-  }
-];
+  floatCards = [
+    {
+      icon: "fa-solid fa-chart-line",
+      color: "rgb(249, 0, 0)",
+      title: "+34% ventas",
+      description: "este mes vs anterior",
+      class: "fc-ventas"
+    },
+    {
+      icon: "fa-solid fa-book-atlas",
+      color: " rgb(0, 204, 255)",
+      title: "Factura CFDI",
+      description: "emitida correctamente",
+      class: "fc-ticket"
+    }
+  ];
 }
