@@ -41,12 +41,12 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
   // Product cards for grid display
   readonly productCards = [
     { index: 0, image: 'images/accesorios/lector/ghia/lector.png', name: 'Lector de código profesional', description: 'Scanner de códigos de alta velocidad y precisión', price: 'Comprar ahora', delay: 'delay-100' },
-    { index: 1, image: 'images/accesorios/impresora/ecline/ecline.png', name: 'Impresora Térmica EPSON', description: 'Impresora térmica directa de alta velocidad (300 mm/seg)', price: 'Comprar ahora', delay: 'delay-200' },
+    { index: 1, image: 'images/accesorios/impresora/ecline/ecline.png', name: 'Impresora Térmica EC-LINE', description: 'Impresora térmica directa de alta velocidad (300 mm/seg)', price: 'Comprar ahora', delay: 'delay-200' },
     { index: 2, image: 'images/accesorios/cajon/ghia/cajon2.png', name: 'Cajón de Efectivo Electrónico', description: 'Cajón automático con seguridad integrada y control USB', price: 'Comprar ahora', delay: 'delay-300' },
     { index: 3, image: 'images/accesorios/rollos/rollo.png', name: 'Rollos de papel termico', description: 'Rollo de papel térmico c/u', price: 'Comprar ahora', delay: 'delay-100' },
     { index: 4, image: 'images/accesorios/monitor/quaroni/quaroni1.png', name: 'Monitor Quaroni MQ19-03', description: 'Monitor LED de 19.5" HD, panel TN, HDMI/VGA', price: 'Comprar ahora', delay: 'delay-200' },
     { index: 5, image: 'images/accesorios/pc/ghia/pc.png', name: 'PC GHIA Frontier Slim 2.0', description: 'Intel N-Series 4 Núcleos 3.40 GHz, 8 GB RAM, 240 GB SSD - Sin Sistema', price: 'Comprar ahora', delay: '' },
-    { index: 6, image: 'images/accesorios/monitor/ghia/monitor3.png', name: 'Monitor ACKTECK 21.5 pulgadas', description: 'Monitor ACKTECK / 21.5 / VA / FHD / 100Hz / VGA, HDMI / Negro', price: 'Comprar ahora', delay: 'delay-100' },
+    { index: 6, image: 'images/accesorios/monitor/acteck2/monitor3.png', name: 'Monitor ACKTECK 21.5 pulgadas', description: 'Monitor ACKTECK / 21.5 / VA / FHD / 100Hz / VGA, HDMI / Negro', price: 'Comprar ahora', delay: 'delay-100' },
     { index: 7, image: 'images/accesorios/rollos/caja.png', name: 'Caja de Rollos Térmicos 76mm', description: 'Caja de 20 rollos térmicos de 76mm compatibles con nuestras impresoras térmicas', price: 'Comprar ahora', delay: 'delay-200' },
     { index: 8, image: 'images/accesorios/basico.png', name: 'Kit Punto de Venta Básico', description: 'Punto de venta completo impulsado por MyBusiness POS', price: 'Comprar ahora', delay: 'delay-300' },
     { index: 9, image: 'images/accesorios/premium.png', name: 'Kit Punto de Venta Premium', description: 'Punto de venta completo impulsado por MyBusiness POS', price: 'Comprar ahora', delay: 'delay-300' },
@@ -106,7 +106,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     { image: 'images/accesorios/impresora/ecline/ecline1.png', text: 'Impresoras Térmicas' },
     { image: 'images/accesorios/lector/ghia/barras5.png', text: 'Lectores de Código' },
     { image: 'images/accesorios/cajon/ghia/cajon4.png', text: 'Cajones de Dinero' },
-    { image: 'images/accesorios/monitor/ghia/monitor4.png', text: 'Monitores' },
+    { image: 'images/accesorios/monitor/acteck2/monitor1.png', text: 'Monitores' },
     { image: 'images/accesorios/terminal/terminal2.png', text: 'Terminal' },
     { image: 'images/accesorios/rollos/rollo2.png', text: 'Consumibles' }
   ];
@@ -116,14 +116,14 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     {
       id: 1, name: 'Lector de código profesional',
       description: 'Fácil de operar por su función Plug and Play, identifica códigos de barra ID en celulares y monitores.',
-      price: 'Comprar ahora', image: 'images/accesorios/lector/ghia/barras3.png',
+      price: 'GSCBI', image: 'images/accesorios/lector/ghia/barras3.png',
       images: ['images/accesorios/lector/ghia/barras4.png', 'images/accesorios/lector/ghia/barras5.png'],
       features: ['Lectura de códigos 1D y 2D', 'Velocidad de escaneo de 300 escaneos/segundo', 'Conexión USB plug and play', 'Compatible con Windows, Mac y Linux', 'Diseño ergonómico para uso prolongado'],
       specifications: { 'Tipo de escaneo': 'Bidireccional', 'IP Class': 'IP52', 'Fuente de luz': '650nm Laser diodo visible', 'Material': 'ABS + PC' },
       moreSpecifications: { 'Voltaje': '5V CC', 'Peso': '246gr', 'Cable': '2 metros', 'Medidas': '175mm x 73mm x 102mm' },
     },
     {
-      id: 2, name: 'Impresora Térmica EPSON',
+      id: 2, name: 'Impresora Térmica EC-LINE',
       description: 'Miniprinter térmica EC-PM-X30 diseñada para negocios que requieren impresiones rápidas (300 mm/seg), silenciosas y confiables. Ideal para puntos de venta con espacio limitado.',
       price: 'EC-PM-X30', image: 'images/accesorios/impresora/ecline/ecline1.png',
       images: ['images/accesorios/impresora/ecline/ecline2.png', 'images/accesorios/impresora/ecline/ecline3.png'],
@@ -140,7 +140,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     {
       id: 3, name: 'Cajón de Efectivo Electrónico',
       description: 'Cajón automático con seguridad integrada y control USB. Diseñado para un manejo seguro y eficiente del efectivo en tu negocio.',
-      price: 'Comprar ahora', image: 'images/accesorios/cajon/ghia/cajon5.png',
+      price: 'GCD581', image: 'images/accesorios/cajon/ghia/cajon5.png',
       images: ['images/accesorios/cajon/ghia/cajon3.png', 'images/accesorios/cajon/ghia/cajon4.png'],
       features: ['Apertura automática mediante impulsor', '5 compartimentos para billetes', '8 compartimentos para monedas', 'Cerradura de 3 posiciones', 'Construcción en metal resistente'],
       specifications: { 'Interfaces': 'RJ11 para impresora de recibos', 'Capacidad': 'Hasta 500 billetes', 'Ranuras': 'Ranura para documentos' },
@@ -149,16 +149,16 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     {
       id: 4, name: 'Rollo de papel térmico',
       description: 'Papel Térmico, Etiquetas. Todo lo necesario para tu punto de venta.',
-      price: 'Comprar ahora', image: 'images/accesorios/rollos/rollo2.png',
+      price: 'ROLLOTER', image: 'images/accesorios/rollos/rollo2.png',
       images: ['images/accesorios/rollos/rollo3.png', 'images/accesorios/rollos/rollo4.png'],
       features: ['Papel térmico de alta calidad', 'Etiquetas térmicas adhesivas', 'Papel termico de calidad', 'Precios competitivos por mayoreo'],
       specifications: { 'Papel térmico': '80mm x 70mm', 'Etiquetas': 'Variados tamaños', 'Calidad': 'Alta' },
       moreSpecifications: { 'Toners': 'Universal', 'Garantía': 'Calidad garantizada' },
     },
     {
-      id: 5, name: 'Monitor Quaroni MQ19-03',
+      id: 5, name: 'Monitor Quaroni',
       description: 'Pantalla LED de 19.5 pulgadas diseñada para ofrecer una visualización clara y eficiente, ideal para oficina y puntos de venta.',
-      price: 'Comprar ahora', image: 'images/accesorios/monitor/quaroni/quaroni.png',
+      price: 'MQ19-03', image: 'images/accesorios/monitor/quaroni/quaroni.png',
       images: ['images/accesorios/monitor/quaroni/quaroni2.png', 'images/accesorios/monitor/quaroni/quaroni3.png'],
       features: [
         'Pantalla de 19.5 pulgadas con resolución HD',
@@ -173,7 +173,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     {
       id: 6, name: 'PC GHIA Frontier Slim 2.0',
       description: 'Computadora de escritorio ultra compacta con procesador Intel de 4 núcleos con bajo consumo energético.',
-      price: 'Comprar ahora', image: 'images/accesorios/pc/ghia/pc1.png',
+      price: 'INTELNSERIES', image: 'images/accesorios/pc/ghia/pc1.png',
       images: ['images/accesorios/pc/ghia/pc2.png', 'images/accesorios/pc/ghia/pc3.png', 'images/accesorios/mouse1.png', 'images/accesorios/teclado1.png'],
       features: [
         'Procesador Intel N-Series de 4 Núcleos (hasta 3.40 GHz)',
@@ -188,8 +188,8 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     {
       id: 7, name: 'Monitor ACKTECK 21.5',
       description: 'Monitor ACKTECK 21.5 pulgadas con panel VA y una tasa de refresco de 100Hz, visualización fluida y nítida.',
-      price: 'Comprar ahora', image: 'images/accesorios/monitor/ghia/monitor.png',
-      images: ['images/accesorios/monitor/ghia/monitor1.png', 'images/accesorios/monitor/ghia/monitor2.png', 'images/accesorios/monitor/ghia/monitor4.png'],
+      price: 'MG2225', image: 'images/accesorios/monitor/acteck2/monitor.png',
+      images: ['images/accesorios/monitor/acteck2/monitor1.png', 'images/accesorios/monitor/acteck2/monitor2.png'],
       features: [
         'Pantalla de 21.5 pulgadas Full HD (1920x1080)',
         'Panel VA para contrastes profundos y amplios ángulos de visión',
@@ -204,7 +204,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     {
       id: 8, name: 'Caja de Rollos Térmicos 76mm',
       description: 'Caja de 20 rollos térmicos de 76mm, compatibles con nuestras impresoras térmicas. Alta calidad de impresión.',
-      price: 'Comprar ahora', image: 'images/accesorios/rollos/caja1.png',
+      price: 'RTERMICO', image: 'images/accesorios/rollos/caja1.png',
       images: ['images/accesorios/rollos/caja2.png', 'images/accesorios/rollos/caja3.png'],
       features: ['20 Rollos térmicos de 76mm', 'Compatible con impresoras térmicas', 'Alta calidad de impresión', 'Larga duración del papel', 'Empaque por caja económica'],
       specifications: { 'Ancho': '76mm', 'Tipo': 'Papel térmico', 'Compatibilidad': 'Impresoras térmicas 76mm' },
@@ -213,31 +213,31 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     {
       id: 9, name: 'Kit Punto de Venta Básico',
       description: 'Punto de venta completo y listo para operar, impulsado por MyBusiness POS. Incluye equipo esencial y soporte especializado para que empieces a vender desde el primer día, todo en un solo paquete.',
-      price: 'Comprar ahora', image: 'images/accesorios/basico1.png',
-      images: ['images/accesorios/pc/hyundai/minipc2.png', 'images/accesorios/monitor/quaroni/quaroni.png', 'images/accesorios/teclado/acteck/acteck1.png', 'images/accesorios/cajon/ghia/cajon3.png', 'images/accesorios/impresora/nextep/next1.png', 'images/accesorios/lector/ghia/barras5.png'],
+      price: '$14,190.00 MXN', image: 'images/accesorios/basico1.png',
+      images: ['images/accesorios/pc/hyundai/minipc2.png', 'images/accesorios/monitor/quaroni/quaroni.png', 'images/accesorios/teclado/acteck/acteck1.png', 'images/accesorios/cajon/ghia/nextep.png', 'images/accesorios/impresora/nextep/next1.png', 'images/accesorios/lector/ghia/barras5.png'],
       features: [
         'Mini PC Hyundai HTN4020MPC04 con Windows 11 Home',
         'Monitor Quaroni MQ19-03 de 19.5" HD (HDMI/VGA)',
         'Kit de Teclado y Mouse Acteck Creator MK210 Alámbrico',
         'Impresora Térmica Nextep de 80mm (USB/LAN/RJ11)',
         'Lector de códigos de barras GHIA GSCBI 1D con Base',
-        'Cajón de dinero GHIA GCDS81 de acero reforzado',
+        'Cajón de dinero Nextep de acero reforzado',
         '2 horas de capacitación y soporte técnico especializado'
       ],
-      specifications: { 'Computadora': 'Mini PC Hyundai HTN4020MPC04 4GB/128GB', 'Monitor': 'Quaroni MQ19-03 19.5" HD', 'Periféricos': 'Kit Acteck Creator MK210', 'Impresora': 'Nextep Térmica 80mm (160 mm/s)', 'Lector': 'GHIA GSCBI 1D CCD con Base', 'Cajón': 'GHIA GCDS81 (5 billetes / 8 monedas)', 'Sistema Operativo': 'Windows 11 Home', 'Software': 'MyBusiness POS v24' },
+      specifications: { 'Computadora': 'Mini PC Hyundai HTN4020MPC04 4GB/128GB', 'Monitor': 'Quaroni MQ19-03 19.5" HD', 'Periféricos': 'Kit Acteck Creator MK210', 'Impresora': 'Nextep Térmica 80mm (160 mm/s)', 'Lector': 'GHIA GSCBI 1D CCD con Base', 'Cajón': 'Nextep (5 billetes / 8 monedas)', 'Sistema Operativo': 'Windows 11 Home', 'Software': 'MyBusiness POS v24' },
       functions: ['Ventas de productos y servicios', 'Inventario de productos', 'Compras y control de proveedores', 'Control de clientes', 'Cobranza a clientes', 'Impresión de tickets', 'Ventas de tiempo aire', 'Cobros con tarjeta de débito y crédito'],
     },
     {
       id: 10, name: 'Kit Punto de Venta Premium',
       description: 'Punto de venta completo y listo para operar, impulsado por MyBusiness POS. Incluye equipo esencial y soporte especializado para que empieces a vender desde el primer día, todo en un solo paquete.',
-      price: 'Comprar ahora', image: 'images/accesorios/premium1.png',
-      images: ['images/accesorios/pc/ghia/pc3.png', 'images/accesorios/monitor/ghia/monitor4.png', 'images/accesorios/impresora/ecline/ecline1.png', 'images/accesorios/lector/ghia/barras4.png', 'images/accesorios/cajon/ghia/cajon4.png'],
+      price: '$24,750.00 MXN', image: 'images/accesorios/premium1.png',
+      images: ['images/accesorios/pc/ghia/pc3.png', 'images/accesorios/monitor/acteck2/monitor1.png', 'images/accesorios/impresora/ecline/epson.png', 'images/accesorios/lector/ghia/barras4.png', 'images/accesorios/cajon/ghia/nextep.png'],
       features: [
         'Computadora GHIA Frontier Slim 2.0 (Intel 4 Núcleos @ 3.40 GHz)',
         'Monitor ACKTECK 21.5 pulgadas VA FHD 100Hz Frameless',
-        'Impresora Térmica EC-Line EC-PM-X30 (300 mm/seg)',
+        'Impresora Térmica Epson (300 mm/seg)',
         'Lector de códigos de barras GHIA GSCBI 1D con Base',
-        'Cajón de dinero GHIA GCDS81 de acero reforzado',
+        'Cajón de dinero Nextep de acero reforzado',
         'Incluye kit de teclado y mouse alámbricos',
         '10 horas de capacitación y soporte técnico premium integral'
       ],
@@ -313,7 +313,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     {
       id: 15, name: 'Software MyBusiness POS',
       description: 'Software líder de punto de venta y control administrativo en México (v24). Automatiza tu comercio con facturación electrónica CFDI 4.0, control de inventarios, compras, clientes y más. Escala desde un solo equipo hasta grandes cadenas con múltiples sucursales.',
-      price: 'Comprar ahora', image: 'images/accesorios/sistema/sistema1.png',
+      price: '$3,790.00 MXN', image: 'images/accesorios/sistema/sistema1.png',
       images: ['images/accesorios/sistema/sistema2.png', 'images/accesorios/sistema/sistema3.png'],
       features: [
         'Facturación electrónica CFDI 4.0 nativa y simplificada',
@@ -438,7 +438,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   onContact(product: Product): void {
-    const message = `Hola, estoy interesado en el producto: ${product.name}`;
+    const message = `Hola, estoy interesado en el producto: ${product.name} (${product.price})`;
     const whatsappUrl = `https://api.whatsapp.com/send?phone=5217131334557&text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
     this.closeModal();

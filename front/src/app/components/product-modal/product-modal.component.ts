@@ -46,10 +46,12 @@ export class ProductModalComponent implements OnDestroy, OnChanges {
         this.currentIndex = 0;
         this.startAutoPlay();
         document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
       } else if (changes['isOpen'] && !this.isOpen) {
         this.isZoomOpen = false;
         this.stopAutoPlay();
         document.body.style.overflow = '';
+        document.documentElement.style.overflow = '';
       }
     }
   }
@@ -57,6 +59,7 @@ export class ProductModalComponent implements OnDestroy, OnChanges {
   ngOnDestroy(): void {
     this.stopAutoPlay();
     document.body.style.overflow = '';
+        document.documentElement.style.overflow = '';
   }
 
   get allImages(): string[] {
