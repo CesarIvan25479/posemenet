@@ -248,7 +248,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     {
       id: 11, name: 'Mini PC Hyundai',
       description: 'Mini PC HYUNDAI HTN4020MPC04, una solución compacta y potente diseñada para maximizar la productividad en espacios reducidos. Ideal para puntos de venta, oficinas y señalización digital.',
-      price: 'Comprar ahora', image: 'images/accesorios/pc/hyundai/minipc1.png',
+      price: 'HTN4020MPC04', image: 'images/accesorios/pc/hyundai/minipc1.png',
       images: ['images/accesorios/pc/hyundai/minipc2.png', 'images/accesorios/pc/hyundai/minipc3.png'],
       features: [
         'Procesador Intel Celeron N4020 (hasta 2.8GHz)',
@@ -264,7 +264,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     {
       id: 12, name: 'Kit Teclado y Mouse Acteck',
       description: 'Kit Acteck Creator MK210, la combinación perfecta para tu espacio de trabajo.',
-      price: 'Comprar ahora', image: 'images/accesorios/teclado/acteck/acteck1.png',
+      price: 'MK210', image: 'images/accesorios/teclado/acteck/acteck1.png',
       images: ['images/accesorios/teclado/acteck/acteck2.png', 'images/accesorios/teclado/acteck/acteck3.png'],
       features: [
         'Conexión USB alámbrica Plug & Play',
@@ -280,7 +280,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     {
       id: 13, name: 'Impresora Térmica Nextep',
       description: 'Impresora térmica Nextep de 80mm diseñada para alto rendimiento en puntos de venta.',
-      price: 'Comprar ahora', image: 'images/accesorios/impresora/nextep/next1.png',
+      price: 'NE-511', image: 'images/accesorios/impresora/nextep/next1.png',
       images: ['images/accesorios/impresora/nextep/next2.png', 'images/accesorios/impresora/nextep/next3.png'],
       features: [
         'Impresión térmica directa de alta velocidad (160 mm/s)',
@@ -296,7 +296,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     {
       id: 14, name: 'Terminal Prosepago',
       description: 'Terminal inteligente de cobro diseñada para modernizar cualquier negocio en México.',
-      price: 'Comprar ahora', image: 'images/accesorios/terminal/terminal1.png',
+      price: 'Prosepago', image: 'images/accesorios/terminal/terminal1.png',
       images: ['images/accesorios/terminal/terminal2.png', 'images/accesorios/terminal/terminal3.png'],
       features: [
         'Acepta tarjetas Visa, Mastercard, American Express y Carnet',
@@ -330,7 +330,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     {
       id: 16, name: 'Monitor Acteck Captive Brite CB185',
       description: 'Monitor LED de 18.5 pulgadas con panel TN y resolución HD, diseñado para ofrecer una visualización clara y cómoda en estaciones de trabajo y puntos de venta.',
-      price: 'Comprar ahora', image: 'images/accesorios/monitor/acteck/acteck1.png',
+      price: 'Captive Brite CB185', image: 'images/accesorios/monitor/acteck/acteck1.png',
       images: ['images/accesorios/monitor/acteck/acteck2.png', 'images/accesorios/monitor/acteck/acteck3.png'],
       features: [
         'Pantalla plana de 18.5 pulgadas con relación de aspecto 16:9',
@@ -347,7 +347,7 @@ export class AccesoriosComponent implements OnInit, AfterViewInit, OnDestroy {
     {
       id: 17, name: 'PC Vorago Slimbay 5',
       description: 'Computadora de escritorio compacta en formato Slim, ideal para oficina, hogar y puntos de venta.',
-      price: 'Comprar ahora', image: 'images/accesorios/pc/vorago/vorago1.png',
+      price: 'B5 CLN N4020-NOS-13', image: 'images/accesorios/pc/vorago/vorago1.png',
       images: ['images/accesorios/pc/vorago/vorago2.png', 'images/accesorios/pc/vorago/vorago3.png'],
       features: [
         'Procesador Intel Celeron N4020 (hasta 2.8 GHz Turbo, 2 núcleos)',
